@@ -8,6 +8,7 @@ import { Globe, Clock, Smartphone, Users } from "lucide-react";
 import { useState, useRef } from "react";
 
 export default function Projects() {
+  // TO-DO : i will add ui-ux section with my portfolio design for now 
   const [activeTab, setActiveTab] = useState("all");
   const tabsRef = useRef<HTMLDivElement>(null);
 
@@ -17,33 +18,33 @@ export default function Projects() {
       country: "United Kingdom",
       client: "Mustafa Nawaz",
       type: "Web Application",
-      duration: "8 months project"
+      duration: "8 months project",
     },
     {
       title: "AI-Powered Analytics Platform",
       country: "United States",
       client: "crimsonbison",
       company: "analytics depot",
-      type: "Web Application"
+      type: "Web Application",
     },
     {
       title: "UX Enhancement Project",
       country: "Japan",
       client: "hamididz",
       company: "artisbay",
-      type: "Web Application"
+      type: "Web Application",
     },
     {
       title: "Transportation Platform",
       country: "Netherlands",
       type: ["Mobile Application", "Full Stack"],
-      stack: "Mobile + Full Stack Development"
+      stack: "Mobile + Full Stack Development",
     },
   ];
 
   const webProjects = projects.filter((p) => p.type === "Web Application");
-  const mobileProjects = projects.filter((p) => 
-    Array.isArray(p.type) 
+  const mobileProjects = projects.filter((p) =>
+    Array.isArray(p.type)
       ? p.type.includes("Mobile Application")
       : p.type === "Mobile Application"
   );
@@ -54,6 +55,8 @@ export default function Projects() {
         return webProjects;
       case "mobile":
         return mobileProjects;
+      // case "ui-ux":
+      //   return projects.filter((p) => p.type === "UI/UX");
       default:
         return projects;
     }
@@ -148,10 +151,11 @@ export default function Projects() {
 
 function ProjectCard({ project, index }: { project: any; index: number }) {
   const isWebProject = project.type === "Web Application";
-  const isMobileProject = Array.isArray(project.type) 
+  const isMobileProject = Array.isArray(project.type)
     ? project.type.includes("Mobile Application")
     : project.type === "Mobile Application";
-  const isFullStack = Array.isArray(project.type) && project.type.includes("Full Stack");
+  const isFullStack =
+    Array.isArray(project.type) && project.type.includes("Full Stack");
 
   return (
     <Card className="overflow-hidden group border border-primary/10 bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-950 shadow-lg hover:shadow-2xl transition-all duration-500 hover:border-primary/20">
@@ -168,7 +172,9 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
         </div>
         <h3 className="text-xl font-bold text-foreground">{project.title}</h3>
         {project.duration && (
-          <span className="text-sm text-muted-foreground">{project.duration}</span>
+          <span className="text-sm text-muted-foreground">
+            {project.duration}
+          </span>
         )}
 
         <div className="flex flex-wrap gap-2 justify-center">
