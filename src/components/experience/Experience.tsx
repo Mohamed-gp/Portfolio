@@ -36,12 +36,77 @@ export default function Experience() {
 
   const workExperience = [
     {
+      title: "Founding Engineer | Technical Lead",
+      company: "Analytics-Depot",
+      location: "Remote (USA)",
+      period: "Present",
+      description:
+        "Implemented RAG (Retrieval-Augmented Generation) system using FastAPI for intelligent data processing. Architected scalable web applications integrating AI/ML capabilities with traditional analytics. Built responsive Next.js frontend with real-time analytics dashboard and data visualization.",
+      skills: [
+        "FastAPI",
+        "RAG Systems",
+        "AI/ML",
+        "Next.js",
+        "Data Visualization",
+        "Real-time Analytics",
+        "Python",
+        "TypeScript",
+      ],
+    },
+    {
+      title: "Full-Stack Developer",
+      company: "HaulHub",
+      location: "Remote (Netherlands)",
+      period: "Contract",
+      description:
+        "Developed cross-platform mobile and web applications for logistics and transportation industry. Collaborated with a 6-person team of designers and developers to deliver projects under tight deadlines.",
+      skills: [
+        "React Native",
+        "React",
+        "Cross-platform Development",
+        "Logistics Solutions",
+        "Team Collaboration",
+        "Agile Development",
+      ],
+    },
+    {
+      title: "Full-Stack Developer",
+      company: "Rentals",
+      location: "Freelance (United Kingdom)",
+      period: "Ongoing",
+      description:
+        "Built comprehensive real estate platform with property listings, search, and booking functionality. Implemented advanced filtering system with geolocation and map integration. Currently developing v2 with enhanced UX/UI and performance optimizations.",
+      skills: [
+        "Real Estate Platform",
+        "Geolocation",
+        "Map Integration",
+        "Advanced Filtering",
+        "UX/UI Optimization",
+        "Performance Optimization",
+      ],
+    },
+    {
+      title: "Full-Stack Developer",
+      company: "ArtisBay",
+      location: "Freelance (Japan)",
+      period: "Contract",
+      description:
+        "Fixed responsive design issues ensuring proper display across all devices and screen sizes. Optimized CSS and layout components for mobile-first responsive functionality. Provided technical recommendations for platform improvements and best practices.",
+      skills: [
+        "Responsive Design",
+        "CSS Optimization",
+        "Mobile-First Design",
+        "Cross-device Compatibility",
+        "Performance Optimization",
+      ],
+    },
+    {
       title: "Freelance Developer",
       company: "Fiverr",
       website: "https://www.fiverr.com/mohamedouterbah?public_mode=true",
       period: "2022 - Present",
       description:
-        "Developing custom web applications and websites for clients worldwide. Maintaining a high satisfaction rate with clients through effective communication and quality deliverables.",
+        "Developed custom websites and full-stack applications for clients worldwide. Maintaining a high satisfaction rate with clients through effective communication and quality deliverables.",
       skills: [
         "React",
         "Next.js",
@@ -49,57 +114,55 @@ export default function Experience() {
         "TypeScript",
         "TailwindCSS",
         "MongoDB",
-        "and more",
+        "Full-Stack Development",
       ],
       rating: {
         score: 5,
         platform: "Fiverr",
       },
     },
-
     {
       title: "Web Development Intern",
       company: "Exclusive Labs",
       period: "December 2024 - February 2025",
       description:
-        "Assisted in the development of client websites and web applications. Gained hands-on experience with modern web development technologies and methodologies.",
+        "Developed full-stack course management system enabling efficient course tracking and administration. Built user authentication system with role-based access control (admin/student/instructor).",
       skills: [
+        "Course Management System",
+        "User Authentication",
+        "Role-based Access Control",
         "React",
-        "Next.js",
-        "TypeScript",
-        "REST APIs",
-        "Team Collaboration",
+        "Node.js",
+        "Database Management",
       ],
     },
+  ];
+
+  const projects = [
     {
-      title: "SaaS Boiler CLI - Co-Creator",
-      company: (
-        <Link
-          href="https://www.npmjs.com/package/saas-boiler-cli"
-          target="_blank"
-          className="text-primary font-medium text-sm sm:text-base flex items-center gap-2"
-        >
-          Open Source Project
-        </Link>
-      ),
-      website: "https://www.npmjs.com/package/saas-boiler-cli",
-      period: "2022 - Present",
+      title: "Profitable Local Mobile App",
       description:
-        "Co-developed a SaaS template generator CLI tool with 500+ peak downloads on npm. Built to streamline SaaS application development across multiple tech stacks with support for various frontend frameworks and backend technologies.",
+        "Developed v2 version of existing React Native mobile application improving user experience and performance. Contributed to application's continued profitability and growing user base.",
+      skills: ["React Native", "Performance Optimization", "UX/UI", "Mobile Development"],
+      status: "Live & Profitable",
+    },
+    {
+      title: "SaaS Boiler CLI - SaaS Template Generator",
+      website: "https://www.npmjs.com/package/saas-boiler-cli",
+      description:
+        "Created open-source CLI tool that peaked at 500 downloads for rapid SaaS application scaffolding. Supports multiple tech stacks: Next.js, Nuxt.js, Express.js, Go, Python with pre-configured setups.",
       skills: [
         "Go",
-        "Nuxt",
-        "Angular",
+        "Nuxt.js",
         "Next.js",
-        "TypeScript",
-        "REST APIs",
-        "Team Collaboration",
+        "Express.js",
+        "Python",
         "CLI Development",
+        "Open Source",
       ],
       achievements: [
         "500+ peak downloads on npm",
-        "Multiple framework support (Next.js, Nuxt, Angular)",
-        "Backend support (Express, Python)",
+        "Multiple framework support",
         "Published and maintained on npm registry",
       ],
     },
@@ -107,25 +170,35 @@ export default function Experience() {
 
   const education = [
     {
-      degree: "Engineering Degree in Computer Science",
+      degree: "Master's Degree in Computer Science",
       institution:
         "Higher School of Computer Science and Digital Technologies (ESTIN)",
       period: "2022 - Present",
       description:
-        "Coursework includes Data Structures, Algorithms, Database Systems, and Web Development.",
+        "Focused on advanced topics in computer science, software engineering, and emerging technologies. Gaining expertise in data structures, algorithms, software design, and more.",
     },
   ];
 
   const certifications = [
     {
-      title: "ByteCraft Ideathon Winner - First Place",
-      organization: "ByteCraft",
+      title: "Hackathon Winner - First Place",
+      organization: "Ideathon Competition",
       date: "2024",
       description:
-        "Achieved first place in the ByteCraft Ideathon competition by developing an innovative concept that stood out among all participants.",
+        "Secured 1st place for developing an innovative tech solution in a competitive ideathon.",
       image: "/achievement/ideathonCertificate.jpg",
       icon: <Star className="h-5 w-5 text-yellow-500" />,
       color: "from-yellow-500/20 to-amber-500/20",
+    },
+    {
+      title: "Hackathon Experience - 5+ Competitions",
+      organization: "Various Organizations",
+      date: "2024",
+      description:
+        "Participated in 5+ hackathons focused on competitive programming, logistics optimization, AI, and real-world tech solutions.",
+      image: "/achievement/codecraft.png",
+      icon: <Trophy className="h-5 w-5 text-purple-500" />,
+      color: "from-purple-500/20 to-indigo-500/20",
     },
     {
       title: "ByteCraft Competitive Programming",
@@ -285,6 +358,11 @@ export default function Experience() {
                         </Link>
                       )}
                     </p>
+                    {job.location && (
+                      <p className="text-muted-foreground text-xs sm:text-sm">
+                        📍 {job.location}
+                      </p>
+                    )}
                     {job.rating && (
                       <div className="flex items-center gap-1.5">
                         <div className="flex">
