@@ -56,11 +56,11 @@ export default function Hero() {
               </Button>
               <Button asChild variant="outline" size="lg" className="group">
                 <Link
-                  href="/resume/Mohamed_Outerbah_Resume.pdf"
+                  href="/cv/Mohamed_Outerbah_CV.pdf"
                   target="_blank"
                 >
                   <Download className="mr-2 h-4 w-4 transition-transform group-hover:translate-y-0.5" />
-                  Download Resume
+                  Download CV
                 </Link>
               </Button>
               <Button asChild variant="ghost" size="lg" className="group">
