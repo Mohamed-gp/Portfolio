@@ -24,7 +24,17 @@ export default function Hero() {
   }, [index]);
 
   return (
-    <section id="home" className="relative min-h-screen flex flex-col">
+    <section
+      id="home"
+      className="relative min-h-screen flex flex-col overflow-hidden"
+    >
+      {/* Animated Background */}
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute top-0 -left-4 w-72 h-72 bg-blue-300 dark:bg-blue-900 rounded-full mix-blend-multiply dark:mix-blend-normal filter blur-xl opacity-20 animate-blob" />
+        <div className="absolute top-0 -right-4 w-72 h-72 bg-cyan-300 dark:bg-cyan-900 rounded-full mix-blend-multiply dark:mix-blend-normal filter blur-xl opacity-20 animate-blob animation-delay-2000" />
+        <div className="absolute -bottom-8 left-20 w-72 h-72 bg-sky-300 dark:bg-sky-900 rounded-full mix-blend-multiply dark:mix-blend-normal filter blur-xl opacity-20 animate-blob animation-delay-4000" />
+      </div>
+
       <div className="flex-1 flex items-center">
         <div className="container px-4 sm:px-6 grid lg:grid-cols-2 gap-8 md:gap-12 items-center pt-20">
           <motion.div
@@ -35,7 +45,7 @@ export default function Hero() {
           >
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
               Hi, I'm{" "}
-              <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
                 Mohamed Outerbah
               </span>
             </h1>
@@ -44,26 +54,42 @@ export default function Hero() {
               <span className="animate-blink">|</span>
             </h2>
             <p className="text-base md:text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0">
-              I build exceptional digital experiences that combine stunning
-              design with cutting-edge technology.
+              <strong className="text-foreground">Founding Engineer</strong> &{" "}
+              <strong className="text-foreground">Technical Lead</strong> with
+              proven track record building AI-powered platforms with{" "}
+              <strong className="text-foreground">99%+ uptime</strong> and{" "}
+              <strong className="text-foreground">5/5 client rating</strong>. I
+              architect scalable full-stack solutions from backend APIs to
+              mobile apps across multiple tech stacks.
             </p>
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
-              <Button asChild size="lg" className="group">
+              <Button
+                asChild
+                size="lg"
+                className="group bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white border-0 shadow-lg hover:shadow-xl transition-all duration-300"
+              >
                 <Link href="#projects">
                   View Projects
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="group">
-                <Link
-                  href="/cv/Mohamed_Outerbah_CV.pdf"
-                  target="_blank"
-                >
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="group backdrop-blur-sm bg-white/10 dark:bg-gray-800/30 border-2 hover:bg-white/20 dark:hover:bg-gray-800/50 transition-all duration-300"
+              >
+                <Link href="/cv/Mohamed_Outerbah_CV.pdf" target="_blank">
                   <Download className="mr-2 h-4 w-4 transition-transform group-hover:translate-y-0.5" />
                   Download CV
                 </Link>
               </Button>
-              <Button asChild variant="ghost" size="lg" className="group">
+              <Button
+                asChild
+                variant="ghost"
+                size="lg"
+                className="group hover:bg-muted/50 transition-all duration-300"
+              >
                 <Link href="#contact">
                   <Mail className="mr-2 h-4 w-4" />
                   Let's Talk
@@ -74,25 +100,25 @@ export default function Hero() {
               <Link
                 href="https://github.com/Mohamed-gp"
                 target="_blank"
-                className="hover:text-primary transition-colors cursor-pointer"
+                className="p-3 rounded-full bg-muted/50 hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110 cursor-pointer"
               >
-                <Github className="h-6 w-6" />
+                <Github className="h-5 w-5" />
                 <span className="sr-only">GitHub</span>
               </Link>
               <Link
                 href="https://www.linkedin.com/in/mohamedouterbah"
                 target="_blank"
-                className="hover:text-primary transition-colors cursor-pointer"
+                className="p-3 rounded-full bg-muted/50 hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110 cursor-pointer"
               >
-                <Linkedin className="h-6 w-6" />
+                <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
               </Link>
               <Link
                 href="mailto:mohamedterba6@gmail.com"
                 target="_blank"
-                className="hover:text-primary transition-colors cursor-pointer"
+                className="p-3 rounded-full bg-muted/50 hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110 cursor-pointer"
               >
-                <Mail className="h-6 w-6" />
+                <Mail className="h-5 w-5" />
                 <span className="sr-only">Email</span>
               </Link>
             </div>
@@ -104,17 +130,24 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="relative order-first lg:order-last mx-auto w-[220px] sm:w-[280px] md:w-[320px] lg:w-[360px] xl:w-[400px] aspect-square"
           >
-            <div className="relative z-10 aspect-square">
-              <div className="w-full h-full rounded-full bg-gradient-to-br from-purple-600 to-pink-600 opacity-20 absolute animate-pulse" />
-              <div className="w-full h-full aspect-square flex justify-center items-center">
-                <Image
-                  src={ProfilePicture}
-                  alt="profile-picture"
-                  width={400}
-                  height={400}
-                  priority
-                  className="rounded-full object-cover w-full h-full relative z-10"
-                />
+            {/* Animated wave outlines - different sizes */}
+
+            
+            {/* Profile image with gradient border */}
+            <div className="relative z-10 w-full h-full aspect-square flex justify-center items-center">
+              {/* Static gradient border */}
+              <div className="relative w-full h-full rounded-full p-1 bg-gradient-to-br from-blue-600 via-cyan-500 to-sky-600 shadow-2xl">
+                {/* Image container */}
+                <div className="relative w-full h-full rounded-full overflow-hidden shadow-inner">
+                  <Image
+                    src={ProfilePicture}
+                    alt="profile-picture"
+                    width={400}
+                    height={400}
+                    priority
+                    className="object-cover w-full h-full hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
               </div>
             </div>
           </motion.div>

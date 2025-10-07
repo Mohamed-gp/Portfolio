@@ -13,7 +13,7 @@ export default function Footer() {
           <div className="md:col-span-2">
             <Link
               href="#home"
-              className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4 inline-block"
+              className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent mb-4 inline-block"
             >
               Mohamed Outerbah
             </Link>

@@ -41,7 +41,7 @@ export default function Header() {
       <div className="container px-4 sm:px-6 flex items-center justify-between">
         <Link
           href="#home"
-          className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent"
+          className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent"
         >
           Mohamed Outerbah
         </Link>

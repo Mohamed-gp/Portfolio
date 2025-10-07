@@ -6,46 +6,49 @@ import { Users, Star, Code, Trophy, Calendar, Coffee } from "lucide-react";
 
 const stats = [
   {
-    icon: <Users className="h-6 w-6 text-blue-500" />,
-    value: "+10",
-    label: "Happy Clients",
-    description: "Satisfied clients worldwide",
+    icon: <Trophy className="h-6 w-6 text-yellow-500" />,
+    value: "99%+",
+    label: "Uptime",
+    description: "Architected scalable apps",
   },
   {
-    icon: <Star className="h-6 w-6 text-yellow-500" />,
+    icon: <Star className="h-6 w-6 text-green-500" />,
+    value: "100/100",
+    label: "Lighthouse SEO",
+    description: "Performance optimization",
+  },
+  {
+    icon: <Users className="h-6 w-6 text-blue-500" />,
     value: "5/5",
     label: "Client Rating",
-    description: "Average rating on Fiverr",
+    description: "Fiverr rating score",
   },
   {
-    icon: <Code className="h-6 w-6 text-green-500" />,
-    value: "+20",
-    label: "Live Projects",
-    description: "Deployed applications",
+    icon: <Code className="h-6 w-6 text-blue-500" />,
+    value: "5min",
+    label: "CI/CD Deploy",
+    description: "From 30min to 5min",
   },
   {
-    icon: <Trophy className="h-6 w-6 text-purple-500" />,
-    value: "+5",
-    label: "Hackathons",
-    description: "Competitions participated",
+    icon: <Trophy className="h-6 w-6 text-orange-500" />,
+    value: "1st Place",
+    label: "Hackathon Winner",
+    description: "Competitive ideathon 2024",
   },
   {
-    icon: <Calendar className="h-6 w-6 text-orange-500" />,
-    value: "+3",
-    label: "Years of Experience",
-    description: "In web development",
-  },
-  {
-    icon: <Coffee className="h-6 w-6 text-amber-600" />,
-    value: "+1000",
-    label: "Hours Coded",
-    description: "Lines of code written",
+    icon: <Calendar className="h-6 w-6 text-pink-500" />,
+    value: "3+",
+    label: "Years Experience",
+    description: "Full-stack development",
   },
 ];
 
 function StatsSection() {
   return (
-    <section className="py-16 sm:py-20 bg-background">
+    <section className="py-16 sm:py-20 relative overflow-hidden">
+      {/* Gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-background to-cyan-50 dark:from-gray-900 dark:via-background dark:to-gray-900 -z-10" />
+      
       <div className="container px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -54,7 +57,7 @@ function StatsSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
             Results That Matter
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -71,17 +74,20 @@ function StatsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ y: -5 }}
+              whileHover={{ y: -8, scale: 1.02 }}
             >
-              <Card className="text-center h-full hover:shadow-lg transition-all duration-300 border-primary/10">
-                <CardContent className="p-4 sm:p-6 space-y-3">
+              <Card className="text-center h-full hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-primary/20 bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm relative overflow-hidden group">
+                {/* Gradient overlay on hover */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                
+                <CardContent className="p-4 sm:p-6 space-y-3 relative z-10">
                   <div className="flex justify-center">
-                    <div className="p-3 rounded-full bg-muted/50">
+                    <div className="p-3 rounded-full bg-gradient-to-br from-muted/80 to-muted/50 group-hover:from-primary/10 group-hover:to-blue-500/10 transition-all duration-300 group-hover:scale-110">
                       {stat.icon}
                     </div>
                   </div>
                   <div className="space-y-1">
-                    <div className="text-2xl sm:text-3xl font-bold text-primary">
+                    <div className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300 inline-block">
                       {stat.value}
                     </div>
                     <div className="font-semibold text-sm sm:text-base">

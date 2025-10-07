@@ -9,46 +9,39 @@ const navBarTitles = [
 ] as const;
 
 const projectsImagesSkills = [
-  // Frontend
+  // Frontend - Core Skills
   { filename: "typescript.svg", name: "TypeScript" },
   { filename: "javascript.svg", name: "JavaScript" },
   { filename: "react.svg", name: "React" },
   { filename: "nextjs.svg", name: "Next.js" },
+  { filename: "expo.svg", name: "Expo (React Native)" },
   { filename: "tailwindcss.svg", name: "Tailwind CSS" },
-  // { filename: "mui.svg", name: "Material UI" },
   { filename: "reactrouter.svg", name: "React Router" },
   { filename: "reduxtoolkit.svg", name: "Redux Toolkit" },
+  { filename: "zustand.webp", name: "Zustand" },
 
-  // Backend
+  // Backend - Core Skills
   { filename: "nodejs.svg", name: "Node.js" },
   { filename: "expressjs.svg", name: "Express.js" },
-  // { filename: "go.svg", name: "Go" },
-  // { filename: "fiber.png", name: "Go Fiber" },
-  // { filename: "dingo.png", name: "Dingo (DI)" },
-  // { filename: "laravel.svg", name: "Laravel" },
-  // { filename: "deno.svg", name: "Deno" },
+  { filename: "nestjs.svg", name: "NestJS" },
 
-  // Databases
+  // Databases - Core Skills
   { filename: "mongodb.svg", name: "MongoDB" },
-  { filename: "mysql.svg", name: "MySQL" },
   { filename: "postgressql.svg", name: "PostgreSQL" },
-  { filename: "sqlite.svg", name: "SQLite" },
   { filename: "prisma.svg", name: "Prisma" },
 
-  // Services & APIs
+  // Services & APIs - Essential
   { filename: "supabase.svg", name: "Supabase" },
-  { filename: "firebase.svg", name: "Firebase" },
   { filename: "nextauth.webp", name: "Auth.js" },
-  { filename: "auth0.svg", name: "Auth0" },
   { filename: "jwt.svg", name: "JWT" },
   { filename: "stripe.svg", name: "Stripe" },
 
-  // DevOps & Tools
+  // DevOps & Tools - Essential
   { filename: "docker.svg", name: "Docker" },
   { filename: "icons8-git.svg", name: "Git" },
   { filename: "Jest.svg", name: "Jest" },
   { filename: "zodlogo.svg", name: "Zod" },
-  // { filename: "electronjs.svg", name: "Electron" },
+  { filename: "vercel.svg", name: "Vercel" },
 ] as const;
 
 const projects = [

@@ -4,28 +4,32 @@ import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardFooter } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Globe, Clock, Smartphone, Users, ExternalLink, Code } from "lucide-react";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { Globe, Clock, Smartphone, Users, ExternalLink, Code, X } from "lucide-react";
 import { useState, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Projects() {
   // TO-DO : i will add ui-ux section with my portfolio design for now 
   const [activeTab, setActiveTab] = useState("all");
   const tabsRef = useRef<HTMLDivElement>(null);
+  const [selectedProject, setSelectedProject] = useState<any>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleProjectClick = (project: any) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
 
   const projects = [
-    {
-      title: "Rentals - Real Estate Platform",
-      country: "United Kingdom",
-      flag: "🇬🇧",
-      client: "Rentals Platform",
-      type: "Web Application",
-      url: "https://rentals.production-server.tech/",
-      description: "Comprehensive real estate platform with property listings, search, and booking functionality with geolocation and map integration",
-      status: "Live",
-      role: "Full-Stack Developer",
-      technologies: ["Real Estate Platform", "Geolocation", "Map Integration", "Advanced Filtering"]
-    },
     {
       title: "Analytics Depot - AI-Powered Analytics Platform",
       country: "United States",
@@ -34,10 +38,11 @@ export default function Projects() {
       company: "Analytics Depot",
       type: "Web Application",
       url: "https://analyticsdepot.com/",
-      description: "RAG (Retrieval-Augmented Generation) system using FastAPI for intelligent data processing with real-time analytics dashboard",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop&auto=format&q=80",
+      description: "RAG (Retrieval-Augmented Generation) system using FastAPI for intelligent data processing with real-time analytics dashboard. Led team of 3 developers, achieved 99%+ uptime.",
       status: "Live",
       role: "Founding Engineer | Technical Lead",
-      technologies: ["FastAPI", "RAG Systems", "AI/ML", "Next.js", "Data Visualization"]
+      technologies: ["FastAPI", "RAG Systems", "AI/ML", "Next.js", "Data Visualization", "Python"]
     },
     {
       title: "HaulHub - Transportation & Logistics Platform",
@@ -46,45 +51,49 @@ export default function Projects() {
       client: "HaulHub",
       type: ["Web Application", "Mobile Application"],
       url: "https://haulhub.app/",
-      description: "Cross-platform mobile and web applications for logistics and transportation industry",
+      image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=400&fit=crop&auto=format&q=80",
+      description: "Cross-platform mobile and web applications for logistics and transportation industry. Improved delivery tracking efficiency working with 6-person team.",
       status: "Live",
       role: "Full-Stack Developer",
       technologies: ["React Native", "Cross-platform", "Logistics Solutions", "Team Collaboration"]
     },
     {
-      title: "ArtisBay - UX Enhancement Platform",
+      title: "Rentals - Real Estate Platform",
+      country: "United Kingdom",
+      flag: "🇬🇧",
+      client: "Rentals Platform",
+      type: "Web Application",
+      image: "/projects/rentals/hero.png",
+      description: "Comprehensive real estate platform with 1,000+ listings, map-based filtering. Building v2 with AI-powered search & 2x faster load times.",
+      status: "V2 In Development",
+      role: "Full-Stack Developer",
+      technologies: ["Real Estate Platform", "Geolocation", "Map Integration", "AI Search", "Performance"]
+    },
+    {
+      title: "ArtisBay - Performance Enhancement",
       country: "Japan",
       flag: "🇯🇵",
       client: "ArtisBay",
       company: "ArtisBay",
       type: "Web Application",
       url: "https://artisbay.com/",
-      description: "Fixed responsive design issues and optimized CSS for mobile-first responsive functionality",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop&auto=format&q=80",
+      description: "Fixed responsive design issues and improved performance by 35% faster load times through CSS optimization",
       status: "Live",
       role: "Full-Stack Developer",
-      technologies: ["Responsive Design", "CSS Optimization", "Mobile-First Design"]
+      technologies: ["Responsive Design", "CSS Optimization", "Performance Tuning"]
     },
     {
-      title: "SaaS Boiler CLI - Template Generator",
-      country: "Open Source",
-      flag: "🌐",
-      type: "CLI Tool",
-      url: "https://www.npmjs.com/package/saas-boiler-cli",
-      description: "Open-source CLI tool that peaked at 500+ downloads for rapid SaaS application scaffolding",
-      status: "Live",
-      role: "Co-Creator",
-      technologies: ["Go", "CLI Development", "Next.js", "Nuxt.js", "Express.js", "Python"]
+      title: "Profitable Local Mobile App",
+      country: "Client Project",
+      flag: "📱",
+      type: "Mobile Application",
+      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=400&fit=crop&auto=format&q=80",
+      description: "Rebuilt v2 in React Native, boosting performance and retention. Added new features that attracted real paying clients and contributed to profit growth.",
+      status: "Live & Profitable",
+      role: "Full-Stack Developer",
+      technologies: ["React Native", "Performance Optimization", "UX/UI", "Mobile Development"]
     },
-    // {
-    //   title: "Profitable Local Mobile App",
-    //   country: "Client Project",
-    //   flag: "📱",
-    //   type: "Mobile Application",
-    //   description: "Developed v2 version of existing React Native mobile application improving user experience and performance",
-    //   status: "Live & Profitable",
-    //   role: "Full-Stack Developer",
-    //   technologies: ["React Native", "Performance Optimization", "UX/UI"]
-    // },
   ];
 
   const webProjects = projects.filter((p) => 
@@ -192,6 +201,7 @@ export default function Projects() {
                       key={project.title}
                       project={project}
                       index={index}
+                      onClick={() => handleProjectClick(project)}
                     />
                   ))}
                 </div>
@@ -199,12 +209,129 @@ export default function Projects() {
             ))}
           </Tabs>
         </motion.div>
+
+        {/* Project Details Modal */}
+        <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
+          <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
+            <DialogHeader>
+              <DialogTitle className="text-2xl font-bold flex items-center gap-2">
+                <span className="text-2xl">{selectedProject?.flag}</span>
+                {selectedProject?.title}
+              </DialogTitle>
+              <DialogDescription className="text-base">
+                {selectedProject?.role} • {selectedProject?.country}
+              </DialogDescription>
+            </DialogHeader>
+
+            {selectedProject && (
+              <div className="space-y-6">
+                {/* Project Image */}
+                {selectedProject.image && (
+                  <div className="relative w-full h-64 rounded-lg overflow-hidden">
+                    <Image
+                      src={selectedProject.image}
+                      alt={selectedProject.title}
+                      width={800}
+                      height={400}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                )}
+
+                {/* Status & Type Badges */}
+                <div className="flex flex-wrap gap-2">
+                  {selectedProject.status && (
+                    <Badge
+                      className={`${
+                        selectedProject.status === "Live" ||
+                        selectedProject.status === "Live & Profitable"
+                          ? "bg-green-600 text-white"
+                          : "bg-muted text-foreground"
+                      }`}
+                    >
+                      {selectedProject.status}
+                    </Badge>
+                  )}
+                  {(selectedProject.type === "Web Application" ||
+                    (Array.isArray(selectedProject.type) &&
+                      selectedProject.type.includes("Web Application"))) && (
+                    <Badge className="bg-blue-500 text-white">
+                      <Globe className="mr-1 h-3 w-3" />
+                      Web Application
+                    </Badge>
+                  )}
+                  {(selectedProject.type === "Mobile Application" ||
+                    (Array.isArray(selectedProject.type) &&
+                      selectedProject.type.includes("Mobile Application"))) && (
+                    <Badge className="bg-purple-500 text-white">
+                      <Smartphone className="mr-1 h-3 w-3" />
+                      Mobile Application
+                    </Badge>
+                  )}
+                  {selectedProject.type === "CLI Tool" && (
+                    <Badge className="bg-green-500 text-white">
+                      <Code className="mr-1 h-3 w-3" />
+                      CLI Tool
+                    </Badge>
+                  )}
+                </div>
+
+                {/* Description */}
+                <div>
+                  <h3 className="font-semibold text-lg mb-2">About the Project</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {selectedProject.description}
+                  </p>
+                </div>
+
+                {/* Technologies Used */}
+                {selectedProject.technologies &&
+                  selectedProject.technologies.length > 0 && (
+                    <div>
+                      <h3 className="font-semibold text-lg mb-3">
+                        Technologies Used
+                      </h3>
+                      <div className="flex flex-wrap gap-2">
+                        {selectedProject.technologies.map(
+                          (tech: string, i: number) => (
+                            <Badge
+                              key={i}
+                              variant="outline"
+                              className="px-3 py-1"
+                            >
+                              {tech}
+                            </Badge>
+                          )
+                        )}
+                      </div>
+                    </div>
+                  )}
+
+                {/* Visit Project Button */}
+                {selectedProject.url && (
+                  <div className="pt-4">
+                    <Button asChild className="w-full sm:w-auto" size="lg">
+                      <a
+                        href={selectedProject.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <ExternalLink className="mr-2 h-4 w-4" />
+                        Visit Live Project
+                      </a>
+                    </Button>
+                  </div>
+                )}
+              </div>
+            )}
+          </DialogContent>
+        </Dialog>
       </div>
     </section>
   );
 }
 
-function ProjectCard({ project, index }: { project: any; index: number }) {
+function ProjectCard({ project, index, onClick }: { project: any; index: number; onClick: () => void }) {
   const isWebProject = project.type === "Web Application" || 
     (Array.isArray(project.type) && project.type.includes("Web Application"));
   const isMobileProject = Array.isArray(project.type)
@@ -212,25 +339,25 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
     : project.type === "Mobile Application";
   const isCliProject = project.type === "CLI Tool";
 
-  const CardWrapper = ({ children }: { children: React.ReactNode }) => {
-    if (project.url) {
-      return (
-        <a
-          href={project.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block"
-        >
-          {children}
-        </a>
-      );
-    }
-    return <>{children}</>;
-  };
-
   return (
-    <CardWrapper>
-      <Card className="overflow-hidden group border border-primary/10 bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-950 shadow-lg hover:shadow-2xl transition-all duration-500 hover:border-primary/20 hover:-translate-y-1 h-full flex flex-col">
+    <Card 
+      onClick={onClick}
+      className="overflow-hidden group border border-primary/10 bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-950 shadow-lg hover:shadow-2xl transition-all duration-500 hover:border-primary/20 hover:-translate-y-1 h-full flex flex-col cursor-pointer"
+    >
+        {/* Project Image */}
+        {project.image && (
+          <div className="relative w-full h-48 overflow-hidden bg-muted">
+            <Image
+              src={project.image}
+              alt={project.title}
+              width={800}
+              height={400}
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          </div>
+        )}
+        
         <div className="p-6 flex flex-col items-center text-center space-y-4 flex-1">
           <div className="flex items-center gap-2 mb-2 flex-wrap justify-center">
             <Badge className="bg-primary/10 text-primary hover:bg-primary/20 flex items-center gap-1.5">
@@ -310,19 +437,16 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
             </div>
           )}
 
-          {project.url && (
-            <div className="pt-2 mt-auto">
-              <Badge
-                variant="outline"
-                className="bg-primary/5 text-primary hover:bg-primary/10 group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
-              >
-                <ExternalLink className="mr-2 h-3 w-3" />
-                Visit Project
-              </Badge>
-            </div>
-          )}
+          <div className="pt-2 mt-auto">
+            <Badge
+              variant="outline"
+              className="bg-primary/5 text-primary hover:bg-primary/10 group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
+            >
+              <ExternalLink className="mr-2 h-3 w-3" />
+              View Details
+            </Badge>
+          </div>
         </div>
       </Card>
-    </CardWrapper>
   );
 }

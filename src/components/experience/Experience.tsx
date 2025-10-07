@@ -73,9 +73,9 @@ export default function Experience() {
       title: "Full-Stack Developer",
       company: "Rentals",
       location: "Freelance (United Kingdom)",
-      period: "Ongoing",
+      period: "2024",
       description:
-        "Built comprehensive real estate platform with property listings, search, and booking functionality. Implemented advanced filtering system with geolocation and map integration. Currently developing v2 with enhanced UX/UI and performance optimizations.",
+        "Built comprehensive real estate platform with property listings, search, and booking functionality. Implemented advanced filtering system with geolocation and map integration. V2 development planned for future iteration with enhanced UX/UI and performance optimizations.",
       skills: [
         "Real Estate Platform",
         "Geolocation",
@@ -89,7 +89,7 @@ export default function Experience() {
       title: "Full-Stack Developer",
       company: "ArtisBay",
       location: "Freelance (Japan)",
-      period: "Contract",
+      period: "2024",
       description:
         "Fixed responsive design issues ensuring proper display across all devices and screen sizes. Optimized CSS and layout components for mobile-first responsive functionality. Provided technical recommendations for platform improvements and best practices.",
       skills: [
@@ -106,7 +106,7 @@ export default function Experience() {
       website: "https://www.fiverr.com/mohamedouterbah?public_mode=true",
       period: "2022 - Present",
       description:
-        "Developed custom websites and full-stack applications for clients worldwide. Maintaining a high satisfaction rate with clients through effective communication and quality deliverables.",
+        "Level 1 seller developing custom websites and full-stack applications for clients worldwide. Maintaining a high satisfaction rate with clients through effective communication and quality deliverables.",
       skills: [
         "React",
         "Next.js",
@@ -119,6 +119,7 @@ export default function Experience() {
       rating: {
         score: 5,
         platform: "Fiverr",
+        level: "Level 1",
       },
     },
     {
@@ -190,16 +191,16 @@ export default function Experience() {
       icon: <Star className="h-5 w-5 text-yellow-500" />,
       color: "from-yellow-500/20 to-amber-500/20",
     },
-    {
-      title: "Hackathon Experience - 5+ Competitions",
-      organization: "Various Organizations",
-      date: "2024",
-      description:
-        "Participated in 5+ hackathons focused on competitive programming, logistics optimization, AI, and real-world tech solutions.",
-      image: "/achievement/codecraft.png",
-      icon: <Trophy className="h-5 w-5 text-purple-500" />,
-      color: "from-purple-500/20 to-indigo-500/20",
-    },
+    // {
+    //   title: "Hackathon Experience - 5+ Competitions",
+    //   organization: "Various Organizations",
+    //   date: "2024",
+    //   description:
+    //     "Participated in 5+ hackathons focused on competitive programming, logistics optimization, AI, and real-world tech solutions.",
+    //   image: "/achievement/codecraft.png",
+    //   icon: <Trophy className="h-5 w-5 text-blue-500" />,
+    //   color: "from-blue-500/20 to-sky-500/20",
+    // },
     {
       title: "ByteCraft Competitive Programming",
       organization: "ByteCraft",
@@ -207,8 +208,8 @@ export default function Experience() {
       description:
         "Participated in competitive programming challenges, enhancing algorithmic problem-solving skills.",
       image: "/achievement/codecraft.png",
-      icon: <Medal className="h-5 w-5 text-purple-500" />,
-      color: "from-purple-500/20 to-indigo-500/20",
+      icon: <Medal className="h-5 w-5 text-blue-500" />,
+      color: "from-blue-500/20 to-cyan-500/20",
     },
     {
       title: "Internal Hackathon",
@@ -364,24 +365,31 @@ export default function Experience() {
                       </p>
                     )}
                     {job.rating && (
-                      <div className="flex items-center gap-1.5">
-                        <div className="flex">
-                          {[...Array(5)].map((_, i) => (
-                            <Star
-                              key={i}
-                              className={`h-4 w-4 ${
-                                i < Math.floor(job.rating.score)
-                                  ? "text-yellow-400 fill-yellow-400"
-                                  : i < job.rating.score
-                                  ? "text-yellow-400 fill-yellow-400" // For the partial star
-                                  : "text-muted"
-                              }`}
-                            />
-                          ))}
+                      <div className="flex flex-col gap-1.5">
+                        <div className="flex items-center gap-1.5">
+                          <div className="flex">
+                            {[...Array(5)].map((_, i) => (
+                              <Star
+                                key={i}
+                                className={`h-4 w-4 ${
+                                  i < Math.floor(job.rating.score)
+                                    ? "text-yellow-400 fill-yellow-400"
+                                    : i < job.rating.score
+                                    ? "text-yellow-400 fill-yellow-400" // For the partial star
+                                    : "text-muted"
+                                }`}
+                              />
+                            ))}
+                          </div>
+                          <span className="text-sm font-medium">
+                            {job.rating.score} on {job.rating.platform}
+                          </span>
                         </div>
-                        <span className="text-sm font-medium">
-                          {job.rating.score} on {job.rating.platform}
-                        </span>
+                        {job.rating.level && (
+                          <Badge variant="secondary" className="w-fit text-xs bg-green-500/10 text-green-700 dark:text-green-400 border-green-500/20">
+                            {job.rating.level} Seller
+                          </Badge>
+                        )}
                       </div>
                     )}
                     <p className="text-muted-foreground text-sm">

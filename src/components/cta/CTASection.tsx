@@ -21,7 +21,7 @@ function CTASection() {
               <div className="space-y-4">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
                   Ready to Build Something
-                  <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
                     {" "}
                     Amazing?
                   </span>
