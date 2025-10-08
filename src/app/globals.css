@@ -149,4 +149,26 @@ button,
   body {
     @apply bg-background text-foreground;
   }
+  
+  /* Remove focus outline from main and non-interactive elements */
+  main:focus,
+  main:focus-visible,
+  main[tabindex="-1"]:focus,
+  div:focus:not([role="button"]):not([tabindex="0"]),
+  section:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  
+  /* Keep focus styles for interactive elements (accessibility) */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible,
+  [role="button"]:focus-visible,
+  [tabindex="0"]:focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
 }
