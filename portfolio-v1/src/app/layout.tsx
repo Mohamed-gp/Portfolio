@@ -141,9 +141,6 @@ export const metadata: Metadata = {
     apple: [{ url: "/favicon.ico" }],
   },
   manifest: "/manifest.json",
-  verification: {
-    google: process.env.GOOGLE_SITE_VERIFICATION,
-  },
 };
 
 interface RootLayoutProps {
