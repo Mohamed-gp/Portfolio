@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Only block API routes if they exist
+Disallow: /api/
+
+# Sitemap location (add this line too)
+Sitemap: https://mohamedouterbah.vercel.app/sitemap.xml
