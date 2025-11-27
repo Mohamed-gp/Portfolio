@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Cairo } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import { ThemeProviderWrapper } from "@/components/theme-provider/ThemeProviderWrapper";
 import "./globals.css";
@@ -28,7 +28,8 @@ export const viewport: Viewport = {
 // Comprehensive metadata for better SEO
 export const metadata: Metadata = {
   title: {
-    default: "Mohamed Outerbah - Founding Engineer | Full Stack Developer | AI/ML",
+    default:
+      "Mohamed Outerbah - Founding Engineer | Full Stack Developer | AI/ML",
     template: "%s | Mohamed Outerbah",
   },
   description:
@@ -51,7 +52,8 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://mohamedouterbah.vercel.app",
     siteName: "Mohamed Outerbah Portfolio",
-    title: "Mohamed Outerbah - Founding Engineer | Full Stack Developer | AI/ML Expert",
+    title:
+      "Mohamed Outerbah - Founding Engineer | Full Stack Developer | AI/ML Expert",
     description:
       "Founding Engineer & Technical Lead at Analytics Depot. Expert in building AI-powered platforms with FastAPI, React Native, Next.js. 99%+ uptime, Fiverr Level 1 with 5/5 rating, international experience.",
     images: [
@@ -164,7 +166,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
               "@context": "https://schema.org",
               "@type": "Person",
               name: "Mohamed Outerbah",
-              jobTitle: "Founding Engineer | Technical Lead | Full Stack Developer",
+              jobTitle:
+                "Founding Engineer | Technical Lead | Full Stack Developer",
               url: "https://mohamedouterbah.vercel.app",
               image:
                 "https://mohamedouterbah.vercel.app/profile/profilePicture2mb.png",
