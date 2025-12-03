@@ -16,7 +16,15 @@ export const metadata: Metadata = {
   title: "Mohamed Outerbah | 3D Portfolio",
   description:
     "An interactive 3D portfolio experience. Fly through the skies and explore my work as a Full-Stack Developer.",
-  keywords: ['portfolio', 'developer', 'full-stack', '3D', 'react', 'next.js', 'three.js'],
+  keywords: [
+    "portfolio",
+    "developer",
+    "full-stack",
+    "3D",
+    "react",
+    "next.js",
+    "three.js",
+  ],
 };
 
 export default function RootLayout({

@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { useEffect, useCallback, useRef } from 'react';
-import { useGameStore } from '@/store/gameStore';
+import { useEffect, useCallback, useRef } from "react";
+import { useGameStore } from "@/store/gameStore";
 
 interface KeyState {
   KeyW: boolean;
@@ -43,7 +43,8 @@ export interface FlightInput {
 
 export function useFlightControls() {
   const keys = useRef<KeyState>({ ...initialKeyState });
-  const { isFlying, isLanded, showMissionBriefing, isOnRunway } = useGameStore();
+  const { isFlying, isLanded, showMissionBriefing, isOnRunway } =
+    useGameStore();
 
   const handleKeyDown = useCallback(
     (event: KeyboardEvent) => {
@@ -51,7 +52,7 @@ export function useFlightControls() {
       if (showMissionBriefing) return;
       if (!isFlying && !isOnRunway) return;
       if (isLanded) return;
-      
+
       const code = event.code as keyof KeyState;
       if (code in keys.current) {
         keys.current[code] = true;
@@ -61,29 +62,26 @@ export function useFlightControls() {
     [isFlying, isLanded, showMissionBriefing, isOnRunway]
   );
 
-  const handleKeyUp = useCallback(
-    (event: KeyboardEvent) => {
-      const code = event.code as keyof KeyState;
-      if (code in keys.current) {
-        keys.current[code] = false;
-      }
-    },
-    []
-  );
+  const handleKeyUp = useCallback((event: KeyboardEvent) => {
+    const code = event.code as keyof KeyState;
+    if (code in keys.current) {
+      keys.current[code] = false;
+    }
+  }, []);
 
   useEffect(() => {
-    window.addEventListener('keydown', handleKeyDown);
-    window.addEventListener('keyup', handleKeyUp);
+    window.addEventListener("keydown", handleKeyDown);
+    window.addEventListener("keyup", handleKeyUp);
 
     return () => {
-      window.removeEventListener('keydown', handleKeyDown);
-      window.removeEventListener('keyup', handleKeyUp);
+      window.removeEventListener("keydown", handleKeyDown);
+      window.removeEventListener("keyup", handleKeyUp);
     };
   }, [handleKeyDown, handleKeyUp]);
 
   const getInput = useCallback((): FlightInput => {
     const k = keys.current;
-    
+
     return {
       pitch: (k.KeyW ? 1 : 0) - (k.KeyS ? 1 : 0),
       roll: (k.KeyD ? 1 : 0) - (k.KeyA ? 1 : 0),

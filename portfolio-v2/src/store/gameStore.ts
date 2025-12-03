@@ -1,6 +1,6 @@
-import { create } from 'zustand';
-import { persist } from 'zustand/middleware';
-import type { AircraftType, IslandType, GameState } from '@/types';
+import { create } from "zustand";
+import { persist } from "zustand/middleware";
+import type { AircraftType, IslandType, GameState } from "@/types";
 
 interface ExtendedGameState extends GameState {
   // Takeoff State
@@ -16,8 +16,8 @@ export const useGameStore = create<ExtendedGameState>()(
   persist(
     (set) => ({
       // Aircraft State
-      currentAircraft: 'b2-spirit',
-      unlockedAircraft: ['b2-spirit'],
+      currentAircraft: "b2-spirit",
+      unlockedAircraft: ["b2-spirit"],
       setAircraft: (aircraft) => set({ currentAircraft: aircraft }),
       unlockAircraft: (aircraft) =>
         set((state) => ({
@@ -57,7 +57,7 @@ export const useGameStore = create<ExtendedGameState>()(
       setLoading: (loading) => set({ isLoading: loading }),
     }),
     {
-      name: 'jet-portfolio-storage',
+      name: "jet-portfolio-storage",
       partialize: (state) => ({
         unlockedAircraft: state.unlockedAircraft,
       }),

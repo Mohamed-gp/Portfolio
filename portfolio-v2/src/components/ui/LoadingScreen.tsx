@@ -1,24 +1,25 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { useGameStore } from '@/store/gameStore';
-import { getRandomQuote } from '@/data/aircraft';
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useGameStore } from "@/store/gameStore";
+import { getRandomQuote } from "@/data/aircraft";
 
 const loadingMessages = [
-  'Initializing flight systems...',
-  'Calibrating instruments...',
-  'Loading portfolio payload...',
-  'Fueling creativity tanks...',
-  'Running pre-flight checks...',
-  'Engaging stealth protocols...',
-  'Deploying landing zones...',
+  "Initializing flight systems...",
+  "Calibrating instruments...",
+  "Loading portfolio payload...",
+  "Fueling creativity tanks...",
+  "Running pre-flight checks...",
+  "Engaging stealth protocols...",
+  "Deploying landing zones...",
 ];
 
 export function LoadingScreen() {
   const [currentMessage, setCurrentMessage] = useState(0);
   const [progress, setProgress] = useState(0);
-  const { setLoading, setShowMissionBriefing, currentAircraft } = useGameStore();
+  const { setLoading, setShowMissionBriefing, currentAircraft } =
+    useGameStore();
 
   useEffect(() => {
     const messageInterval = setInterval(() => {
@@ -70,15 +71,16 @@ export function LoadingScreen() {
               transition={{ delay: i * 0.2, duration: 0.5 }}
             />
           ))}
-          
+
           {/* Radar sweep */}
           <motion.div
             className="absolute left-1/2 top-1/2 h-[300px] w-1 origin-bottom -translate-x-1/2"
             style={{
-              background: 'linear-gradient(to top, transparent, rgba(16, 185, 129, 0.5))',
+              background:
+                "linear-gradient(to top, transparent, rgba(16, 185, 129, 0.5))",
             }}
             animate={{ rotate: 360 }}
-            transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}
+            transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
           />
         </div>
       </div>
@@ -140,10 +142,11 @@ export function LoadingScreen() {
       </div>
 
       {/* Scanlines Effect */}
-      <div 
+      <div
         className="pointer-events-none absolute inset-0 opacity-10"
         style={{
-          backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.3) 2px, rgba(0,0,0,0.3) 4px)',
+          backgroundImage:
+            "repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.3) 2px, rgba(0,0,0,0.3) 4px)",
         }}
       />
     </motion.div>

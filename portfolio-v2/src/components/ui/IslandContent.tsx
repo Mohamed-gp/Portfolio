@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import { motion, AnimatePresence } from 'framer-motion';
-import { useGameStore } from '@/store/gameStore';
-import { ISLANDS } from '@/data/islands';
-import { AIRCRAFT } from '@/data/aircraft';
-import type { IslandType } from '@/types';
+import { motion, AnimatePresence } from "framer-motion";
+import { useGameStore } from "@/store/gameStore";
+import { ISLANDS } from "@/data/islands";
+import { AIRCRAFT } from "@/data/aircraft";
+import type { IslandType } from "@/types";
 
 // About Island Content
 function AboutContent() {
@@ -16,16 +16,19 @@ function AboutContent() {
         </div>
         <div>
           <h3 className="text-2xl font-bold text-white">Mohamed Outerbah</h3>
-          <p className="text-emerald-400">Full-Stack Developer & 3D Web Enthusiast</p>
+          <p className="text-emerald-400">
+            Full-Stack Developer & 3D Web Enthusiast
+          </p>
         </div>
       </div>
-      
+
       <p className="text-slate-300 leading-relaxed">
-        Welcome aboard, pilot! I'm a passionate developer from Algeria with a love for 
-        crafting exceptional web experiences. From sleek landing pages to complex 3D 
-        applications, I turn ideas into reality with clean code and creative solutions.
+        Welcome aboard, pilot! I'm a passionate developer from Algeria with a
+        love for crafting exceptional web experiences. From sleek landing pages
+        to complex 3D applications, I turn ideas into reality with clean code
+        and creative solutions.
       </p>
-      
+
       <div className="grid grid-cols-2 gap-4 text-sm">
         <div className="rounded-lg bg-slate-800/50 p-3">
           <div className="text-slate-400">Location</div>
@@ -52,29 +55,29 @@ function AboutContent() {
 function ProjectsContent() {
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'Full-stack e-commerce solution with real-time inventory',
-      tech: ['Next.js', 'Prisma', 'Stripe'],
-      status: 'Completed',
+      title: "E-Commerce Platform",
+      description: "Full-stack e-commerce solution with real-time inventory",
+      tech: ["Next.js", "Prisma", "Stripe"],
+      status: "Completed",
     },
     {
-      title: 'Property Rentals App',
-      description: 'Modern property listing and booking platform',
-      tech: ['React', 'Node.js', 'MongoDB'],
-      status: 'Completed',
+      title: "Property Rentals App",
+      description: "Modern property listing and booking platform",
+      tech: ["React", "Node.js", "MongoDB"],
+      status: "Completed",
     },
     {
-      title: '3D Portfolio (This!)',
-      description: 'Interactive 3D portfolio with flight mechanics',
-      tech: ['Three.js', 'R3F', 'Framer'],
-      status: 'In Progress',
+      title: "3D Portfolio (This!)",
+      description: "Interactive 3D portfolio with flight mechanics",
+      tech: ["Three.js", "R3F", "Framer"],
+      status: "In Progress",
     },
   ];
 
   return (
     <div className="space-y-4">
       <p className="text-slate-400 text-sm">Missions completed and ongoing:</p>
-      
+
       {projects.map((project, i) => (
         <motion.div
           key={project.title}
@@ -85,18 +88,23 @@ function ProjectsContent() {
         >
           <div className="flex items-start justify-between">
             <h4 className="font-semibold text-white">{project.title}</h4>
-            <span className={`text-xs px-2 py-1 rounded ${
-              project.status === 'Completed' 
-                ? 'bg-emerald-500/20 text-emerald-400'
-                : 'bg-amber-500/20 text-amber-400'
-            }`}>
+            <span
+              className={`text-xs px-2 py-1 rounded ${
+                project.status === "Completed"
+                  ? "bg-emerald-500/20 text-emerald-400"
+                  : "bg-amber-500/20 text-amber-400"
+              }`}
+            >
               {project.status}
             </span>
           </div>
           <p className="mt-1 text-sm text-slate-400">{project.description}</p>
           <div className="mt-2 flex flex-wrap gap-2">
             {project.tech.map((t) => (
-              <span key={t} className="text-xs bg-slate-700 px-2 py-1 rounded text-cyan-400">
+              <span
+                key={t}
+                className="text-xs bg-slate-700 px-2 py-1 rounded text-cyan-400"
+              >
                 {t}
               </span>
             ))}
@@ -110,23 +118,25 @@ function ProjectsContent() {
 // Skills Island Content
 function SkillsContent() {
   const skills = [
-    { name: 'React / Next.js', level: 95 },
-    { name: 'TypeScript', level: 90 },
-    { name: 'Node.js', level: 85 },
-    { name: 'Three.js / R3F', level: 75 },
-    { name: 'PostgreSQL / MongoDB', level: 80 },
-    { name: 'Tailwind CSS', level: 95 },
+    { name: "React / Next.js", level: 95 },
+    { name: "TypeScript", level: 90 },
+    { name: "Node.js", level: 85 },
+    { name: "Three.js / R3F", level: 75 },
+    { name: "PostgreSQL / MongoDB", level: 80 },
+    { name: "Tailwind CSS", level: 95 },
   ];
 
   return (
     <div className="space-y-4">
-      <p className="text-slate-400 text-sm">Technical arsenal at your disposal:</p>
-      
+      <p className="text-slate-400 text-sm">
+        Technical arsenal at your disposal:
+      </p>
+
       {skills.map((skill, i) => (
         <motion.div
           key={skill.name}
           initial={{ opacity: 0, width: 0 }}
-          animate={{ opacity: 1, width: '100%' }}
+          animate={{ opacity: 1, width: "100%" }}
           transition={{ delay: i * 0.1 }}
         >
           <div className="flex justify-between text-sm mb-1">
@@ -152,7 +162,7 @@ function ContactContent() {
   return (
     <div className="space-y-4">
       <p className="text-slate-400 text-sm">Establish communication:</p>
-      
+
       <form className="space-y-3">
         <input
           type="text"
@@ -178,11 +188,26 @@ function ContactContent() {
           📡 Send Transmission
         </motion.button>
       </form>
-      
+
       <div className="flex justify-center gap-4 pt-2">
-        <a href="#" className="text-slate-400 hover:text-white transition-colors">GitHub</a>
-        <a href="#" className="text-slate-400 hover:text-white transition-colors">LinkedIn</a>
-        <a href="#" className="text-slate-400 hover:text-white transition-colors">Twitter</a>
+        <a
+          href="#"
+          className="text-slate-400 hover:text-white transition-colors"
+        >
+          GitHub
+        </a>
+        <a
+          href="#"
+          className="text-slate-400 hover:text-white transition-colors"
+        >
+          LinkedIn
+        </a>
+        <a
+          href="#"
+          className="text-slate-400 hover:text-white transition-colors"
+        >
+          Twitter
+        </a>
       </div>
     </div>
   );
@@ -191,49 +216,57 @@ function ContactContent() {
 // Hangar Island Content
 function HangarContent() {
   const { unlockedAircraft, unlockAircraft } = useGameStore();
-  
-  const handleUnlock = (id: 'f15-eagle' | 'f35-lightning') => {
+
+  const handleUnlock = (id: "f15-eagle" | "f35-lightning") => {
     unlockAircraft(id);
   };
 
   return (
     <div className="space-y-4">
-      <p className="text-slate-400 text-sm">Welcome to the secret hangar! Unlock new aircraft:</p>
-      
+      <p className="text-slate-400 text-sm">
+        Welcome to the secret hangar! Unlock new aircraft:
+      </p>
+
       {Object.values(AIRCRAFT).map((aircraft) => {
         const isUnlocked = unlockedAircraft.includes(aircraft.id);
-        
+
         return (
           <div
             key={aircraft.id}
             className={`rounded-lg border p-4 ${
               isUnlocked
-                ? 'border-emerald-500/50 bg-emerald-500/10'
-                : 'border-slate-700 bg-slate-800/50'
+                ? "border-emerald-500/50 bg-emerald-500/10"
+                : "border-slate-700 bg-slate-800/50"
             }`}
           >
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <span className="text-2xl">{isUnlocked ? '✈️' : '🔒'}</span>
+                <span className="text-2xl">{isUnlocked ? "✈️" : "🔒"}</span>
                 <div>
                   <h4 className="font-semibold text-white">{aircraft.name}</h4>
-                  <p className="text-xs text-slate-400">{aircraft.description}</p>
+                  <p className="text-xs text-slate-400">
+                    {aircraft.description}
+                  </p>
                 </div>
               </div>
-              
-              {!isUnlocked && aircraft.id !== 'b2-spirit' && (
+
+              {!isUnlocked && aircraft.id !== "b2-spirit" && (
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  onClick={() => handleUnlock(aircraft.id as 'f15-eagle' | 'f35-lightning')}
+                  onClick={() =>
+                    handleUnlock(aircraft.id as "f15-eagle" | "f35-lightning")
+                  }
                   className="rounded bg-amber-500 px-3 py-1 text-sm font-semibold text-slate-900"
                 >
                   UNLOCK
                 </motion.button>
               )}
-              
+
               {isUnlocked && (
-                <span className="text-xs text-emerald-400 font-mono">UNLOCKED ✓</span>
+                <span className="text-xs text-emerald-400 font-mono">
+                  UNLOCKED ✓
+                </span>
               )}
             </div>
           </div>
@@ -254,15 +287,15 @@ export function IslandContent() {
 
   const getContent = (island: IslandType) => {
     switch (island) {
-      case 'about':
+      case "about":
         return <AboutContent />;
-      case 'projects':
+      case "projects":
         return <ProjectsContent />;
-      case 'skills':
+      case "skills":
         return <SkillsContent />;
-      case 'contact':
+      case "contact":
         return <ContactContent />;
-      case 'hangar':
+      case "hangar":
         return <HangarContent />;
       default:
         return null;
@@ -288,10 +321,10 @@ export function IslandContent() {
           className="relative w-full max-w-lg overflow-hidden rounded-2xl border border-slate-700 bg-slate-900/95"
         >
           {/* Header */}
-          <div 
+          <div
             className="p-4"
-            style={{ 
-              background: `linear-gradient(135deg, ${island.color}33, transparent)` 
+            style={{
+              background: `linear-gradient(135deg, ${island.color}33, transparent)`,
             }}
           >
             <div className="flex items-center gap-3">

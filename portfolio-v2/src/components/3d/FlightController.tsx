@@ -1,19 +1,19 @@
-'use client';
+"use client";
 
-import { useRef, useEffect, useCallback } from 'react';
-import { useFrame, useThree } from '@react-three/fiber';
-import * as THREE from 'three';
-import { useFlightControls } from '@/hooks/useFlightControls';
-import { useGameStore } from '@/store/gameStore';
-import { AIRCRAFT } from '@/data/aircraft';
-import { ISLAND_LIST } from '@/data/islands';
-import { Aircraft } from './Aircraft';
+import { useRef, useEffect, useCallback } from "react";
+import { useFrame, useThree } from "@react-three/fiber";
+import * as THREE from "three";
+import { useFlightControls } from "@/hooks/useFlightControls";
+import { useGameStore } from "@/store/gameStore";
+import { AIRCRAFT } from "@/data/aircraft";
+import { ISLAND_LIST } from "@/data/islands";
+import { Aircraft } from "./Aircraft";
 
 export function FlightController() {
   const groupRef = useRef<THREE.Group>(null);
   const velocityRef = useRef(new THREE.Vector3(0, 5, -60));
   const angularVelRef = useRef(new THREE.Vector3());
-  
+
   const { camera } = useThree();
   const { getInput, resetKeys } = useFlightControls();
   const {
@@ -40,28 +40,31 @@ export function FlightController() {
   }, [groundSpeed]);
 
   // Check island proximity
-  const checkIslandProximity = useCallback((position: THREE.Vector3) => {
-    let nearestIsland = null;
-    let nearestDistance = Infinity;
+  const checkIslandProximity = useCallback(
+    (position: THREE.Vector3) => {
+      let nearestIsland = null;
+      let nearestDistance = Infinity;
 
-    for (const island of ISLAND_LIST) {
-      const islandPos = new THREE.Vector3(...island.position);
-      const distance = position.distanceTo(islandPos);
-      
-      if (distance < nearestDistance) {
-        nearestDistance = distance;
-        nearestIsland = island;
+      for (const island of ISLAND_LIST) {
+        const islandPos = new THREE.Vector3(...island.position);
+        const distance = position.distanceTo(islandPos);
+
+        if (distance < nearestDistance) {
+          nearestDistance = distance;
+          nearestIsland = island;
+        }
       }
-    }
 
-    if (nearestDistance < 30 && nearestIsland) {
-      setCurrentIsland(nearestIsland.id);
-      return { island: nearestIsland, canLand: nearestDistance < 20 };
-    }
-    
-    setCurrentIsland(null);
-    return { island: null, canLand: false };
-  }, [setCurrentIsland]);
+      if (nearestDistance < 30 && nearestIsland) {
+        setCurrentIsland(nearestIsland.id);
+        return { island: nearestIsland, canLand: nearestDistance < 20 };
+      }
+
+      setCurrentIsland(null);
+      return { island: null, canLand: false };
+    },
+    [setCurrentIsland]
+  );
 
   useFrame((state, delta) => {
     if (!groupRef.current || !isFlying || isLanded) return;
@@ -70,26 +73,28 @@ export function FlightController() {
     const group = groupRef.current;
     const velocity = velocityRef.current;
     const angularVel = angularVelRef.current;
-    
+
     const input = getInput();
     const agility = aircraftData.agility;
     const speedMod = aircraftData.speed;
 
     // Get directions
-    const forward = new THREE.Vector3(0, 0, -1).applyQuaternion(group.quaternion);
+    const forward = new THREE.Vector3(0, 0, -1).applyQuaternion(
+      group.quaternion
+    );
     const up = new THREE.Vector3(0, 1, 0).applyQuaternion(group.quaternion);
     const right = new THREE.Vector3(1, 0, 0).applyQuaternion(group.quaternion);
 
     // Simple thrust
     const baseThrust = input.boost ? 120 : 80;
     const thrust = baseThrust * speedMod;
-    
+
     // Apply thrust
     velocity.add(forward.clone().multiplyScalar(thrust * dt));
-    
+
     // Simple gravity
     velocity.y -= 20 * dt;
-    
+
     // Simple lift (proportional to speed and AoA)
     const speed = velocity.length();
     const lift = speed * 0.4;
@@ -129,27 +134,32 @@ export function FlightController() {
     }
 
     // Camera follow
-    const camOffset = forward.clone().multiplyScalar(25).add(new THREE.Vector3(0, 8, 0));
+    const camOffset = forward
+      .clone()
+      .multiplyScalar(25)
+      .add(new THREE.Vector3(0, 8, 0));
     const idealCamPos = group.position.clone().add(camOffset);
     camera.position.lerp(idealCamPos, 0.05);
-    
-    const lookTarget = group.position.clone().add(forward.clone().multiplyScalar(-50));
+
+    const lookTarget = group.position
+      .clone()
+      .add(forward.clone().multiplyScalar(-50));
     camera.lookAt(lookTarget);
 
     // Update store
     setSpeed(speed / 100);
     setAltitude(group.position.y);
-    
+
     const headingRad = Math.atan2(forward.x, -forward.z);
-    setHeading(((headingRad * 180 / Math.PI) + 360) % 360);
+    setHeading(((headingRad * 180) / Math.PI + 360) % 360);
 
     // Landing check
     const { canLand, island } = checkIslandProximity(group.position);
-    
+
     if (input.land && canLand && island && speed < 40) {
       setLanded(true);
       resetKeys();
-      
+
       const targetPos = new THREE.Vector3(...island.position);
       targetPos.y += 8;
       group.position.copy(targetPos);

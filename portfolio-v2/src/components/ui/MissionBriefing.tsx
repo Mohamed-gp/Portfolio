@@ -1,42 +1,43 @@
-'use client';
+"use client";
 
-import { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { useGameStore } from '@/store/gameStore';
-import { AIRCRAFT } from '@/data/aircraft';
+import { useState, useEffect, useCallback } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useGameStore } from "@/store/gameStore";
+import { AIRCRAFT } from "@/data/aircraft";
 
 const briefingLines = [
-  '> SYSTEM ONLINE',
-  '> PILOT IDENTIFIED: Mohamed Outerbah',
-  '> CLEARANCE LEVEL: Full-Stack Developer',
-  '> ',
-  '> MISSION BRIEFING:',
-  '> Your objective is to explore the portfolio airspace.',
-  '> Multiple landing zones detected across the region.',
-  '> ',
-  '> TAKEOFF PROCEDURE:',
-  '> Hold W or SHIFT to accelerate on runway',
-  '> At rotation speed, pull back (W) to lift off',
-  '> ',
-  '> FLIGHT CONTROLS:',
-  '> W/S - Pitch control (nose up/down)',
-  '> A/D - Roll control (bank left/right)',
-  '> Q/E - Yaw/Turn (rudder)',
-  '> SHIFT - Afterburner (max thrust)',
-  '> SPACE - Land on island when near',
-  '> ',
-  '> AIRCRAFT STATUS: Ready for deployment',
-  '> ',
-  '> Good luck, pilot. The skies are yours.',
-  '> ',
-  '> Press ENTER or click to taxi to runway...',
+  "> SYSTEM ONLINE",
+  "> PILOT IDENTIFIED: Mohamed Outerbah",
+  "> CLEARANCE LEVEL: Full-Stack Developer",
+  "> ",
+  "> MISSION BRIEFING:",
+  "> Your objective is to explore the portfolio airspace.",
+  "> Multiple landing zones detected across the region.",
+  "> ",
+  "> TAKEOFF PROCEDURE:",
+  "> Hold W or SHIFT to accelerate on runway",
+  "> At rotation speed, pull back (W) to lift off",
+  "> ",
+  "> FLIGHT CONTROLS:",
+  "> W/S - Pitch control (nose up/down)",
+  "> A/D - Roll control (bank left/right)",
+  "> Q/E - Yaw/Turn (rudder)",
+  "> SHIFT - Afterburner (max thrust)",
+  "> SPACE - Land on island when near",
+  "> ",
+  "> AIRCRAFT STATUS: Ready for deployment",
+  "> ",
+  "> Good luck, pilot. The skies are yours.",
+  "> ",
+  "> Press ENTER or click to taxi to runway...",
 ];
 
 export function MissionBriefing() {
   const [displayedLines, setDisplayedLines] = useState<string[]>([]);
   const [currentLineIndex, setCurrentLineIndex] = useState(0);
   const [isComplete, setIsComplete] = useState(false);
-  const { setShowMissionBriefing, setOnRunway, currentAircraft } = useGameStore();
+  const { setShowMissionBriefing, setOnRunway, currentAircraft } =
+    useGameStore();
   const aircraft = AIRCRAFT[currentAircraft];
 
   const startMission = useCallback(() => {
@@ -66,15 +67,15 @@ export function MissionBriefing() {
   // Listen for enter key
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Enter' && isComplete) {
+      if (event.key === "Enter" && isComplete) {
         startMission();
-      } else if (event.key === 'Escape') {
+      } else if (event.key === "Escape") {
         skipBriefing();
       }
     };
 
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
   }, [isComplete, startMission, skipBriefing]);
 
   return (
@@ -112,17 +113,19 @@ export function MissionBriefing() {
                 initial={{ opacity: 0, x: -10 }}
                 animate={{ opacity: 1, x: 0 }}
                 className={`${
-                  line.startsWith('> MISSION') || line.startsWith('> FLIGHT') || line.startsWith('> TAKEOFF')
-                    ? 'text-emerald-400 font-bold'
-                    : line.startsWith('> AIRCRAFT')
-                    ? 'text-cyan-400'
-                    : 'text-green-400'
+                  line.startsWith("> MISSION") ||
+                  line.startsWith("> FLIGHT") ||
+                  line.startsWith("> TAKEOFF")
+                    ? "text-emerald-400 font-bold"
+                    : line.startsWith("> AIRCRAFT")
+                    ? "text-cyan-400"
+                    : "text-green-400"
                 }`}
               >
                 {line}
               </motion.div>
             ))}
-            
+
             {/* Blinking Cursor */}
             {!isComplete && (
               <motion.span

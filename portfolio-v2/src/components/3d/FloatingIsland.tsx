@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import { useRef } from 'react';
-import { useFrame } from '@react-three/fiber';
-import { Text } from '@react-three/drei';
-import * as THREE from 'three';
-import type { Island as IslandType } from '@/types';
+import { useRef } from "react";
+import { useFrame } from "@react-three/fiber";
+import { Text } from "@react-three/drei";
+import * as THREE from "three";
+import type { Island as IslandType } from "@/types";
 
 interface FloatingIslandProps {
   island: IslandType;
@@ -28,15 +28,19 @@ function SimpleTree({ position }: { position: [number, number, number] }) {
   );
 }
 
-export function FloatingIsland({ island, isNearby = false }: FloatingIslandProps) {
+export function FloatingIsland({
+  island,
+  isNearby = false,
+}: FloatingIslandProps) {
   const groupRef = useRef<THREE.Group>(null);
   const floatOffset = useRef(Math.random() * Math.PI * 2);
 
   useFrame((state) => {
     if (groupRef.current) {
       // Simple floating animation
-      groupRef.current.position.y = 
-        island.position[1] + Math.sin(state.clock.elapsedTime * 0.5 + floatOffset.current) * 2;
+      groupRef.current.position.y =
+        island.position[1] +
+        Math.sin(state.clock.elapsedTime * 0.5 + floatOffset.current) * 2;
     }
   });
 
@@ -47,7 +51,7 @@ export function FloatingIsland({ island, isNearby = false }: FloatingIslandProps
         <cylinderGeometry args={[12, 8, 6, 8]} />
         <meshStandardMaterial color="#4a5568" roughness={0.9} />
       </mesh>
-      
+
       {/* Top grass layer */}
       <mesh position={[0, 3.5, 0]}>
         <cylinderGeometry args={[12, 12, 1, 8]} />
@@ -63,7 +67,11 @@ export function FloatingIsland({ island, isNearby = false }: FloatingIslandProps
       {/* Landing pad marker */}
       <mesh position={[0, 4.2, 0]} rotation={[-Math.PI / 2, 0, 0]}>
         <ringGeometry args={[3, 4, 16]} />
-        <meshStandardMaterial color={island.color} emissive={island.color} emissiveIntensity={0.5} />
+        <meshStandardMaterial
+          color={island.color}
+          emissive={island.color}
+          emissiveIntensity={0.5}
+        />
       </mesh>
 
       {/* Trees */}
@@ -86,9 +94,9 @@ export function FloatingIsland({ island, isNearby = false }: FloatingIslandProps
       {isNearby && (
         <mesh position={[0, 8, 0]}>
           <sphereGeometry args={[1, 8, 8]} />
-          <meshStandardMaterial 
-            color={island.color} 
-            emissive={island.color} 
+          <meshStandardMaterial
+            color={island.color}
+            emissive={island.color}
             emissiveIntensity={1}
             transparent
             opacity={0.8}
@@ -97,11 +105,11 @@ export function FloatingIsland({ island, isNearby = false }: FloatingIslandProps
       )}
 
       {/* Beacon light */}
-      <pointLight 
-        position={[0, 10, 0]} 
-        color={island.color} 
-        intensity={isNearby ? 3 : 1} 
-        distance={50} 
+      <pointLight
+        position={[0, 10, 0]}
+        color={island.color}
+        intensity={isNearby ? 3 : 1}
+        distance={50}
       />
     </group>
   );

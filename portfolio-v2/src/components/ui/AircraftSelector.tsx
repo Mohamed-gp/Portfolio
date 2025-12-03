@@ -1,14 +1,15 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { useGameStore } from '@/store/gameStore';
-import { AIRCRAFT } from '@/data/aircraft';
-import type { AircraftType } from '@/types';
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useGameStore } from "@/store/gameStore";
+import { AIRCRAFT } from "@/data/aircraft";
+import type { AircraftType } from "@/types";
 
 export function AircraftSelector() {
   const [isOpen, setIsOpen] = useState(false);
-  const { currentAircraft, unlockedAircraft, setAircraft, isFlying } = useGameStore();
+  const { currentAircraft, unlockedAircraft, setAircraft, isFlying } =
+    useGameStore();
   const aircraft = AIRCRAFT[currentAircraft];
 
   const handleSelect = (id: AircraftType) => {
@@ -58,41 +59,57 @@ export function AircraftSelector() {
               return (
                 <motion.button
                   key={a.id}
-                  whileHover={isUnlocked ? { backgroundColor: 'rgba(16, 185, 129, 0.1)' } : {}}
+                  whileHover={
+                    isUnlocked
+                      ? { backgroundColor: "rgba(16, 185, 129, 0.1)" }
+                      : {}
+                  }
                   onClick={() => handleSelect(a.id)}
                   disabled={!isUnlocked}
                   className={`flex w-full items-start gap-3 p-4 text-left transition-colors ${
                     isSelected
-                      ? 'bg-emerald-500/20 border-l-2 border-emerald-500'
-                      : ''
-                  } ${!isUnlocked ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}`}
+                      ? "bg-emerald-500/20 border-l-2 border-emerald-500"
+                      : ""
+                  } ${
+                    !isUnlocked
+                      ? "opacity-50 cursor-not-allowed"
+                      : "cursor-pointer"
+                  }`}
                 >
-                  <div 
+                  <div
                     className="mt-1 h-8 w-8 rounded-full flex items-center justify-center"
                     style={{ backgroundColor: a.color }}
                   >
-                    {isUnlocked ? '✈️' : '🔒'}
+                    {isUnlocked ? "✈️" : "🔒"}
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center justify-between">
-                      <span className={isUnlocked ? 'text-white' : 'text-slate-500'}>
+                      <span
+                        className={isUnlocked ? "text-white" : "text-slate-500"}
+                      >
                         {a.name}
                       </span>
                       {!isUnlocked && (
                         <span className="text-xs text-amber-500">LOCKED</span>
                       )}
                     </div>
-                    <p className="mt-1 text-xs text-slate-400">{a.description}</p>
-                    
+                    <p className="mt-1 text-xs text-slate-400">
+                      {a.description}
+                    </p>
+
                     {/* Stats */}
                     <div className="mt-2 flex gap-4 text-xs">
                       <div>
                         <span className="text-slate-500">Speed: </span>
-                        <span className="text-cyan-400">{Math.round(a.speed * 100)}%</span>
+                        <span className="text-cyan-400">
+                          {Math.round(a.speed * 100)}%
+                        </span>
                       </div>
                       <div>
                         <span className="text-slate-500">Agility: </span>
-                        <span className="text-amber-400">{Math.round(a.agility * 100)}%</span>
+                        <span className="text-amber-400">
+                          {Math.round(a.agility * 100)}%
+                        </span>
                       </div>
                     </div>
                   </div>

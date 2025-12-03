@@ -1,5 +1,5 @@
 // Aircraft Types
-export type AircraftType = 'b2-spirit' | 'f15-eagle' | 'f35-lightning';
+export type AircraftType = "b2-spirit" | "f15-eagle" | "f35-lightning";
 
 export interface Aircraft {
   id: AircraftType;
@@ -13,7 +13,7 @@ export interface Aircraft {
 }
 
 // Island/Landing Zone Types
-export type IslandType = 'about' | 'projects' | 'skills' | 'contact' | 'hangar';
+export type IslandType = "about" | "projects" | "skills" | "contact" | "hangar";
 
 export interface Island {
   id: IslandType;

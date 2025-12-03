@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { Text } from '@react-three/drei';
+import { Text } from "@react-three/drei";
 
 // Simple runway component
 export function Runway() {
@@ -14,7 +14,7 @@ export function Runway() {
         <boxGeometry args={[300, 4, 500]} />
         <meshStandardMaterial color="#1e3a1e" roughness={1} />
       </mesh>
-      
+
       {/* Main runway surface */}
       <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.1, 0]}>
         <planeGeometry args={[runwayWidth, runwayLength]} />
@@ -23,9 +23,9 @@ export function Runway() {
 
       {/* Runway centerline */}
       {Array.from({ length: 12 }).map((_, i) => (
-        <mesh 
-          key={i} 
-          position={[0, 0.12, -170 + i * 30]} 
+        <mesh
+          key={i}
+          position={[0, 0.12, -170 + i * 30]}
           rotation={[-Math.PI / 2, 0, 0]}
         >
           <planeGeometry args={[0.5, 10]} />
@@ -45,9 +45,9 @@ export function Runway() {
 
       {/* Threshold markings */}
       {Array.from({ length: 6 }).map((_, i) => (
-        <mesh 
-          key={`thresh-${i}`} 
-          position={[(i - 2.5) * 4, 0.12, 180]} 
+        <mesh
+          key={`thresh-${i}`}
+          position={[(i - 2.5) * 4, 0.12, 180]}
           rotation={[-Math.PI / 2, 0, 0]}
         >
           <planeGeometry args={[1.5, 20]} />
@@ -81,7 +81,13 @@ export function Runway() {
         </mesh>
         <mesh position={[0, 20, 0]}>
           <cylinderGeometry args={[5, 5, 8, 8]} />
-          <meshStandardMaterial color="#0ea5e9" metalness={0.5} roughness={0.3} transparent opacity={0.7} />
+          <meshStandardMaterial
+            color="#0ea5e9"
+            metalness={0.5}
+            roughness={0.3}
+            transparent
+            opacity={0.7}
+          />
         </mesh>
       </group>
 
@@ -98,11 +104,19 @@ export function Runway() {
         <group key={`light-${i}`}>
           <mesh position={[-15, 0.3, -180 + i * 40]}>
             <sphereGeometry args={[0.3, 6, 6]} />
-            <meshStandardMaterial color="#22c55e" emissive="#22c55e" emissiveIntensity={1} />
+            <meshStandardMaterial
+              color="#22c55e"
+              emissive="#22c55e"
+              emissiveIntensity={1}
+            />
           </mesh>
           <mesh position={[15, 0.3, -180 + i * 40]}>
             <sphereGeometry args={[0.3, 6, 6]} />
-            <meshStandardMaterial color="#22c55e" emissive="#22c55e" emissiveIntensity={1} />
+            <meshStandardMaterial
+              color="#22c55e"
+              emissive="#22c55e"
+              emissiveIntensity={1}
+            />
           </mesh>
         </group>
       ))}
@@ -111,7 +125,11 @@ export function Runway() {
       {Array.from({ length: 6 }).map((_, i) => (
         <mesh key={`green-${i}`} position={[(i - 2.5) * 5, 0.3, 195]}>
           <sphereGeometry args={[0.3, 6, 6]} />
-          <meshStandardMaterial color="#22c55e" emissive="#22c55e" emissiveIntensity={2} />
+          <meshStandardMaterial
+            color="#22c55e"
+            emissive="#22c55e"
+            emissiveIntensity={2}
+          />
         </mesh>
       ))}
     </group>
