@@ -16,17 +16,15 @@ function AboutContent() {
         </div>
         <div>
           <h3 className="text-2xl font-bold text-white">Mohamed Outerbah</h3>
-          <p className="text-emerald-400">
-            Full-Stack Developer & 3D Web Enthusiast
-          </p>
+          <p className="text-emerald-400">Full-Stack Developer</p>
         </div>
       </div>
 
       <p className="text-slate-300 leading-relaxed">
-        Welcome aboard, pilot! I'm a passionate developer from Algeria with a
-        love for crafting exceptional web experiences. From sleek landing pages
-        to complex 3D applications, I turn ideas into reality with clean code
-        and creative solutions.
+        Welcome aboard, pilot! I'm a passionate developer from Algeria with 4+
+        years of experience building production applications. From multi-service
+        logistics platforms to AI-powered analytics, I deliver scalable
+        full-stack solutions for international clients.
       </p>
 
       <div className="grid grid-cols-2 gap-4 text-sm">
@@ -40,11 +38,11 @@ function AboutContent() {
         </div>
         <div className="rounded-lg bg-slate-800/50 p-3">
           <div className="text-slate-400">Experience</div>
-          <div className="text-white">3+ Years</div>
+          <div className="text-white">4+ Years</div>
         </div>
         <div className="rounded-lg bg-slate-800/50 p-3">
           <div className="text-slate-400">Specialty</div>
-          <div className="text-white">React & Next.js</div>
+          <div className="text-white">React, Next.js & NestJS</div>
         </div>
       </div>
     </div>
@@ -55,22 +53,31 @@ function AboutContent() {
 function ProjectsContent() {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution with real-time inventory",
-      tech: ["Next.js", "Prisma", "Stripe"],
-      status: "Completed",
+      title: "HaulHub - Logistics Platform",
+      description:
+        "Multi-service logistics platform (Uber-like) with 5+ user roles",
+      tech: ["Next.js", "NestJS", "React Native"],
+      status: "Live",
     },
     {
-      title: "Property Rentals App",
-      description: "Modern property listing and booking platform",
-      tech: ["React", "Node.js", "MongoDB"],
-      status: "Completed",
+      title: "Analytics Depot - AI Platform",
+      description: "RAG-based AI system with FastAPI and Next.js frontend",
+      tech: ["FastAPI", "Next.js", "Python"],
+      status: "Live",
     },
     {
-      title: "3D Portfolio (This!)",
-      description: "Interactive 3D portfolio with flight mechanics",
-      tech: ["Three.js", "R3F", "Framer"],
-      status: "In Progress",
+      title: "Cribbix - Real Estate",
+      description:
+        "Real estate platform with Redis caching and Stripe subscriptions",
+      tech: ["Next.js", "Redis", "Stripe"],
+      status: "Live",
+    },
+    {
+      title: "Munia - Open Source",
+      description: "Contributed to Next.js project with 300+ GitHub stars",
+      tech: ["Next.js", "TypeScript", "Auth"],
+      status: "Completed",
+      url: "https://munia.norcio.dev/",
     },
   ];
 
@@ -120,9 +127,11 @@ function SkillsContent() {
   const skills = [
     { name: "React / Next.js", level: 95 },
     { name: "TypeScript", level: 90 },
-    { name: "Node.js", level: 85 },
-    { name: "Three.js / R3F", level: 75 },
-    { name: "PostgreSQL / MongoDB", level: 80 },
+    { name: "Node.js / NestJS", level: 88 },
+    { name: "FastAPI / Python", level: 80 },
+    { name: "PostgreSQL / Redis", level: 85 },
+    { name: "Docker / DevOps", level: 80 },
+    { name: "React Native / Expo", level: 85 },
     { name: "Tailwind CSS", level: 95 },
   ];
 
@@ -191,22 +200,26 @@ function ContactContent() {
 
       <div className="flex justify-center gap-4 pt-2">
         <a
-          href="#"
+          href="https://github.com/Mohamed-gp"
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-slate-400 hover:text-white transition-colors"
         >
           GitHub
         </a>
         <a
-          href="#"
+          href="https://www.linkedin.com/in/mohamedouterbah"
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-slate-400 hover:text-white transition-colors"
         >
           LinkedIn
         </a>
         <a
-          href="#"
+          href="mailto:mohamedterba6@gmail.com"
           className="text-slate-400 hover:text-white transition-colors"
         >
-          Twitter
+          Email
         </a>
       </div>
     </div>

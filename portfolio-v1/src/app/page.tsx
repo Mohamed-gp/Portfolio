@@ -1,19 +1,25 @@
+import dynamic from "next/dynamic";
 import Hero from "@/components/hero/Hero";
-import About from "@/components/about/About";
-import Skills from "@/components/skills/Skills";
-import Projects from "@/components/projects/Projects";
-import Testimonials from "@/components/testimonials/Testimonials";
-import Experience from "@/components/experience/Experience";
-import Footer from "@/components/foooter/Footer";
 import Header from "@/components/header/Header";
-import ScrollToTop from "@/components/scroll-to-top/ScrollToTop";
-import Contact from "@/components/contact/Contact";
-import CTASection from "@/components/cta/CTASection";
-import StatsSection from "@/components/stats/StatsSection";
-import ConsoleLog from "@/components/consoleLog/ConsoleLog";
+import Footer from "@/components/foooter/Footer";
+
+const About = dynamic(() => import("@/components/about/About"));
+const Skills = dynamic(() => import("@/components/skills/Skills"));
+const Projects = dynamic(() => import("@/components/projects/Projects"));
+const Testimonials = dynamic(
+  () => import("@/components/testimonials/Testimonials"),
+);
+const Experience = dynamic(() => import("@/components/experience/Experience"));
+const ScrollToTop = dynamic(
+  () => import("@/components/scroll-to-top/ScrollToTop"),
+);
+const Contact = dynamic(() => import("@/components/contact/Contact"));
+const CTASection = dynamic(() => import("@/components/cta/CTASection"));
+const StatsSection = dynamic(() => import("@/components/stats/StatsSection"));
+const ConsoleLog = dynamic(() => import("@/components/consoleLog/ConsoleLog"));
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <>
       <Header />
       <Hero />
       <StatsSection />
@@ -27,6 +33,6 @@ export default function Home() {
       <Footer />
       <ScrollToTop />
       <ConsoleLog />
-    </main>
+    </>
   );
 }

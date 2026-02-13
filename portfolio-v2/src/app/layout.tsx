@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Mohamed Outerbah | 3D Portfolio",
   description:
-    "An interactive 3D portfolio experience. Fly through the skies and explore my work as a Full-Stack Developer.",
+    "An interactive 3D portfolio experience. Fly through the skies and explore the work of a Full-Stack Developer with 4+ years of experience.",
   keywords: [
     "portfolio",
     "developer",
@@ -24,6 +24,9 @@ export const metadata: Metadata = {
     "react",
     "next.js",
     "three.js",
+    "nestjs",
+    "fastapi",
+    "react native",
   ],
 };
 

@@ -2,32 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --primary-color: #0080ff;
+/* Animation delay utilities for blob animations */
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+.animation-delay-4000 {
+  animation-delay: 4s;
 }
 
-.text-primary {
-  color: var(--primary-color);
-}
-
-.bg-primary {
-  background-color: var(--primary-color);
-}
-
-.border-primary {
-  border-color: var(--primary-color);
-}
-
-.hover\:bg-primary:hover {
-  background-color: var(--primary-color);
-}
-
-.hover\:text-primary:hover {
-  color: var(--primary-color);
-}
-
-*,
-body {
+html {
   scroll-behavior: smooth;
 }
 html,
@@ -41,12 +24,6 @@ body {
   min-height: 100vh;
 }
 
-#__next {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
 main {
   flex: 1 0 auto;
 }
@@ -55,34 +32,11 @@ footer {
   flex-shrink: 0;
 }
 
-
-
 a,
 button,
 [role="button"] {
   cursor: pointer;
 }
-
-.mouse-shadow {
-  position: fixed;
-  pointer-events: none;
-  z-index: 9999;
-}
-
-@keyframes flood {
-  0% {
-    transform: translateY(100%);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-.flood-animation {
-  animation: flood 2s ease-out forwards;
-}
-
-
 
 @layer base {
   :root {
@@ -140,8 +94,6 @@ button,
   }
 }
 
-
-
 @layer base {
   * {
     @apply border-border;
@@ -149,7 +101,7 @@ button,
   body {
     @apply bg-background text-foreground;
   }
-  
+
   /* Remove focus outline from main and non-interactive elements */
   main:focus,
   main:focus-visible,
@@ -159,7 +111,7 @@ button,
     outline: none !important;
     box-shadow: none !important;
   }
-  
+
   /* Keep focus styles for interactive elements (accessibility) */
   a:focus-visible,
   button:focus-visible,

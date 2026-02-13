@@ -28,12 +28,11 @@ export const viewport: Viewport = {
 // Comprehensive metadata for better SEO
 export const metadata: Metadata = {
   title: {
-    default:
-      "Mohamed Outerbah - Founding Engineer | Full Stack Developer | AI/ML",
+    default: "Mohamed Outerbah - Full-Stack Developer | React & Next.js Expert",
     template: "%s | Mohamed Outerbah",
   },
   description:
-    "Founding Engineer & Technical Lead with 99%+ uptime track record. Expert in FastAPI, React Native, Next.js, AI/ML, and full-stack development. International experience (USA, UK, Netherlands, Japan). Fiverr Level 1 seller with 5/5 rating. Hackathon winner. 100/100 Lighthouse SEO scores.",
+    "Full-Stack Developer with 4+ years of experience building production applications with 99%+ uptime. Expert in Next.js, React Native, NestJS, FastAPI, and full-stack development. International experience (USA, UK, Netherlands, Japan). 5.0/5 Fiverr rating. Hackathon winner.",
   applicationName: "Mohamed Outerbah Portfolio",
   authors: [
     {
@@ -52,59 +51,54 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://mohamedouterbah.vercel.app",
     siteName: "Mohamed Outerbah Portfolio",
-    title:
-      "Mohamed Outerbah - Founding Engineer | Full Stack Developer | AI/ML Expert",
+    title: "Mohamed Outerbah - Full-Stack Developer | React & Next.js Expert",
     description:
-      "Founding Engineer & Technical Lead at Analytics Depot. Expert in building AI-powered platforms with FastAPI, React Native, Next.js. 99%+ uptime, Fiverr Level 1 with 5/5 rating, international experience.",
+      "Full-Stack Developer with 4+ years building production apps. Expert in Next.js, React Native, NestJS, FastAPI. 99%+ uptime, 5.0/5 Fiverr rating, international experience.",
     images: [
       {
-        url: "/profile/profilePicture2mb.png",
+        url: "/profile/profilePicture2mb.jpg",
         width: 1200,
         height: 630,
         alt: "Mohamed Outerbah - Founding Engineer & Full Stack Developer",
-        type: "image/png",
+        type: "image/jpeg",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mohamed Outerbah - Founding Engineer | Full Stack Developer",
+    title: "Mohamed Outerbah - Full-Stack Developer | React & Next.js Expert",
     description:
-      "Founding Engineer with expertise in AI/ML, FastAPI, React Native, Next.js. 99%+ uptime, Fiverr Level 1 with 5/5 rating, international experience.",
-    images: ["/profile/profilePicture2mb.png"],
+      "Full-Stack Developer with expertise in Next.js, React Native, NestJS, FastAPI. 99%+ uptime, 5.0/5 Fiverr rating, international experience.",
+    images: ["/profile/profilePicture2mb.jpg"],
     creator: "@mohamed_outerbah",
   },
   keywords: [
     "Mohamed Outerbah",
-    "Founding Engineer",
-    "Technical Lead",
-    "Full Stack Developer",
-    "AI/ML Engineer",
+    "Full-Stack Developer",
+    "React Developer",
+    "Next.js Expert",
+    "NestJS Developer",
     "FastAPI Developer",
     "React Native Developer",
-    "Next.js Expert",
     "Python Developer",
-    "Go Developer",
+    "TypeScript Developer",
     "RAG Systems",
-    "AI-Powered Applications",
-    "Analytics Depot",
+    "Docker",
+    "VPS Deployment",
+    "Hetzner",
+    "Coolify",
+    "HaulHub",
     "International Developer",
-    "USA Developer",
-    "UK Developer",
-    "Netherlands Developer",
-    "Japan Developer",
     "Hackathon Winner",
     "CI/CD Optimization",
     "SEO Expert",
     "100/100 Lighthouse",
     "99% Uptime",
-    "React Developer",
     "Node.js Developer",
     "JavaScript",
     "TypeScript",
     "Mobile App Development",
     "Cross-platform Development",
-    "Team Leadership",
     "Software Architecture",
     "Web Development",
     "Software Engineer",
@@ -115,12 +109,9 @@ export const metadata: Metadata = {
     "PostgreSQL",
     "Express.js",
     "REST API",
-    "GraphQL",
-    "Docker",
     "Microservices",
     "SaaS Development",
     "Open Source",
-    "CLI Tools",
   ],
   category: "technology",
   robots: {
@@ -166,50 +157,49 @@ export default function RootLayout({ children }: RootLayoutProps) {
               "@context": "https://schema.org",
               "@type": "Person",
               name: "Mohamed Outerbah",
-              jobTitle:
-                "Founding Engineer | Technical Lead | Full Stack Developer",
+              jobTitle: "Full-Stack Developer",
               url: "https://mohamedouterbah.vercel.app",
               image:
-                "https://mohamedouterbah.vercel.app/profile/profilePicture2mb.png",
+                "https://mohamedouterbah.vercel.app/profile/profilePicture2mb.jpg",
               sameAs: [
                 "https://github.com/Mohamed-gp",
                 "https://www.linkedin.com/in/mohamedouterbah",
               ],
               worksFor: {
                 "@type": "Organization",
-                name: "Analytics Depot",
+                name: "HaulHub",
                 address: {
                   "@type": "PostalAddress",
-                  addressCountry: "USA",
+                  addressCountry: "Netherlands",
                 },
               },
               knowsAbout: [
-                "AI/ML Engineering",
-                "FastAPI",
-                "Python",
-                "RAG Systems",
-                "React Native",
-                "Mobile Development",
-                "Go Programming",
-                "Go Fiber",
-                "JavaScript",
-                "TypeScript",
                 "React",
                 "Next.js",
-                "Node.js",
-                "Full Stack Development",
-                "Team Leadership",
-                "Software Architecture",
-                "CI/CD Optimization",
-                "SEO Optimization",
-                "MongoDB",
-                "PostgreSQL",
-                "Express.js",
+                "TypeScript",
+                "JavaScript",
+                "React Native",
+                "Expo",
                 "NestJS",
-                "Tailwind CSS",
+                "FastAPI",
+                "Python",
+                "Node.js",
+                "Express.js",
+                "PostgreSQL",
+                "MongoDB",
+                "Redis",
+                "Prisma ORM",
                 "Docker",
-                "Microservices",
-                "Cross-platform Development",
+                "CI/CD Pipelines",
+                "GitHub Actions",
+                "VPS Deployment",
+                "Stripe",
+                "Tailwind CSS",
+                "REST API Design",
+                "Role-Based Access Control",
+                "SEO Optimization",
+                "Google Maps API",
+                "OAuth",
               ],
               alumniOf: {
                 "@type": "EducationalOrganization",
@@ -221,7 +211,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
                 "100/100 Lighthouse SEO Score",
               ],
               description:
-                "Founding Engineer & Technical Lead with proven track record building AI-powered platforms with 99%+ uptime. Expert in FastAPI, React Native, Next.js, and full-stack development. International experience across USA, UK, Netherlands, and Japan.",
+                "Full-Stack Developer with 4+ years of experience building production applications with 99%+ uptime. Expert in Next.js, React Native, NestJS, FastAPI. International experience across USA, UK, Netherlands, and Japan.",
             }),
           }}
         />
@@ -231,8 +221,14 @@ export default function RootLayout({ children }: RootLayoutProps) {
         className={`${cairo.className} antialiased`}
         suppressHydrationWarning
       >
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded-md"
+        >
+          Skip to content
+        </a>
         <ThemeProviderWrapper>
-          <main id="main-content" tabIndex={-1}>
+          <main id="main-content" className="min-h-screen" tabIndex={-1}>
             {children}
           </main>
         </ThemeProviderWrapper>

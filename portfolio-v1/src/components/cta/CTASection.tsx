@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Mail } from "lucide-react";
 import Link from "next/link";
 
-function CTASection() {
+export default function CTASection() {
   return (
     <section className="py-16 sm:py-20 bg-gradient-to-br from-primary/5 via-background to-primary/5">
       <div className="container px-4 sm:px-6">
@@ -56,5 +56,3 @@ function CTASection() {
     </section>
   );
 }
-
-export default CTASection;

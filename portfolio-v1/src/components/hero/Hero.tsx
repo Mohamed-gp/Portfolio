@@ -2,11 +2,10 @@
 
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
 import { ArrowRight, Download, Github, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import ProfilePicture from "@/../public/profile/profilePicture2mb.png";
+import ProfilePicture from "@/../public/profile/profilePicture2mb.jpg";
 
 export default function Hero() {
   const [text, setText] = useState("");
@@ -37,12 +36,7 @@ export default function Hero() {
 
       <div className="flex-1 flex items-center">
         <div className="container px-4 sm:px-6 grid lg:grid-cols-2 gap-8 md:gap-12 items-center pt-20">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="space-y-4 sm:space-y-6 text-center lg:text-left"
-          >
+          <div className="space-y-4 sm:space-y-6 text-center lg:text-left animate-fade-in-up">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
               Hi, I'm{" "}
               <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
@@ -54,13 +48,14 @@ export default function Hero() {
               <span className="animate-blink">|</span>
             </h2>
             <p className="text-base md:text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0">
-              <strong className="text-foreground">Founding Engineer</strong> &{" "}
-              <strong className="text-foreground">Technical Lead</strong> with
-              proven track record building AI-powered platforms with{" "}
+              <strong className="text-foreground">Full-Stack Developer</strong>{" "}
+              with <strong className="text-foreground">4+ years</strong> of
+              experience building production applications with{" "}
               <strong className="text-foreground">99%+ uptime</strong> and{" "}
-              <strong className="text-foreground">5/5 client rating</strong>. I
-              architect scalable full-stack solutions from backend APIs to
-              mobile apps across multiple tech stacks.
+              <strong className="text-foreground">5.0/5 client rating</strong>.
+              I architect scalable full-stack solutions from backend APIs to
+              mobile apps, delivering for international clients across USA, UK,
+              Netherlands, and Japan.
             </p>
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
               <Button
@@ -122,17 +117,9 @@ export default function Hero() {
                 <span className="sr-only">Email</span>
               </Link>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="relative order-first lg:order-last mx-auto w-[220px] sm:w-[280px] md:w-[320px] lg:w-[360px] xl:w-[400px] aspect-square"
-          >
-            {/* Animated wave outlines - different sizes */}
-
-            
+          <div className="relative order-first lg:order-last mx-auto w-[220px] sm:w-[280px] md:w-[320px] lg:w-[360px] xl:w-[400px] aspect-square animate-fade-in-scale">
             {/* Profile image with gradient border */}
             <div className="relative z-10 w-full h-full aspect-square flex justify-center items-center">
               {/* Static gradient border */}
@@ -141,7 +128,7 @@ export default function Hero() {
                 <div className="relative w-full h-full rounded-full overflow-hidden shadow-inner">
                   <Image
                     src={ProfilePicture}
-                    alt="profile-picture"
+                    alt="Mohamed Outerbah - Full Stack Developer"
                     width={400}
                     height={400}
                     priority
@@ -150,7 +137,7 @@ export default function Hero() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

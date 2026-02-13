@@ -1,5 +1,3 @@
-"use client";
-
 import { Github, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
 
@@ -9,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="border-t py-8 sm:py-12 bg-muted/30">
       <div className="container px-4 sm:px-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
           <div className="md:col-span-2">
             <Link
               href="#home"
@@ -109,39 +107,6 @@ export default function Footer() {
                 >
                   Contact
                 </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="font-semibold mb-3 sm:mb-4 text-base sm:text-lg">
-              Services
-            </h3>
-            <ul className="space-y-1 sm:space-y-2 text-sm">
-              <li>
-                <p className="text-muted-foreground hover:text-foreground transition-colors">
-                  Full Stack Development
-                </p>
-              </li>
-              <li>
-                <p className="text-muted-foreground hover:text-foreground transition-colors">
-                  Debugging & Troubleshooting
-                </p>
-              </li>
-              <li>
-                <p className="text-muted-foreground hover:text-foreground transition-colors">
-                  API Development & Integration
-                </p>
-              </li>
-              <li>
-                <p className="text-muted-foreground hover:text-foreground transition-colors">
-                  UI/UX Implementation
-                </p>
-              </li>
-              <li>
-                <p className="text-muted-foreground hover:text-foreground transition-colors">
-                  Technical Consulting
-                </p>
               </li>
             </ul>
           </div>

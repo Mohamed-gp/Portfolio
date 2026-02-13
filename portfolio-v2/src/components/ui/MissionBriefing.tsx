@@ -9,6 +9,7 @@ const briefingLines = [
   "> SYSTEM ONLINE",
   "> PILOT IDENTIFIED: Mohamed Outerbah",
   "> CLEARANCE LEVEL: Full-Stack Developer",
+  "> EXPERIENCE: 4+ Years | 6+ Production Apps",
   "> ",
   "> MISSION BRIEFING:",
   "> Your objective is to explore the portfolio airspace.",
@@ -118,8 +119,8 @@ export function MissionBriefing() {
                   line.startsWith("> TAKEOFF")
                     ? "text-emerald-400 font-bold"
                     : line.startsWith("> AIRCRAFT")
-                    ? "text-cyan-400"
-                    : "text-green-400"
+                      ? "text-cyan-400"
+                      : "text-green-400"
                 }`}
               >
                 {line}

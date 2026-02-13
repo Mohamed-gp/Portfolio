@@ -22,10 +22,9 @@ export default function About() {
     <section id="about" className="py-20 relative overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-muted/50 via-background to-muted/30 -z-10" />
-      
+
       <div className="container">
         <motion.div
-          style={{ willChange: "transform, opacity" }}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -61,11 +60,27 @@ export default function About() {
           >
             <h3 className="text-2xl font-semibold">Experience & Expertise</h3>
             <p className="text-muted-foreground">
-              <strong className="text-foreground">Founding Engineer & Technical Lead</strong> at Analytics Depot (USA) with 3+ years of experience building web
-              applications, mobile solutions, and AI-powered platforms. I led a team of 3 developers to architect scalable apps with <strong className="text-foreground">99%+ uptime</strong> and implemented RAG systems using FastAPI.
+              <strong className="text-foreground">Full-Stack Developer</strong>{" "}
+              with 4+ years of experience building web applications, mobile
+              solutions, and AI-powered platforms. Currently architecting a
+              multi-service logistics platform at HaulHub and building RAG-based
+              AI systems at Analytics-Depot, maintaining{" "}
+              <strong className="text-foreground">99%+ uptime</strong> across
+              deployed applications.
             </p>
             <p className="text-muted-foreground">
-              My expertise spans from <strong className="text-foreground">cutting deployment time from ~30 mins to a few mins</strong> through CI/CD optimization, to achieving <strong className="text-foreground">100/100 Lighthouse SEO scores</strong>. As a <strong className="text-foreground">Fiverr Level 1 seller with 5/5 rating</strong>, I've worked for international clients across USA, UK, Netherlands, and Japan, delivering excellence consistently.
+              My expertise spans from{" "}
+              <strong className="text-foreground">
+                cutting deployment time from ~30 mins to under 5 mins
+              </strong>{" "}
+              through CI/CD optimization, to achieving{" "}
+              <strong className="text-foreground">
+                100/100 Lighthouse SEO scores
+              </strong>
+              . With a{" "}
+              <strong className="text-foreground">5.0/5 Fiverr rating</strong>{" "}
+              across 6+ delivered production applications, I've worked for
+              international clients across USA, UK, Netherlands, and Japan.
             </p>
 
             {/* Professional Highlights */}
@@ -78,49 +93,57 @@ export default function About() {
                 <div className="flex items-start gap-2">
                   <span className="text-lg">🏆</span>
                   <span className="text-sm text-muted-foreground">
-                    <strong>1st Place Hackathon Winner</strong> - Developed innovative tech solution in competitive ideathon 2024
+                    <strong>1st Place Hackathon Winner</strong> - Developed
+                    innovative tech solution in competitive ideathon 2024
                   </span>
                 </div>
                 <div className="flex items-start gap-2">
                   <span className="text-lg">⚡</span>
                   <span className="text-sm text-muted-foreground">
-                    <strong>CI/CD Optimization</strong> - Reduced deployment time from 30 minutes to few minutes
+                    <strong>CI/CD Optimization</strong> - Reduced deployment
+                    time from 30 minutes to few minutes
                   </span>
                 </div>
                 <div className="flex items-start gap-2">
                   <span className="text-lg">🎯</span>
                   <span className="text-sm text-muted-foreground">
-                    <strong>SEO Excellence</strong> - Achieved 100/100 Lighthouse SEO score improving organic visibility
+                    <strong>SEO Excellence</strong> - Achieved 100/100
+                    Lighthouse SEO score improving organic visibility
                   </span>
                 </div>
                 <div className="flex items-start gap-2">
                   <span className="text-lg">🚀</span>
                   <span className="text-sm text-muted-foreground">
-                    <strong>99%+ Uptime</strong> - Architected scalable apps serving users reliably
+                    <strong>99%+ Uptime</strong> - Architected scalable apps
+                    serving users reliably
                   </span>
                 </div>
                 <div className="flex items-start gap-2">
                   <span className="text-lg">💡</span>
                   <span className="text-sm text-muted-foreground">
-                    <strong>Open Source Impact</strong> - SaaS Boiler CLI peaked at 500+ downloads on npm
+                    <strong>Open Source Contributor</strong> - Contributed to
+                    Munia (300+ GitHub stars Next.js project)
                   </span>
                 </div>
                 <div className="flex items-start gap-2">
                   <span className="text-lg">🌍</span>
                   <span className="text-sm text-muted-foreground">
-                    <strong>Global Client Work</strong> - Delivered projects for USA, UK, Netherlands, and Japan
+                    <strong>Global Client Work</strong> - Delivered 6+
+                    production apps for USA, UK, Netherlands, and Japan
                   </span>
                 </div>
                 <div className="flex items-start gap-2">
                   <span className="text-lg">👥</span>
                   <span className="text-sm text-muted-foreground">
-                    <strong>Team Leadership</strong> - Led team of 3 developers building AI-driven analytics platforms
+                    <strong>Cross-Functional Collaboration</strong> - Working
+                    with teams of 5+ developers, designers, and PMs
                   </span>
                 </div>
                 <div className="flex items-start gap-2">
                   <span className="text-lg">🎮</span>
                   <span className="text-sm text-muted-foreground">
-                    <strong>5+ Hackathons</strong> - Competitive programming, logistics optimization, AI solutions
+                    <strong>5+ Hackathons</strong> - Competitive programming,
+                    logistics optimization, AI solutions
                   </span>
                 </div>
               </div>
@@ -128,7 +151,6 @@ export default function About() {
           </motion.div>
 
           <motion.div
-            style={{ willChange: "transform, opacity" }}
             custom={1}
             variants={fadeIn}
             initial="hidden"

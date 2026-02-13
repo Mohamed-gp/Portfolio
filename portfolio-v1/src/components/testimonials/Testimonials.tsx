@@ -20,14 +20,14 @@ import {
 
 export default function Testimonials() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const swiperRef = useRef<SwiperType>();
+  const swiperRef = useRef<SwiperType>(null);
 
   const testimonials = [
     {
       id: 1,
       name: "crimsonbison",
-      company: "analytics depot",
-      role: "",
+      company: "Analytics Depot",
+      role: "Analytics Depot Project",
       avatar: "/clients/crimsonbison.webp",
       rating: 5,
       country: "🇺🇸",
@@ -38,8 +38,8 @@ export default function Testimonials() {
     {
       id: 2,
       name: "hamididz",
-      company: "artisbay",
-      role: "",
+      company: "ArtisBay",
+      role: "ArtisBay Project",
       avatar: "/clients/hamididz.webp",
       rating: 5,
       country: "🇯🇵",
@@ -50,9 +50,9 @@ export default function Testimonials() {
     {
       id: 3,
       name: "mustafa nawaz",
-      company: "Web Application",
-      role: "8 months project",
-      avatar: "/clients/nonexistent-image.webp", // This will trigger the fallback
+      company: "Cribbix",
+      role: "Cribbix Project",
+      avatar: null,
       rating: 5,
       country: "🇬🇧",
       countryName: "United Kingdom",
@@ -119,32 +119,21 @@ export default function Testimonials() {
                       <div className="flex items-center gap-4">
                         <div className="relative">
                           <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm overflow-hidden border-2 border-white/30">
-                            <div className="relative w-full h-full">
-                              <Image
-                                src={testimonial.avatar}
-                                alt={`${testimonial.name} profile picture`}
-                                fill
-                                sizes="64px"
-                                className="object-cover"
-                                onError={(e) => {
-                                  const target = e.target as HTMLImageElement;
-                                  const fallback = target.parentElement
-                                    ?.nextElementSibling as HTMLDivElement;
-                                  if (target.parentElement) {
-                                    target.parentElement.style.display = "none";
-                                  }
-                                  if (fallback) {
-                                    fallback.style.display = "flex";
-                                  }
-                                }}
-                              />
-                            </div>
-                            <div
-                              className="w-full h-full flex items-center justify-center text-2xl font-bold text-white"
-                              style={{ display: "none" }}
-                            >
-                              {testimonial.name.charAt(0).toUpperCase()}
-                            </div>
+                            {testimonial.avatar ? (
+                              <div className="relative w-full h-full">
+                                <Image
+                                  src={testimonial.avatar}
+                                  alt={`${testimonial.name} profile picture`}
+                                  fill
+                                  sizes="64px"
+                                  className="object-cover"
+                                />
+                              </div>
+                            ) : (
+                              <div className="w-full h-full flex items-center justify-center text-2xl font-bold text-white">
+                                {testimonial.name.charAt(0).toUpperCase()}
+                              </div>
+                            )}
                           </div>
                           <div className="absolute -bottom-1 -right-1 text-2xl">
                             {testimonial.country}

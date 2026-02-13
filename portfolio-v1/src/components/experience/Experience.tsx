@@ -36,53 +36,55 @@ export default function Experience() {
 
   const workExperience = [
     {
-      title: "Founding Engineer | Technical Lead",
-      company: "Analytics-Depot",
-      location: "Remote (USA)",
-      period: "Present",
+      title: "Full-Stack Developer",
+      company: "HaulHub",
+      location: "Remote (Netherlands)",
+      period: "Jun 2025 - Present",
       description:
-        "Implemented RAG (Retrieval-Augmented Generation) system using FastAPI for intelligent data processing. Architected scalable web applications integrating AI/ML capabilities with traditional analytics. Built responsive Next.js frontend with real-time analytics dashboard and data visualization.",
+        "Architecting and developing a multi-service logistics platform (Uber-like) using Next.js, NestJS, and React Native (Expo). Designing secure role-based workflows across 5+ user types. Integrating Stripe payment workflows. Deploying Dockerized services on Hetzner VPS using Coolify. Collaborating with 5 developers, 3 designers, and a product manager.",
+      skills: [
+        "Next.js",
+        "NestJS",
+        "React Native",
+        "Expo",
+        "Stripe",
+        "Docker",
+        "Coolify",
+        "Hetzner VPS",
+      ],
+    },
+    {
+      title: "Full-Stack Developer",
+      company: "Analytics-Depot",
+      location: "Freelance (USA)",
+      period: "2024 - Present",
+      description:
+        "Built a RAG-based AI system using FastAPI to improve query accuracy and responsiveness. Developed a production-ready frontend using Next.js and deployed services on VPS infrastructure. Optimized CI/CD pipelines, reducing deployment time from ~30 minutes to under 5 minutes. Maintained 99%+ uptime across deployed applications.",
       skills: [
         "FastAPI",
         "RAG Systems",
         "AI/ML",
         "Next.js",
-        "Data Visualization",
-        "Real-time Analytics",
         "Python",
+        "CI/CD",
+        "VPS Deployment",
         "TypeScript",
-      ],
-    },
-    {
-      title: "Full-Stack Developer",
-      company: "HaulHub",
-      location: "Remote (Netherlands)",
-      period: "Contract",
-      description:
-        "Developed cross-platform mobile and web applications for logistics and transportation industry. Collaborated with a 6-person team of designers and developers to deliver projects under tight deadlines.",
-      skills: [
-        "React Native",
-        "React",
-        "Cross-platform Development",
-        "Logistics Solutions",
-        "Team Collaboration",
-        "Agile Development",
       ],
     },
     {
       title: "Full-Stack Developer",
       company: "Rentals",
       location: "Freelance (United Kingdom)",
-      period: "2024",
+      period: "2023",
       description:
-        "Built comprehensive real estate platform with property listings, search, and booking functionality. Implemented advanced filtering system with geolocation and map integration. V2 development planned for future iteration with enhanced UX/UI and performance optimizations.",
+        "Designed and deployed a real estate platform using Next.js (App Router, SSR & CSR). Implemented Redis caching to improve API response performance. Integrated Stripe subscriptions and built an admin listing management system. Managed full VPS deployment and production infrastructure independently.",
       skills: [
-        "Real Estate Platform",
-        "Geolocation",
-        "Map Integration",
-        "Advanced Filtering",
-        "UX/UI Optimization",
-        "Performance Optimization",
+        "Next.js",
+        "Redis",
+        "Stripe",
+        "SSR/CSR",
+        "Admin Dashboard",
+        "VPS Deployment",
       ],
     },
     {
@@ -101,19 +103,19 @@ export default function Experience() {
       ],
     },
     {
-      title: "Freelance Developer",
+      title: "Freelance Software Engineer",
       company: "Fiverr",
       website: "https://www.fiverr.com/mohamedouterbah?public_mode=true",
       period: "2022 - Present",
       description:
-        "Level 1 seller developing custom websites and full-stack applications for clients worldwide. Maintaining a high satisfaction rate with clients through effective communication and quality deliverables.",
+        "Delivered 6+ full-stack production applications using Next.js, React, and Express. Implemented new features, resolved complex frontend/backend production bugs, and improved system performance. Managed VPS deployments and production troubleshooting for international clients.",
       skills: [
         "React",
         "Next.js",
         "Node.js",
         "TypeScript",
         "TailwindCSS",
-        "MongoDB",
+        "VPS Deployment",
         "Full-Stack Development",
       ],
       rating: {
@@ -125,47 +127,44 @@ export default function Experience() {
     {
       title: "Web Development Intern",
       company: "Exclusive Labs",
-      period: "December 2024 - February 2025",
+      location: "Remote",
+      period: "September 2024 - December 2024",
       description:
-        "Developed full-stack course management system enabling efficient course tracking and administration. Built user authentication system with role-based access control (admin/student/instructor).",
+        "Developed a course management system using Next.js and Express. Implemented secure role-based authentication for students, instructors, and admins.",
       skills: [
-        "Course Management System",
-        "User Authentication",
+        "Next.js",
+        "Express.js",
         "Role-based Access Control",
-        "React",
-        "Node.js",
-        "Database Management",
+        "Authentication",
+        "Course Management",
       ],
     },
   ];
 
   const projects = [
     {
-      title: "Profitable Local Mobile App",
+      title: "Munia - Open Source Social Media",
+      website: "https://munia.norcio.dev/",
       description:
-        "Developed v2 version of existing React Native mobile application improving user experience and performance. Contributed to application's continued profitability and growing user base.",
-      skills: ["React Native", "Performance Optimization", "UX/UI", "Mobile Development"],
-      status: "Live & Profitable",
+        "Contributed to a Next.js open-source project with 300+ GitHub stars. Implemented authentication-aware navigation and dynamic UI logic.",
+      skills: ["Next.js", "Open Source", "Authentication", "UI/UX"],
+      achievements: [
+        "300+ GitHub stars",
+        "Authentication-aware navigation",
+        "Dynamic UI logic",
+      ],
     },
     {
-      title: "SaaS Boiler CLI - SaaS Template Generator",
-      website: "https://www.npmjs.com/package/saas-boiler-cli",
+      title: "Profitable Local Mobile App",
       description:
-        "Created open-source CLI tool that peaked at 500 downloads for rapid SaaS application scaffolding. Supports multiple tech stacks: Next.js, Nuxt.js, Express.js, Go, Python with pre-configured setups.",
+        "Developed the desktop application and led the v2 mobile rebuild using React Native (Expo). Improved application performance and maintainability.",
       skills: [
-        "Go",
-        "Nuxt.js",
-        "Next.js",
-        "Express.js",
-        "Python",
-        "CLI Development",
-        "Open Source",
+        "React Native",
+        "Expo",
+        "Performance Optimization",
+        "Mobile Development",
       ],
-      achievements: [
-        "500+ peak downloads on npm",
-        "Multiple framework support",
-        "Published and maintained on npm registry",
-      ],
+      status: "Live & Profitable",
     },
   ];
 
@@ -174,7 +173,7 @@ export default function Experience() {
       degree: "Master's Degree in Computer Science",
       institution:
         "Higher School of Computer Science and Digital Technologies (ESTIN)",
-      period: "2022 - Present",
+      period: "2022 - 2027 (Expected)",
       description:
         "Focused on advanced topics in computer science, software engineering, and emerging technologies. Gaining expertise in data structures, algorithms, software design, and more.",
     },
@@ -259,7 +258,7 @@ export default function Experience() {
   const totalPages = Math.ceil(certifications.length / itemsPerPage);
   const paginatedCertifications = certifications.slice(
     (currentPage - 1) * itemsPerPage,
-    currentPage * itemsPerPage
+    currentPage * itemsPerPage,
   );
 
   const handlePrevPage = () => {
@@ -375,8 +374,8 @@ export default function Experience() {
                                   i < Math.floor(job.rating.score)
                                     ? "text-yellow-400 fill-yellow-400"
                                     : i < job.rating.score
-                                    ? "text-yellow-400 fill-yellow-400" // For the partial star
-                                    : "text-muted"
+                                      ? "text-yellow-400 fill-yellow-400" // For the partial star
+                                      : "text-muted"
                                 }`}
                               />
                             ))}
@@ -386,7 +385,10 @@ export default function Experience() {
                           </span>
                         </div>
                         {job.rating.level && (
-                          <Badge variant="secondary" className="w-fit text-xs bg-green-500/10 text-green-700 dark:text-green-400 border-green-500/20">
+                          <Badge
+                            variant="secondary"
+                            className="w-fit text-xs bg-green-500/10 text-green-700 dark:text-green-400 border-green-500/20"
+                          >
                             {job.rating.level} Seller
                           </Badge>
                         )}

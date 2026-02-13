@@ -15,7 +15,7 @@ export default function Header() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -35,7 +35,7 @@ export default function Header() {
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled
           ? "bg-background/80 backdrop-blur-md shadow-md py-2"
-          : "bg-transparent py-4"
+          : "bg-transparent py-4",
       )}
     >
       <div className="container px-4 sm:px-6 flex items-center justify-between">
@@ -47,7 +47,10 @@ export default function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-1">
+        <nav
+          aria-label="Main navigation"
+          className="hidden md:flex items-center space-x-1"
+        >
           {navItems.map((item) => (
             <Link
               key={item.name}
@@ -69,6 +72,9 @@ export default function Header() {
             size="icon"
             className="ml-2"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-menu"
+            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
           >
             {mobileMenuOpen ? (
               <X className="h-6 w-6" />
@@ -80,22 +86,28 @@ export default function Header() {
       </div>
 
       {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <div className="md:hidden bg-background/95 backdrop-blur-md shadow-lg">
-          <div className="container py-4 flex flex-col space-y-2">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="px-3 py-2 text-sm font-medium rounded-md hover:bg-accent transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {item.name}
-              </Link>
-            ))}
-          </div>
+      <div
+        id="mobile-menu"
+        role="navigation"
+        aria-label="Mobile navigation"
+        className={cn(
+          "md:hidden bg-background/95 backdrop-blur-md shadow-lg overflow-hidden transition-all duration-200",
+          mobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0",
+        )}
+      >
+        <div className="container py-4 flex flex-col space-y-2">
+          {navItems.map((item) => (
+            <Link
+              key={item.name}
+              href={item.href}
+              className="px-3 py-2 text-sm font-medium rounded-md hover:bg-accent transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {item.name}
+            </Link>
+          ))}
         </div>
-      )}
+      </div>
     </header>
   );
 }
