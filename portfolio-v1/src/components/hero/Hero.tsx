@@ -74,7 +74,7 @@ export default function Hero() {
                 size="lg"
                 className="group backdrop-blur-sm bg-white/10 dark:bg-gray-800/30 border-2 hover:bg-white/20 dark:hover:bg-gray-800/50 transition-all duration-300"
               >
-                <Link href="/cv/Mohamed_Outerbah_CV.pdf" target="_blank">
+                <Link href="/cv/Mohamed_Outerbah_CV.pdf" target="_blank" prefetch={false}>
                   <Download className="mr-2 h-4 w-4 transition-transform group-hover:translate-y-0.5" />
                   Download CV
                 </Link>
