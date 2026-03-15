@@ -45,8 +45,7 @@ export default function CTASection() {
 
               <div className="pt-4">
                 <p className="text-sm text-muted-foreground">
-                  💡 Available for freelance projects and full-time
-                  opportunities
+                  💡 Available for contracts and full-time remote opportunities
                 </p>
               </div>
             </CardContent>

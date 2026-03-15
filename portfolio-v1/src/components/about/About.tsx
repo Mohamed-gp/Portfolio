@@ -40,7 +40,7 @@ export default function About() {
             </Badge>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-foreground via-foreground to-foreground/70 bg-clip-text text-transparent">
-            Full Stack Developer & Problem Solver
+            Full-Stack Engineer & Problem Solver
           </h2>
           <p className="text-muted-foreground max-w-3xl mx-auto text-lg">
             Passionate about creating efficient, scalable solutions that make a
@@ -60,27 +60,37 @@ export default function About() {
           >
             <h3 className="text-2xl font-semibold">Experience & Expertise</h3>
             <p className="text-muted-foreground">
-              <strong className="text-foreground">Full-Stack Developer</strong>{" "}
-              with 4+ years of experience building web applications, mobile
-              solutions, and AI-powered platforms. Currently architecting a
-              multi-service logistics platform at HaulHub and building RAG-based
-              AI systems at Analytics-Depot, maintaining{" "}
-              <strong className="text-foreground">99%+ uptime</strong> across
-              deployed applications.
+              <strong className="text-foreground">Full-Stack Engineer</strong>{" "}
+              with 3+ years delivering production-grade platforms for clients
+              across the Netherlands, UK, and USA. Currently{" "}
+              <strong className="text-foreground">
+                Founding Engineer at Analytics Depot
+              </strong>{" "}
+              — an AI SaaS with{" "}
+              <strong className="text-foreground">232 registered users</strong>,
+              competing with Julius and Databox. Also building HaulHub, a{" "}
+              <strong className="text-foreground">
+                live Uber-style logistics marketplace on iOS & Android
+              </strong>{" "}
+              in the Netherlands.
             </p>
             <p className="text-muted-foreground">
-              My expertise spans from{" "}
+              My expertise spans{" "}
+              <strong className="text-foreground">
+                real-time collaboration with WebSockets
+              </strong>
+              , custom drag-and-drop dashboard builders, RAG-based document
+              intelligence, and{" "}
               <strong className="text-foreground">
                 cutting deployment time from ~30 mins to under 5 mins
               </strong>{" "}
-              through CI/CD optimization, to achieving{" "}
-              <strong className="text-foreground">
-                100/100 Lighthouse SEO scores
-              </strong>
-              . With a{" "}
-              <strong className="text-foreground">5.0/5 Fiverr rating</strong>{" "}
+              through CI/CD optimization. Founded{" "}
+              <strong className="text-foreground">DzStore</strong> — a
+              Shopify-equivalent SaaS with 50+ active users. With a{" "}
+              <strong className="text-foreground">4.9/5 Fiverr rating</strong>{" "}
               across 6+ delivered production applications, I've worked for
-              international clients across USA, UK, Netherlands, and Japan.
+              international clients across USA, UK, Netherlands, Japan, and
+              Saudi Arabia.
             </p>
 
             {/* Professional Highlights */}
@@ -91,31 +101,38 @@ export default function About() {
               </h4>
               <div className="grid gap-3">
                 <div className="flex items-start gap-2">
+                  <span className="text-lg">🚀</span>
+                  <span className="text-sm text-muted-foreground">
+                    <strong>Founding Engineer — Analytics Depot</strong> - AI
+                    SaaS with 232 users, competing with Julius & Databox
+                  </span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <span className="text-lg">📱</span>
+                  <span className="text-sm text-muted-foreground">
+                    <strong>HaulHub — Live on iOS & Android</strong> - Uber-style
+                    logistics marketplace with 12+ service categories
+                  </span>
+                </div>
+                <div className="flex items-start gap-2">
                   <span className="text-lg">🏆</span>
                   <span className="text-sm text-muted-foreground">
-                    <strong>1st Place Hackathon Winner</strong> - Developed
-                    innovative tech solution in competitive ideathon 2024
+                    <strong>1st Place Hackathon Winner</strong> - Competitive
+                    ideathon 2024 · 5+ hackathons participated
+                  </span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <span className="text-lg">🛒</span>
+                  <span className="text-sm text-muted-foreground">
+                    <strong>Founded DzStore</strong> - Shopify-equivalent SaaS
+                    with 50+ active users for Algerian market
                   </span>
                 </div>
                 <div className="flex items-start gap-2">
                   <span className="text-lg">⚡</span>
                   <span className="text-sm text-muted-foreground">
                     <strong>CI/CD Optimization</strong> - Reduced deployment
-                    time from 30 minutes to few minutes
-                  </span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <span className="text-lg">🎯</span>
-                  <span className="text-sm text-muted-foreground">
-                    <strong>SEO Excellence</strong> - Achieved 100/100
-                    Lighthouse SEO score improving organic visibility
-                  </span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <span className="text-lg">🚀</span>
-                  <span className="text-sm text-muted-foreground">
-                    <strong>99%+ Uptime</strong> - Architected scalable apps
-                    serving users reliably
+                    time from 30 minutes to under 5 minutes
                   </span>
                 </div>
                 <div className="flex items-start gap-2">
@@ -128,22 +145,15 @@ export default function About() {
                 <div className="flex items-start gap-2">
                   <span className="text-lg">🌍</span>
                   <span className="text-sm text-muted-foreground">
-                    <strong>Global Client Work</strong> - Delivered 6+
-                    production apps for USA, UK, Netherlands, and Japan
+                    <strong>Global Client Work</strong> - 6+ production apps
+                    for USA, UK, Netherlands, Japan, and Saudi Arabia
                   </span>
                 </div>
                 <div className="flex items-start gap-2">
                   <span className="text-lg">👥</span>
                   <span className="text-sm text-muted-foreground">
                     <strong>Cross-Functional Collaboration</strong> - Working
-                    with teams of 5+ developers, designers, and PMs
-                  </span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <span className="text-lg">🎮</span>
-                  <span className="text-sm text-muted-foreground">
-                    <strong>5+ Hackathons</strong> - Competitive programming,
-                    logistics optimization, AI solutions
+                    with 6-person teams across AI/ML, LLMOps, and infrastructure
                   </span>
                 </div>
               </div>

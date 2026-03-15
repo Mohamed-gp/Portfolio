@@ -57,6 +57,7 @@ function getSkillLevel(skillName: string) {
     "tailwind css",
     "node js",
     "node.js",
+    "expo (react native)",
   ];
   const advancedSkills = [
     "express js",
@@ -69,9 +70,9 @@ function getSkillLevel(skillName: string) {
     "prisma",
     "redis",
     "docker",
-    "expo (react native)",
     "stripe",
     "redux toolkit",
+    "supabase",
   ];
 
   const normalizedName = skillName.toLowerCase();
@@ -143,6 +144,9 @@ projectsImagesSkills.forEach((skill) => {
       "vercel",
       "github actions",
       "coolify",
+      "pm2",
+      "digitalocean",
+      "sentry",
     ].some((tech) => skill.name.toLowerCase().includes(tech))
   ) {
     category = "devops";

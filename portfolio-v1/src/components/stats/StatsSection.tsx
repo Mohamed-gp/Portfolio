@@ -2,24 +2,18 @@
 
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
-import { Users, Star, Code, Trophy, Calendar } from "lucide-react";
+import { Users, Star, Code, Trophy, Calendar, Rocket } from "lucide-react";
 
 const stats = [
   {
-    icon: <Trophy className="h-6 w-6 text-yellow-500" />,
-    value: "99%+",
-    label: "Uptime",
-    description: "Architected scalable apps",
+    icon: <Rocket className="h-6 w-6 text-blue-500" />,
+    value: "200+",
+    label: "Active Users",
+    description: "Analytics Depot AI SaaS",
   },
   {
-    icon: <Star className="h-6 w-6 text-green-500" />,
-    value: "100/100",
-    label: "Lighthouse SEO",
-    description: "Performance optimization",
-  },
-  {
-    icon: <Users className="h-6 w-6 text-blue-500" />,
-    value: "5/5",
+    icon: <Users className="h-6 w-6 text-green-500" />,
+    value: "4.9/5",
     label: "Client Rating",
     description: "Fiverr rating score",
   },
@@ -36,10 +30,16 @@ const stats = [
     description: "Competitive ideathon 2024",
   },
   {
+    icon: <Star className="h-6 w-6 text-yellow-500" />,
+    value: "50+",
+    label: "DzStore Users",
+    description: "Shopify-equivalent SaaS",
+  },
+  {
     icon: <Calendar className="h-6 w-6 text-pink-500" />,
-    value: "4+",
+    value: "3+",
     label: "Years Experience",
-    description: "Full-stack development",
+    description: "Full-stack engineering",
   },
 ];
 

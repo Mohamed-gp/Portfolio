@@ -36,12 +36,33 @@ export default function Experience() {
 
   const workExperience = [
     {
-      title: "Full-Stack Developer",
+      title: "Founding Full-Stack Engineer",
+      company: "Analytics Depot",
+      location: "Remote (USA)",
+      period: "Apr 2025 – Present",
+      description:
+        "One of 4 founding engineers on a live AI analytics platform with 232 registered users — targeting feature parity with Julius (conversational AI analysis) and Databox (KPI dashboards, scheduled reports). Owning all frontend architecture: custom drag-and-drop dashboard builder, shareable reports with password protection and embed mode, one-click PDF/PowerPoint export. Shipped real-time collaboration with WebSocket session sync, user presence system, collaborative chat sidebar, and NL-to-SQL query interface. Integrated Apple Auth, Sentry observability, and CI/CD optimization — deployment time: ~30 min → under 5 min. Initialized React Native mobile app with dashboard viewing, push notifications, biometric auth, and offline caching.",
+      skills: [
+        "Next.js",
+        "FastAPI",
+        "React Native",
+        "TypeScript",
+        "WebSockets",
+        "Redis",
+        "Celery",
+        "RAG Systems",
+        "LangChain",
+        "Sentry",
+        "CI/CD",
+      ],
+    },
+    {
+      title: "Full-Stack Developer — Extensive Contract",
       company: "HaulHub",
       location: "Remote (Netherlands)",
-      period: "Jun 2025 - Present",
+      period: "Jun 2025 – Present",
       description:
-        "Architecting and developing a multi-service logistics platform (Uber-like) using Next.js, NestJS, and React Native (Expo). Designing secure role-based workflows across 5+ user types. Integrating Stripe payment workflows. Deploying Dockerized services on Hetzner VPS using Coolify. Collaborating with 5 developers, 3 designers, and a product manager.",
+        "Building a production Uber-style logistics marketplace with 12+ service categories (truck rentals, skilled labor, agricultural equipment, furniture moving) — live on iOS & Android in the Netherlands. Architecting a complex multi-role system: Admin (with sub-roles), End Users, Service Providers (freelancers & companies), and Company Employees — each with dedicated dashboards and permission scopes. Developed the platform's two most complex services end-to-end: booking flows, real-time tracking, provider matching, and status management. Integrated Stripe payments (on-demand, subscriptions, provider payouts). Deployed Dockerized microservices on Hetzner via Coolify.",
       skills: [
         "Next.js",
         "NestJS",
@@ -51,64 +72,48 @@ export default function Experience() {
         "Docker",
         "Coolify",
         "Hetzner VPS",
-      ],
-    },
-    {
-      title: "Full-Stack Developer",
-      company: "Analytics-Depot",
-      location: "Freelance (USA)",
-      period: "2024 - Present",
-      description:
-        "Built a RAG-based AI system using FastAPI to improve query accuracy and responsiveness. Developed a production-ready frontend using Next.js and deployed services on VPS infrastructure. Optimized CI/CD pipelines, reducing deployment time from ~30 minutes to under 5 minutes. Maintained 99%+ uptime across deployed applications.",
-      skills: [
-        "FastAPI",
-        "RAG Systems",
-        "AI/ML",
-        "Next.js",
-        "Python",
-        "CI/CD",
-        "VPS Deployment",
+        "PostgreSQL",
         "TypeScript",
       ],
     },
     {
       title: "Full-Stack Developer",
-      company: "Rentals",
-      location: "Freelance (United Kingdom)",
-      period: "2023",
+      company: "Cribbix",
+      location: "Remote (United Kingdom)",
+      period: "2023 – 2024",
       description:
-        "Designed and deployed a real estate platform using Next.js (App Router, SSR & CSR). Implemented Redis caching to improve API response performance. Integrated Stripe subscriptions and built an admin listing management system. Managed full VPS deployment and production infrastructure independently.",
+        "Built a Rightmove-style real estate platform (V1 & V2): tenant dashboard, application tracking, payments history, price drop alerts, interactive map search with full filtering, and Stripe subscriptions. Implemented Redis caching, rate limiting, reCAPTCHA v3. Managed full VPS deployment on DigitalOcean independently.",
       skills: [
         "Next.js",
         "Redis",
         "Stripe",
         "SSR/CSR",
-        "Admin Dashboard",
+        "reCAPTCHA",
         "VPS Deployment",
+        "DigitalOcean",
       ],
     },
     {
-      title: "Full-Stack Developer",
-      company: "ArtisBay",
-      location: "Freelance (Japan)",
-      period: "2024",
+      title: "Web Development Intern",
+      company: "Exclusive Labs",
+      location: "Remote",
+      period: "Sep – Dec 2024",
       description:
-        "Fixed responsive design issues ensuring proper display across all devices and screen sizes. Optimized CSS and layout components for mobile-first responsive functionality. Provided technical recommendations for platform improvements and best practices.",
+        "Built a course management system using Next.js and Express with role-based authentication for students, instructors, and admins.",
       skills: [
-        "Responsive Design",
-        "CSS Optimization",
-        "Mobile-First Design",
-        "Cross-device Compatibility",
-        "Performance Optimization",
+        "Next.js",
+        "Express.js",
+        "Role-based Access Control",
+        "Authentication",
       ],
     },
     {
-      title: "Freelance Software Engineer",
+      title: "Freelance Full-Stack Developer",
       company: "Fiverr",
       website: "https://www.fiverr.com/mohamedouterbah?public_mode=true",
-      period: "2022 - Present",
+      period: "2022 – Present",
       description:
-        "Delivered 6+ full-stack production applications using Next.js, React, and Express. Implemented new features, resolved complex frontend/backend production bugs, and improved system performance. Managed VPS deployments and production troubleshooting for international clients.",
+        "Delivered 6+ full-stack production applications for clients in the UK, USA, Netherlands, Japan, and Saudi Arabia. Implemented new features, resolved complex frontend/backend production bugs, and improved system performance. Managed VPS deployments and production troubleshooting for international clients.",
       skills: [
         "React",
         "Next.js",
@@ -119,52 +124,47 @@ export default function Experience() {
         "Full-Stack Development",
       ],
       rating: {
-        score: 5,
+        score: 4.9,
         platform: "Fiverr",
         level: "Level 1",
       },
-    },
-    {
-      title: "Web Development Intern",
-      company: "Exclusive Labs",
-      location: "Remote",
-      period: "September 2024 - December 2024",
-      description:
-        "Developed a course management system using Next.js and Express. Implemented secure role-based authentication for students, instructors, and admins.",
-      skills: [
-        "Next.js",
-        "Express.js",
-        "Role-based Access Control",
-        "Authentication",
-        "Course Management",
-      ],
     },
   ];
 
   const projects = [
     {
-      title: "Munia - Open Source Social Media",
+      title: "DzStore — Shopify-equivalent SaaS for Algerian merchants",
+      website: "https://dzstore.org/",
+      description:
+        "Founded and built a full e-commerce SaaS with 50+ active users. Built with Next.js, PostgreSQL, TypeScript — flagship of the Dzeri ecosystem targeting Algerian market digitization.",
+      skills: ["Next.js", "PostgreSQL", "TypeScript", "SaaS", "E-commerce"],
+      status: "Live · 50+ Users",
+    },
+    {
+      title: "Khdame — CRM & Marketplace for Retail Stores",
+      website: "https://www.khdame.com/",
+      description:
+        "Co-founded and built a CRM suite targeting small and medium retail businesses: desktop-optimized web app, Android app (Expo), and an integrated marketplace with product listings, price filters, and region-based search. Built real-time push notifications, WebSocket infrastructure, inventory management, statistics dashboard, OTP email verification, Google Auth, and Play Store submission.",
+      skills: [
+        "React Native",
+        "Expo",
+        "WebSockets",
+        "Push Notifications",
+        "Google Auth",
+      ],
+      status: "Live & Profitable",
+    },
+    {
+      title: "Munia — Open Source Social Media",
       website: "https://munia.norcio.dev/",
       description:
-        "Contributed to a Next.js open-source project with 300+ GitHub stars. Implemented authentication-aware navigation and dynamic UI logic.",
+        "Contributed auth-aware navigation and dynamic UI logic to a Next.js open-source project with 300+ GitHub stars.",
       skills: ["Next.js", "Open Source", "Authentication", "UI/UX"],
       achievements: [
         "300+ GitHub stars",
         "Authentication-aware navigation",
         "Dynamic UI logic",
       ],
-    },
-    {
-      title: "Profitable Local Mobile App",
-      description:
-        "Developed the desktop application and led the v2 mobile rebuild using React Native (Expo). Improved application performance and maintainability.",
-      skills: [
-        "React Native",
-        "Expo",
-        "Performance Optimization",
-        "Mobile Development",
-      ],
-      status: "Live & Profitable",
     },
   ];
 

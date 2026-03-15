@@ -88,7 +88,7 @@ export default function Testimonials() {
               ))}
             </div>
             <span className="font-semibold text-lg text-foreground">
-              5.0 on Fiverr
+              4.9 on Fiverr
             </span>
           </div>
         </div>

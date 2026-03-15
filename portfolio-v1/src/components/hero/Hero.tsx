@@ -9,7 +9,7 @@ import ProfilePicture from "@/../public/profile/profilePicture2mb.jpg";
 
 export default function Hero() {
   const [text, setText] = useState("");
-  const fullText = "Full Stack Developer";
+  const fullText = "Full-Stack Engineer";
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -48,14 +48,16 @@ export default function Hero() {
               <span className="animate-blink">|</span>
             </h2>
             <p className="text-base md:text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0">
-              <strong className="text-foreground">Full-Stack Developer</strong>{" "}
-              with <strong className="text-foreground">4+ years</strong> of
-              experience building production applications with{" "}
-              <strong className="text-foreground">99%+ uptime</strong> and{" "}
-              <strong className="text-foreground">5.0/5 client rating</strong>.
-              I architect scalable full-stack solutions from backend APIs to
-              mobile apps, delivering for international clients across USA, UK,
-              Netherlands, and Japan.
+              <strong className="text-foreground">Full-Stack Engineer</strong>{" "}
+              with <strong className="text-foreground">3+ years</strong>{" "}
+              delivering production-grade platforms. Currently{" "}
+              <strong className="text-foreground">Founding Engineer at Analytics Depot</strong>{" "}
+              (AI SaaS, 200+ users) and building{" "}
+              <strong className="text-foreground">HaulHub</strong>, a live
+              logistics marketplace on iOS & Android.{" "}
+              <strong className="text-foreground">4.9/5 Fiverr rating</strong>{" "}
+              delivering for clients across USA, UK, Netherlands, Japan, and
+              Saudi Arabia.
             </p>
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
               <Button
@@ -132,7 +134,7 @@ export default function Hero() {
                 <div className="relative w-full h-full rounded-full overflow-hidden shadow-inner">
                   <Image
                     src={ProfilePicture}
-                    alt="Mohamed Outerbah - Full Stack Developer"
+                    alt="Mohamed Outerbah - Full-Stack Engineer"
                     width={400}
                     height={400}
                     priority

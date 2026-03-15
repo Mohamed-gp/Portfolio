@@ -11,7 +11,7 @@ const ConsoleLog = () => {
 
     // Welcome banner with gradient effect
     console.log(
-      "%c🚀 Mohamed Outerbah - Full Stack Developer",
+      "%c🚀 Mohamed Outerbah - Full-Stack Engineer",
       "background: linear-gradient(90deg, #667eea 0%, #764ba2 100%); color: white; font-size: 20px; font-weight: bold; padding: 12px 20px; border-radius: 10px; text-shadow: 0 2px 4px rgba(0,0,0,0.3);",
     );
 
