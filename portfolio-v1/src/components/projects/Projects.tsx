@@ -182,12 +182,12 @@ export default function Projects() {
   const webProjects = projects.filter(
     (p) =>
       p.type === "Web Application" ||
-      (Array.isArray(p.type) && p.type.includes("Web Application")),
+      (Array.isArray(p.type) && p.type.includes("Web Application"))
   );
   const mobileProjects = projects.filter((p) =>
     Array.isArray(p.type)
       ? p.type.includes("Mobile Application")
-      : p.type === "Mobile Application",
+      : p.type === "Mobile Application"
   );
 
   const getProjectsForTab = (tab: string) => {
@@ -400,7 +400,7 @@ export default function Projects() {
                             >
                               {tech}
                             </Badge>
-                          ),
+                          )
                         )}
                       </div>
                     </div>

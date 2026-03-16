@@ -110,8 +110,8 @@ export default function About() {
                 <div className="flex items-start gap-2">
                   <span className="text-lg">📱</span>
                   <span className="text-sm text-muted-foreground">
-                    <strong>HaulHub — Live on iOS & Android</strong> - Uber-style
-                    logistics marketplace with 12+ service categories
+                    <strong>HaulHub — Live on iOS & Android</strong> -
+                    Uber-style logistics marketplace with 12+ service categories
                   </span>
                 </div>
                 <div className="flex items-start gap-2">
@@ -145,8 +145,8 @@ export default function About() {
                 <div className="flex items-start gap-2">
                   <span className="text-lg">🌍</span>
                   <span className="text-sm text-muted-foreground">
-                    <strong>Global Client Work</strong> - 6+ production apps
-                    for USA, UK, Netherlands, Japan, and Saudi Arabia
+                    <strong>Global Client Work</strong> - 6+ production apps for
+                    USA, UK, Netherlands, Japan, and Saudi Arabia
                   </span>
                 </div>
                 <div className="flex items-start gap-2">

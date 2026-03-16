@@ -258,7 +258,7 @@ export default function Experience() {
   const totalPages = Math.ceil(certifications.length / itemsPerPage);
   const paginatedCertifications = certifications.slice(
     (currentPage - 1) * itemsPerPage,
-    currentPage * itemsPerPage,
+    currentPage * itemsPerPage
   );
 
   const handlePrevPage = () => {
@@ -374,8 +374,8 @@ export default function Experience() {
                                   i < Math.floor(job.rating.score)
                                     ? "text-yellow-400 fill-yellow-400"
                                     : i < job.rating.score
-                                      ? "text-yellow-400 fill-yellow-400" // For the partial star
-                                      : "text-muted"
+                                    ? "text-yellow-400 fill-yellow-400" // For the partial star
+                                    : "text-muted"
                                 }`}
                               />
                             ))}

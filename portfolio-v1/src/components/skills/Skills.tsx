@@ -163,7 +163,7 @@ projectsImagesSkills.forEach((skill) => {
 
 // Convert Map back to array and sort by level
 const categorizedSkills = Array.from(uniqueSkillsMap.values()).sort(
-  (a, b) => b.level - a.level,
+  (a, b) => b.level - a.level
 );
 
 export default function Skills() {
@@ -181,7 +181,7 @@ export default function Skills() {
     (skill) =>
       (activeCategory === "all" || skill.category === activeCategory) &&
       (searchQuery === "" ||
-        skill.name.toLowerCase().includes(searchQuery.toLowerCase())),
+        skill.name.toLowerCase().includes(searchQuery.toLowerCase()))
   );
 
   // For better performance with many skills
@@ -231,7 +231,7 @@ export default function Skills() {
                   "px-2 sm:px-3 py-1.5 text-xs sm:text-sm font-medium rounded-full transition-all flex items-center gap-1 sm:gap-1.5 shrink-0",
                   activeCategory === category.id
                     ? "bg-primary text-primary-foreground shadow-sm"
-                    : "text-muted-foreground hover:text-foreground hover:bg-muted dark:hover:bg-gray-700/50",
+                    : "text-muted-foreground hover:text-foreground hover:bg-muted dark:hover:bg-gray-700/50"
                 )}
               >
                 {category.icon}
@@ -289,8 +289,8 @@ export default function Skills() {
                         skill.level === 5
                           ? "bg-primary/30"
                           : skill.level === 4
-                            ? "bg-blue-500/30"
-                            : "bg-violet-500/30",
+                          ? "bg-blue-500/30"
+                          : "bg-violet-500/30"
                       )}
                     ></div>
 
@@ -305,7 +305,7 @@ export default function Skills() {
                         "border border-gray-700/50 dark:border-gray-700/80" /* Dark border for light mode too */,
                         "shadow-md dark:shadow-md",
                         "group-hover:shadow-lg dark:group-hover:shadow-lg",
-                        "group-hover:border-primary/30 dark:group-hover:border-primary/30",
+                        "group-hover:border-primary/30 dark:group-hover:border-primary/30"
                       )}
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
@@ -321,7 +321,7 @@ export default function Skills() {
                             "w-full h-full",
                             "object-contain transition-all duration-300 group-hover:scale-110",
                             "drop-shadow-[0_2px_2px_rgba(255,255,255,0.15)]" /* Light drop shadow for dark backgrounds */,
-                            "brightness-[1.15] contrast-[1.15]" /* Increased brightness and contrast */,
+                            "brightness-[1.15] contrast-[1.15]" /* Increased brightness and contrast */
                           )}
                           src={`/skills/${skill?.filename}`}
                           alt={skill.name}

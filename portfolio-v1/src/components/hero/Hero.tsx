@@ -51,7 +51,9 @@ export default function Hero() {
               <strong className="text-foreground">Full-Stack Engineer</strong>{" "}
               with <strong className="text-foreground">3+ years</strong>{" "}
               delivering production-grade platforms. Currently{" "}
-              <strong className="text-foreground">Founding Engineer at Analytics Depot</strong>{" "}
+              <strong className="text-foreground">
+                Founding Engineer at Analytics Depot
+              </strong>{" "}
               (AI SaaS, 200+ users) and building{" "}
               <strong className="text-foreground">HaulHub</strong>, a live
               logistics marketplace on iOS & Android.{" "}

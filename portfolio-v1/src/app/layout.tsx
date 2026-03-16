@@ -28,7 +28,8 @@ export const viewport: Viewport = {
 // Comprehensive metadata for better SEO
 export const metadata: Metadata = {
   title: {
-    default: "Mohamed Outerbah - Full-Stack Engineer | Next.js, React & React Native Expert",
+    default:
+      "Mohamed Outerbah - Full-Stack Engineer | Next.js, React & React Native Expert",
     template: "%s | Mohamed Outerbah",
   },
   description:
@@ -51,7 +52,8 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://mohamedouterbah.vercel.app",
     siteName: "Mohamed Outerbah Portfolio",
-    title: "Mohamed Outerbah - Full-Stack Engineer | Next.js, React & React Native Expert",
+    title:
+      "Mohamed Outerbah - Full-Stack Engineer | Next.js, React & React Native Expert",
     description:
       "Full-Stack Engineer with 3+ years delivering production-grade platforms. Founding Engineer at Analytics Depot (AI SaaS, 200+ users). Building HaulHub on iOS & Android. 4.9/5 Fiverr rating.",
     images: [
@@ -66,7 +68,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mohamed Outerbah - Full-Stack Engineer | Next.js, React & React Native Expert",
+    title:
+      "Mohamed Outerbah - Full-Stack Engineer | Next.js, React & React Native Expert",
     description:
       "Full-Stack Engineer with 3+ years delivering production-grade platforms. Founding Engineer at Analytics Depot. Building HaulHub. 4.9/5 Fiverr rating.",
     images: ["/profile/profilePicture2mb.jpg"],
