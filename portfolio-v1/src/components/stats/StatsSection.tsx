@@ -5,12 +5,12 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Users, Star, Code, Trophy, Calendar, Rocket } from "lucide-react";
 
 const stats = [
-  {
-    icon: <Rocket className="h-6 w-6 text-blue-500" />,
-    value: "200+",
-    label: "Active Users",
-    description: "Analytics Depot AI SaaS",
-  },
+  // {
+  //   icon: <Rocket className="h-6 w-6 text-blue-500" />,
+  //   value: "200+",
+  //   label: "Active Users",
+  //   description: "Analytics Depot AI SaaS",
+  // },
   {
     icon: <Users className="h-6 w-6 text-green-500" />,
     value: "4.9/5",

@@ -54,7 +54,7 @@ export default function Hero() {
               <strong className="text-foreground">
                 Founding Engineer at Analytics Depot
               </strong>{" "}
-              (AI SaaS, 200+ users) and building{" "}
+              (AI SaaS) and building{" "}
               <strong className="text-foreground">HaulHub</strong>, a live
               logistics marketplace on iOS & Android.{" "}
               <strong className="text-foreground">4.9/5 Fiverr rating</strong>{" "}
