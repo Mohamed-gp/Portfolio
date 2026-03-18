@@ -66,8 +66,7 @@ export default function About() {
               <strong className="text-foreground">
                 Founding Engineer at Analytics Depot
               </strong>{" "}
-              — an AI SaaS with{" "}
-              <strong className="text-foreground">232 registered users</strong>,
+              — an AI SaaS,
               competing with Julius and Databox. Also building HaulHub, a{" "}
               <strong className="text-foreground">
                 live Uber-style logistics marketplace on iOS & Android
@@ -104,7 +103,7 @@ export default function About() {
                   <span className="text-lg">🚀</span>
                   <span className="text-sm text-muted-foreground">
                     <strong>Founding Engineer — Analytics Depot</strong> - AI
-                    SaaS with 232 users, competing with Julius & Databox
+                    SaaS, competing with Julius & Databox
                   </span>
                 </div>
                 <div className="flex items-start gap-2">

@@ -41,7 +41,7 @@ export default function Experience() {
       location: "Remote (USA)",
       period: "Apr 2025 – Present",
       description:
-        "One of 4 founding engineers on a live AI analytics platform with 232 registered users — targeting feature parity with Julius (conversational AI analysis) and Databox (KPI dashboards, scheduled reports). Owning all frontend architecture: custom drag-and-drop dashboard builder, shareable reports with password protection and embed mode, one-click PDF/PowerPoint export. Shipped real-time collaboration with WebSocket session sync, user presence system, collaborative chat sidebar, and NL-to-SQL query interface. Integrated Apple Auth, Sentry observability, and CI/CD optimization — deployment time: ~30 min → under 5 min. Initialized React Native mobile app with dashboard viewing, push notifications, biometric auth, and offline caching.",
+        "One of 4 founding engineers on a live AI analytics platform — targeting feature parity with Julius (conversational AI analysis) and Databox (KPI dashboards, scheduled reports). Owning all frontend architecture: custom drag-and-drop dashboard builder, shareable reports with password protection and embed mode, one-click PDF/PowerPoint export. Shipped real-time collaboration with WebSocket session sync, user presence system, collaborative chat sidebar, and NL-to-SQL query interface. Integrated Apple Auth, Sentry observability, and CI/CD optimization — deployment time: ~30 min → under 5 min. Initialized React Native mobile app with dashboard viewing, push notifications, biometric auth, and offline caching.",
       skills: [
         "Next.js",
         "FastAPI",

@@ -65,8 +65,8 @@ export default function Projects() {
       url: "https://analyticsdepot.com/",
       image: "/projects/analytics-depot/hero-updated-1.png",
       description:
-        "Founding Full-Stack Engineer on a live AI analytics platform with 232 registered users — competing with Julius and Databox. Owning all frontend architecture: custom drag-and-drop dashboard builder, shareable reports with password protection and embed mode, PDF/PowerPoint export. Shipped real-time collaboration with WebSockets, NL-to-SQL query interface, Apple Auth, Sentry observability, and React Native mobile app.",
-      status: "Live · 232 Users",
+        "Founding Full-Stack Engineer on a live AI analytics platform — competing with Julius and Databox. Owning all frontend architecture: custom drag-and-drop dashboard builder, shareable reports with password protection and embed mode, PDF/PowerPoint export. Shipped real-time collaboration with WebSockets, NL-to-SQL query interface, Apple Auth, Sentry observability, and React Native mobile app.",
+      status: "Live",
       role: "Founding Full-Stack Engineer",
       technologies: [
         "Next.js",
