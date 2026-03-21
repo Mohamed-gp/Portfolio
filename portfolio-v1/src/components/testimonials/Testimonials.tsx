@@ -1,69 +1,187 @@
 "use client";
-import { useState, useRef } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import type { Swiper as SwiperType } from "swiper";
+import { useState } from "react";
 import Image from "next/image";
 
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-
 import {
-  ChevronLeft,
-  ChevronRight,
   ExternalLink,
   Quote,
   Star,
+  Clock,
+  RefreshCw,
+  ChevronRight,
+  ChevronDown,
 } from "lucide-react";
 
-export default function Testimonials() {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const swiperRef = useRef<SwiperType>(null);
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
 
-  const testimonials = [
-    {
-      id: 1,
-      name: "crimsonbison",
-      company: "Analytics Depot",
-      role: "Analytics Depot Project",
-      avatar: "/clients/crimsonbison.webp",
-      rating: 5,
-      country: "🇺🇸",
-      countryName: "United States",
-      text: "Mohamed is truly a remarkable software developer! He not only EXCEEDED our expectations with his detailed and well-documented work, but his proactive communication and quick responsiveness made collaborating a breeze. Highly recommend! 👏",
-      fiverr_link: "https://www.fiverr.com/mohamedouterbah?public_mode=true",
-    },
-    {
-      id: 2,
-      name: "hamididz",
-      company: "ArtisBay",
-      role: "ArtisBay Project",
-      avatar: "/clients/hamididz.webp",
-      rating: 5,
-      country: "🇯🇵",
-      countryName: "Japan",
-      text: "We assigned him the task of enhancing font responsiveness, which he executed flawlessly. Beyond that, he proactively suggested valuable improvements that further optimized the design. His communication was clear and professional, and his skills were truly outstanding. Highly recommended!",
-      fiverr_link: "https://www.fiverr.com/mohamedouterbah?public_mode=true",
-    },
-    {
-      id: 3,
-      name: "mustafa nawaz",
-      company: "Cribbix",
-      role: "Cribbix Project",
-      avatar: null,
-      rating: 5,
-      country: "🇬🇧",
-      countryName: "United Kingdom",
-      text: "Mohamed is a great developer with a deep understanding of building a product end to end. Amazing communication - highly recommended.",
-      fiverr_link: "https://www.fiverr.com/mohamedouterbah?public_mode=true",
-    },
-  ];
+interface Review {
+  text: string;
+  rating: number;
+  date: string;
+}
+
+interface Client {
+  id: number;
+  username: string;
+  displayName: string;
+  avatar: string | null;
+  countryFlag: string;
+  countryName: string;
+  project?: string;
+  fiverr_link: string;
+  gradient: string;
+  reviews: Review[];
+}
+
+function getRelativeTime(dateStr: string): string {
+  const date = new Date(dateStr);
+  const now = new Date();
+  const diffMs = now.getTime() - date.getTime();
+  const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+
+  if (diffDays === 0) return "Today";
+  if (diffDays === 1) return "Yesterday";
+  if (diffDays < 7) return `${diffDays} days ago`;
+  if (diffDays < 30) {
+    const weeks = Math.floor(diffDays / 7);
+    return `${weeks} week${weeks > 1 ? "s" : ""} ago`;
+  }
+  if (diffDays < 365) {
+    const months = Math.floor(diffDays / 30);
+    return `${months} month${months > 1 ? "s" : ""} ago`;
+  }
+  const years = Math.floor(diffDays / 365);
+  return `${years} year${years > 1 ? "s" : ""} ago`;
+}
+
+function formatDate(dateStr: string): string {
+  return new Date(dateStr).toLocaleDateString("en-US", {
+    month: "short",
+    year: "numeric",
+  });
+}
+
+const clients: Client[] = [
+  {
+    id: 1,
+    username: "mustafanawaz890",
+    displayName: "mustafa nawaz",
+    avatar: null,
+    countryFlag: "🇬🇧",
+    countryName: "United Kingdom",
+    project: "Cribbix",
+    gradient: "from-violet-600 via-purple-600 to-indigo-600",
+    fiverr_link: "https://www.fiverr.com/mohamedouterbah?public_mode=true",
+    reviews: [
+      {
+        text: "Mohamed is a great developer with a deep understanding of building a product end to end. Amazing communication - highly recommended.",
+        rating: 5,
+        date: "2025-06-21",
+      },
+      {
+        text: "Mohamed is an excellent software engineer. he will work meticulously to align product to the vision and goes above and beyond to deliver. Enjoyed working with Mohamed a lot and looking forward to working together again.",
+        rating: 5,
+        date: "2026-03-21",
+      },
+      {
+        text: "Mohamed is an excellent software engineer. he will work meticulously to align product to the vision and goes above and beyond to deliver. Enjoyed working with Mohamed a lot and looking forward to working together again.",
+        rating: 5,
+        date: "2026-03-21",
+      },
+    ],
+  },
+  {
+    id: 2,
+    username: "crimsonbison",
+    displayName: "crimsonbison",
+    avatar: "/clients/crimsonbison.webp",
+    countryFlag: "🇺🇸",
+    countryName: "United States",
+    project: "Analytics Depot",
+    gradient: "from-blue-600 via-cyan-600 to-teal-500",
+    fiverr_link: "https://www.fiverr.com/mohamedouterbah?public_mode=true",
+    reviews: [
+      {
+        text: "Mohamed is truly a remarkable software developer! He not only EXCEEDED our expectations with his detailed and well-documented work, but his proactive communication and quick responsiveness made collaborating a breeze. Highly recommend! 👏",
+        rating: 5,
+        date: "2025-06-21",
+      },
+    ],
+  },
+  {
+    id: 3,
+    username: "hamididz",
+    displayName: "hamididz",
+    avatar: "/clients/hamididz.webp",
+    countryFlag: "🇯🇵",
+    countryName: "Japan",
+    project: "ArtisBay",
+    gradient: "from-rose-500 via-pink-600 to-fuchsia-600",
+    fiverr_link: "https://www.fiverr.com/mohamedouterbah?public_mode=true",
+    reviews: [
+      {
+        text: "We assigned him the task of enhancing font responsiveness, which he executed flawlessly. Beyond that, he proactively suggested valuable improvements that further optimized the design. His communication was clear and professional, and his skills were truly outstanding. Highly recommended!",
+        rating: 5,
+        date: "2025-03-21",
+      },
+    ],
+  },
+  {
+    id: 4,
+    username: "mohammedmans680",
+    displayName: "mohammedmans680",
+    avatar: "/clients/mohammedmans680.webp",
+    countryFlag: "🇵🇸",
+    countryName: "Palestinian Territories",
+    gradient: "from-amber-500 via-orange-500 to-red-500",
+    fiverr_link: "https://www.fiverr.com/mohamedouterbah?public_mode=true",
+    reviews: [
+      {
+        text: "nice work .",
+        rating: 5,
+        date: "2025-09-21",
+      },
+      {
+        text: "Great work . fast delivery.",
+        rating: 5,
+        date: "2025-09-21",
+      },
+    ],
+  },
+  {
+    id: 5,
+    username: "dhiaa00",
+    displayName: "dhiaa00",
+    avatar: "/clients/dhiaa00.webp",
+    countryFlag: "🇩🇿",
+    countryName: "Algeria",
+    gradient: "from-emerald-500 via-green-600 to-teal-600",
+    fiverr_link: "https://www.fiverr.com/mohamedouterbah?public_mode=true",
+    reviews: [
+      {
+        text: "It was a good experience working with mohamed, he is such a professional in his work",
+        rating: 5,
+        date: "2025-03-21",
+      },
+    ],
+  },
+];
+
+export default function Testimonials() {
+  const [timelineClient, setTimelineClient] = useState<Client | null>(null);
+  const [showAll, setShowAll] = useState(false);
+
+  const visibleClients = showAll ? clients : clients.slice(0, 3);
 
   return (
     <section id="testimonials" className="py-16 sm:py-20 bg-muted/30">
-      <div className="container px-4 sm:px-6 max-w-6xl mx-auto">
+      <div className="container px-4 sm:px-6 max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16 max-w-3xl mx-auto">
           <div className="inline-flex items-center gap-2 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
@@ -74,9 +192,9 @@ export default function Testimonials() {
             What My Clients Say
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            I've had the privilege of working with amazing clients who have
-            shared their experiences working with me. Here's what they have to
-            say.
+            I&apos;ve had the privilege of working with amazing clients who have
+            shared their experiences working with me. Here&apos;s what they have
+            to say.
           </p>
           <div className="flex items-center justify-center mt-6 gap-3">
             <div className="flex">
@@ -88,173 +206,287 @@ export default function Testimonials() {
               ))}
             </div>
             <span className="font-semibold text-lg text-foreground">
-              4.9 on Fiverr
+              5.0 on Fiverr
             </span>
           </div>
         </div>
 
-        {/* Slider Container */}
-        <div className="relative max-w-5xl mx-auto">
-          <Swiper
-            modules={[Navigation, Pagination, Autoplay]}
-            spaceBetween={32}
-            slidesPerView={1}
-            autoplay={{
-              delay: 5000,
-              disableOnInteraction: false,
-            }}
-            speed={500}
-            onSwiper={(swiper) => {
-              swiperRef.current = swiper;
-            }}
-            onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
-            className="testimonials-swiper !overflow-visible"
-          >
-            {testimonials.map((testimonial) => (
-              <SwiperSlide key={testimonial.id} className="px-4 h-auto">
-                <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700 overflow-hidden h-full flex flex-col">
-                  {/* Card Header */}
-                  <div className="bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 p-6 text-white">
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-4">
+        {/* Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {visibleClients.map((client, idx) => {
+            const latestReview = client.reviews[client.reviews.length - 1];
+            const isRepeatClient = client.reviews.length > 1;
+
+            return (
+              <div
+                key={client.id}
+                className={`bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 dark:border-gray-700 overflow-hidden flex flex-col group ${
+                  idx >= 3
+                    ? "animate-in fade-in slide-in-from-bottom-4 duration-500"
+                    : ""
+                }`}
+                style={
+                  idx >= 3
+                    ? {
+                        animationDelay: `${(idx - 3) * 100}ms`,
+                        animationFillMode: "both",
+                      }
+                    : undefined
+                }
+              >
+                {/* Card Header */}
+                <div
+                  className={`bg-gradient-to-r ${client.gradient} p-5 text-white relative overflow-hidden`}
+                >
+                  {/* Subtle pattern overlay */}
+                  <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_30%_50%,white_1px,transparent_1px)] bg-[length:20px_20px]" />
+
+                  <div className="relative z-10">
+                    <div className="flex items-start justify-between">
+                      <div className="flex items-center gap-3">
                         <div className="relative">
-                          <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm overflow-hidden border-2 border-white/30">
-                            {testimonial.avatar ? (
+                          <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm overflow-hidden border-2 border-white/40">
+                            {client.avatar ? (
                               <div className="relative w-full h-full">
                                 <Image
-                                  src={testimonial.avatar}
-                                  alt={`${testimonial.name} profile picture`}
+                                  src={client.avatar}
+                                  alt={`${client.displayName} profile picture`}
                                   fill
-                                  sizes="64px"
+                                  sizes="48px"
                                   className="object-cover"
                                 />
                               </div>
                             ) : (
-                              <div className="w-full h-full flex items-center justify-center text-2xl font-bold text-white">
-                                {testimonial.name.charAt(0).toUpperCase()}
+                              <div className="w-full h-full flex items-center justify-center text-lg font-bold text-white">
+                                {client.displayName.charAt(0).toUpperCase()}
                               </div>
                             )}
                           </div>
-                          <div className="absolute -bottom-1 -right-1 text-2xl">
-                            {testimonial.country}
+                          <div className="absolute -bottom-1 -right-1 text-lg">
+                            {client.countryFlag}
                           </div>
                         </div>
-                        <div>
-                          <h4 className="font-bold text-xl">
-                            {testimonial.name}
+                        <div className="min-w-0">
+                          <h4 className="font-bold text-base truncate">
+                            {client.displayName}
                           </h4>
-                          <p className="text-blue-100 font-medium">
-                            {testimonial.company}
-                          </p>
-                          <p className="text-blue-200 text-sm">
-                            {testimonial.countryName}
+                          <p className="text-white/70 text-xs">
+                            {client.countryName}
                           </p>
                         </div>
                       </div>
                       <a
-                        href={testimonial.fiverr_link}
+                        href={client.fiverr_link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-white/20 hover:bg-white/30 transition-colors p-3 rounded-full"
+                        className="bg-white/15 hover:bg-white/25 transition-colors p-2 rounded-full shrink-0"
                       >
-                        <ExternalLink className="h-5 w-5" />
-                      </a>
-                    </div>
-
-                    {/* Rating */}
-                    <div className="flex items-center gap-2 mt-4">
-                      <div className="flex">
-                        {Array.from({ length: 5 }).map((_, i) => (
-                          <Star
-                            key={i}
-                            className="h-5 w-5 text-yellow-300 fill-yellow-300"
-                          />
-                        ))}
-                      </div>
-                      <span className="font-semibold text-lg">
-                        {testimonial.rating}.0
-                      </span>
-                    </div>
-                  </div>
-
-                  {/* Card Content */}
-                  <div className="p-8 flex-grow flex flex-col">
-                    <div className="relative flex-grow">
-                      <Quote className="h-12 w-12 text-blue-200 dark:text-blue-800 absolute -top-6 -left-2 opacity-50" />
-                      <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed relative z-10 pl-8 font-medium">
-                        {testimonial.text}
-                      </p>
-                    </div>
-
-                    {/* Footer */}
-                    <div className="mt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-                      <div className="bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 px-4 py-2 rounded-full text-sm font-semibold">
-                        ✓ Verified Client
-                      </div>
-                      <a
-                        href={testimonial.fiverr_link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-semibold text-sm flex items-center gap-1 transition-colors"
-                      >
-                        Verify on Fiverr
                         <ExternalLink className="h-4 w-4" />
                       </a>
                     </div>
+
+                    <div className="flex items-center justify-between mt-3">
+                      <div className="flex items-center gap-1.5">
+                        <div className="flex">
+                          {Array.from({ length: 5 }).map((_, i) => (
+                            <Star
+                              key={i}
+                              className={`h-4 w-4 ${
+                                i < Math.floor(latestReview.rating)
+                                  ? "text-yellow-300 fill-yellow-300"
+                                  : "text-white/30"
+                              }`}
+                            />
+                          ))}
+                        </div>
+                        <span className="font-semibold text-sm">
+                          {latestReview.rating}
+                        </span>
+                      </div>
+                      <div className="flex items-center gap-1 text-white/60 text-xs">
+                        <Clock className="h-3 w-3" />
+                        {getRelativeTime(latestReview.date)}
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
 
-          {/* Navigation Dots */}
-          <div className="flex justify-center mt-8 gap-3">
-            {testimonials.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => swiperRef.current?.slideTo(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  activeIndex === index
-                    ? "bg-blue-600 scale-125"
-                    : "bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500"
-                }`}
-                aria-label={`Go to testimonial ${index + 1}`}
-              />
-            ))}
-          </div>
+                {/* Card Content */}
+                <div className="p-5 flex-grow flex flex-col">
+                  <div className="relative flex-grow">
+                    <Quote className="h-8 w-8 text-blue-200 dark:text-blue-800 absolute -top-3 -left-1 opacity-40" />
+                    <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed pl-6 font-medium">
+                      {latestReview.text}
+                    </p>
+                  </div>
 
-          {/* Navigation Arrows */}
-          {testimonials.length > 1 && (
-            <div className="flex justify-center mt-6 gap-4">
-              <button
-                onClick={() => swiperRef.current?.slidePrev()}
-                className="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 group"
-                aria-label="Previous testimonial"
-              >
-                <ChevronLeft className="h-5 w-5 text-gray-600 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors" />
-              </button>
-              <button
-                onClick={() => swiperRef.current?.slideNext()}
-                className="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 group"
-                aria-label="Next testimonial"
-              >
-                <ChevronRight className="h-5 w-5 text-gray-600 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors" />
-              </button>
-            </div>
-          )}
+                  {/* Footer */}
+                  <div className="mt-5 flex items-center justify-between pt-4 border-t border-gray-100 dark:border-gray-700">
+                    <div className="flex items-center gap-2">
+                      <div className="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 px-2.5 py-1 rounded-full text-xs font-semibold">
+                        ✓ Verified
+                      </div>
+                      {isRepeatClient && (
+                        <button
+                          onClick={() => setTimelineClient(client)}
+                          className="bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300 px-2.5 py-1 rounded-full text-xs font-semibold flex items-center gap-1 hover:bg-yellow-200 dark:hover:bg-yellow-900/50 transition-colors"
+                        >
+                          <RefreshCw className="h-3 w-3" />
+                          {client.reviews.length}x
+                        </button>
+                      )}
+                    </div>
+                    {isRepeatClient ? (
+                      <button
+                        onClick={() => setTimelineClient(client)}
+                        className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium text-xs flex items-center gap-0.5 transition-colors"
+                      >
+                        All reviews
+                        <ChevronRight className="h-3.5 w-3.5" />
+                      </button>
+                    ) : (
+                      <a
+                        href={client.fiverr_link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium text-xs flex items-center gap-0.5 transition-colors"
+                      >
+                        Fiverr
+                        <ExternalLink className="h-3 w-3" />
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
+
+        {/* Show More / Show Less */}
+        {clients.length > 3 && (
+          <div className="flex justify-center mt-10">
+            <button
+              onClick={() => setShowAll((prev) => !prev)}
+              className="group inline-flex items-center gap-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-600 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-6 py-3 rounded-full font-semibold text-sm shadow-md hover:shadow-lg transition-all duration-300"
+            >
+              {showAll ? "Show Less" : `Show More (${clients.length - 3})`}
+              <ChevronDown
+                className={`h-4 w-4 transition-transform duration-300 ${
+                  showAll ? "rotate-180" : "group-hover:translate-y-0.5"
+                }`}
+              />
+            </button>
+          </div>
+        )}
       </div>
 
-      <style jsx global>{`
-        .testimonials-swiper .swiper-slide {
-          height: auto;
-          display: flex;
-        }
+      {/* Timeline Dialog for Repeat Clients */}
+      <Dialog
+        open={timelineClient !== null}
+        onOpenChange={(open) => !open && setTimelineClient(null)}
+      >
+        <DialogContent className="max-w-lg max-h-[80vh] overflow-y-auto">
+          {timelineClient && (
+            <>
+              <DialogHeader>
+                <div className="flex items-center gap-3 mb-2">
+                  <div
+                    className={`w-12 h-12 rounded-full bg-gradient-to-r ${timelineClient.gradient} overflow-hidden flex items-center justify-center text-white font-bold text-lg shrink-0`}
+                  >
+                    {timelineClient.avatar ? (
+                      <Image
+                        src={timelineClient.avatar}
+                        alt={timelineClient.displayName}
+                        width={48}
+                        height={48}
+                        className="object-cover"
+                      />
+                    ) : (
+                      timelineClient.displayName.charAt(0).toUpperCase()
+                    )}
+                  </div>
+                  <div>
+                    <DialogTitle className="text-left">
+                      {timelineClient.displayName}
+                    </DialogTitle>
+                    <DialogDescription className="text-left">
+                      {timelineClient.countryFlag} {timelineClient.countryName}{" "}
+                      · {timelineClient.reviews.length} reviews
+                    </DialogDescription>
+                  </div>
+                </div>
+                <div className="inline-flex items-center gap-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-300 px-3 py-1 rounded-full text-xs font-semibold w-fit">
+                  <RefreshCw className="h-3 w-3" />
+                  Repeat Client
+                </div>
+              </DialogHeader>
 
-        .testimonials-swiper .swiper-wrapper {
-          align-items: stretch;
-        }
-      `}</style>
+              {/* Timeline */}
+              <div className="mt-4 space-y-0">
+                {[...timelineClient.reviews]
+                  .sort(
+                    (a, b) =>
+                      new Date(b.date).getTime() - new Date(a.date).getTime(),
+                  )
+                  .map((review, index, arr) => (
+                    <div key={index} className="relative pl-8 pb-6 last:pb-0">
+                      {/* Timeline line */}
+                      {index < arr.length - 1 && (
+                        <div className="absolute left-[11px] top-6 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 to-blue-200 dark:from-blue-400 dark:to-blue-800" />
+                      )}
+
+                      {/* Timeline dot */}
+                      <div className="absolute left-0 top-1 w-6 h-6 rounded-full bg-blue-500 border-4 border-white dark:border-gray-900 shadow-md flex items-center justify-center">
+                        <div className="w-2 h-2 rounded-full bg-white" />
+                      </div>
+
+                      <div className="bg-muted/50 rounded-lg p-4 border border-border">
+                        <div className="flex items-center justify-between mb-2">
+                          <div className="flex items-center gap-1">
+                            {Array.from({ length: 5 }).map((_, i) => (
+                              <Star
+                                key={i}
+                                className={`h-3.5 w-3.5 ${
+                                  i < Math.floor(review.rating)
+                                    ? "text-yellow-400 fill-yellow-400"
+                                    : "text-gray-300"
+                                }`}
+                              />
+                            ))}
+                            <span className="text-sm font-medium ml-1">
+                              {review.rating}
+                            </span>
+                          </div>
+                          <div className="flex items-center gap-1 text-xs text-muted-foreground">
+                            <Clock className="h-3 w-3" />
+                            {formatDate(review.date)} ·{" "}
+                            {getRelativeTime(review.date)}
+                          </div>
+                        </div>
+                        <p className="text-sm text-foreground leading-relaxed">
+                          &ldquo;{review.text}&rdquo;
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+              </div>
+
+              {/* Fiverr link at bottom of dialog */}
+              <div className="mt-4 text-center">
+                <a
+                  href={timelineClient.fiverr_link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-semibold text-sm inline-flex items-center gap-1 transition-colors"
+                >
+                  Verify on Fiverr
+                  <ExternalLink className="h-4 w-4" />
+                </a>
+              </div>
+            </>
+          )}
+        </DialogContent>
+      </Dialog>
     </section>
   );
 }

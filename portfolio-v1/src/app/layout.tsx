@@ -29,11 +29,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: {
     default:
-      "Mohamed Outerbah - Full-Stack Engineer | Next.js, React & React Native Expert",
+      "Mohamed Outerbah - Software Engineer | Next.js, React & React Native Expert",
     template: "%s | Mohamed Outerbah",
   },
   description:
-    "Full-Stack Engineer with 3+ years delivering production-grade platforms. Founding Engineer at Analytics Depot (AI SaaS). Building HaulHub — live logistics marketplace on iOS & Android. Expert in Next.js, TypeScript, React Native. 4.9/5 Fiverr rating. International clients across USA, UK, Netherlands, Japan, Saudi Arabia.",
+    "Software Engineer with 4+ years building production-grade web & mobile platforms. Founding Engineer at Analytics Depot (AI SaaS). Expert in Next.js, TypeScript, React Native. 5/5 Fiverr rating from international clients.",
   applicationName: "Mohamed Outerbah Portfolio",
   authors: [
     {
@@ -53,15 +53,15 @@ export const metadata: Metadata = {
     url: "https://mohamedouterbah.vercel.app",
     siteName: "Mohamed Outerbah Portfolio",
     title:
-      "Mohamed Outerbah - Full-Stack Engineer | Next.js, React & React Native Expert",
+      "Mohamed Outerbah - Software Engineer | Next.js, React & React Native Expert",
     description:
-      "Full-Stack Engineer with 3+ years delivering production-grade platforms. Founding Engineer at Analytics Depot (AI SaaS). Building HaulHub on iOS & Android. 4.9/5 Fiverr rating.",
+      "Software Engineer with 4+ years building production-grade web & mobile platforms. Founding Engineer at Analytics Depot (AI SaaS). 5/5 Fiverr rating.",
     images: [
       {
-        url: "/profile/profilePicture2mb.jpg",
+        url: "/profile/profile_picture.jpg",
         width: 1200,
         height: 630,
-        alt: "Mohamed Outerbah - Founding Engineer & Full-Stack Engineer",
+        alt: "Mohamed Outerbah - Founding Engineer & Software Engineer",
         type: "image/jpeg",
       },
     ],
@@ -69,15 +69,15 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "Mohamed Outerbah - Full-Stack Engineer | Next.js, React & React Native Expert",
+      "Mohamed Outerbah - Software Engineer | Next.js, React & React Native Expert",
     description:
-      "Full-Stack Engineer with 3+ years delivering production-grade platforms. Founding Engineer at Analytics Depot. Building HaulHub. 4.9/5 Fiverr rating.",
-    images: ["/profile/profilePicture2mb.jpg"],
+      "Software Engineer with 4+ years building production-grade web & mobile platforms. Founding Engineer at Analytics Depot (AI SaaS). 5/5 Fiverr rating.",
+    images: ["/profile/profile_picture.jpg"],
     creator: "@mohamed_outerbah",
   },
   keywords: [
     "Mohamed Outerbah",
-    "Full-Stack Engineer",
+    "Software Engineer",
     "Founding Engineer",
     "Analytics Depot",
     "HaulHub",
@@ -172,10 +172,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
               "@context": "https://schema.org",
               "@type": "Person",
               name: "Mohamed Outerbah",
-              jobTitle: "Full-Stack Engineer",
+              jobTitle: "Software Engineer",
               url: "https://mohamedouterbah.vercel.app",
               image:
-                "https://mohamedouterbah.vercel.app/profile/profilePicture2mb.jpg",
+                "https://mohamedouterbah.vercel.app/profile/profile_picture.jpg",
               sameAs: [
                 "https://github.com/Mohamed-gp",
                 "https://www.linkedin.com/in/mohamedouterbah",
@@ -228,11 +228,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
               award: [
                 "Founding Engineer at Analytics Depot (AI SaaS)",
                 "1st Place Hackathon Winner 2024",
-                "Fiverr Level 1 Seller - 4.9/5 Rating",
+                "Fiverr Level 1 Seller - 5/5 Rating",
                 "DzStore - Shopify-equivalent SaaS with 50+ users",
               ],
               description:
-                "Full-Stack Engineer with 3+ years delivering production-grade platforms for clients across the Netherlands, UK, and USA. Founding Engineer at Analytics Depot (AI SaaS). Building HaulHub — live logistics marketplace on iOS & Android.",
+                "Software Engineer with 4+ years delivering production-grade platforms for clients across the Netherlands, UK, and USA. Founding Engineer at Analytics Depot (AI SaaS). Building HaulHub — live logistics marketplace on iOS & Android.",
             }),
           }}
         />

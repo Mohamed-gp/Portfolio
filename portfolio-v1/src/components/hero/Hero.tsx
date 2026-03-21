@@ -5,11 +5,11 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Download, Github, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import ProfilePicture from "@/../public/profile/profilePicture2mb.jpg";
+import ProfilePicture from "@/../public/profile/profile_picture.jpg";
 
 export default function Hero() {
   const [text, setText] = useState("");
-  const fullText = "Full-Stack Engineer";
+  const fullText = "Software Engineer";
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -48,7 +48,7 @@ export default function Hero() {
               <span className="animate-blink">|</span>
             </h2>
             <p className="text-base md:text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0">
-              <strong className="text-foreground">Full-Stack Engineer</strong>{" "}
+              <strong className="text-foreground">Software Engineer</strong>{" "}
               with <strong className="text-foreground">3+ years</strong>{" "}
               delivering production-grade platforms. Currently{" "}
               <strong className="text-foreground">
@@ -57,7 +57,7 @@ export default function Hero() {
               (AI SaaS) and building{" "}
               <strong className="text-foreground">HaulHub</strong>, a live
               logistics marketplace on iOS & Android.{" "}
-              <strong className="text-foreground">4.9/5 Fiverr rating</strong>{" "}
+              <strong className="text-foreground">5/5 Fiverr rating</strong>{" "}
               delivering for clients across USA, UK, Netherlands, Japan, and
               Saudi Arabia.
             </p>
@@ -127,7 +127,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="relative order-first lg:order-last mx-auto w-[220px] sm:w-[280px] md:w-[320px] lg:w-[360px] xl:w-[400px] aspect-square animate-fade-in-scale">
+          <div className="relative order-first lg:order-last mx-auto flex items-center justify-center w-[220px] sm:w-[280px] md:w-[320px] lg:w-[360px] xl:w-[400px] aspect-square animate-fade-in-scale">
             {/* Profile image with gradient border */}
             <div className="relative z-10 w-full h-full aspect-square flex justify-center items-center">
               {/* Static gradient border */}
@@ -136,11 +136,11 @@ export default function Hero() {
                 <div className="relative w-full h-full rounded-full overflow-hidden shadow-inner">
                   <Image
                     src={ProfilePicture}
-                    alt="Mohamed Outerbah - Full-Stack Engineer"
+                    alt="Mohamed Outerbah - Software Engineer"
                     width={400}
                     height={400}
                     priority
-                    className="object-cover w-full h-full hover:scale-110 transition-transform duration-500"
+                    className="object-cover object-top w-full h-full hover:scale-110 transition-transform duration-500"
                   />
                 </div>
               </div>

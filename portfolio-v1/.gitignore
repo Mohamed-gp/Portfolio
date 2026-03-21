@@ -38,3 +38,7 @@ yarn-error.log*
 next-env.d.ts
 .secrets
 public/workbo*
+
+# Private — personal roadmap & notes
+ROADMAP.md
+NOTES.md

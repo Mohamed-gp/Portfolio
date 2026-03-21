@@ -40,7 +40,7 @@ export default function About() {
             </Badge>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-foreground via-foreground to-foreground/70 bg-clip-text text-transparent">
-            Full-Stack Engineer & Problem Solver
+            Software Engineer & Problem Solver
           </h2>
           <p className="text-muted-foreground max-w-3xl mx-auto text-lg">
             Passionate about creating efficient, scalable solutions that make a
@@ -60,14 +60,14 @@ export default function About() {
           >
             <h3 className="text-2xl font-semibold">Experience & Expertise</h3>
             <p className="text-muted-foreground">
-              <strong className="text-foreground">Full-Stack Engineer</strong>{" "}
+              <strong className="text-foreground">Software Engineer</strong>{" "}
               with 3+ years delivering production-grade platforms for clients
               across the Netherlands, UK, and USA. Currently{" "}
               <strong className="text-foreground">
                 Founding Engineer at Analytics Depot
               </strong>{" "}
-              — an AI SaaS,
-              competing with Julius and Databox. Also building HaulHub, a{" "}
+              — an AI SaaS, competing with Julius and Databox. Also building
+              HaulHub, a{" "}
               <strong className="text-foreground">
                 live Uber-style logistics marketplace on iOS & Android
               </strong>{" "}
@@ -86,7 +86,7 @@ export default function About() {
               through CI/CD optimization. Founded{" "}
               <strong className="text-foreground">DzStore</strong> — a
               Shopify-equivalent SaaS with 50+ active users. With a{" "}
-              <strong className="text-foreground">4.9/5 Fiverr rating</strong>{" "}
+              <strong className="text-foreground">5/5 Fiverr rating</strong>{" "}
               across 6+ delivered production applications, I've worked for
               international clients across USA, UK, Netherlands, Japan, and
               Saudi Arabia.

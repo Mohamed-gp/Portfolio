@@ -2,26 +2,28 @@
 
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
-import { Users, Star, Code, Trophy, Calendar, Rocket } from "lucide-react";
+import {
+  Users,
+  Star,
+  Code,
+  Trophy,
+  Calendar,
+  Rocket,
+  Globe,
+} from "lucide-react";
 
 const stats = [
-  // {
-  //   icon: <Rocket className="h-6 w-6 text-blue-500" />,
-  //   value: "200+",
-  //   label: "Active Users",
-  //   description: "Analytics Depot AI SaaS",
-  // },
   {
     icon: <Users className="h-6 w-6 text-green-500" />,
-    value: "4.9/5",
+    value: "5/5",
     label: "Client Rating",
     description: "Fiverr rating score",
   },
   {
-    icon: <Code className="h-6 w-6 text-blue-500" />,
-    value: "5min",
-    label: "CI/CD Deploy",
-    description: "From 30min to 5min",
+    icon: <Code className="h-6 w-6 text-purple-500" />,
+    value: "6+",
+    label: "Production Apps",
+    description: "Shipped & live worldwide",
   },
   {
     icon: <Trophy className="h-6 w-6 text-orange-500" />,
@@ -30,16 +32,16 @@ const stats = [
     description: "Competitive ideathon 2024",
   },
   {
-    icon: <Star className="h-6 w-6 text-yellow-500" />,
-    value: "50+",
-    label: "DzStore Users",
-    description: "Shopify-equivalent SaaS",
+    icon: <Globe className="h-6 w-6 text-cyan-500" />,
+    value: "5+",
+    label: "Countries Served",
+    description: "USA, UK, NL, Japan & more",
   },
   {
     icon: <Calendar className="h-6 w-6 text-pink-500" />,
     value: "3+",
     label: "Years Experience",
-    description: "Full-stack engineering",
+    description: "Software engineering",
   },
 ];
 
@@ -66,7 +68,7 @@ export default function StatsSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6">
+        <div className="flex flex-wrap justify-center gap-4 sm:gap-6 max-w-6xl mx-auto">
           {stats.map((stat, index) => (
             <motion.div
               key={index}
@@ -75,6 +77,7 @@ export default function StatsSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -8, scale: 1.02 }}
+              className="w-[calc(50%-0.5rem)] md:w-[calc(33.333%-1rem)] lg:w-[180px]"
             >
               <Card className="text-center h-full hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-primary/20 bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm relative overflow-hidden group">
                 {/* Gradient overlay on hover */}
