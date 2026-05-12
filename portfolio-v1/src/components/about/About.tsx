@@ -83,7 +83,7 @@ export default function About() {
               <strong className="text-foreground">
                 cutting deployment time from ~30 mins to under 5 mins
               </strong>{" "}
-              through CI/CD optimization. Founded{" "}
+              through CI/CD optimization. Co-founded{" "}
               <strong className="text-foreground">DzStore</strong> — a
               Shopify-equivalent SaaS with 50+ active users. With a{" "}
               <strong className="text-foreground">5/5 Fiverr rating</strong>{" "}
@@ -123,8 +123,8 @@ export default function About() {
                 <div className="flex items-start gap-2">
                   <span className="text-lg">🛒</span>
                   <span className="text-sm text-muted-foreground">
-                    <strong>Founded DzStore</strong> - Shopify-equivalent SaaS
-                    with 50+ active users for Algerian market
+                    <strong>Co-founded DzStore</strong> - Shopify-equivalent
+                    SaaS with 50+ active users for Algerian market
                   </span>
                 </div>
                 <div className="flex items-start gap-2">

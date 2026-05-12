@@ -136,7 +136,7 @@ export default function Experience() {
       title: "DzStore — Shopify-equivalent SaaS for Algerian merchants",
       website: "https://dzstore.org/",
       description:
-        "Founded and built a full e-commerce SaaS with 50+ active users. Built with Next.js, PostgreSQL, TypeScript — flagship of the Dzeri ecosystem targeting Algerian market digitization.",
+        "Co-founded and built a full e-commerce SaaS with 50+ active users. Built with Next.js, PostgreSQL, TypeScript — flagship of the Dzeri ecosystem targeting Algerian market digitization.",
       skills: ["Next.js", "PostgreSQL", "TypeScript", "SaaS", "E-commerce"],
       status: "Live · 50+ Users",
     },

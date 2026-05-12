@@ -110,9 +110,9 @@ export default function Projects() {
       url: "https://dzstore.org/",
       image: "/projects/dzstore/hero-updated-1.png",
       description:
-        "Founded and built a Shopify-equivalent SaaS for Algerian merchants with 50+ active users. Flagship of the Dzeri ecosystem targeting Algerian market digitization. Full e-commerce platform with store management, product listings, and payment processing.",
+        "Co-founded and built a Shopify-equivalent SaaS for Algerian merchants with 50+ active users. Flagship of the Dzeri ecosystem targeting Algerian market digitization. Full e-commerce platform with store management, product listings, and payment processing.",
       status: "Live · 50+ Users",
-      role: "Founder & Full-Stack Engineer",
+      role: "Co-Founder & Full-Stack Engineer",
       technologies: [
         "Next.js",
         "PostgreSQL",
