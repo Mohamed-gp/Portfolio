@@ -44,8 +44,12 @@ export default function CTASection() {
               </div>
 
               <div className="pt-4">
-                <p className="text-sm text-muted-foreground">
-                  💡 Available for contracts and full-time remote opportunities
+                <p className="text-sm text-muted-foreground flex items-center justify-center gap-2">
+                  <span className="relative flex h-2 w-2">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75" />
+                    <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
+                  </span>
+                  Available for full-time remote roles and select contract work
                 </p>
               </div>
             </CardContent>

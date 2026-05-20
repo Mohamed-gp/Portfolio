@@ -132,45 +132,46 @@ const clients: Client[] = [
       },
     ],
   },
-  {
-    id: 4,
-    username: "mohammedmans680",
-    displayName: "mohammedmans680",
-    avatar: "/clients/mohammedmans680.webp",
-    countryFlag: "🇵🇸",
-    countryName: "Palestinian Territories",
-    gradient: "from-amber-500 via-orange-500 to-red-500",
-    fiverr_link: "https://www.fiverr.com/mohamedouterbah?public_mode=true",
-    reviews: [
-      {
-        text: "nice work .",
-        rating: 5,
-        date: "2025-09-21",
-      },
-      {
-        text: "Great work . fast delivery.",
-        rating: 5,
-        date: "2025-09-21",
-      },
-    ],
-  },
-  {
-    id: 5,
-    username: "dhiaa00",
-    displayName: "dhiaa00",
-    avatar: "/clients/dhiaa00.webp",
-    countryFlag: "🇩🇿",
-    countryName: "Algeria",
-    gradient: "from-emerald-500 via-green-600 to-teal-600",
-    fiverr_link: "https://www.fiverr.com/mohamedouterbah?public_mode=true",
-    reviews: [
-      {
-        text: "It was a good experience working with mohamed, he is such a professional in his work",
-        rating: 5,
-        date: "2025-03-21",
-      },
-    ],
-  },
+  // Commented out per request. Uncomment to restore these testimonials.
+  // {
+  //   id: 4,
+  //   username: "mohammedmans680",
+  //   displayName: "mohammedmans680",
+  //   avatar: "/clients/mohammedmans680.webp",
+  //   countryFlag: "🇵🇸",
+  //   countryName: "Palestinian Territories",
+  //   gradient: "from-amber-500 via-orange-500 to-red-500",
+  //   fiverr_link: "https://www.fiverr.com/mohamedouterbah?public_mode=true",
+  //   reviews: [
+  //     {
+  //       text: "nice work .",
+  //       rating: 5,
+  //       date: "2025-09-21",
+  //     },
+  //     {
+  //       text: "Great work . fast delivery.",
+  //       rating: 5,
+  //       date: "2025-09-21",
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: 5,
+  //   username: "dhiaa00",
+  //   displayName: "dhiaa00",
+  //   avatar: "/clients/dhiaa00.webp",
+  //   countryFlag: "🇩🇿",
+  //   countryName: "Algeria",
+  //   gradient: "from-emerald-500 via-green-600 to-teal-600",
+  //   fiverr_link: "https://www.fiverr.com/mohamedouterbah?public_mode=true",
+  //   reviews: [
+  //     {
+  //       text: "It was a good experience working with mohamed, he is such a professional in his work",
+  //       rating: 5,
+  //       date: "2025-03-21",
+  //     },
+  //   ],
+  // },
 ];
 
 export default function Testimonials() {

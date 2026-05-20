@@ -110,8 +110,8 @@ export default function Projects() {
       url: "https://dzstore.org/",
       image: "/projects/dzstore/hero-updated-1.png",
       description:
-        "Co-founded and built a Shopify-equivalent SaaS for Algerian merchants with 50+ active users. Flagship of the Dzeri ecosystem targeting Algerian market digitization. Full e-commerce platform with store management, product listings, and payment processing.",
-      status: "Live · 50+ Users",
+        "Co-founded and built a Shopify-equivalent SaaS for Algerian merchants with 1,000+ users. Flagship of the Dzeri ecosystem targeting Algerian market digitization. Full e-commerce platform with store management, product listings, and payment processing.",
+      status: "Live · 1,000+ Users",
       role: "Co-Founder & Full-Stack Engineer",
       technologies: [
         "Next.js",
@@ -142,25 +142,26 @@ export default function Projects() {
         "DigitalOcean",
       ],
     },
-    {
-      title: "Khdame — CRM & Marketplace",
-      country: "Client Project",
-      flag: "📱",
-      type: ["Web Application", "Mobile Application"],
-      url: "https://www.khdame.com/",
-      image: "/projects/khdame/hero-updated-1.png",
-      description:
-        "Co-founded and built a CRM suite for small and medium retail businesses: desktop-optimized web app, Android app (Expo), and integrated marketplace with product listings, price filters, and region-based search. Real-time push notifications, WebSocket infrastructure, inventory management, statistics dashboard, OTP email verification, Google Auth, and Play Store submission.",
-      status: "Live & Profitable",
-      role: "Co-Founder & Full-Stack Developer",
-      technologies: [
-        "React Native",
-        "Expo",
-        "WebSockets",
-        "Push Notifications",
-        "Google Auth",
-      ],
-    },
+    // Khdame — commented out per request. Uncomment to restore the project card.
+    // {
+    //   title: "Khdame — CRM & Marketplace",
+    //   country: "Client Project",
+    //   flag: "📱",
+    //   type: ["Web Application", "Mobile Application"],
+    //   url: "https://www.khdame.com/",
+    //   image: "/projects/khdame/hero-updated-1.png",
+    //   description:
+    //     "Co-founded and built a CRM suite for small and medium retail businesses: desktop-optimized web app, Android app (Expo), and integrated marketplace with product listings, price filters, and region-based search. Real-time push notifications, WebSocket infrastructure, inventory management, statistics dashboard, OTP email verification, Google Auth, and Play Store submission.",
+    //   status: "Live & Profitable",
+    //   role: "Co-Founder & Full-Stack Developer",
+    //   technologies: [
+    //     "React Native",
+    //     "Expo",
+    //     "WebSockets",
+    //     "Push Notifications",
+    //     "Google Auth",
+    //   ],
+    // },
     {
       title: "Munia — Open Source Social Media",
       country: "Open Source",
@@ -271,11 +272,10 @@ export default function Projects() {
             {["all", "web", "mobile"].map((tab) => (
               <TabsContent key={tab} value={tab} className="mt-0">
                 <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8 justify-items-center">
-                  {getProjectsForTab(tab).map((project, index) => (
+                  {getProjectsForTab(tab).map((project) => (
                     <ProjectCard
                       key={project.title}
                       project={project}
-                      index={index}
                       onClick={() => handleProjectClick(project)}
                     />
                   ))}
@@ -449,11 +449,9 @@ export default function Projects() {
 
 function ProjectCard({
   project,
-  index,
   onClick,
 }: {
   project: Project;
-  index: number;
   onClick: () => void;
 }) {
   const isWebProject =

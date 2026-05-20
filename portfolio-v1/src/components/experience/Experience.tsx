@@ -18,6 +18,7 @@ import {
   ChevronLeft,
   ChevronRight,
   Leaf,
+  MapPin,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -76,23 +77,25 @@ export default function Experience() {
         "TypeScript",
       ],
     },
-    {
-      title: "Full-Stack Developer",
-      company: "Cribbix",
-      location: "Remote (United Kingdom)",
-      period: "2023 – 2024",
-      description:
-        "Built a Rightmove-style real estate platform (V1 & V2): tenant dashboard, application tracking, payments history, price drop alerts, interactive map search with full filtering, and Stripe subscriptions. Implemented Redis caching, rate limiting, reCAPTCHA v3. Managed full VPS deployment on DigitalOcean independently.",
-      skills: [
-        "Next.js",
-        "Redis",
-        "Stripe",
-        "SSR/CSR",
-        "reCAPTCHA",
-        "VPS Deployment",
-        "DigitalOcean",
-      ],
-    },
+    // Cribbix was a Fiverr freelance engagement — folded into the Fiverr entry below.
+    // Uncomment to restore it as a standalone work-experience role.
+    // {
+    //   title: "Full-Stack Developer",
+    //   company: "Cribbix",
+    //   location: "Remote (United Kingdom)",
+    //   period: "2023 – 2024",
+    //   description:
+    //     "Built a Rightmove-style real estate platform (V1 & V2): tenant dashboard, application tracking, payments history, price drop alerts, interactive map search with full filtering, and Stripe subscriptions. Implemented Redis caching, rate limiting, reCAPTCHA v3. Managed full VPS deployment on DigitalOcean independently.",
+    //   skills: [
+    //     "Next.js",
+    //     "Redis",
+    //     "Stripe",
+    //     "SSR/CSR",
+    //     "reCAPTCHA",
+    //     "VPS Deployment",
+    //     "DigitalOcean",
+    //   ],
+    // },
     {
       title: "Web Development Intern",
       company: "Exclusive Labs",
@@ -113,15 +116,15 @@ export default function Experience() {
       website: "https://www.fiverr.com/mohamedouterbah?public_mode=true",
       period: "2022 – Present",
       description:
-        "Delivered 6+ full-stack production applications for clients in the UK, USA, Netherlands, Japan, and Saudi Arabia. Implemented new features, resolved complex frontend/backend production bugs, and improved system performance. Managed VPS deployments and production troubleshooting for international clients.",
+        "Delivered 6+ full-stack production applications for clients in the UK, USA, Netherlands, Japan, and Saudi Arabia — including Cribbix, a Rightmove-style real estate platform with tenant dashboards, interactive map search, Stripe subscriptions, and Redis caching. Implemented new features, resolved complex frontend/backend production bugs, improved system performance, and managed VPS deployments for international clients.",
       skills: [
         "React",
         "Next.js",
         "Node.js",
         "TypeScript",
-        "TailwindCSS",
+        "Stripe",
+        "Redis",
         "VPS Deployment",
-        "Full-Stack Development",
       ],
       rating: {
         score: 5,
@@ -136,24 +139,25 @@ export default function Experience() {
       title: "DzStore — Shopify-equivalent SaaS for Algerian merchants",
       website: "https://dzstore.org/",
       description:
-        "Co-founded and built a full e-commerce SaaS with 50+ active users. Built with Next.js, PostgreSQL, TypeScript — flagship of the Dzeri ecosystem targeting Algerian market digitization.",
+        "Co-founded and built a full e-commerce SaaS with 1,000+ users. Built with Next.js, PostgreSQL, TypeScript — flagship of the Dzeri ecosystem targeting Algerian market digitization.",
       skills: ["Next.js", "PostgreSQL", "TypeScript", "SaaS", "E-commerce"],
-      status: "Live · 50+ Users",
+      status: "Live · 1,000+ Users",
     },
-    {
-      title: "Khdame — CRM & Marketplace for Retail Stores",
-      website: "https://www.khdame.com/",
-      description:
-        "Co-founded and built a CRM suite targeting small and medium retail businesses: desktop-optimized web app, Android app (Expo), and an integrated marketplace with product listings, price filters, and region-based search. Built real-time push notifications, WebSocket infrastructure, inventory management, statistics dashboard, OTP email verification, Google Auth, and Play Store submission.",
-      skills: [
-        "React Native",
-        "Expo",
-        "WebSockets",
-        "Push Notifications",
-        "Google Auth",
-      ],
-      status: "Live & Profitable",
-    },
+    // Khdame — commented out per request. Uncomment to restore.
+    // {
+    //   title: "Khdame — CRM & Marketplace for Retail Stores",
+    //   website: "https://www.khdame.com/",
+    //   description:
+    //     "Co-founded and built a CRM suite targeting small and medium retail businesses: desktop-optimized web app, Android app (Expo), and an integrated marketplace with product listings, price filters, and region-based search. Built real-time push notifications, WebSocket infrastructure, inventory management, statistics dashboard, OTP email verification, Google Auth, and Play Store submission.",
+    //   skills: [
+    //     "React Native",
+    //     "Expo",
+    //     "WebSockets",
+    //     "Push Notifications",
+    //     "Google Auth",
+    //   ],
+    //   status: "Live & Profitable",
+    // },
     {
       title: "Munia — Open Source Social Media",
       website: "https://munia.norcio.dev/",
@@ -173,7 +177,7 @@ export default function Experience() {
       degree: "Master's Degree in Computer Science",
       institution:
         "Higher School of Computer Science and Digital Technologies (ESTIN)",
-      period: "2022 - 2027 (Expected)",
+      period: "2022 - 2027",
       description:
         "Focused on advanced topics in computer science, software engineering, and emerging technologies. Gaining expertise in data structures, algorithms, software design, and more.",
     },
@@ -359,8 +363,9 @@ export default function Experience() {
                       )}
                     </p>
                     {job.location && (
-                      <p className="text-muted-foreground text-xs sm:text-sm">
-                        📍 {job.location}
+                      <p className="text-muted-foreground text-xs sm:text-sm flex items-center gap-1">
+                        <MapPin className="h-3 w-3 shrink-0" />
+                        {job.location}
                       </p>
                     )}
                     {job.rating && (

@@ -3,7 +3,17 @@
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import { Code2, Lightbulb, Rocket, Users } from "lucide-react";
+import {
+  Code2,
+  Lightbulb,
+  Rocket,
+  Users,
+  Smartphone,
+  Trophy,
+  Store,
+  Zap,
+  Globe,
+} from "lucide-react";
 
 export default function About() {
   const fadeIn = {
@@ -85,7 +95,7 @@ export default function About() {
               </strong>{" "}
               through CI/CD optimization. Co-founded{" "}
               <strong className="text-foreground">DzStore</strong> — a
-              Shopify-equivalent SaaS with 50+ active users. With a{" "}
+              Shopify-equivalent SaaS with 1,000+ users. With a{" "}
               <strong className="text-foreground">5/5 Fiverr rating</strong>{" "}
               across 6+ delivered production applications, I've worked for
               international clients across USA, UK, Netherlands, Japan, and
@@ -99,60 +109,53 @@ export default function About() {
                 Key Achievements
               </h4>
               <div className="grid gap-3">
-                <div className="flex items-start gap-2">
-                  <span className="text-lg">🚀</span>
+                <div className="flex items-start gap-2.5">
+                  <Rocket className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                   <span className="text-sm text-muted-foreground">
-                    <strong>Founding Engineer — Analytics Depot</strong> - AI
+                    <strong>Founding Engineer — Analytics Depot</strong> — AI
                     SaaS, competing with Julius & Databox
                   </span>
                 </div>
-                <div className="flex items-start gap-2">
-                  <span className="text-lg">📱</span>
+                <div className="flex items-start gap-2.5">
+                  <Smartphone className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                   <span className="text-sm text-muted-foreground">
-                    <strong>HaulHub — Live on iOS & Android</strong> -
-                    Uber-style logistics marketplace with 12+ service categories
+                    <strong>HaulHub — Live on iOS & Android</strong> — Uber-style
+                    logistics marketplace with 12+ service categories
                   </span>
                 </div>
-                <div className="flex items-start gap-2">
-                  <span className="text-lg">🏆</span>
+                <div className="flex items-start gap-2.5">
+                  <Trophy className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                   <span className="text-sm text-muted-foreground">
-                    <strong>1st Place Hackathon Winner</strong> - Competitive
-                    ideathon 2024 · 5+ hackathons participated
+                    <strong>1st Place Hackathon Winner</strong> — competitive
+                    ideathon 2024
                   </span>
                 </div>
-                <div className="flex items-start gap-2">
-                  <span className="text-lg">🛒</span>
+                <div className="flex items-start gap-2.5">
+                  <Store className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                   <span className="text-sm text-muted-foreground">
-                    <strong>Co-founded DzStore</strong> - Shopify-equivalent
-                    SaaS with 50+ active users for Algerian market
+                    <strong>Co-founded DzStore</strong> — Shopify-equivalent SaaS
+                    with 1,000+ users
                   </span>
                 </div>
-                <div className="flex items-start gap-2">
-                  <span className="text-lg">⚡</span>
+                <div className="flex items-start gap-2.5">
+                  <Zap className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                   <span className="text-sm text-muted-foreground">
-                    <strong>CI/CD Optimization</strong> - Reduced deployment
-                    time from 30 minutes to under 5 minutes
+                    <strong>CI/CD Optimization</strong> — cut deployment time
+                    from 30 minutes to under 5
                   </span>
                 </div>
-                <div className="flex items-start gap-2">
-                  <span className="text-lg">💡</span>
+                <div className="flex items-start gap-2.5">
+                  <Lightbulb className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                   <span className="text-sm text-muted-foreground">
-                    <strong>Open Source Contributor</strong> - Contributed to
-                    Munia (300+ GitHub stars Next.js project)
+                    <strong>Open Source Contributor</strong> — Munia (300+ GitHub
+                    stars, Next.js)
                   </span>
                 </div>
-                <div className="flex items-start gap-2">
-                  <span className="text-lg">🌍</span>
+                <div className="flex items-start gap-2.5">
+                  <Globe className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                   <span className="text-sm text-muted-foreground">
-                    <strong>Global Client Work</strong> - 6+ production apps for
-                    USA, UK, Netherlands, Japan, and Saudi Arabia
-                  </span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <span className="text-lg">👥</span>
-                  <span className="text-sm text-muted-foreground">
-                    <strong>Cross-Functional Collaboration</strong> - Working
-                    with 6-person teams across AI/ML, LLMOps, and infrastructure
+                    <strong>Global Client Work</strong> — production apps across
+                    the USA, UK, Netherlands, Japan, and Saudi Arabia
                   </span>
                 </div>
               </div>

@@ -48,18 +48,18 @@ export default function Hero() {
               <span className="animate-blink">|</span>
             </h2>
             <p className="text-base md:text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0">
-              <strong className="text-foreground">Software Engineer</strong>{" "}
-              with <strong className="text-foreground">3+ years</strong>{" "}
-              delivering production-grade platforms. Currently{" "}
               <strong className="text-foreground">
                 Founding Engineer at Analytics Depot
-              </strong>{" "}
-              (AI SaaS) and building{" "}
-              <strong className="text-foreground">HaulHub</strong>, a live
-              logistics marketplace on iOS & Android.{" "}
-              <strong className="text-foreground">5/5 Fiverr rating</strong>{" "}
-              delivering for clients across USA, UK, Netherlands, Japan, and
-              Saudi Arabia.
+              </strong>
+              , building an AI analytics SaaS. I focus on{" "}
+              <strong className="text-foreground">
+                full-stack web development
+              </strong>
+              , <strong className="text-foreground">RAG &amp; AI systems</strong>
+              , and{" "}
+              <strong className="text-foreground">scalable backends</strong> —
+              with 3+ years shipping production platforms that real users depend
+              on.
             </p>
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
               <Button

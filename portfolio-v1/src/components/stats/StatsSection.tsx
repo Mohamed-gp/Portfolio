@@ -2,46 +2,38 @@
 
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
-import {
-  Users,
-  Star,
-  Code,
-  Trophy,
-  Calendar,
-  Rocket,
-  Globe,
-} from "lucide-react";
+import { Users, Code, Trophy, Calendar, Globe } from "lucide-react";
 
 const stats = [
-  {
-    icon: <Users className="h-6 w-6 text-green-500" />,
-    value: "5/5",
-    label: "Client Rating",
-    description: "Fiverr rating score",
-  },
   {
     icon: <Code className="h-6 w-6 text-purple-500" />,
     value: "6+",
     label: "Production Apps",
-    description: "Shipped & live worldwide",
-  },
-  {
-    icon: <Trophy className="h-6 w-6 text-orange-500" />,
-    value: "1st Place",
-    label: "Hackathon Winner",
-    description: "Competitive ideathon 2024",
-  },
-  {
-    icon: <Globe className="h-6 w-6 text-cyan-500" />,
-    value: "5+",
-    label: "Countries Served",
-    description: "USA, UK, NL, Japan & more",
+    description: "Shipped and live in production",
   },
   {
     icon: <Calendar className="h-6 w-6 text-pink-500" />,
     value: "3+",
     label: "Years Experience",
-    description: "Software engineering",
+    description: "Full-stack engineering",
+  },
+  {
+    icon: <Globe className="h-6 w-6 text-cyan-500" />,
+    value: "5+",
+    label: "Countries",
+    description: "USA, UK, NL, Japan & more",
+  },
+  {
+    icon: <Users className="h-6 w-6 text-green-500" />,
+    value: "5/5",
+    label: "Client Rating",
+    description: "Across every delivered project",
+  },
+  {
+    icon: <Trophy className="h-6 w-6 text-orange-500" />,
+    value: "1st",
+    label: "Hackathon Win",
+    description: "Ideathon 2024",
   },
 ];
 
@@ -60,11 +52,11 @@ export default function StatsSection() {
           className="text-center mb-12"
         >
           <h2 className="text-2xl sm:text-3xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
-            Results That Matter
+            By the Numbers
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Numbers that reflect my commitment to delivering exceptional results
-            and building lasting relationships with clients.
+            A quick snapshot of what I&apos;ve shipped and who I&apos;ve shipped
+            it for.
           </p>
         </motion.div>
 
