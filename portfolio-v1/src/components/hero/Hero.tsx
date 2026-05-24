@@ -56,7 +56,7 @@ export default function Hero() {
       </div>
 
       <div className="flex-1 flex items-center">
-        <div className="container px-4 sm:px-6 grid lg:grid-cols-2 gap-8 md:gap-12 items-center pt-20">
+        <div className="container px-4 sm:px-6 grid lg:grid-cols-2 gap-8 md:gap-12 items-center pt-20 pb-16 sm:pb-20">
           <div className="space-y-4 sm:space-y-6 text-center lg:text-left animate-fade-in-up">
             {/* Availability badge */}
             <div className="inline-flex items-center gap-2 rounded-full border border-green-500/30 bg-green-500/10 px-3 py-1.5 text-xs sm:text-sm font-medium text-green-700 dark:text-green-400">

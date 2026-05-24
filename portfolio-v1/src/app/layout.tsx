@@ -220,11 +220,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
                 "Core engineer at Analytics Depot (AI SaaS)",
                 "HaulHub — shipped live on iOS & Android",
                 "1st Place Hackathon Winner 2024",
-                "Fiverr Level 1 Seller - 5/5 Rating",
+                "5/5 rating across delivered freelance projects",
                 "DzStore - Shopify-equivalent SaaS, 151 stores & 253 users in 2 months (organic, pre-revenue)",
               ],
               description:
-                "Full-Stack Engineer with 3+ years delivering production-grade platforms for clients across the Netherlands, UK, and USA. Shipped HaulHub (live logistics marketplace on iOS & Android) and works as a core engineer at Analytics Depot (AI SaaS).",
+                "Full-Stack Engineer with 3+ years delivering production-grade platforms for clients across the USA, UK, Netherlands, Japan, and Saudi Arabia. Shipped HaulHub (live logistics marketplace on iOS & Android) and works as a core engineer at Analytics Depot (AI SaaS).",
             }),
           }}
         />

@@ -6,7 +6,7 @@ Algeria (Remote) · Open to Contracts & Full-Time Remote
 
 ---
 
-Full-Stack Engineer with 3+ years delivering production web & mobile applications. Core contributor to AI analytics SaaS and logistics marketplace. Co-founded e-commerce platform that reached 151 stores organically in 2 months. Specialized in Next.js, React Native, AI integrations, and scalable systems.
+Full-Stack Engineer with 3+ years delivering production web & mobile applications. Core engineer on AI analytics SaaS and logistics marketplace. Co-founded e-commerce platform that reached 151 stores organically in 2 months. Specialized in Next.js, React Native, AI integrations, and scalable systems.
 
 ## Experience
 
