@@ -4,15 +4,16 @@ import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import {
-  Code2,
-  Lightbulb,
-  Rocket,
-  Users,
+  Layers,
   Smartphone,
+  ShieldCheck,
+  Compass,
+  Rocket,
   Trophy,
   Store,
   Zap,
   Globe,
+  GitCommitHorizontal,
 } from "lucide-react";
 
 export default function About() {
@@ -27,6 +28,33 @@ export default function About() {
       },
     }),
   };
+
+  const capabilities = [
+    {
+      icon: <Layers className="h-6 w-6 text-blue-600 dark:text-blue-400" />,
+      bg: "bg-blue-100 dark:bg-blue-900/30",
+      title: "Ships end-to-end",
+      body: "Frontend, backend, mobile, and deployment — solo or embedded in a team.",
+    },
+    {
+      icon: <ShieldCheck className="h-6 w-6 text-cyan-600 dark:text-cyan-400" />,
+      bg: "bg-cyan-100 dark:bg-cyan-900/30",
+      title: "Production-grade",
+      body: "Auth, Stripe payments, real-time sync, observability, and CI/CD on live apps.",
+    },
+    {
+      icon: <Smartphone className="h-6 w-6 text-sky-600 dark:text-sky-400" />,
+      bg: "bg-sky-100 dark:bg-sky-900/30",
+      title: "Web + Mobile",
+      body: "React / Next.js on web; React Native (Expo) shipped to the App Store & Play Store.",
+    },
+    {
+      icon: <Compass className="h-6 w-6 text-indigo-600 dark:text-indigo-400" />,
+      bg: "bg-indigo-100 dark:bg-indigo-900/30",
+      title: "Owns ambiguity",
+      body: "Took HaulHub's two hardest services from spec to live in production.",
+    },
+  ];
 
   return (
     <section id="about" className="py-20 relative overflow-hidden">
@@ -50,11 +78,11 @@ export default function About() {
             </Badge>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-foreground via-foreground to-foreground/70 bg-clip-text text-transparent">
-            Software Engineer & Problem Solver
+            Full-Stack Engineer & Problem Solver
           </h2>
           <p className="text-muted-foreground max-w-3xl mx-auto text-lg">
-            Passionate about creating efficient, scalable solutions that make a
-            real impact.
+            I build production platforms that real users and paying clients
+            depend on — end to end.
           </p>
         </motion.div>
 
@@ -68,38 +96,36 @@ export default function About() {
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <h3 className="text-2xl font-semibold">Experience & Expertise</h3>
+            <h3 className="text-2xl font-semibold">What I do</h3>
             <p className="text-muted-foreground">
-              <strong className="text-foreground">Software Engineer</strong>{" "}
+              <strong className="text-foreground">Full-Stack Engineer</strong>{" "}
               with 3+ years delivering production-grade platforms for clients
-              across the Netherlands, UK, and USA. Currently{" "}
+              across the USA, UK, Netherlands, Japan, and Saudi Arabia. A{" "}
               <strong className="text-foreground">
-                Founding Engineer at Analytics Depot
+                core engineer on Analytics Depot
               </strong>{" "}
-              — an AI SaaS, competing with Julius and Databox. Also building
-              HaulHub, a{" "}
-              <strong className="text-foreground">
-                live Uber-style logistics marketplace on iOS & Android
-              </strong>{" "}
-              in the Netherlands.
+              (an AI analytics SaaS), and previously a full-stack engineer on{" "}
+              <strong className="text-foreground">HaulHub</strong> — a live
+              Uber-style logistics marketplace on iOS &amp; Android in the
+              Netherlands.
             </p>
             <p className="text-muted-foreground">
-              My expertise spans{" "}
+              My work spans{" "}
               <strong className="text-foreground">
-                real-time collaboration with WebSockets
+                real-time collaboration over WebSockets
               </strong>
-              , custom drag-and-drop dashboard builders, RAG-based document
-              intelligence, and{" "}
+              , custom drag-and-drop dashboard builders, RAG document
+              intelligence, Stripe payments, and self-managed VPS deployments. I
+              co-founded{" "}
+              <strong className="text-foreground">DzStore</strong>, a
+              Shopify-equivalent SaaS I co-founded and helped build across the
+              full stack, which reached{" "}
               <strong className="text-foreground">
-                cutting deployment time from ~30 mins to under 5 mins
+                151 active stores and 253 users in 2 months
               </strong>{" "}
-              through CI/CD optimization. Co-founded{" "}
-              <strong className="text-foreground">DzStore</strong> — a
-              Shopify-equivalent SaaS with 1,000+ users. With a{" "}
-              <strong className="text-foreground">5/5 Fiverr rating</strong>{" "}
-              across 6+ delivered production applications, I've worked for
-              international clients across USA, UK, Netherlands, Japan, and
-              Saudi Arabia.
+              through organic SEO alone. I hold a{" "}
+              <strong className="text-foreground">5/5 rating</strong> across 6+
+              delivered production applications.
             </p>
 
             {/* Professional Highlights */}
@@ -110,52 +136,53 @@ export default function About() {
               </h4>
               <div className="grid gap-3">
                 <div className="flex items-start gap-2.5">
-                  <Rocket className="h-4 w-4 text-primary mt-0.5 shrink-0" />
-                  <span className="text-sm text-muted-foreground">
-                    <strong>Founding Engineer — Analytics Depot</strong> — AI
-                    SaaS, competing with Julius & Databox
-                  </span>
-                </div>
-                <div className="flex items-start gap-2.5">
                   <Smartphone className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                   <span className="text-sm text-muted-foreground">
-                    <strong>HaulHub — Live on iOS & Android</strong> — Uber-style
-                    logistics marketplace with 12+ service categories
+                    <strong>HaulHub — live on iOS & Android</strong> — built two
+                    of its hardest services, 380+ commits across backend, mobile
+                    & web
                   </span>
                 </div>
                 <div className="flex items-start gap-2.5">
-                  <Trophy className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                  <Rocket className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                   <span className="text-sm text-muted-foreground">
-                    <strong>1st Place Hackathon Winner</strong> — competitive
-                    ideathon 2024
+                    <strong>Core engineer — Analytics Depot (AI SaaS)</strong> —
+                    real-time dashboards, RAG, NL-to-SQL, 120+ commits
                   </span>
                 </div>
                 <div className="flex items-start gap-2.5">
                   <Store className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                   <span className="text-sm text-muted-foreground">
-                    <strong>Co-founded DzStore</strong> — Shopify-equivalent SaaS
-                    with 1,000+ users
+                    <strong>Co-founded DzStore</strong> — 151 stores & 253 users
+                    in 2 months, 100% organic (pre-revenue)
                   </span>
                 </div>
                 <div className="flex items-start gap-2.5">
                   <Zap className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                   <span className="text-sm text-muted-foreground">
-                    <strong>CI/CD Optimization</strong> — cut deployment time
-                    from 30 minutes to under 5
+                    <strong>CI/CD optimization</strong> — cut deployment time
+                    from ~30 minutes to under 5
                   </span>
                 </div>
                 <div className="flex items-start gap-2.5">
-                  <Lightbulb className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                  <Trophy className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                   <span className="text-sm text-muted-foreground">
-                    <strong>Open Source Contributor</strong> — Munia (300+ GitHub
-                    stars, Next.js)
+                    <strong>1st Place Hackathon Winner 2024</strong> —
+                    competitive ideathon
+                  </span>
+                </div>
+                <div className="flex items-start gap-2.5">
+                  <GitCommitHorizontal className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                  <span className="text-sm text-muted-foreground">
+                    <strong>Contributed to Munia</strong> — open-source Next.js
+                    project, 300+ GitHub stars
                   </span>
                 </div>
                 <div className="flex items-start gap-2.5">
                   <Globe className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                   <span className="text-sm text-muted-foreground">
-                    <strong>Global Client Work</strong> — production apps across
-                    the USA, UK, Netherlands, Japan, and Saudi Arabia
+                    <strong>5/5 across global clients</strong> — USA, UK,
+                    Netherlands, Japan, and Saudi Arabia
                   </span>
                 </div>
               </div>
@@ -168,59 +195,24 @@ export default function About() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid grid-cols-2 gap-4"
+            className="grid grid-cols-2 gap-4 self-start"
           >
-            <Card className="relative bg-gradient-to-br from-blue-50 to-white dark:from-gray-900 dark:to-gray-800 hover:shadow-xl transition-all duration-300 group border-2 border-transparent hover:border-blue-200 dark:hover:border-blue-900">
-              <CardContent className="p-6 flex flex-col items-center text-center relative z-10">
-                <div className="p-3 rounded-full bg-blue-100 dark:bg-blue-900/30 mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-                  <Code2 className="h-6 w-6 text-blue-600 dark:text-blue-400" />
-                </div>
-                <h4 className="font-semibold mb-2">Code Craftsman</h4>
-                <p className="text-sm text-muted-foreground">
-                  I don't just write code, I craft digital experiences that
-                  users actually love
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="relative bg-gradient-to-br from-cyan-50 to-white dark:from-gray-900 dark:to-gray-800 hover:shadow-xl transition-all duration-300 group border-2 border-transparent hover:border-cyan-200 dark:hover:border-cyan-900">
-              <CardContent className="p-6 flex flex-col items-center text-center relative z-10">
-                <div className="p-3 rounded-full bg-cyan-100 dark:bg-cyan-900/30 mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-                  <Users className="h-6 w-6 text-cyan-600 dark:text-cyan-400" />
-                </div>
-                <h4 className="font-semibold mb-2">Team Player</h4>
-                <p className="text-sm text-muted-foreground">
-                  From solo freelancing to team collaboration — I make
-                  everyone's job easier
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="relative bg-gradient-to-br from-sky-50 to-white dark:from-gray-900 dark:to-gray-800 hover:shadow-xl transition-all duration-300 group border-2 border-transparent hover:border-sky-200 dark:hover:border-sky-900">
-              <CardContent className="p-6 flex flex-col items-center text-center relative z-10">
-                <div className="p-3 rounded-full bg-sky-100 dark:bg-sky-900/30 mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-                  <Lightbulb className="h-6 w-6 text-sky-600 dark:text-sky-400" />
-                </div>
-                <h4 className="font-semibold mb-2">Solution Architect</h4>
-                <p className="text-sm text-muted-foreground">
-                  I see problems as puzzles waiting to be solved (and I'm pretty
-                  good at puzzles)
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="relative bg-gradient-to-br from-indigo-50 to-white dark:from-gray-900 dark:to-gray-800 hover:shadow-xl transition-all duration-300 group border-2 border-transparent hover:border-indigo-200 dark:hover:border-indigo-900">
-              <CardContent className="p-6 flex flex-col items-center text-center relative z-10">
-                <div className="p-3 rounded-full bg-indigo-100 dark:bg-indigo-900/30 mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-                  <Rocket className="h-6 w-6 text-indigo-600 dark:text-indigo-400" />
-                </div>
-                <h4 className="font-semibold mb-2">Tech Enthusiast</h4>
-                <p className="text-sm text-muted-foreground">
-                  Always learning the latest tech — because staying ahead means
-                  better solutions
-                </p>
-              </CardContent>
-            </Card>
+            {capabilities.map((c) => (
+              <Card
+                key={c.title}
+                className="relative bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 hover:shadow-xl transition-all duration-300 group border-2 border-transparent hover:border-primary/20"
+              >
+                <CardContent className="p-6 flex flex-col items-center text-center relative z-10">
+                  <div
+                    className={`p-3 rounded-full ${c.bg} mb-4 group-hover:scale-110 transition-all duration-300`}
+                  >
+                    {c.icon}
+                  </div>
+                  <h4 className="font-semibold mb-2">{c.title}</h4>
+                  <p className="text-sm text-muted-foreground">{c.body}</p>
+                </CardContent>
+              </Card>
+            ))}
           </motion.div>
         </div>
       </div>

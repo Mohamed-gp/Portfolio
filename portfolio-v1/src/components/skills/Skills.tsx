@@ -62,6 +62,7 @@ function getSkillLevel(skillName: string) {
   const advancedSkills = [
     "express js",
     "express.js",
+    "nestjs",
     "fastapi",
     "python",
     "postgresql",
@@ -116,6 +117,7 @@ projectsImagesSkills.forEach((skill) => {
     [
       "node",
       "express",
+      "nest",
       "mysql",
       "postgres",
       "graphql",

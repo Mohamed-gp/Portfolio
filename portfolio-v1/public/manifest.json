@@ -17,24 +17,16 @@
       "type": "image/x-icon"
     },
     {
-      "src": "/profile/profile_picture.jpg",
+      "src": "/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/profile/profile_picture.jpg",
+      "src": "/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
-    }
-  ],
-  "screenshots": [
-    {
-      "src": "/profile/profile_picture.jpg",
-      "sizes": "1280x720",
-      "type": "image/png",
-      "label": "Mohamed Outerbah Portfolio Homepage"
     }
   ]
 }

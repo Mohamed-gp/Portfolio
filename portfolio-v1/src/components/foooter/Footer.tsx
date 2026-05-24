@@ -78,10 +78,10 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="#skills"
+                  href="#projects"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Skills
+                  Projects
                 </Link>
               </li>
               <li>
@@ -94,10 +94,10 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="#projects"
+                  href="#skills"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Projects
+                  Skills
                 </Link>
               </li>
               <li>

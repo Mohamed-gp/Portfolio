@@ -1,13 +1,3 @@
-const navBarTitles = [
-  "Home",
-  "About",
-  "Skills",
-  "Projects",
-  "Contact",
-  // "Experience",
-  // "Contact",
-] as const;
-
 const projectsImagesSkills = [
   // Frontend
   { filename: "typescript.svg", name: "TypeScript" },
@@ -24,6 +14,7 @@ const projectsImagesSkills = [
   { filename: "fastapi.svg", name: "FastAPI" },
   { filename: "nodejs.svg", name: "Node.js" },
   { filename: "expressjs.svg", name: "Express.js" },
+  { filename: "nestjs.svg", name: "NestJS" },
   { filename: "celery.svg", name: "Celery" },
 
   // Databases
@@ -45,6 +36,4 @@ const projectsImagesSkills = [
   { filename: "umami.svg", name: "Umami" },
 ] as const;
 
-const projects: Record<string, unknown>[] = [];
-
-export { navBarTitles, projectsImagesSkills, projects };
+export { projectsImagesSkills };

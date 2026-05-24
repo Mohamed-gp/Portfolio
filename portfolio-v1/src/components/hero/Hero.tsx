@@ -2,15 +2,26 @@
 
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Download, Github, Linkedin, Mail } from "lucide-react";
+import {
+  ArrowRight,
+  Check,
+  Copy,
+  Download,
+  Github,
+  Linkedin,
+  Mail,
+} from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import ProfilePicture from "@/../public/profile/profile_picture.jpg";
 
+const EMAIL = "mohamedterba6@gmail.com";
+
 export default function Hero() {
   const [text, setText] = useState("");
-  const fullText = "Software Engineer";
+  const fullText = "Full-Stack Engineer";
   const [index, setIndex] = useState(0);
+  const [copied, setCopied] = useState(false);
 
   useEffect(() => {
     if (index < fullText.length) {
@@ -21,6 +32,16 @@ export default function Hero() {
       return () => clearTimeout(timeout);
     }
   }, [index]);
+
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(EMAIL);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      window.location.href = `mailto:${EMAIL}`;
+    }
+  };
 
   return (
     <section
@@ -37,6 +58,16 @@ export default function Hero() {
       <div className="flex-1 flex items-center">
         <div className="container px-4 sm:px-6 grid lg:grid-cols-2 gap-8 md:gap-12 items-center pt-20">
           <div className="space-y-4 sm:space-y-6 text-center lg:text-left animate-fade-in-up">
+            {/* Availability badge */}
+            <div className="inline-flex items-center gap-2 rounded-full border border-green-500/30 bg-green-500/10 px-3 py-1.5 text-xs sm:text-sm font-medium text-green-700 dark:text-green-400">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
+              </span>
+              Available for full-time remote — US East Coast overlap &amp; EMEA
+              hours
+            </div>
+
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
               Hi, I'm{" "}
               <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
@@ -48,20 +79,59 @@ export default function Hero() {
               <span className="animate-blink">|</span>
             </h2>
             <p className="text-base md:text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0">
+              I build and ship production web &amp; mobile platforms
+              end-to-end — from AI analytics dashboards at{" "}
+              <strong className="text-foreground">Analytics Depot</strong> to{" "}
+              <strong className="text-foreground">HaulHub</strong>, a live
+              Uber-style logistics marketplace on iOS &amp; Android.{" "}
               <strong className="text-foreground">
-                Founding Engineer at Analytics Depot
-              </strong>
-              , building an AI analytics SaaS. I focus on{" "}
-              <strong className="text-foreground">
-                full-stack web development
-              </strong>
-              , <strong className="text-foreground">RAG &amp; AI systems</strong>
-              , and{" "}
-              <strong className="text-foreground">scalable backends</strong> —
-              with 3+ years shipping production platforms that real users depend
-              on.
+                3+ years, 6+ live products
+              </strong>{" "}
+              for clients across the US, UK, Netherlands, Japan &amp; Saudi
+              Arabia.
             </p>
-            <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
+
+            {/* Prominent contact bar */}
+            <div className="flex flex-wrap items-center gap-2 justify-center lg:justify-start">
+              <div className="inline-flex items-center gap-2 rounded-full border bg-background/60 backdrop-blur-sm pl-4 pr-1.5 py-1.5 shadow-sm">
+                <Mail className="h-4 w-4 text-primary shrink-0" />
+                <span className="text-sm font-medium select-all">{EMAIL}</span>
+                <button
+                  type="button"
+                  onClick={copyEmail}
+                  aria-label="Copy email address"
+                  className="inline-flex items-center gap-1 rounded-full bg-primary px-2.5 py-1 text-xs font-semibold text-primary-foreground hover:opacity-90 transition-opacity"
+                >
+                  {copied ? (
+                    <>
+                      <Check className="h-3.5 w-3.5" /> Copied
+                    </>
+                  ) : (
+                    <>
+                      <Copy className="h-3.5 w-3.5" /> Copy
+                    </>
+                  )}
+                </button>
+              </div>
+              <Link
+                href="https://www.linkedin.com/in/mohamedouterbah"
+                target="_blank"
+                aria-label="LinkedIn"
+                className="p-2.5 rounded-full bg-muted/50 hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110"
+              >
+                <Linkedin className="h-5 w-5" />
+              </Link>
+              <Link
+                href="https://github.com/Mohamed-gp"
+                target="_blank"
+                aria-label="GitHub"
+                className="p-2.5 rounded-full bg-muted/50 hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110"
+              >
+                <Github className="h-5 w-5" />
+              </Link>
+            </div>
+
+            <div className="flex flex-wrap gap-4 justify-center lg:justify-start pt-1">
               <Button
                 asChild
                 size="lg"
@@ -82,48 +152,12 @@ export default function Hero() {
                   href="/cv/Mohamed_Outerbah_CV.pdf"
                   target="_blank"
                   prefetch={false}
+                  download
                 >
                   <Download className="mr-2 h-4 w-4 transition-transform group-hover:translate-y-0.5" />
                   Download CV
                 </Link>
               </Button>
-              <Button
-                asChild
-                variant="ghost"
-                size="lg"
-                className="group hover:bg-muted/50 transition-all duration-300"
-              >
-                <Link href="#contact">
-                  <Mail className="mr-2 h-4 w-4" />
-                  Let's Talk
-                </Link>
-              </Button>
-            </div>
-            <div className="flex items-center gap-4 pt-4 justify-center lg:justify-start">
-              <Link
-                href="https://github.com/Mohamed-gp"
-                target="_blank"
-                className="p-3 rounded-full bg-muted/50 hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110 cursor-pointer"
-              >
-                <Github className="h-5 w-5" />
-                <span className="sr-only">GitHub</span>
-              </Link>
-              <Link
-                href="https://www.linkedin.com/in/mohamedouterbah"
-                target="_blank"
-                className="p-3 rounded-full bg-muted/50 hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110 cursor-pointer"
-              >
-                <Linkedin className="h-5 w-5" />
-                <span className="sr-only">LinkedIn</span>
-              </Link>
-              <Link
-                href="mailto:mohamedterba6@gmail.com"
-                target="_blank"
-                className="p-3 rounded-full bg-muted/50 hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110 cursor-pointer"
-              >
-                <Mail className="h-5 w-5" />
-                <span className="sr-only">Email</span>
-              </Link>
             </div>
           </div>
 
@@ -136,7 +170,7 @@ export default function Hero() {
                 <div className="relative w-full h-full rounded-full overflow-hidden shadow-inner">
                   <Image
                     src={ProfilePicture}
-                    alt="Mohamed Outerbah - Software Engineer"
+                    alt="Mohamed Outerbah - Full-Stack Engineer"
                     width={400}
                     height={400}
                     priority

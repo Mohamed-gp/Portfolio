@@ -11,7 +11,7 @@ const ConsoleLog = () => {
 
     // Welcome banner with gradient effect
     console.log(
-      "%c🚀 Mohamed Outerbah - Software Engineer",
+      "%c🚀 Mohamed Outerbah - Full-Stack Engineer",
       "background: linear-gradient(90deg, #667eea 0%, #764ba2 100%); color: white; font-size: 20px; font-weight: bold; padding: 12px 20px; border-radius: 10px; text-shadow: 0 2px 4px rgba(0,0,0,0.3);",
     );
 
@@ -21,7 +21,7 @@ const ConsoleLog = () => {
       "color: #4f46e5; font-size: 16px; font-weight: bold; padding: 8px 0;",
     );
     console.log(
-      "%c🔗 https://github.com/Mohamed-gp/Mohamed-gp.github.io",
+      "%c🔗 https://github.com/Mohamed-gp/Portfolio",
       "background: #1f2937; color: #60a5fa; font-size: 14px; padding: 8px 12px; border-radius: 6px; border-left: 4px solid #60a5fa;",
     );
 

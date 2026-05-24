@@ -89,11 +89,6 @@ const clients: Client[] = [
         rating: 5,
         date: "2026-03-21",
       },
-      {
-        text: "Mohamed is an excellent software engineer. he will work meticulously to align product to the vision and goes above and beyond to deliver. Enjoyed working with Mohamed a lot and looking forward to working together again.",
-        rating: 5,
-        date: "2026-03-21",
-      },
     ],
   },
   {

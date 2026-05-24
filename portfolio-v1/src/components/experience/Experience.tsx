@@ -37,12 +37,12 @@ export default function Experience() {
 
   const workExperience = [
     {
-      title: "Founding Full-Stack Engineer",
+      title: "Full-Stack Engineer",
       company: "Analytics Depot",
       location: "Remote (USA)",
       period: "Apr 2025 – Present",
       description:
-        "One of 4 founding engineers on a live AI analytics platform — targeting feature parity with Julius (conversational AI analysis) and Databox (KPI dashboards, scheduled reports). Owning all frontend architecture: custom drag-and-drop dashboard builder, shareable reports with password protection and embed mode, one-click PDF/PowerPoint export. Shipped real-time collaboration with WebSocket session sync, user presence system, collaborative chat sidebar, and NL-to-SQL query interface. Integrated Apple Auth, Sentry observability, and CI/CD optimization — deployment time: ~30 min → under 5 min. Initialized React Native mobile app with dashboard viewing, push notifications, biometric auth, and offline caching.",
+        "Core engineer on a live AI analytics SaaS (team of ~10), owning all frontend architecture: custom drag-and-drop dashboard builder, shareable reports with password protection and embed mode, one-click PDF/PowerPoint export. Shipped real-time collaboration with WebSocket session sync, user presence system, collaborative chat sidebar, and an NL-to-SQL query interface. Built an OAuth2 connector platform (Google services, SQL databases, BigQuery, Sheets, Slack) and RAG document Q&A. Integrated Apple Auth, Sentry observability, and CI/CD optimization — deployment time: ~30 min → under 5 min. Also initialized the companion React Native mobile app (dashboard viewing, push notifications, biometric auth, offline caching).",
       skills: [
         "Next.js",
         "FastAPI",
@@ -58,12 +58,12 @@ export default function Experience() {
       ],
     },
     {
-      title: "Full-Stack Developer — Extensive Contract",
+      title: "Full-Stack Engineer — Contract",
       company: "HaulHub",
       location: "Remote (Netherlands)",
-      period: "Jun 2025 – Present",
+      period: "Jun 2025 – May 2026",
       description:
-        "Building a production Uber-style logistics marketplace with 12+ service categories (truck rentals, skilled labor, agricultural equipment, furniture moving) — live on iOS & Android in the Netherlands. Architecting a complex multi-role system: Admin (with sub-roles), End Users, Service Providers (freelancers & companies), and Company Employees — each with dedicated dashboards and permission scopes. Developed the platform's two most complex services end-to-end: booking flows, real-time tracking, provider matching, and status management. Integrated Stripe payments (on-demand, subscriptions, provider payouts). Deployed Dockerized microservices on Hetzner via Coolify.",
+        "Built a production Uber-style logistics marketplace with 12+ service categories (truck rentals, skilled labor, agricultural equipment, furniture moving) — live on iOS & Android in the Netherlands. Implemented a role-based system across 5+ user types: Admin (with sub-roles), End Users, Service Providers (freelancers & companies), and Company Employees — each with dedicated dashboards and permission scopes. Developed the platform's two most complex services end-to-end: booking flows, real-time tracking, provider matching, and status management. Integrated Stripe payments (on-demand, subscriptions, provider payouts). Deployed Dockerized microservices on Hetzner via Coolify.",
       skills: [
         "Next.js",
         "NestJS",
@@ -139,25 +139,24 @@ export default function Experience() {
       title: "DzStore — Shopify-equivalent SaaS for Algerian merchants",
       website: "https://dzstore.org/",
       description:
-        "Co-founded and built a full e-commerce SaaS with 1,000+ users. Built with Next.js, PostgreSQL, TypeScript — flagship of the Dzeri ecosystem targeting Algerian market digitization.",
+        "Co-founded a multi-tenant e-commerce SaaS and worked across its full stack — database, backend, and frontend — reaching 151 active stores and 253 users in its first 2 months, entirely through organic SEO, zero ad spend. Subdomain-per-store routing with Caddy on-demand TLS, Next.js, a 38-model Prisma/PostgreSQL schema, self-hosted on Hetzner. Flagship of the Dzeri ecosystem targeting Algerian market digitization.",
       skills: ["Next.js", "PostgreSQL", "TypeScript", "SaaS", "E-commerce"],
-      status: "Live · 1,000+ Users",
+      status: "Live · 151 Stores",
     },
-    // Khdame — commented out per request. Uncomment to restore.
-    // {
-    //   title: "Khdame — CRM & Marketplace for Retail Stores",
-    //   website: "https://www.khdame.com/",
-    //   description:
-    //     "Co-founded and built a CRM suite targeting small and medium retail businesses: desktop-optimized web app, Android app (Expo), and an integrated marketplace with product listings, price filters, and region-based search. Built real-time push notifications, WebSocket infrastructure, inventory management, statistics dashboard, OTP email verification, Google Auth, and Play Store submission.",
-    //   skills: [
-    //     "React Native",
-    //     "Expo",
-    //     "WebSockets",
-    //     "Push Notifications",
-    //     "Google Auth",
-    //   ],
-    //   status: "Live & Profitable",
-    // },
+    {
+      title: "Khdame — Retail CRM & Marketplace",
+      website: "https://www.khdame.com/",
+      description:
+        "Co-founded a CRM suite for small & medium retail stores — a desktop web app plus an Android app (Expo) — with real-time stock/inventory management, an integrated marketplace (product listings, price filters, region-based search), a statistics dashboard, push notifications over WebSockets, OTP email verification, and Google Auth. Submitted to the Play Store.",
+      skills: [
+        "React Native",
+        "Expo",
+        "WebSockets",
+        "Inventory Management",
+        "Google Auth",
+      ],
+      status: "Live",
+    },
     {
       title: "Munia — Open Source Social Media",
       website: "https://munia.norcio.dev/",
