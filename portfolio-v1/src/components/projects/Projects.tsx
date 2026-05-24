@@ -63,7 +63,7 @@ export default function Projects() {
       url: "https://analyticsdepot.com/",
       image: "/projects/analytics-depot/hero-updated-1.png",
       description:
-        "Built the entire frontend of a live AI analytics SaaS: a drag-and-drop dashboard builder with multiple chart types, shareable reports (password-protected + embed mode) with one-click PDF/PowerPoint export, and an OAuth2 connector platform spanning Google services, SQL databases, BigQuery, Sheets, and Slack. Shipped RAG document Q&A and an NL-to-SQL query interface, and initialized the companion React Native app. Cut deploy time from ~30 min to under 5.",
+        "Built the entire frontend of a live AI analytics SaaS: a drag-and-drop dashboard builder with multiple chart types, shareable reports (password-protected + embed mode) with one-click PDF/PowerPoint export, and an OAuth2 connector platform spanning 10+ data sources (BigQuery, GA4, Search Console, Sheets, Gmail, YouTube, Google Play, PostgreSQL, MySQL, Slack). Shipped RAG document Q&A and an NL-to-SQL query interface, and initialized the companion React Native app. Cut deploy time from ~30 min to under 5.",
       hardest:
         "Real-time multi-user dashboard sync over WebSockets — session sync, live presence, and a collaborative chat sidebar that stay consistent across editors.",
       status: "Live",
@@ -89,7 +89,7 @@ export default function Projects() {
       url: "https://haulhub.app/",
       image: "/projects/haulhub/hero-updated-1.png",
       description:
-        "Full-stack engineer (380+ commits across backend, mobile & web) on a production Uber-style logistics marketplace — live on iOS & Android in the Netherlands across 12+ service categories (truck rentals, skilled labor, agricultural equipment, furniture moving). Built the two most complex services end-to-end — booking, real-time tracking, provider matching — plus Stripe payments (on-demand, subscriptions, provider payouts) and Dutch KVK business-registry lookup. Shipped with full RTL i18n (EN/AR/UR/NL).",
+        "Full-stack engineer (380+ commits across backend, mobile & web) on a production Uber-style logistics marketplace — live on iOS & Android in the Netherlands across 12 service categories and 100+ skilled-labor sub-categories. Built the two most complex services end-to-end — booking, real-time tracking, provider matching — plus Stripe payments (on-demand, subscriptions, provider payouts) and Dutch KVK business-registry lookup. Shipped with full RTL i18n in 5 languages (EN/NL/AR/DE/UR).",
       hardest:
         "Delivering a 5+ role platform — Admin (with sub-roles), End Users, freelance & company Service Providers, and Company Employees, each with its own dashboard, permissions, and payout flows — while shipping many features in parallel under tight deadlines.",
       status: "Live on iOS & Android",
@@ -113,7 +113,7 @@ export default function Projects() {
       url: "https://dzstore.org/",
       image: "/projects/dzstore/hero-updated-1.png",
       description:
-        "Co-founded a multi-tenant Shopify-equivalent SaaS and worked across its full stack — database, backend, and frontend. Reached 151 active stores, 253 users, and 190+ products in its first 2 months — 100% organic SEO, zero ad spend (pre-revenue). Subdomain-per-store routing with Caddy on-demand TLS, a 38-model Prisma/PostgreSQL schema, a drag-and-drop storefront builder, per-region shipping, abandoned-cart recovery, an affiliate system, and AI product descriptions — self-hosted on Hetzner via Docker.",
+        "Co-founded a multi-tenant Shopify-equivalent SaaS and worked across its full stack — database, backend, and frontend. Reached 151 active stores, 253 users, and 190+ products in its first 2 months — 100% organic SEO, zero ad spend (pre-revenue). Subdomain-per-store routing with Caddy on-demand TLS, a 38-model Prisma/PostgreSQL schema, a drag-and-drop storefront builder, per-region shipping, abandoned-cart recovery, an affiliate system, and AI product descriptions — self-hosted on Hetzner via Docker. Drove the platform's organic growth through technical SEO: structured data (FAQ, breadcrumbs, product/merchant schema for Google Shopping) and 130+ pages indexed.",
       hardest:
         "Multi-tenant subdomain routing with Caddy on-demand TLS — every merchant gets their own store and custom domain with automatic HTTPS, all from one codebase.",
       status: "Live · 151 Stores",
@@ -126,6 +126,7 @@ export default function Projects() {
         "Docker",
         "Caddy",
         "Umami",
+        "Technical SEO",
       ],
     },
     {

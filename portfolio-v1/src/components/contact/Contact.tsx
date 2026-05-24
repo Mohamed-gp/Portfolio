@@ -186,63 +186,53 @@ export default function Contact() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="lg:col-span-2 flex flex-col gap-4"
           >
-            {/* Email Card */}
-            <Card className="overflow-hidden border-primary/10 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-              <CardContent className="p-5 flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <Mail className="h-6 w-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-bold">Email</h3>
-                  <a
-                    href="mailto:mohamedterba6@gmail.com"
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    mohamedterba6@gmail.com
-                  </a>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* GitHub Card */}
-            <Card className="overflow-hidden border-primary/10 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-              <CardContent className="p-5 flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <Github className="h-6 w-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-bold">GitHub</h3>
-                  <a
-                    href="https://github.com/Mohamed-gp"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    Mohamed-gp
-                  </a>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* LinkedIn Card */}
-            <Card className="overflow-hidden border-primary/10 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-              <CardContent className="p-5 flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <Linkedin className="h-6 w-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-bold">LinkedIn</h3>
-                  <a
-                    href="https://www.linkedin.com/in/mohamedouterbah"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    mohamedouterbah
-                  </a>
-                </div>
-              </CardContent>
-            </Card>
+            {[
+              {
+                icon: Mail,
+                label: "Email",
+                value: "mohamedterba6@gmail.com",
+                href: "mailto:mohamedterba6@gmail.com",
+                external: false,
+              },
+              {
+                icon: Github,
+                label: "GitHub",
+                value: "Mohamed-gp",
+                href: "https://github.com/Mohamed-gp",
+                external: true,
+              },
+              {
+                icon: Linkedin,
+                label: "LinkedIn",
+                value: "mohamedouterbah",
+                href: "https://www.linkedin.com/in/mohamedouterbah",
+                external: true,
+              },
+            ].map(({ icon: Icon, label, value, href, external }) => (
+              <a
+                key={label}
+                href={href}
+                aria-label={`${label}: ${value}`}
+                {...(external
+                  ? { target: "_blank", rel: "noopener noreferrer" }
+                  : {})}
+                className="block rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+              >
+                <Card className="group cursor-pointer overflow-hidden border-primary/10 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                  <CardContent className="p-5 flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
+                      <Icon className="h-6 w-6 text-primary" />
+                    </div>
+                    <div className="min-w-0">
+                      <h3 className="font-bold">{label}</h3>
+                      <span className="text-sm text-muted-foreground group-hover:text-primary transition-colors break-all">
+                        {value}
+                      </span>
+                    </div>
+                  </CardContent>
+                </Card>
+              </a>
+            ))}
           </motion.div>
         </div>
       </div>

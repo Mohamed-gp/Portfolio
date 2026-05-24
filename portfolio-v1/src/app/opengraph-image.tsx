@@ -73,7 +73,7 @@ export default function OpengraphImage() {
           ))}
         </div>
         <div style={{ display: "flex", marginTop: 50, fontSize: 24, color: "#94a3b8" }}>
-          mohamedouterbah.vercel.app
+          mohamedouterbah.com
         </div>
       </div>
     ),

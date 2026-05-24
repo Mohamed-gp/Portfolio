@@ -42,7 +42,7 @@ export default function Experience() {
       location: "Remote (USA)",
       period: "Apr 2025 – Present",
       description:
-        "Core engineer on a live AI analytics SaaS (team of ~10), owning all frontend architecture: custom drag-and-drop dashboard builder, shareable reports with password protection and embed mode, one-click PDF/PowerPoint export. Shipped real-time collaboration with WebSocket session sync, user presence system, collaborative chat sidebar, and an NL-to-SQL query interface. Built an OAuth2 connector platform (Google services, SQL databases, BigQuery, Sheets, Slack) and RAG document Q&A. Integrated Apple Auth, Sentry observability, and CI/CD optimization — deployment time: ~30 min → under 5 min. Also initialized the companion React Native mobile app (dashboard viewing, push notifications, biometric auth, offline caching).",
+        "Core engineer on a live AI analytics SaaS (team of ~10), owning all frontend architecture: custom drag-and-drop dashboard builder, shareable reports with password protection and embed mode, one-click PDF/PowerPoint export. Shipped real-time collaboration with WebSocket session sync, user presence system, collaborative chat sidebar, and an NL-to-SQL query interface. Built an OAuth2 connector platform spanning 10+ data sources (BigQuery, GA4, Search Console, Sheets, Gmail, YouTube, Google Play, PostgreSQL, MySQL, Slack) and RAG document Q&A. Integrated Apple Auth, Sentry observability, and CI/CD optimization — deployment time: ~30 min → under 5 min. Also initialized the companion React Native mobile app (dashboard viewing, push notifications, biometric auth, offline caching).",
       skills: [
         "Next.js",
         "FastAPI",
@@ -63,7 +63,7 @@ export default function Experience() {
       location: "Remote (Netherlands)",
       period: "Jun 2025 – May 2026",
       description:
-        "Built a production Uber-style logistics marketplace with 12+ service categories (truck rentals, skilled labor, agricultural equipment, furniture moving) — live on iOS & Android in the Netherlands. Implemented a role-based system across 5+ user types: Admin (with sub-roles), End Users, Service Providers (freelancers & companies), and Company Employees — each with dedicated dashboards and permission scopes. Developed the platform's two most complex services end-to-end: booking flows, real-time tracking, provider matching, and status management. Integrated Stripe payments (on-demand, subscriptions, provider payouts). Deployed Dockerized microservices on Hetzner via Coolify.",
+        "Built a production Uber-style logistics marketplace spanning 12 service categories and 100+ skilled-labor sub-categories — live on iOS & Android in the Netherlands, localized in 5 languages (EN/NL/AR/DE/UR). Implemented a role-based system across 5+ user types: Admin (with sub-roles), End Users, Service Providers (freelancers & companies), and Company Employees — each with dedicated dashboards and permission scopes. Developed the platform's two most complex services end-to-end: booking flows, real-time tracking, provider matching, and status management. Integrated Stripe payments (on-demand, subscriptions, provider payouts). Deployed Dockerized microservices on Hetzner via Coolify.",
       skills: [
         "Next.js",
         "NestJS",
@@ -114,7 +114,7 @@ export default function Experience() {
       title: "Freelance Full-Stack Developer",
       company: "Fiverr",
       website: "https://www.fiverr.com/mohamedouterbah?public_mode=true",
-      period: "2022 – Present",
+      period: "Jun 2023 – Jun 2025",
       description:
         "Delivered 6+ full-stack production applications for clients in the UK, USA, Netherlands, Japan, and Saudi Arabia — including Cribbix, a Rightmove-style real estate platform with tenant dashboards, interactive map search, Stripe subscriptions, and Redis caching. Implemented new features, resolved complex frontend/backend production bugs, improved system performance, and managed VPS deployments for international clients.",
       skills: [
@@ -129,7 +129,6 @@ export default function Experience() {
       rating: {
         score: 5,
         platform: "Fiverr",
-        level: "Level 1",
       },
     },
   ];
@@ -388,14 +387,6 @@ export default function Experience() {
                             {job.rating.score} on {job.rating.platform}
                           </span>
                         </div>
-                        {job.rating.level && (
-                          <Badge
-                            variant="secondary"
-                            className="w-fit text-xs bg-green-500/10 text-green-700 dark:text-green-400 border-green-500/20"
-                          >
-                            {job.rating.level} Seller
-                          </Badge>
-                        )}
                       </div>
                     )}
                     <p className="text-muted-foreground text-sm">

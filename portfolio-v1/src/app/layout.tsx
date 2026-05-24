@@ -43,14 +43,14 @@ export const metadata: Metadata = {
   ],
   creator: "Mohamed Outerbah",
   publisher: "Mohamed Outerbah",
-  metadataBase: new URL("https://mohamedouterbah.vercel.app"),
+  metadataBase: new URL("https://www.mohamedouterbah.com"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://mohamedouterbah.vercel.app",
+    url: "https://www.mohamedouterbah.com",
     siteName: "Mohamed Outerbah Portfolio",
     title:
       "Mohamed Outerbah - Full-Stack Engineer | Next.js, React & React Native Expert",
@@ -164,9 +164,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
               "@type": "Person",
               name: "Mohamed Outerbah",
               jobTitle: "Full-Stack Engineer",
-              url: "https://mohamedouterbah.vercel.app",
+              url: "https://www.mohamedouterbah.com",
               image:
-                "https://mohamedouterbah.vercel.app/profile/profile_picture.jpg",
+                "https://www.mohamedouterbah.com/profile/profile_picture.jpg",
               sameAs: [
                 "https://github.com/Mohamed-gp",
                 "https://www.linkedin.com/in/mohamedouterbah",

@@ -6,7 +6,8 @@
     "build": "next build",
     "dev": "next dev",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "cv": "bash ../build-cv.sh"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",

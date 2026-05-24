@@ -5,4 +5,4 @@ Allow: /
 Disallow: /api/
 
 # Sitemap location (add this line too)
-Sitemap: https://mohamedouterbah.vercel.app/sitemap.xml
+Sitemap: https://www.mohamedouterbah.com/sitemap.xml
