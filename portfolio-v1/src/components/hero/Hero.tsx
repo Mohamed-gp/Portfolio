@@ -58,16 +58,6 @@ export default function Hero() {
       <div className="flex-1 flex items-center">
         <div className="container px-4 sm:px-6 grid lg:grid-cols-2 gap-8 md:gap-12 items-center pt-20 pb-16 sm:pb-20">
           <div className="space-y-4 sm:space-y-6 text-center lg:text-left animate-fade-in-up">
-            {/* Availability badge */}
-            <div className="inline-flex items-center gap-2 rounded-full border border-green-500/30 bg-green-500/10 px-3 py-1.5 text-xs sm:text-sm font-medium text-green-700 dark:text-green-400">
-              <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
-              </span>
-              Available for full-time remote — US East Coast overlap &amp; EMEA
-              hours
-            </div>
-
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
               Hi, I'm{" "}
               <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
