@@ -29,19 +29,19 @@ const stats = [
     icon: <Gamepad2 className="h-6 w-6 text-cyan-500" />,
     value: "2,500+",
     label: "Game Players",
-    description: "On Fibble, co-founded — 39 countries",
+    description: "On Fibble, co-founded, 39 countries",
   },
   {
     icon: <Store className="h-6 w-6 text-blue-500" />,
     value: "550+",
     label: "Active Stores",
-    description: "On DzStore, co-founded — 100% organic",
+    description: "On DzStore, co-founded, 100% organic",
   },
   {
     icon: <BadgeDollarSign className="h-6 w-6 text-amber-500" />,
     value: "15+",
     label: "Paying Subscribers",
-    description: "On DzStore — acquired via SEO alone",
+    description: "On DzStore, acquired via SEO alone",
   },
   {
     icon: <Activity className="h-6 w-6 text-emerald-500" />,

@@ -70,7 +70,7 @@ export default function Hero() {
             </h2>
             <p className="text-base md:text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0">
               I build and ship production web &amp; mobile platforms
-              end-to-end — from AI analytics dashboards at{" "}
+              end-to-end: AI analytics dashboards at{" "}
               <a
                 href="https://analyticsdepot.com/"
                 target="_blank"
@@ -88,7 +88,7 @@ export default function Hero() {
               >
                 HaulHub
               </a>
-              , a live Uber-style logistics marketplace on iOS &amp; Android —
+              , a live Uber-style logistics marketplace on iOS &amp; Android,
               plus products I co-founded that make money organically:{" "}
               <a
                 href="https://dzstore.org/en"

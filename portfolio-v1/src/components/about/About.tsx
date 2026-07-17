@@ -13,6 +13,7 @@ import {
   Store,
   Zap,
   Globe,
+  GitCommitHorizontal,
 } from "lucide-react";
 
 export default function About() {
@@ -33,7 +34,7 @@ export default function About() {
       icon: <Layers className="h-6 w-6 text-blue-600 dark:text-blue-400" />,
       bg: "bg-blue-100 dark:bg-blue-900/30",
       title: "Ships end-to-end",
-      body: "Frontend, backend, mobile, and deployment — solo or embedded in a team.",
+      body: "Frontend, backend, mobile, and deployment, solo or embedded in a team.",
     },
     {
       icon: <ShieldCheck className="h-6 w-6 text-cyan-600 dark:text-cyan-400" />,
@@ -81,7 +82,7 @@ export default function About() {
           </h2>
           <p className="text-muted-foreground max-w-3xl mx-auto text-lg">
             I build production platforms that real users and paying clients
-            depend on — end to end.
+            depend on, end to end.
           </p>
         </motion.div>
 
@@ -116,8 +117,8 @@ export default function About() {
                 className="font-semibold text-foreground underline decoration-primary/40 underline-offset-4 hover:decoration-primary transition-colors"
               >
                 HaulHub
-              </a>{" "}
-              — a live Uber-style logistics marketplace on iOS &amp; Android in
+              </a>
+              , a live Uber-style logistics marketplace on iOS &amp; Android in
               the Netherlands.
             </p>
             <p className="text-muted-foreground">
@@ -140,8 +141,8 @@ export default function About() {
               across the full stack, now serving{" "}
               <strong className="text-foreground">
                 550+ active stores, 600+ users, and 15+ paying subscribers
-              </strong>{" "}
-              — growing ~40% week-over-week, 100% organic, zero ad spend,
+              </strong>
+              , growing ~40% week-over-week, 100% organic, zero ad spend,
               99.95% uptime. I hold a{" "}
               <strong className="text-foreground">5/5 rating</strong> across 6+
               delivered production applications.
@@ -157,15 +158,15 @@ export default function About() {
                 <div className="flex items-start gap-2.5">
                   <Smartphone className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                   <span className="text-sm text-muted-foreground">
-                    <strong>HaulHub — live on iOS & Android</strong> — built
-                    its on-demand dispatch and fleet-operations services
+                    <strong>HaulHub, live on iOS & Android:</strong> built its
+                    on-demand dispatch and fleet-operations services
                     end-to-end, across backend, mobile & web
                   </span>
                 </div>
                 <div className="flex items-start gap-2.5">
                   <Rocket className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                   <span className="text-sm text-muted-foreground">
-                    <strong>Frontend lead — Analytics Depot (AI SaaS)</strong> —
+                    <strong>Frontend lead at Analytics Depot (AI SaaS):</strong>{" "}
                     owns every user-facing surface: dashboards, real-time
                     collaboration, RAG, NL-to-SQL
                   </span>
@@ -173,28 +174,35 @@ export default function About() {
                 <div className="flex items-start gap-2.5">
                   <Store className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                   <span className="text-sm text-muted-foreground">
-                    <strong>Co-founded DzStore</strong> — 550+ stores, 15+
+                    <strong>Co-founded DzStore:</strong> 550+ stores, 15+
                     paying subscribers, ~40% WoW growth, 100% organic
                   </span>
                 </div>
                 <div className="flex items-start gap-2.5">
                   <Zap className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                   <span className="text-sm text-muted-foreground">
-                    <strong>CI/CD optimization</strong> — cut deployment time
+                    <strong>CI/CD optimization:</strong> cut deployment time
                     from ~30 minutes to under 5
                   </span>
                 </div>
                 <div className="flex items-start gap-2.5">
                   <Trophy className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                   <span className="text-sm text-muted-foreground">
-                    <strong>1st Place Hackathon Winner 2024</strong> —
+                    <strong>1st Place Hackathon Winner 2024:</strong>{" "}
                     competitive ideathon
+                  </span>
+                </div>
+                <div className="flex items-start gap-2.5">
+                  <GitCommitHorizontal className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                  <span className="text-sm text-muted-foreground">
+                    <strong>Open-source contributor:</strong> Munia, a Next.js
+                    social platform with 300+ GitHub stars
                   </span>
                 </div>
                 <div className="flex items-start gap-2.5">
                   <Globe className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                   <span className="text-sm text-muted-foreground">
-                    <strong>5/5 across global clients</strong> — USA, UK,
+                    <strong>5/5 across global clients:</strong> USA, UK,
                     Netherlands, Japan, and Saudi Arabia
                   </span>
                 </div>

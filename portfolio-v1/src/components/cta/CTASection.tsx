@@ -26,7 +26,7 @@ export default function CTASection() {
                   </span>
                 </h2>
                 <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                  I ship production web &amp; mobile platforms end-to-end —
+                  I ship production web &amp; mobile platforms end-to-end:
                   frontend, backend, mobile, and infrastructure. Available now
                   for full-time remote roles and contracts.
                 </p>
@@ -48,8 +48,8 @@ export default function CTASection() {
                     <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75" />
                     <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
                   </span>
-                  Available for full-time remote roles — US East Coast overlap &
-                  EMEA hours
+                  Available for full-time remote roles, with US East Coast
+                  overlap &amp; EMEA hours
                 </p>
               </div>
             </CardContent>

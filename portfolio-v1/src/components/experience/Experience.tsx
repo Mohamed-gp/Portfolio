@@ -43,7 +43,7 @@ export default function Experience() {
       location: "Remote (USA)",
       period: "Apr 2025 – Present",
       description:
-        "Frontend lead on a live AI analytics SaaS (team of ~10) — 2nd-highest contributor, owning every user-facing surface. Built the custom drag-and-drop dashboard builder, shareable reports with password protection and embed mode, one-click PDF/PowerPoint export, and an NL-to-SQL query interface. Shipped real-time collaboration (WebSocket session sync, live presence, collaborative chat sidebar), an OAuth2 connector platform spanning 10+ data sources (BigQuery, GA4, Search Console, Sheets, Gmail, YouTube, Google Play, PostgreSQL, MySQL, Slack), and RAG document Q&A. Recently rebuilt the public marketing site for launch, shipped per-connector refresh scheduling end-to-end (React + FastAPI + Celery Beat), hardened auth with PKCE OAuth and Apple \"Hide My Email\" support, and moved deploys to zero-downtime PM2 cluster reloads — deploy time cut from ~30 min to under 5. Also initialized the companion React Native mobile app (dashboard viewing, push notifications, biometric auth, offline caching).",
+        "Frontend lead on a live AI analytics SaaS (team of ~10): 2nd-highest contributor, owning every user-facing surface. Built the custom drag-and-drop dashboard builder, shareable reports with password protection and embed mode, one-click PDF/PowerPoint export, and an NL-to-SQL query interface. Shipped real-time collaboration (WebSocket session sync, live presence, collaborative chat sidebar), an OAuth2 connector platform spanning 10+ data sources (BigQuery, GA4, Search Console, Sheets, Gmail, YouTube, Google Play, PostgreSQL, MySQL, Slack), and RAG document Q&A. Recently rebuilt the public marketing site for launch, shipped per-connector refresh scheduling end-to-end (React + FastAPI + Celery Beat), hardened auth with PKCE OAuth and Apple \"Hide My Email\" support, and moved deploys to zero-downtime PM2 cluster reloads: deploy time cut from ~30 min to under 5. Also initialized the companion React Native mobile app (dashboard viewing, push notifications, biometric auth, offline caching).",
       skills: [
         "Next.js",
         "FastAPI",
@@ -65,7 +65,7 @@ export default function Experience() {
       location: "Algeria · Remote",
       period: "2026 – Present",
       description:
-        "Co-founded a Shopify-equivalent multi-tenant e-commerce SaaS and lead nearly all engineering across the stack. Grown to 550+ active stores, 600+ users, and 15+ paying PRO subscribers acquired through SEO alone — 100% organic, zero ad spend — with 2.2M+ DZD in merchant sales (GMV) and 99.95% uptime over the last 90 days. Multi-tenant subdomain-per-store routing with Caddy on-demand TLS, a 42-model Prisma/PostgreSQL schema, online card payments (Chargily Pay) with HMAC-verified webhooks, and technical SEO with 4,300+ pages indexed — self-hosted on Hetzner via Docker with zero-downtime deploys.",
+        "Co-founded a Shopify-equivalent multi-tenant e-commerce SaaS and lead nearly all engineering across the stack. Grown to 550+ active stores, 600+ users, and 15+ paying PRO subscribers acquired through SEO alone, 100% organic with zero ad spend, plus 2.2M+ DZD in merchant sales (GMV) and 99.95% uptime over the last 90 days. Multi-tenant subdomain-per-store routing with Caddy on-demand TLS, a 42-model Prisma/PostgreSQL schema, online card payments (Chargily Pay) with HMAC-verified webhooks, and technical SEO with 4,300+ pages indexed; self-hosted on Hetzner via Docker with zero-downtime deploys.",
       skills: [
         "Next.js",
         "TypeScript",
@@ -77,13 +77,13 @@ export default function Experience() {
       ],
     },
     {
-      title: "Full-Stack Engineer — Contract",
+      title: "Full-Stack Engineer (Contract)",
       company: "HaulHub",
       website: "https://haulhub.app/",
       location: "Remote (Netherlands)",
       period: "Jun 2025 – May 2026",
       description:
-        "Built a production Uber-style logistics marketplace spanning 12 service categories and 100+ skilled-labor sub-categories — live on iOS & Android in the Netherlands, localized in 5 languages (EN/NL/AR/DE/UR). Implemented a role-based system across 5+ user types: Admin (with sub-roles), End Users, Service Providers (freelancers & companies), and Company Employees — each with dedicated dashboards and permission scopes. Built the on-demand dispatch service end-to-end — Haversine nearest-provider matching with per-provider search radius, competing provider offers, live driver tracking over per-ride WebSocket rooms, an 11-state request lifecycle with proof-of-delivery and disputes, and Stripe escrow with timing-based refunds — plus the B2B fleet-operations module (drivers, vehicles, trip assignment, and commission/earnings settlement). Deployed Dockerized microservices on Hetzner via Coolify.",
+        "Built a production Uber-style logistics marketplace spanning 12 service categories and 100+ skilled-labor sub-categories, live on iOS & Android in the Netherlands, localized in 5 languages (EN/NL/AR/DE/UR). Implemented a role-based system across 5+ user types: Admin (with sub-roles), End Users, Service Providers (freelancers & companies), and Company Employees, each with dedicated dashboards and permission scopes. Built the on-demand dispatch service end-to-end (Haversine nearest-provider matching with per-provider search radius, competing provider offers, live driver tracking over per-ride WebSocket rooms, an 11-state request lifecycle with proof-of-delivery and disputes, and Stripe escrow with timing-based refunds) plus the B2B fleet-operations module (drivers, vehicles, trip assignment, and commission/earnings settlement). Deployed Dockerized microservices on Hetzner via Coolify.",
       skills: [
         "Next.js",
         "NestJS",
@@ -136,7 +136,7 @@ export default function Experience() {
       website: "https://www.fiverr.com/mohamedouterbah?public_mode=true",
       period: "Jun 2023 – Jun 2025",
       description:
-        "Delivered 6+ full-stack production applications for clients in the UK, USA, Netherlands, Japan, and Saudi Arabia — including Cribbix, a Rightmove-style real estate platform with tenant dashboards, interactive map search, Stripe subscriptions, and Redis caching. Implemented new features, resolved complex frontend/backend production bugs, improved system performance, and managed VPS deployments for international clients.",
+        "Delivered 6+ full-stack production applications for clients in the UK, USA, Netherlands, Japan, and Saudi Arabia, including Cribbix, a Rightmove-style real estate platform with tenant dashboards, interactive map search, Stripe subscriptions, and Redis caching. Implemented new features, resolved complex frontend/backend production bugs, improved system performance, and managed VPS deployments for international clients.",
       skills: [
         "React",
         "Next.js",

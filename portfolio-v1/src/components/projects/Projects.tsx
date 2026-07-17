@@ -63,9 +63,9 @@ export default function Projects() {
       url: "https://analyticsdepot.com/",
       image: "/projects/analytics-depot/hero-updated-1.png",
       description:
-        "Frontend lead on a live AI analytics SaaS — own every user-facing surface: a drag-and-drop dashboard builder with multiple chart types, shareable reports (password-protected + embed mode) with one-click PDF/PowerPoint export, and an OAuth2 connector platform spanning 10+ data sources (BigQuery, GA4, Search Console, Sheets, Gmail, YouTube, Google Play, PostgreSQL, MySQL, Slack). Shipped RAG document Q&A, an NL-to-SQL query interface, per-connector refresh scheduling (React + FastAPI + Celery), and the rebuilt public marketing site. Hardened auth with PKCE OAuth and Apple \"Hide My Email\"; cut deploy time from ~30 min to under 5 with zero-downtime PM2 cluster reloads.",
+        "Frontend lead on a live AI analytics SaaS, owning every user-facing surface: a drag-and-drop dashboard builder with multiple chart types, shareable reports (password-protected + embed mode) with one-click PDF/PowerPoint export, and an OAuth2 connector platform spanning 10+ data sources (BigQuery, GA4, Search Console, Sheets, Gmail, YouTube, Google Play, PostgreSQL, MySQL, Slack). Shipped RAG document Q&A, an NL-to-SQL query interface, per-connector refresh scheduling (React + FastAPI + Celery), and the rebuilt public marketing site. Hardened auth with PKCE OAuth and Apple \"Hide My Email\"; cut deploy time from ~30 min to under 5 with zero-downtime PM2 cluster reloads.",
       hardest:
-        "Real-time multi-user dashboard sync over WebSockets — session sync, live presence, and a collaborative chat sidebar that stay consistent across editors.",
+        "Real-time multi-user dashboard sync over WebSockets: session sync, live presence, and a collaborative chat sidebar that stay consistent across editors.",
       status: "Live",
       role: "Full-Stack Engineer (Frontend Lead) · team of ~10",
       technologies: [
@@ -89,9 +89,9 @@ export default function Projects() {
       url: "https://haulhub.app/",
       image: "/projects/haulhub/hero-updated-1.png",
       description:
-        "One of the primary engineers — across backend, mobile & web — on a production Uber-style logistics marketplace, live on iOS & Android in the Netherlands across 12 service categories and 100+ skilled-labor sub-categories. Built the on-demand dispatch service (Haversine nearest-provider matching, competing provider offers, live driver tracking over per-ride WebSocket rooms, an 11-state request lifecycle) and the B2B fleet-operations module end-to-end, plus Stripe payments (on-demand, subscriptions, provider payouts) and Dutch KVK business-registry lookup. Shipped with full RTL i18n in 5 languages (EN/NL/AR/DE/UR).",
+        "One of the primary engineers across backend, mobile & web on a production Uber-style logistics marketplace, live on iOS & Android in the Netherlands across 12 service categories and 100+ skilled-labor sub-categories. Built the on-demand dispatch service (Haversine nearest-provider matching, competing provider offers, live driver tracking over per-ride WebSocket rooms, an 11-state request lifecycle) and the B2B fleet-operations module end-to-end, plus Stripe payments (on-demand, subscriptions, provider payouts) and Dutch KVK business-registry lookup. Shipped with full RTL i18n in 5 languages (EN/NL/AR/DE/UR).",
       hardest:
-        "Dispatching a request to the right provider in real time — Haversine radius matching that fans out to freelancers and fleet companies, competing offers, live location tracking, and Stripe escrow with timing-based cancellation refunds — across an 11-state request lifecycle.",
+        "Dispatching a request to the right provider in real time: Haversine radius matching that fans out to freelancers and fleet companies, competing offers, live location tracking, and Stripe escrow with timing-based cancellation refunds, across an 11-state request lifecycle.",
       status: "Live on iOS & Android",
       role: "Full-Stack Engineer",
       technologies: [
@@ -113,9 +113,9 @@ export default function Projects() {
       url: "https://dzstore.org/en",
       image: "/projects/dzstore/hero-updated-1.png",
       description:
-        "550+ active stores, 600+ users, 1,300+ products, and 15+ paying PRO subscribers acquired through SEO alone — ~40% week-over-week growth, 100% organic, zero ad spend, with 2.2M+ DZD in merchant sales (GMV). Co-founded this multi-tenant Shopify-equivalent SaaS and lead nearly all engineering: subdomain-per-store routing with Caddy on-demand TLS, a 42-model Prisma/PostgreSQL schema, a drag-and-drop storefront builder, per-region shipping, abandoned-cart recovery, an affiliate system, and AI product descriptions — self-hosted on Hetzner via Docker with 99.95% uptime over the last 90 days. Technical SEO drives acquisition: 4,300+ pages indexed with 600+ valid Google Shopping product snippets. Merchants rate it 4.6/5 in the in-app survey.",
+        "550+ active stores, 600+ users, 1,300+ products, and 15+ paying PRO subscribers acquired through SEO alone, with ~40% week-over-week growth, 100% organic, zero ad spend, and 2.2M+ DZD in merchant sales (GMV). Co-founded this multi-tenant Shopify-equivalent SaaS and lead nearly all engineering: subdomain-per-store routing with Caddy on-demand TLS, a 42-model Prisma/PostgreSQL schema, a drag-and-drop storefront builder, per-region shipping, abandoned-cart recovery, an affiliate system, and AI product descriptions; self-hosted on Hetzner via Docker with 99.95% uptime over the last 90 days. Technical SEO drives acquisition: 4,300+ pages indexed with 600+ valid Google Shopping product snippets. Merchants rate it 4.6/5 in the in-app survey.",
       hardest:
-        "Multi-tenant subdomain routing with Caddy on-demand TLS — every merchant gets their own store and custom domain with automatic HTTPS, all from one codebase.",
+        "Multi-tenant subdomain routing with Caddy on-demand TLS: every merchant gets their own store and custom domain with automatic HTTPS, all from one codebase.",
       status: "Live · 550+ Stores · 15+ Paying",
       role: "Co-Founder & Full-Stack Engineer",
       technologies: [
@@ -137,9 +137,9 @@ export default function Projects() {
       url: "https://fibble.io/",
       image: "/projects/fibble/hero-updated-1.png",
       description:
-        "Co-founded a real-time multiplayer bluffing trivia game — playable on the web and inside Discord as an embedded Activity. 2,500+ players across 39 countries and $50 MRR, fully organic, zero ads. Premium via Paddle checkout on web plus native Discord SKU subscriptions in-app, user-generated question packs, media questions (image/GIF/audio), bots, friends & DMs with moderation, and a full admin panel — Dockerized on Hetzner behind Caddy, with GitHub Actions CI/CD, health checks, and automatic rollback.",
+        "Co-founded a real-time multiplayer bluffing trivia game playable on the web and inside Discord as an embedded Activity. 2,500+ players across 39 countries and $50 MRR, fully organic, zero ads. Premium via Paddle checkout on web plus native Discord SKU subscriptions in-app, user-generated question packs, media questions (image/GIF/audio), bots, friends & DMs with moderation, and a full admin panel; Dockerized on Hetzner behind Caddy, with GitHub Actions CI/CD, health checks, and automatic rollback.",
       hardest:
-        "Real-time multiplayer game-state sync on a serverless Next.js stack — no dedicated game server: Postgres as the source of truth, Ably pub/sub fan-out, server-authoritative phase deadlines with idempotent transitions, and HMAC action tokens so guests and Discord players can't spoof each other.",
+        "Real-time multiplayer game-state sync on a serverless Next.js stack with no dedicated game server: Postgres as the source of truth, Ably pub/sub fan-out, server-authoritative phase deadlines with idempotent transitions, and HMAC action tokens so guests and Discord players can't spoof each other.",
       status: "Live · 2,500+ Players",
       role: "Co-Founder & Full-Stack Engineer",
       technologies: [
@@ -216,7 +216,7 @@ export default function Projects() {
             Selected Work
           </h2>
           <p className="text-muted-foreground text-lg">
-            Production platforms serving real users — AI analytics, a live
+            Production platforms serving real users: AI analytics, a live
             logistics marketplace, e-commerce SaaS, and open source. Click any
             card for the full breakdown.
           </p>
