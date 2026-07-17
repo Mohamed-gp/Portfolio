@@ -16,8 +16,9 @@ export default function Footer() {
               Mohamed Outerbah
             </Link>
             <p className="text-muted-foreground mb-4 max-w-md text-sm sm:text-base">
-              Building exceptional digital experiences with cutting-edge
-              technologies. Let's create something amazing together.
+              Full-Stack Engineer shipping production web &amp; mobile
+              platforms end-to-end. Open to full-time remote roles and
+              contracts.
             </p>
             <div className="flex space-x-4">
               <Link

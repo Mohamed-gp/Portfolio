@@ -13,7 +13,6 @@ import {
   Store,
   Zap,
   Globe,
-  GitCommitHorizontal,
 } from "lucide-react";
 
 export default function About() {
@@ -52,7 +51,7 @@ export default function About() {
       icon: <Compass className="h-6 w-6 text-indigo-600 dark:text-indigo-400" />,
       bg: "bg-indigo-100 dark:bg-indigo-900/30",
       title: "Owns ambiguity",
-      body: "Took HaulHub's two hardest services from spec to live in production.",
+      body: "Took HaulHub's dispatch and fleet services from spec to live in production.",
     },
   ];
 
@@ -101,13 +100,25 @@ export default function About() {
               <strong className="text-foreground">Full-Stack Engineer</strong>{" "}
               with 3+ years delivering production-grade platforms for clients
               across the USA, UK, Netherlands, Japan, and Saudi Arabia. A{" "}
-              <strong className="text-foreground">
+              <a
+                href="https://analyticsdepot.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-foreground underline decoration-primary/40 underline-offset-4 hover:decoration-primary transition-colors"
+              >
                 core engineer on Analytics Depot
-              </strong>{" "}
+              </a>{" "}
               (an AI analytics SaaS), and previously a full-stack engineer on{" "}
-              <strong className="text-foreground">HaulHub</strong> — a live
-              Uber-style logistics marketplace on iOS &amp; Android in the
-              Netherlands.
+              <a
+                href="https://haulhub.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-foreground underline decoration-primary/40 underline-offset-4 hover:decoration-primary transition-colors"
+              >
+                HaulHub
+              </a>{" "}
+              — a live Uber-style logistics marketplace on iOS &amp; Android in
+              the Netherlands.
             </p>
             <p className="text-muted-foreground">
               My work spans{" "}
@@ -117,13 +128,21 @@ export default function About() {
               , custom drag-and-drop dashboard builders, RAG document
               intelligence, Stripe payments, and self-managed VPS deployments. I
               co-founded{" "}
-              <strong className="text-foreground">DzStore</strong>, a
-              Shopify-equivalent SaaS I co-founded and helped build across the
-              full stack, which reached{" "}
+              <a
+                href="https://dzstore.org/en"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-foreground underline decoration-primary/40 underline-offset-4 hover:decoration-primary transition-colors"
+              >
+                DzStore
+              </a>
+              , a Shopify-equivalent SaaS where I lead nearly all engineering
+              across the full stack, now serving{" "}
               <strong className="text-foreground">
-                151 active stores and 253 users in 2 months
+                550+ active stores, 600+ users, and 15+ paying subscribers
               </strong>{" "}
-              through organic SEO alone. I hold a{" "}
+              — growing ~40% week-over-week, 100% organic, zero ad spend,
+              99.95% uptime. I hold a{" "}
               <strong className="text-foreground">5/5 rating</strong> across 6+
               delivered production applications.
             </p>
@@ -138,23 +157,24 @@ export default function About() {
                 <div className="flex items-start gap-2.5">
                   <Smartphone className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                   <span className="text-sm text-muted-foreground">
-                    <strong>HaulHub — live on iOS & Android</strong> — built two
-                    of its hardest services, 380+ commits across backend, mobile
-                    & web
+                    <strong>HaulHub — live on iOS & Android</strong> — built
+                    its on-demand dispatch and fleet-operations services
+                    end-to-end, across backend, mobile & web
                   </span>
                 </div>
                 <div className="flex items-start gap-2.5">
                   <Rocket className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                   <span className="text-sm text-muted-foreground">
-                    <strong>Core engineer — Analytics Depot (AI SaaS)</strong> —
-                    real-time dashboards, RAG, NL-to-SQL, 120+ commits
+                    <strong>Frontend lead — Analytics Depot (AI SaaS)</strong> —
+                    owns every user-facing surface: dashboards, real-time
+                    collaboration, RAG, NL-to-SQL
                   </span>
                 </div>
                 <div className="flex items-start gap-2.5">
                   <Store className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                   <span className="text-sm text-muted-foreground">
-                    <strong>Co-founded DzStore</strong> — 151 stores & 253 users
-                    in 2 months, 100% organic (pre-revenue)
+                    <strong>Co-founded DzStore</strong> — 550+ stores, 15+
+                    paying subscribers, ~40% WoW growth, 100% organic
                   </span>
                 </div>
                 <div className="flex items-start gap-2.5">
@@ -169,13 +189,6 @@ export default function About() {
                   <span className="text-sm text-muted-foreground">
                     <strong>1st Place Hackathon Winner 2024</strong> —
                     competitive ideathon
-                  </span>
-                </div>
-                <div className="flex items-start gap-2.5">
-                  <GitCommitHorizontal className="h-4 w-4 text-primary mt-0.5 shrink-0" />
-                  <span className="text-sm text-muted-foreground">
-                    <strong>Contributed to Munia</strong> — open-source Next.js
-                    project, 300+ GitHub stars
                   </span>
                 </div>
                 <div className="flex items-start gap-2.5">

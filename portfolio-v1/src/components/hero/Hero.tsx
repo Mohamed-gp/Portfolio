@@ -71,11 +71,45 @@ export default function Hero() {
             <p className="text-base md:text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0">
               I build and ship production web &amp; mobile platforms
               end-to-end — from AI analytics dashboards at{" "}
-              <strong className="text-foreground">Analytics Depot</strong> to{" "}
-              <strong className="text-foreground">HaulHub</strong>, a live
-              Uber-style logistics marketplace on iOS &amp; Android.{" "}
+              <a
+                href="https://analyticsdepot.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-foreground underline decoration-primary/40 underline-offset-4 hover:decoration-primary transition-colors"
+              >
+                Analytics Depot
+              </a>{" "}
+              to{" "}
+              <a
+                href="https://haulhub.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-foreground underline decoration-primary/40 underline-offset-4 hover:decoration-primary transition-colors"
+              >
+                HaulHub
+              </a>
+              , a live Uber-style logistics marketplace on iOS &amp; Android —
+              plus products I co-founded that make money organically:{" "}
+              <a
+                href="https://dzstore.org/en"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-foreground underline decoration-primary/40 underline-offset-4 hover:decoration-primary transition-colors"
+              >
+                DzStore
+              </a>{" "}
+              (15+ paying subscribers via SEO alone) and{" "}
+              <a
+                href="https://fibble.io/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-foreground underline decoration-primary/40 underline-offset-4 hover:decoration-primary transition-colors"
+              >
+                Fibble
+              </a>{" "}
+              ($50 MRR).{" "}
               <strong className="text-foreground">
-                3+ years, 6+ live products
+                3+ years, 7+ live products
               </strong>{" "}
               for clients across the US, UK, Netherlands, Japan &amp; Saudi
               Arabia.

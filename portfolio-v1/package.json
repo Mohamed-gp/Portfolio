@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "prebuild": "bash ../build-cv.sh || true",
     "build": "next build",
     "dev": "next dev",
     "start": "next start",

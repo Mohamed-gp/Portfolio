@@ -1,188 +1,458 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Mohamed Outerbah — Full-Stack Engineer · CV</title>
-<style>
-  :root {
-    --ink: #14181f;
-    --muted: #4a5460;
-    --accent: #0b7ec2;
-    --rule: #d9dee6;
-    --bg: #ffffff;
-  }
-  * { box-sizing: border-box; }
-  html, body { margin: 0; padding: 0; background: #eef1f5; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    color: var(--ink);
-    line-height: 1.45;
-    font-size: 10.4px;
-  }
-  .page {
-    background: var(--bg);
-    max-width: 820px;
-    margin: 24px auto;
-    padding: 40px 48px;
-    box-shadow: 0 4px 24px rgba(0,0,0,.12);
-  }
-  header { border-bottom: 2px solid var(--accent); padding-bottom: 12px; margin-bottom: 16px; }
-  h1 { font-size: 25px; margin: 0; letter-spacing: -.4px; }
-  .title { color: var(--accent); font-weight: 600; font-size: 12px; margin-top: 3px; }
-  .meta { color: var(--muted); font-size: 10px; margin-top: 6px; }
-  .meta a { color: var(--muted); text-decoration: none; border-bottom: 1px dotted #b9c1cc; }
-  .summary { margin: 14px 0 4px; color: #222; font-size: 10.6px; }
-  h2 {
-    font-size: 11.5px; text-transform: uppercase; letter-spacing: 1.1px;
-    color: var(--accent); margin: 18px 0 8px; padding-bottom: 3px;
-    border-bottom: 1px solid var(--rule);
-  }
-  .role { margin-bottom: 12px; }
-  .role-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
-  .role-title { font-weight: 700; font-size: 11.6px; }
-  .role-title .org { color: var(--ink); }
-  .role-sub { color: var(--muted); font-style: italic; font-weight: 500; }
-  .period { color: var(--muted); font-size: 9.6px; white-space: nowrap; font-weight: 600; }
-  ul { margin: 5px 0 0; padding-left: 16px; }
-  li { margin-bottom: 3px; }
-  li b, .role b { color: var(--ink); }
-  .proj-title { font-weight: 700; font-size: 11px; margin-top: 9px; }
-  .proj-title .accent { color: var(--accent); }
-  .proj-title .who { color: var(--muted); font-weight: 500; font-style: italic; }
-  .skills p { margin: 3px 0; }
-  .skills b { display: inline-block; min-width: 88px; color: var(--accent); }
-  .edu { display:flex; justify-content: space-between; }
-  .edu .period { font-size: 10px; }
-  @media print {
-    html, body { background: #fff; }
-    .page { box-shadow: none; margin: 0; max-width: none; padding: 0 14mm; }
-    a { color: var(--muted) !important; }
-    h2 { break-after: avoid; }
-    .role, .proj-title { break-inside: avoid; }
-    @page { size: A4; margin: 12mm; }
-  }
-</style>
-</head>
-<body>
-<div class="page">
-  <header>
-    <h1>Mohamed Outerbah</h1>
-    <div class="title">Full-Stack Engineer · Next.js · React · React Native · Node.js · Express · Python</div>
-    <div class="meta">
-      Algeria (Remote) · Open to Contracts &amp; Full-Time Remote &nbsp;|&nbsp;
-      <a href="mailto:mohamedterba6@gmail.com">mohamedterba6@gmail.com</a> ·
-      <a href="https://www.mohamedouterbah.com">mohamedouterbah.com</a> ·
-      <a href="https://github.com/Mohamed-gp">github.com/Mohamed-gp</a> ·
-      <a href="https://www.linkedin.com/in/mohamedouterbah">linkedin.com/in/mohamedouterbah</a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mohamed Outerbah · Full-Stack Engineer CV</title>
+    <style>
+      :root {
+        --ink: #1a1a1a;
+        --muted: #555555;
+        --navy: #1f4e79;
+        --rule: #1f4e79;
+        --bg: #ffffff;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: #eef1f5;
+      }
+      body {
+        font-family: Arial, Helvetica, "Segoe UI", Roboto, sans-serif;
+        color: var(--ink);
+        line-height: 1.45;
+        font-size: 10.1px;
+        font-kerning: none;
+        font-variant-ligatures: none;
+        text-rendering: optimizeSpeed;
+      }
+      .page {
+        background: var(--bg);
+        max-width: 820px;
+        margin: 24px auto;
+        padding: 40px 48px;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+      }
+      header {
+        text-align: center;
+        margin-bottom: 12px;
+      }
+      h1 {
+        font-size: 24px;
+        margin: 0;
+        color: var(--navy);
+      }
+      .title {
+        color: var(--ink);
+        font-weight: 600;
+        font-size: 11.5px;
+        margin-top: 4px;
+      }
+      .meta {
+        color: var(--muted);
+        font-size: 10px;
+        margin-top: 4px;
+      }
+      .meta a {
+        color: var(--muted);
+        text-decoration: none;
+      }
+      .summary {
+        margin: 10px 0 4px;
+        color: var(--ink);
+        font-size: 10.4px;
+      }
+      h2 {
+        font-size: 11.5px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--navy);
+        margin: 16px 0 8px;
+        padding-bottom: 2px;
+        border-bottom: 1.5px solid var(--rule);
+      }
+      .role {
+        margin-bottom: 11px;
+      }
+      .role-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 12px;
+      }
+      .role-title {
+        font-weight: 700;
+        font-size: 11.4px;
+        color: var(--ink);
+      }
+      .role-sub {
+        color: var(--muted);
+        font-style: normal;
+        font-weight: 500;
+      }
+      .period {
+        color: var(--muted);
+        font-size: 9.6px;
+        white-space: nowrap;
+        font-weight: 500;
+        font-style: italic;
+      }
+      ul {
+        margin: 4px 0 0;
+        padding-left: 16px;
+      }
+      li {
+        margin-bottom: 2px;
+      }
+      li b,
+      .role b {
+        color: var(--ink);
+      }
+      .skills p {
+        margin: 3px 0;
+      }
+      .skills b {
+        display: inline-block;
+        min-width: 100px;
+        color: var(--ink);
+      }
+      .edu-line {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 3px;
+      }
+      @media print {
+        html,
+        body {
+          background: #fff;
+        }
+        .page {
+          box-shadow: none;
+          margin: 0;
+          max-width: none;
+          padding: 0 14mm;
+        }
+        a {
+          color: var(--muted) !important;
+        }
+        h2 {
+          break-after: avoid;
+        }
+        .role {
+          break-inside: avoid;
+        }
+        @page {
+          size: A4;
+          margin: 10mm;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <h1>Mohamed Outerbah</h1>
+        <div class="title">
+          Full-Stack Engineer · Next.js · React · React Native · Node.js ·
+          FastAPI · TypeScript
+        </div>
+        <div class="meta">
+          <a href="mailto:mohamedterba6@gmail.com"><b>Email</b></a> ·
+          <a href="https://www.mohamedouterbah.com"><b>Portfolio</b></a> ·
+          <a href="https://github.com/Mohamed-gp"><b>GitHub</b></a> ·
+          <a href="https://www.linkedin.com/in/mohamedouterbah"
+            ><b>LinkedIn</b></a
+          >
+        </div>
+      </header>
+
+      <p class="summary">
+        Full-Stack Engineer with 3+ years shipping production web &amp; mobile
+        platforms end-to-end. Own the entire frontend of a live AI analytics
+        SaaS as 2nd-highest contributor in a ~10-person team, and built the
+        on-demand dispatch and fleet-operations services of a live Uber-style
+        logistics marketplace. Co-founder of DzStore, a Shopify-equivalent
+        SaaS that grew to 550+ stores and 15+ paying subscribers in its first
+        2 months with zero ad spend, and Fibble, a multiplayer party game
+        generating revenue organically.
+      </p>
+
+      <h2>Experience</h2>
+
+      <div class="role">
+        <div class="role-head">
+          <div class="role-title">
+            Full-Stack Engineer (Frontend Lead)
+            <span class="role-sub"
+              >· Analytics Depot (AI Analytics SaaS), USA · Remote</span
+            >
+          </div>
+          <div class="period">Apr 2025 - Present</div>
+        </div>
+        <ul>
+          <li>
+            Own the entire frontend architecture of a live AI analytics
+            platform, ranking 2nd of ~10 engineers by contribution across
+            AI/ML, LLMOps, and infra: every user-facing surface from
+            dashboards to the marketing site.
+          </li>
+          <li>
+            <b>Dashboards &amp; reporting:</b> Designed and implemented the
+            drag-and-drop dashboard builder, shareable
+            password-protected/embed reports, and one-click PDF/PowerPoint
+            export UI.
+          </li>
+          <li>
+            <b>Real-time collaboration:</b> Shipped WebSocket session sync,
+            live user presence, and a collaborative chat sidebar over
+            production wss://, plus the NL-to-SQL query interface.
+          </li>
+          <li>
+            <b>Data connectors:</b> Developed an OAuth2 connector platform
+            with encrypted credential storage across 10+ sources (BigQuery,
+            GA4, Search Console, Sheets, Gmail, YouTube, Google Play,
+            PostgreSQL, MySQL, Slack), including per-connector refresh
+            schedules taken end-to-end (React UI, FastAPI, Celery Beat).
+          </li>
+          <li>
+            <b>AI / RAG:</b> Delivered RAG document-intelligence Q&amp;A with
+            resilient streaming, multi-format ingestion
+            (CSV/PDF/Excel/images), and a Gemini model layer with fallback.
+          </li>
+          <li>
+            <b>Growth &amp; DevOps:</b> Rebuilt the full marketing site
+            (animated hero, comparison, FAQ); cut deploy time from ~30 min to
+            under 5 with zero-downtime PM2 cluster reloads; hardened CI/CD
+            (GitHub Actions) with Sentry observability; PKCE OAuth and Apple
+            "Hide My Email" auth.
+          </li>
+          <li>
+            <b>Mobile:</b> Initialized the companion React Native app:
+            dashboard viewing, push notifications, biometric auth, offline
+            caching.
+          </li>
+        </ul>
+      </div>
+
+      <div class="role">
+        <div class="role-head">
+          <div class="role-title">
+            Full-Stack Engineer (Contract)
+            <span class="role-sub"
+              >· HaulHub (Logistics Marketplace), Netherlands · Remote</span
+            >
+          </div>
+          <div class="period">Jun 2025 - May 2026</div>
+        </div>
+        <ul>
+          <li>
+            One of the primary engineers across backend, mobile &amp; web on a
+            production Uber-style marketplace, live on iOS &amp; Android in the
+            Netherlands across 12 service categories and 100+ skilled-labor
+            sub-categories, localized in 5 languages (EN/NL/AR/DE/UR) with full
+            RTL.
+          </li>
+          <li>
+            <b>On-demand dispatch service:</b> Engineered the
+            request-to-delivery flow end-to-end: nearest-provider matching
+            with the Haversine formula and per-provider search radius,
+            competing provider offers with price and pickup-time bids, an
+            11-state request lifecycle with proof-of-delivery and disputes,
+            live driver tracking over per-ride WebSocket rooms, and Stripe
+            escrow with timing-based cancellation refunds.
+          </li>
+          <li>
+            <b>Fleet-operations service:</b> Developed the B2B fleet module,
+            the platform's largest: companies manage drivers, vehicles, and
+            workers, accept marketplace requests, and assign each trip to a
+            specific driver and vehicle, backed by a settlement engine that
+            splits every job into company commission and driver earnings.
+          </li>
+          <li>
+            <b>Multi-role architecture:</b> Architected a role-based
+            permission system across 5+ user types (Admin with sub-roles, End
+            Users, freelance &amp; company Service Providers, Company
+            Employees), each with dedicated dashboards.
+          </li>
+          <li>
+            <b>Payments &amp; compliance:</b> Integrated Stripe with hardened
+            webhook signature verification (on-demand, subscriptions, provider
+            payouts) and Dutch KVK business-registry lookup.
+          </li>
+          <li>
+            <b>Mobile &amp; infra:</b> Shipped the React Native (Expo) app via
+            EAS builds with push notifications, real-time chat, and map
+            directions; Dockerized microservices on Hetzner via Coolify with
+            Sentry + Clarity.
+          </li>
+        </ul>
+      </div>
+
+      <div class="role">
+        <div class="role-head">
+          <div class="role-title">
+            Freelance Full-Stack Developer
+            <span class="role-sub">· Global clients · Remote</span>
+          </div>
+          <div class="period">Jun 2023 - Jun 2025</div>
+        </div>
+        <ul>
+          <li>
+            Delivered 6+ production applications for clients in the UK, USA,
+            Netherlands, Japan, and Saudi Arabia, with a
+            <b>5/5 rating across all delivered projects.</b>
+          </li>
+          <li>
+            <b>Cribbix (UK):</b> Rightmove-style property platform (V1 &amp;
+            V2): interactive map search with live filtering,
+            client/agency/admin dashboards, real-time chat, AI property
+            descriptions, Stripe tenancy payments, Redis caching, and
+            independent DigitalOcean VPS deployment.
+          </li>
+          <li>
+            <b>MLC SharePoint to Zoho sync:</b> Zero-framework Cloudflare
+            Worker watching a SharePoint contract library and auto-updating
+            Zoho CRM (NDA/MSA detection) with SendGrid notifications.
+          </li>
+        </ul>
+      </div>
+
+      <div class="role">
+        <div class="role-head">
+          <div class="role-title">
+            Web Development Intern
+            <span class="role-sub">· Exclusive Labs · Remote</span>
+          </div>
+          <div class="period">Sep - Dec 2024</div>
+        </div>
+        <ul>
+          <li>
+            Created a course management system (Next.js + Express) with
+            role-based auth for students, instructors, and admins.
+          </li>
+        </ul>
+      </div>
+
+      <h2>Founder Projects</h2>
+
+      <div class="role">
+        <div class="role-head">
+          <div class="role-title">
+            DzStore
+            <span class="role-sub"
+              >· Shopify-equivalent E-commerce SaaS · Co-Founder &amp; Lead
+              Engineer · dzstore.org</span
+            >
+          </div>
+          <div class="period">2026 - Present</div>
+        </div>
+        <ul>
+          <li>
+            <b>Traction:</b> 550+ active stores, 600+ users, and 1,300+
+            products within 2 months of launch, 100% organic with zero ad
+            spend: <b>15+ paying PRO subscribers acquired through SEO
+            alone</b>, a +500% week-over-week user-growth spike, and +800%
+            week-over-week revenue growth in the first weeks of monetization.
+          </li>
+          <li>
+            <b>Quality signals:</b> 4.6/5 average across 42 in-app merchant
+            survey responses; 99.95% uptime over the last 90 days with zero
+            recorded incidents (public status page).
+          </li>
+          <li>
+            <b>Organic SEO engine:</b> Owned technical SEO end-to-end: 4,300+
+            pages indexed, 600+ valid product snippets &amp; merchant listings
+            (Google Shopping rich results), and breadcrumb/FAQ structured
+            data, driving 1,600+ Google Search clicks and all merchant
+            acquisition.
+          </li>
+          <li>
+            <b>Engineering:</b> Led nearly all engineering across the stack:
+            multi-tenant subdomain-per-store routing with Caddy on-demand TLS
+            for custom domains, a 42-model Prisma/PostgreSQL schema,
+            drag-and-drop storefront builder, online card payments (Chargily
+            Pay) with HMAC-verified webhooks, per-region shipping, abandoned-cart
+            lifecycle emails (Resend), affiliate payouts, AI product
+            descriptions, and Arabic/French RTL; self-hosted on Hetzner via
+            Docker with zero-downtime deploys and Upstash Redis.
+          </li>
+        </ul>
+      </div>
+
+      <div class="role">
+        <div class="role-head">
+          <div class="role-title">
+            Fibble
+            <span class="role-sub"
+              >· Multiplayer Party Game (Web + Discord) · Co-Founder &amp;
+              Full-Stack Engineer · fibble.io</span
+            >
+          </div>
+          <div class="period">2026 - Present</div>
+        </div>
+        <ul>
+          <li>
+            <b>Product:</b> Free real-time bluffing trivia game (2-8 players,
+            no download) playable in the browser and as a Discord Activity,
+            with a premium subscription tier.
+          </li>
+          <li>
+            <b>Traction:</b> 2,500+ players from 39 countries in the first
+            weeks and $50 MRR, entirely organic with zero ad spend.
+          </li>
+          <li>
+            <b>Engineering:</b> Serverless real-time multiplayer: Postgres as
+            the source of truth with Ably pub/sub fan-out,
+            server-authoritative phase deadlines, and HMAC anti-spoofing
+            action tokens; plus Discord Activity integration, Paddle + Discord
+            SKU billing, and a full admin analytics panel (player geo,
+            sessions, retention, moderation).
+          </li>
+        </ul>
+      </div>
+
+      <h2>Education &amp; Awards</h2>
+      <div class="edu-line">
+        <div><b>Master's in Computer Science</b>, ESTIN, Algeria</div>
+        <div class="period">Expected 2027</div>
+      </div>
+      <ul>
+        <li>
+          <b>Hackathon Winner 2024:</b> 1st place, competitive ideathon · 5+
+          hackathons participated.
+        </li>
+      </ul>
+
+      <h2>Technical Skills</h2>
+      <div class="skills">
+        <p>
+          <b>Frontend</b> React, Next.js (App &amp; Pages Router), TypeScript,
+          JavaScript ES6+, Tailwind CSS, Redux Toolkit
+        </p>
+        <p>
+          <b>Mobile</b> React Native (Expo) for iOS &amp; Android: EAS builds,
+          push notifications, biometric auth, RTL i18n
+        </p>
+        <p>
+          <b>Backend</b> Node.js, NestJS, Express.js, FastAPI, Python, REST
+          APIs, WebSockets, Ably, RBAC
+        </p>
+        <p><b>Databases</b> PostgreSQL, Prisma ORM, Redis, MongoDB</p>
+        <p>
+          <b>DevOps</b> Docker, GitHub Actions, CI/CD, VPS (Hetzner,
+          DigitalOcean), Coolify, Caddy/Nginx, PM2, Cloudflare Workers
+        </p>
+        <p>
+          <b>Integrations &amp; AI</b> Stripe, Paddle, online payments
+          (Chargily Pay), OAuth2 (PKCE), Apple/Google Auth, Sentry,
+          SendGrid/Resend, PostHog, RAG systems, LangChain, NL-to-SQL, Celery,
+          real-time collaboration
+        </p>
+      </div>
     </div>
-  </header>
-
-  <p class="summary">
-    Full-Stack Engineer with 3+ years delivering production web &amp; mobile applications. Core engineer on AI
-    analytics SaaS and logistics marketplace. Co-founded e-commerce platform that reached 151 stores organically
-    in 2 months. Specialized in Next.js, React Native, AI integrations, and scalable systems.
-  </p>
-
-  <h2>Experience</h2>
-
-  <div class="role">
-    <div class="role-head">
-      <div class="role-title"><span class="org">Analytics Depot</span> — Full-Stack Engineer
-        <span class="role-sub">· AI SaaS, USA · Remote</span></div>
-      <div class="period">Apr 2025 – Present</div>
-    </div>
-    <ul>
-      <li>Core engineer and 2nd-highest contributor (<b>120+ commits</b>) on a live AI analytics platform, across a ~10-person team (AI/ML, LLMOps, NL-to-SQL, infra).</li>
-      <li><b>Dashboards &amp; reporting:</b> Built the custom drag-and-drop dashboard builder and shareable reporting system — password-protected and embed-mode reports with one-click PDF/PowerPoint export.</li>
-      <li><b>Real-time collaboration:</b> Shipped WebSocket session sync, live user-presence, and a collaborative chat sidebar (production <code>wss://</code> handling), plus a natural-language-to-SQL query interface.</li>
-      <li><b>Data connectors:</b> Built an OAuth2 connector platform with encrypted credential storage spanning 10+ data sources — BigQuery, Google Analytics 4, Search Console, Google Sheets, Gmail, YouTube, Google Play, PostgreSQL, MySQL, and Slack.</li>
-      <li><b>AI / RAG:</b> Delivered RAG document-intelligence Q&amp;A with resilient streaming, soft-delete tombstones, multi-format ingestion (CSV/PDF/Excel/images), and a Gemini model layer with fallback.</li>
-      <li><b>Async &amp; scale:</b> Implemented Redis caching and Celery task queues for async jobs, scheduled reports, a threshold-alert builder, and data-source auto-refresh.</li>
-      <li><b>Auth &amp; DevOps:</b> Built RBAC (Admin/Expert/User) with Apple + Google auth and rate limiting; cut deploy time from ~30 min to under 5 min; hardened CI/CD (GitHub Actions, PM2), idempotent Alembic migrations with fail-on-error rollback, and Sentry observability.</li>
-      <li><b>Mobile:</b> Initialized the companion React Native app — dashboard viewing, push notifications, biometric auth, offline caching.</li>
-    </ul>
-  </div>
-
-  <div class="role">
-    <div class="role-head">
-      <div class="role-title"><span class="org">HaulHub</span> — Full-Stack Engineer (Contract)
-        <span class="role-sub">· Logistics Marketplace, Netherlands · Remote</span></div>
-      <div class="period">Jun 2025 – May 2026</div>
-    </div>
-    <ul>
-      <li>Full-stack engineer (<b>380+ commits</b> across backend, mobile, web) on a production Uber-style logistics marketplace — live on iOS &amp; Android in the Netherlands across 12 service categories (truck &amp; equipment rental, towing, furniture transport, logistics, agriculture) with 100+ skilled-labor sub-categories.</li>
-      <li><b>Multi-role architecture:</b> Built a role-based permission system across 5+ user types — Admin (with sub-roles), End Users, Service Providers (freelancers &amp; companies), and Company Employees — each with dedicated dashboards and scopes.</li>
-      <li><b>Core services:</b> Built the platform's two most complex services end-to-end: booking flows, real-time tracking, provider matching, and status management.</li>
-      <li><b>Payments:</b> Integrated Stripe with hardened raw-body webhook signature verification — on-demand, subscriptions, and provider payouts.</li>
-      <li><b>Compliance &amp; fleet:</b> Built fleet-company and employee flows, skilled-labor approval, vehicle/image management, and Dutch KVK business-registry lookup.</li>
-      <li><b>Mobile:</b> Shipped the React Native (Expo) app to the App Store via EAS builds — push notifications, full RTL i18n across 5 languages (English, Dutch, Arabic, German, Urdu), real-time chat, and map directions.</li>
-      <li><b>Infra:</b> Deployed Dockerized microservices on Hetzner via Coolify; hardened CORS; integrated Sentry and Microsoft Clarity.</li>
-    </ul>
-  </div>
-
-  <div class="role">
-    <div class="role-head">
-      <div class="role-title"><span class="org">Freelance</span> — Full-Stack Developer <span class="role-sub">· Global · Remote</span></div>
-      <div class="period">Jun 2023 – Jun 2025</div>
-    </div>
-    <ul>
-      <li>Delivered 6+ production applications for clients in the UK, USA, Netherlands, Japan, and Saudi Arabia. <b>5/5 rating across delivered projects.</b></li>
-      <li><b>Cribbix (UK):</b> Built a Rightmove-style property rental &amp; sales platform (V1 &amp; V2) — interactive map search with full filtering, client/agency/admin dashboards, renter profiles, real-time chat, AI-generated property descriptions, and Stripe tenancy payments. Added Redis caching, rate limiting, and reCAPTCHA v3; migrated to Next.js 15 + React 18 and ran full VPS deployment on DigitalOcean independently.</li>
-      <li><b>MLC SharePoint to Zoho CRM Sync:</b> Built a zero-framework Cloudflare Worker that watches a SharePoint contract library and auto-updates matching Zoho CRM accounts (NDA/MSA detection), notifying account managers via SendGrid — with a deliberate "never auto-fill legal dates" safeguard.</li>
-    </ul>
-  </div>
-
-  <div class="role">
-    <div class="role-head">
-      <div class="role-title"><span class="org">Exclusive Labs</span> — Web Development Intern <span class="role-sub">· Remote</span></div>
-      <div class="period">Sep – Dec 2024</div>
-    </div>
-    <ul>
-      <li>Built a course management system (Next.js + Express) with role-based auth for students, instructors, and admins.</li>
-    </ul>
-  </div>
-
-  <h2>Projects</h2>
-
-  <div class="proj-title"><span class="accent">DzStore</span> — Shopify-equivalent e-commerce SaaS <span class="who">· Co-Founder &amp; Full-Stack Engineer</span></div>
-  <ul>
-    <li>Co-founded a multi-tenant e-commerce SaaS and worked across its full stack — <b>database, backend, and frontend</b>. Reached <b>151 active stores, 253 users, and 190+ products in its first 2 months — 100% organic SEO, zero ad spend</b> (pre-revenue).</li>
-    <li><b>Multi-tenancy &amp; infra:</b> Subdomain-per-store routing (Next.js middleware) with Caddy on-demand TLS for merchant custom domains; a 38-model Prisma/PostgreSQL schema; self-hosted on Hetzner via Docker with a cron sidecar and Upstash Redis caching/rate-limiting.</li>
-    <li><b>Commerce:</b> Drag-and-drop storefront builder with themes, product/variant management, per-region (wilaya/commune) shipping, discount codes, abandoned-cart recovery with lifecycle emails (Resend), and an affiliate system with payouts.</li>
-    <li><b>Platform:</b> Better-Auth with email verification, AI product-listing &amp; description generation, customer fraud flagging, merchant SEO controls, full Arabic/French RTL (next-intl), and self-hosted Umami analytics.</li>
-    <li><b>SEO &amp; organic growth:</b> Owned technical SEO for the marketplace (dzstore.org/discover) — structured data (FAQ, breadcrumbs, product &amp; merchant schema for Google Shopping / rich results) and 130+ pages indexed — powering the platform's 100% organic merchant and buyer acquisition (zero ad spend).</li>
-  </ul>
-
-  <div class="proj-title"><span class="accent">Khdame</span> — CRM &amp; marketplace for retail stores <span class="who">· Co-Founder &amp; Full-Stack Developer</span></div>
-  <ul>
-    <li>Co-founded a CRM suite (desktop web + Android/Expo) with an integrated marketplace, real-time stock/inventory management, push notifications, WebSocket infrastructure, a stats dashboard, OTP verification, Google Auth, and Play Store submission.</li>
-  </ul>
-
-  <div class="proj-title"><span class="accent">Munia</span> — Open-source social media <span class="who">· Contributor · 300+ GitHub stars</span></div>
-  <ul>
-    <li>Contributed auth-aware navigation and dynamic UI logic to a Next.js open-source project.</li>
-  </ul>
-
-  <h2>Education</h2>
-  <div class="edu">
-    <div><b>Master's in Computer Science</b> — ESTIN, Algeria</div>
-    <div class="period">Expected 2027</div>
-  </div>
-  <ul>
-    <li><b>Hackathon Winner 2024</b> — 1st place, competitive ideathon · 5+ hackathons participated.</li>
-  </ul>
-
-  <h2>Technical Skills</h2>
-  <div class="skills">
-    <p><b>Frontend</b> React, Next.js (App &amp; Pages Router), TypeScript, JavaScript ES6+, Tailwind CSS, Redux Toolkit</p>
-    <p><b>Mobile</b> React Native (Expo) — iOS &amp; Android, EAS builds, push notifications, biometric auth, RTL i18n</p>
-    <p><b>Backend</b> Node.js, NestJS, Express.js, FastAPI, Python, REST APIs, WebSockets, RBAC</p>
-    <p><b>Databases</b> PostgreSQL, Prisma ORM, Redis, MongoDB</p>
-    <p><b>DevOps</b> Docker, GitHub Actions, CI/CD, VPS (Hetzner, DigitalOcean), Coolify, Caddy/Nginx, PM2, Cloudflare Workers</p>
-    <p><b>Integrations</b> Stripe, OAuth2, Apple/Google Auth, Zoho CRM, SharePoint, Google Maps, reCAPTCHA, Turnstile, SendGrid/Resend, Sentry, Umami</p>
-    <p><b>AI / SaaS</b> RAG systems, LangChain, NL-to-SQL, Gemini, Celery task queues, real-time collaboration, drag-and-drop builders</p>
-  </div>
-</div>
-</body>
+  </body>
 </html>

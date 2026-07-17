@@ -20,16 +20,15 @@ export default function CTASection() {
             <CardContent className="p-8 sm:p-12 text-center space-y-6">
               <div className="space-y-4">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
-                  Ready to Build Something
+                  Hiring a{" "}
                   <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
-                    {" "}
-                    Amazing?
+                    Full-Stack Engineer?
                   </span>
                 </h2>
                 <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                  Let's discuss your project and turn your ideas into reality.
-                  I'm always excited to work on challenging projects that make a
-                  real impact.
+                  I ship production web &amp; mobile platforms end-to-end —
+                  frontend, backend, mobile, and infrastructure. Available now
+                  for full-time remote roles and contracts.
                 </p>
               </div>
 

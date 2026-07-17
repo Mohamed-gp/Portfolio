@@ -37,12 +37,13 @@ export default function Experience() {
 
   const workExperience = [
     {
-      title: "Full-Stack Engineer",
+      title: "Full-Stack Engineer (Frontend Lead)",
       company: "Analytics Depot",
+      website: "https://analyticsdepot.com/",
       location: "Remote (USA)",
       period: "Apr 2025 – Present",
       description:
-        "Core engineer on a live AI analytics SaaS (team of ~10), owning all frontend architecture: custom drag-and-drop dashboard builder, shareable reports with password protection and embed mode, one-click PDF/PowerPoint export. Shipped real-time collaboration with WebSocket session sync, user presence system, collaborative chat sidebar, and an NL-to-SQL query interface. Built an OAuth2 connector platform spanning 10+ data sources (BigQuery, GA4, Search Console, Sheets, Gmail, YouTube, Google Play, PostgreSQL, MySQL, Slack) and RAG document Q&A. Integrated Apple Auth, Sentry observability, and CI/CD optimization — deployment time: ~30 min → under 5 min. Also initialized the companion React Native mobile app (dashboard viewing, push notifications, biometric auth, offline caching).",
+        "Frontend lead on a live AI analytics SaaS (team of ~10) — 2nd-highest contributor, owning every user-facing surface. Built the custom drag-and-drop dashboard builder, shareable reports with password protection and embed mode, one-click PDF/PowerPoint export, and an NL-to-SQL query interface. Shipped real-time collaboration (WebSocket session sync, live presence, collaborative chat sidebar), an OAuth2 connector platform spanning 10+ data sources (BigQuery, GA4, Search Console, Sheets, Gmail, YouTube, Google Play, PostgreSQL, MySQL, Slack), and RAG document Q&A. Recently rebuilt the public marketing site for launch, shipped per-connector refresh scheduling end-to-end (React + FastAPI + Celery Beat), hardened auth with PKCE OAuth and Apple \"Hide My Email\" support, and moved deploys to zero-downtime PM2 cluster reloads — deploy time cut from ~30 min to under 5. Also initialized the companion React Native mobile app (dashboard viewing, push notifications, biometric auth, offline caching).",
       skills: [
         "Next.js",
         "FastAPI",
@@ -58,12 +59,31 @@ export default function Experience() {
       ],
     },
     {
+      title: "Co-Founder & Lead Engineer",
+      company: "DzStore",
+      website: "https://dzstore.org/en",
+      location: "Algeria · Remote",
+      period: "2026 – Present",
+      description:
+        "Co-founded a Shopify-equivalent multi-tenant e-commerce SaaS and lead nearly all engineering across the stack. Grown to 550+ active stores, 600+ users, and 15+ paying PRO subscribers acquired through SEO alone — 100% organic, zero ad spend — with 2.2M+ DZD in merchant sales (GMV) and 99.95% uptime over the last 90 days. Multi-tenant subdomain-per-store routing with Caddy on-demand TLS, a 42-model Prisma/PostgreSQL schema, online card payments (Chargily Pay) with HMAC-verified webhooks, and technical SEO with 4,300+ pages indexed — self-hosted on Hetzner via Docker with zero-downtime deploys.",
+      skills: [
+        "Next.js",
+        "TypeScript",
+        "PostgreSQL",
+        "Prisma",
+        "Docker",
+        "Caddy",
+        "Technical SEO",
+      ],
+    },
+    {
       title: "Full-Stack Engineer — Contract",
       company: "HaulHub",
+      website: "https://haulhub.app/",
       location: "Remote (Netherlands)",
       period: "Jun 2025 – May 2026",
       description:
-        "Built a production Uber-style logistics marketplace spanning 12 service categories and 100+ skilled-labor sub-categories — live on iOS & Android in the Netherlands, localized in 5 languages (EN/NL/AR/DE/UR). Implemented a role-based system across 5+ user types: Admin (with sub-roles), End Users, Service Providers (freelancers & companies), and Company Employees — each with dedicated dashboards and permission scopes. Developed the platform's two most complex services end-to-end: booking flows, real-time tracking, provider matching, and status management. Integrated Stripe payments (on-demand, subscriptions, provider payouts). Deployed Dockerized microservices on Hetzner via Coolify.",
+        "Built a production Uber-style logistics marketplace spanning 12 service categories and 100+ skilled-labor sub-categories — live on iOS & Android in the Netherlands, localized in 5 languages (EN/NL/AR/DE/UR). Implemented a role-based system across 5+ user types: Admin (with sub-roles), End Users, Service Providers (freelancers & companies), and Company Employees — each with dedicated dashboards and permission scopes. Built the on-demand dispatch service end-to-end — Haversine nearest-provider matching with per-provider search radius, competing provider offers, live driver tracking over per-ride WebSocket rooms, an 11-state request lifecycle with proof-of-delivery and disputes, and Stripe escrow with timing-based refunds — plus the B2B fleet-operations module (drivers, vehicles, trip assignment, and commission/earnings settlement). Deployed Dockerized microservices on Hetzner via Coolify.",
       skills: [
         "Next.js",
         "NestJS",
@@ -130,43 +150,6 @@ export default function Experience() {
         score: 5,
         platform: "Fiverr",
       },
-    },
-  ];
-
-  const projects = [
-    {
-      title: "DzStore — Shopify-equivalent SaaS for Algerian merchants",
-      website: "https://dzstore.org/",
-      description:
-        "Co-founded a multi-tenant e-commerce SaaS and worked across its full stack — database, backend, and frontend — reaching 151 active stores and 253 users in its first 2 months, entirely through organic SEO, zero ad spend. Subdomain-per-store routing with Caddy on-demand TLS, Next.js, a 38-model Prisma/PostgreSQL schema, self-hosted on Hetzner. Flagship of the Dzeri ecosystem targeting Algerian market digitization.",
-      skills: ["Next.js", "PostgreSQL", "TypeScript", "SaaS", "E-commerce"],
-      status: "Live · 151 Stores",
-    },
-    {
-      title: "Khdame — Retail CRM & Marketplace",
-      website: "https://www.khdame.com/",
-      description:
-        "Co-founded a CRM suite for small & medium retail stores — a desktop web app plus an Android app (Expo) — with real-time stock/inventory management, an integrated marketplace (product listings, price filters, region-based search), a statistics dashboard, push notifications over WebSockets, OTP email verification, and Google Auth. Submitted to the Play Store.",
-      skills: [
-        "React Native",
-        "Expo",
-        "WebSockets",
-        "Inventory Management",
-        "Google Auth",
-      ],
-      status: "Live",
-    },
-    {
-      title: "Munia — Open Source Social Media",
-      website: "https://munia.norcio.dev/",
-      description:
-        "Contributed auth-aware navigation and dynamic UI logic to a Next.js open-source project with 300+ GitHub stars.",
-      skills: ["Next.js", "Open Source", "Authentication", "UI/UX"],
-      achievements: [
-        "300+ GitHub stars",
-        "Authentication-aware navigation",
-        "Dynamic UI logic",
-      ],
     },
   ];
 
@@ -337,11 +320,12 @@ export default function Experience() {
                       </Badge>
                     </div>
                     <p className="text-primary font-medium text-sm sm:text-base flex items-center gap-2">
-                      {job.company == "Fiverr" && job?.website ? (
+                      {job.website ? (
                         <Link
                           href={job.website}
                           target="_blank"
-                          className="text-primary font-medium text-sm sm:text-base flex items-center gap-2"
+                          rel="noopener noreferrer"
+                          className="text-primary font-medium text-sm sm:text-base flex items-center gap-2 hover:underline underline-offset-4"
                         >
                           {job.company}
                         </Link>

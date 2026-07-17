@@ -2,12 +2,20 @@
 
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
-import { Users, Code, Trophy, Calendar, Globe } from "lucide-react";
+import {
+  Users,
+  Code,
+  Calendar,
+  Store,
+  Activity,
+  Gamepad2,
+  BadgeDollarSign,
+} from "lucide-react";
 
 const stats = [
   {
     icon: <Code className="h-6 w-6 text-purple-500" />,
-    value: "6+",
+    value: "7+",
     label: "Production Apps",
     description: "Shipped and live in production",
   },
@@ -18,22 +26,34 @@ const stats = [
     description: "Full-stack engineering",
   },
   {
-    icon: <Globe className="h-6 w-6 text-cyan-500" />,
-    value: "5+",
-    label: "Countries",
-    description: "USA, UK, NL, Japan & more",
+    icon: <Gamepad2 className="h-6 w-6 text-cyan-500" />,
+    value: "2,500+",
+    label: "Game Players",
+    description: "On Fibble, co-founded — 39 countries",
+  },
+  {
+    icon: <Store className="h-6 w-6 text-blue-500" />,
+    value: "550+",
+    label: "Active Stores",
+    description: "On DzStore, co-founded — 100% organic",
+  },
+  {
+    icon: <BadgeDollarSign className="h-6 w-6 text-amber-500" />,
+    value: "15+",
+    label: "Paying Subscribers",
+    description: "On DzStore — acquired via SEO alone",
+  },
+  {
+    icon: <Activity className="h-6 w-6 text-emerald-500" />,
+    value: "99.95%",
+    label: "Uptime",
+    description: "Self-hosted infra, last 90 days",
   },
   {
     icon: <Users className="h-6 w-6 text-green-500" />,
     value: "5/5",
     label: "Client Rating",
     description: "Across every delivered project",
-  },
-  {
-    icon: <Trophy className="h-6 w-6 text-orange-500" />,
-    value: "1st",
-    label: "Hackathon Win",
-    description: "Ideathon 2024",
   },
 ];
 

@@ -63,11 +63,11 @@ export default function Projects() {
       url: "https://analyticsdepot.com/",
       image: "/projects/analytics-depot/hero-updated-1.png",
       description:
-        "Built the entire frontend of a live AI analytics SaaS: a drag-and-drop dashboard builder with multiple chart types, shareable reports (password-protected + embed mode) with one-click PDF/PowerPoint export, and an OAuth2 connector platform spanning 10+ data sources (BigQuery, GA4, Search Console, Sheets, Gmail, YouTube, Google Play, PostgreSQL, MySQL, Slack). Shipped RAG document Q&A and an NL-to-SQL query interface, and initialized the companion React Native app. Cut deploy time from ~30 min to under 5.",
+        "Frontend lead on a live AI analytics SaaS — own every user-facing surface: a drag-and-drop dashboard builder with multiple chart types, shareable reports (password-protected + embed mode) with one-click PDF/PowerPoint export, and an OAuth2 connector platform spanning 10+ data sources (BigQuery, GA4, Search Console, Sheets, Gmail, YouTube, Google Play, PostgreSQL, MySQL, Slack). Shipped RAG document Q&A, an NL-to-SQL query interface, per-connector refresh scheduling (React + FastAPI + Celery), and the rebuilt public marketing site. Hardened auth with PKCE OAuth and Apple \"Hide My Email\"; cut deploy time from ~30 min to under 5 with zero-downtime PM2 cluster reloads.",
       hardest:
         "Real-time multi-user dashboard sync over WebSockets — session sync, live presence, and a collaborative chat sidebar that stay consistent across editors.",
       status: "Live",
-      role: "Full-Stack Engineer · team of ~10",
+      role: "Full-Stack Engineer (Frontend Lead) · team of ~10",
       technologies: [
         "Next.js",
         "FastAPI",
@@ -89,9 +89,9 @@ export default function Projects() {
       url: "https://haulhub.app/",
       image: "/projects/haulhub/hero-updated-1.png",
       description:
-        "Full-stack engineer (380+ commits across backend, mobile & web) on a production Uber-style logistics marketplace — live on iOS & Android in the Netherlands across 12 service categories and 100+ skilled-labor sub-categories. Built the two most complex services end-to-end — booking, real-time tracking, provider matching — plus Stripe payments (on-demand, subscriptions, provider payouts) and Dutch KVK business-registry lookup. Shipped with full RTL i18n in 5 languages (EN/NL/AR/DE/UR).",
+        "One of the primary engineers — across backend, mobile & web — on a production Uber-style logistics marketplace, live on iOS & Android in the Netherlands across 12 service categories and 100+ skilled-labor sub-categories. Built the on-demand dispatch service (Haversine nearest-provider matching, competing provider offers, live driver tracking over per-ride WebSocket rooms, an 11-state request lifecycle) and the B2B fleet-operations module end-to-end, plus Stripe payments (on-demand, subscriptions, provider payouts) and Dutch KVK business-registry lookup. Shipped with full RTL i18n in 5 languages (EN/NL/AR/DE/UR).",
       hardest:
-        "Delivering a 5+ role platform — Admin (with sub-roles), End Users, freelance & company Service Providers, and Company Employees, each with its own dashboard, permissions, and payout flows — while shipping many features in parallel under tight deadlines.",
+        "Dispatching a request to the right provider in real time — Haversine radius matching that fans out to freelancers and fleet companies, competing offers, live location tracking, and Stripe escrow with timing-based cancellation refunds — across an 11-state request lifecycle.",
       status: "Live on iOS & Android",
       role: "Full-Stack Engineer",
       technologies: [
@@ -110,13 +110,13 @@ export default function Projects() {
       country: "Algeria",
       flag: "🇩🇿",
       type: "Web Application",
-      url: "https://dzstore.org/",
+      url: "https://dzstore.org/en",
       image: "/projects/dzstore/hero-updated-1.png",
       description:
-        "Co-founded a multi-tenant Shopify-equivalent SaaS and worked across its full stack — database, backend, and frontend. Reached 151 active stores, 253 users, and 190+ products in its first 2 months — 100% organic SEO, zero ad spend (pre-revenue). Subdomain-per-store routing with Caddy on-demand TLS, a 38-model Prisma/PostgreSQL schema, a drag-and-drop storefront builder, per-region shipping, abandoned-cart recovery, an affiliate system, and AI product descriptions — self-hosted on Hetzner via Docker. Drove the platform's organic growth through technical SEO: structured data (FAQ, breadcrumbs, product/merchant schema for Google Shopping) and 130+ pages indexed.",
+        "550+ active stores, 600+ users, 1,300+ products, and 15+ paying PRO subscribers acquired through SEO alone — ~40% week-over-week growth, 100% organic, zero ad spend, with 2.2M+ DZD in merchant sales (GMV). Co-founded this multi-tenant Shopify-equivalent SaaS and lead nearly all engineering: subdomain-per-store routing with Caddy on-demand TLS, a 42-model Prisma/PostgreSQL schema, a drag-and-drop storefront builder, per-region shipping, abandoned-cart recovery, an affiliate system, and AI product descriptions — self-hosted on Hetzner via Docker with 99.95% uptime over the last 90 days. Technical SEO drives acquisition: 4,300+ pages indexed with 600+ valid Google Shopping product snippets. Merchants rate it 4.6/5 in the in-app survey.",
       hardest:
         "Multi-tenant subdomain routing with Caddy on-demand TLS — every merchant gets their own store and custom domain with automatic HTTPS, all from one codebase.",
-      status: "Live · 151 Stores",
+      status: "Live · 550+ Stores · 15+ Paying",
       role: "Co-Founder & Full-Stack Engineer",
       technologies: [
         "Next.js",
@@ -127,6 +127,30 @@ export default function Projects() {
         "Caddy",
         "Umami",
         "Technical SEO",
+      ],
+    },
+    {
+      title: "Fibble — Multiplayer Trivia Game (Web & Discord)",
+      country: "Global",
+      flag: "🌍",
+      type: "Web Application",
+      url: "https://fibble.io/",
+      image: "/projects/fibble/hero-updated-1.png",
+      description:
+        "Co-founded a real-time multiplayer bluffing trivia game — playable on the web and inside Discord as an embedded Activity. 2,500+ players across 39 countries and $50 MRR, fully organic, zero ads. Premium via Paddle checkout on web plus native Discord SKU subscriptions in-app, user-generated question packs, media questions (image/GIF/audio), bots, friends & DMs with moderation, and a full admin panel — Dockerized on Hetzner behind Caddy, with GitHub Actions CI/CD, health checks, and automatic rollback.",
+      hardest:
+        "Real-time multiplayer game-state sync on a serverless Next.js stack — no dedicated game server: Postgres as the source of truth, Ably pub/sub fan-out, server-authoritative phase deadlines with idempotent transitions, and HMAC action tokens so guests and Discord players can't spoof each other.",
+      status: "Live · 2,500+ Players",
+      role: "Co-Founder & Full-Stack Engineer",
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "PostgreSQL",
+        "Prisma",
+        "Ably",
+        "Discord SDK",
+        "Paddle",
+        "Docker",
       ],
     },
     {
@@ -151,46 +175,6 @@ export default function Projects() {
         "PostgreSQL",
         "DigitalOcean",
       ],
-    },
-    {
-      title: "Khdame — Retail CRM & Marketplace",
-      country: "Algeria",
-      flag: "🇩🇿",
-      type: ["Web Application", "Mobile Application"],
-      url: "https://www.khdame.com/",
-      image: "/projects/khdame/hero-updated-1.png",
-      description:
-        "Co-founded a CRM suite for small & medium retail stores — a desktop-optimized web app plus an Android app (Expo) — with real-time stock/inventory management, an integrated marketplace (product listings, price filters, region-based search), a statistics dashboard, OTP email verification, and Google Auth. Submitted to the Play Store.",
-      hardest:
-        "Keeping stock, orders, and a customer-facing marketplace in sync in real time across a web dashboard and an Android app via WebSockets and push notifications.",
-      status: "Live",
-      role: "Co-Founder & Full-Stack Developer",
-      technologies: [
-        "React Native",
-        "Expo",
-        "WebSockets",
-        "Push Notifications",
-        "Google Auth",
-        "PostgreSQL",
-      ],
-    },
-    {
-      title: "Munia — Open Source Social Media",
-      country: "Open Source",
-      flag: "🌐",
-      type: "Web Application",
-      url: "https://munia.norcio.dev/",
-      github: "https://github.com/leandronorcio/munia",
-      video:
-        "https://norcio-dot-dev-public-files.s3.us-east-1.amazonaws.com/munia/showcase.mp4",
-      image: "/projects/munia/hero-updated-1.png",
-      description:
-        "Contributed to a Next.js open-source social platform with 300+ GitHub stars — implemented auth-aware navigation and dynamic UI logic that adapts the interface to the viewer's session state.",
-      hardest:
-        "Auth-aware navigation that re-shapes the entire UI based on whether (and who) the viewer is signed in as.",
-      status: "Live",
-      role: "Contributor · 300+ stars",
-      technologies: ["Next.js", "TypeScript", "Authentication", "Open Source"],
     },
   ];
 
@@ -244,7 +228,11 @@ export default function Projects() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+          <Tabs
+            value={activeTab}
+            onValueChange={setActiveTab}
+            className="w-full"
+          >
             <div className="flex justify-center mb-12">
               <TabsList className="grid w-full max-w-lg mx-auto grid-cols-3 h-12 p-1 bg-muted/50 backdrop-blur-sm">
                 <TabsTrigger

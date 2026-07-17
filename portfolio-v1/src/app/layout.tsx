@@ -73,6 +73,7 @@ export const metadata: Metadata = {
     "Analytics Depot",
     "HaulHub",
     "DzStore",
+    "Fibble",
     "React Developer",
     "Next.js Expert",
     "NestJS Developer",
@@ -221,7 +222,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
                 "HaulHub — shipped live on iOS & Android",
                 "1st Place Hackathon Winner 2024",
                 "5/5 rating across delivered freelance projects",
-                "DzStore - Shopify-equivalent SaaS, 151 stores & 253 users in 2 months (organic, pre-revenue)",
+                "DzStore - Shopify-equivalent SaaS, 550+ stores & 600+ users, 15+ paying subscribers, 100% organic",
               ],
               description:
                 "Full-Stack Engineer with 3+ years delivering production-grade platforms for clients across the USA, UK, Netherlands, Japan, and Saudi Arabia. Shipped HaulHub (live logistics marketplace on iOS & Android) and works as a core engineer at Analytics Depot (AI SaaS).",
