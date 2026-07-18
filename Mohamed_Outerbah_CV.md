@@ -1,6 +1,6 @@
 # Mohamed Outerbah
 
-**Full-Stack Engineer** · Next.js · React · React Native · Node.js · FastAPI · TypeScript
+**Full-Stack Engineer** · Next.js · React · React Native · Node.js · Express · TypeScript
 [Email](mailto:mohamedterba6@gmail.com) · [Portfolio](https://www.mohamedouterbah.com) · [GitHub](https://github.com/Mohamed-gp) · [LinkedIn](https://www.linkedin.com/in/mohamedouterbah)
 
 ---
