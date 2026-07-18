@@ -67,7 +67,7 @@ Full-Stack Engineer with 3+ years shipping production web & mobile platforms end
 
 ## Education & Awards
 
-**Master's in Computer Science**, ESTIN, Algeria · _Expected 2027_
+**Master's in Computer Science**, AI & Data Science specialization, ESTIN, Algeria · _Expected 2027_
 
 - **Hackathon Winner 2024:** 1st place, competitive ideathon · 5+ hackathons participated.
 - **Open-source contributor:** Munia, a Next.js social platform with 300+ GitHub stars (auth-aware navigation and dynamic UI).
