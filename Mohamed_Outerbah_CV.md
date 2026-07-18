@@ -1,7 +1,7 @@
 # Mohamed Outerbah
 
 **Full-Stack Engineer** · Next.js · React · React Native · Node.js · Express · TypeScript
-[mohamedterba6@gmail.com](mailto:mohamedterba6@gmail.com) · [mohamedouterbah.com](https://www.mohamedouterbah.com) · [github.com/Mohamed-gp](https://github.com/Mohamed-gp) · [linkedin.com/in/mohamedouterbah](https://www.linkedin.com/in/mohamedouterbah)
+Algeria · CET (UTC+1) · [mohamedterba6@gmail.com](mailto:mohamedterba6@gmail.com) · [mohamedouterbah.com](https://www.mohamedouterbah.com) · [github.com/Mohamed-gp](https://github.com/Mohamed-gp) · [linkedin.com/in/mohamedouterbah](https://www.linkedin.com/in/mohamedouterbah)
 
 ---
 
@@ -9,11 +9,11 @@ Full-Stack Engineer with 3+ years shipping production web & mobile platforms end
 
 ## Experience
 
-### Full-Stack Engineer (Frontend Lead) · _[Analytics Depot](https://analyticsdepot.com/) (AI Analytics SaaS), USA · Remote_
+### Full-Stack Engineer (Frontend Lead) · _[Analytics Depot](https://analyticsdepot.com/) (AI Analytics SaaS), USA · Remote · Freelance_
 
 **Apr 2025 - Present**
 
-- Own the entire frontend architecture of a live AI analytics platform, ranking 2nd of ~10 engineers by contribution across AI/ML, LLMOps, and infra: every user-facing surface from dashboards to the marketing site.
+- Own the entire frontend architecture of a live AI analytics platform in a ~10-person team of AI/ML, LLMOps, and infra engineers: every user-facing surface from dashboards to the marketing site.
 - **Dashboards & reporting:** Designed and implemented the drag-and-drop dashboard builder, shareable password-protected/embed reports, and one-click PDF/PowerPoint export UI.
 - **Real-time collaboration:** Shipped WebSocket session sync, user presence, and a collaborative chat sidebar over production wss://, plus the NL-to-SQL query interface.
 - **Data connectors:** Developed an OAuth2 connector platform with encrypted credential storage spanning 10+ sources (BigQuery, GA4, Search Console, Sheets, Gmail, YouTube, Google Play, PostgreSQL, MySQL, Slack), including per-connector refresh schedules taken end-to-end (React UI, FastAPI, Celery Beat).
@@ -36,7 +36,7 @@ Full-Stack Engineer with 3+ years shipping production web & mobile platforms end
 
 **Jun 2023 - Jun 2025**
 
-- Delivered 6+ production applications for clients in the UK, USA, Netherlands, Japan, and Saudi Arabia, with a **5/5 rating on every client project.**
+- Delivered 6+ production applications for clients in the UK, USA, Netherlands, Japan, and Saudi Arabia, with a **5/5 rating on every client project** ([Fiverr](https://www.fiverr.com/mohamedouterbah)).
 - **[Cribbix](https://cribbix.com/) (UK):** Rightmove-style property platform (V1 & V2): interactive map search with instant filtering, client/agency/admin dashboards, real-time chat, AI property descriptions, Stripe tenancy payments, Redis caching, and independent DigitalOcean VPS deployment.
 - **MLC SharePoint to Zoho sync:** Zero-framework Cloudflare Worker watching a SharePoint contract library and auto-updating Zoho CRM (NDA/MSA detection) with SendGrid notifications.
 
@@ -52,7 +52,7 @@ Full-Stack Engineer with 3+ years shipping production web & mobile platforms end
 
 **2025 - Present**
 
-- **Traction:** 550+ active stores, 600+ users, and 1,300+ products within 2 months of launch, 100% organic with zero ad spend: **15+ paying PRO subscribers acquired through SEO alone**, a +500% week-over-week user-growth spike, and +800% week-over-week revenue growth in the first weeks of monetization.
+- **Traction:** 550+ active stores, 600+ users, and 1,300+ products within 2 months of launch, 100% organic with zero ad spend, and **15+ paying PRO subscribers acquired through SEO alone**.
 - **Quality signals:** 4.6/5 average across 42 in-app merchant survey responses; 99.95% uptime over the last 90 days with zero recorded incidents (public status page).
 - **Organic SEO engine:** Owned technical SEO end-to-end: 4,300+ pages indexed, 600+ valid product snippets & merchant listings (Google Shopping rich results), and breadcrumb/FAQ structured data, driving 1,600+ Google Search clicks and all merchant acquisition.
 - **Engineering:** Led nearly all engineering across the stack: multi-tenant subdomain-per-store routing with Caddy on-demand TLS for custom domains, a 42-model Prisma/PostgreSQL schema, drag-and-drop storefront builder, online card payments (Chargily Pay) with HMAC-verified webhooks, per-region shipping, abandoned-cart lifecycle emails (Resend), affiliate payouts, AI product descriptions, and Arabic/French RTL; self-hosted on Hetzner via Docker with zero-downtime deploys and Upstash Redis.
