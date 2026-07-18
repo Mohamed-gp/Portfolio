@@ -1,7 +1,7 @@
 # Mohamed Outerbah
 
 **Full-Stack Engineer** · Next.js · React · React Native · Node.js · Express · TypeScript
-[Email](mailto:mohamedterba6@gmail.com) · [Portfolio](https://www.mohamedouterbah.com) · [GitHub](https://github.com/Mohamed-gp) · [LinkedIn](https://www.linkedin.com/in/mohamedouterbah)
+[mohamedterba6@gmail.com](mailto:mohamedterba6@gmail.com) · [mohamedouterbah.com](https://www.mohamedouterbah.com) · [github.com/Mohamed-gp](https://github.com/Mohamed-gp) · [linkedin.com/in/mohamedouterbah](https://www.linkedin.com/in/mohamedouterbah)
 
 ---
 
@@ -15,9 +15,9 @@ Full-Stack Engineer with 3+ years shipping production web & mobile platforms end
 
 - Own the entire frontend architecture of a live AI analytics platform, ranking 2nd of ~10 engineers by contribution across AI/ML, LLMOps, and infra: every user-facing surface from dashboards to the marketing site.
 - **Dashboards & reporting:** Designed and implemented the drag-and-drop dashboard builder, shareable password-protected/embed reports, and one-click PDF/PowerPoint export UI.
-- **Real-time collaboration:** Shipped WebSocket session sync, live user presence, and a collaborative chat sidebar over production wss://, plus the NL-to-SQL query interface.
-- **Data connectors:** Developed an OAuth2 connector platform with encrypted credential storage across 10+ sources (BigQuery, GA4, Search Console, Sheets, Gmail, YouTube, Google Play, PostgreSQL, MySQL, Slack), including per-connector refresh schedules taken end-to-end (React UI, FastAPI, Celery Beat).
-- **AI / RAG:** Delivered RAG document-intelligence Q&A with resilient streaming, multi-format ingestion (CSV/PDF/Excel/images), and a Gemini model layer with fallback.
+- **Real-time collaboration:** Shipped WebSocket session sync, user presence, and a collaborative chat sidebar over production wss://, plus the NL-to-SQL query interface.
+- **Data connectors:** Developed an OAuth2 connector platform with encrypted credential storage spanning 10+ sources (BigQuery, GA4, Search Console, Sheets, Gmail, YouTube, Google Play, PostgreSQL, MySQL, Slack), including per-connector refresh schedules taken end-to-end (React UI, FastAPI, Celery Beat).
+- **AI / RAG:** Built RAG document-intelligence Q&A with resilient streaming, multi-format ingestion (CSV/PDF/Excel/images), and a Gemini model layer with fallback.
 - **Growth & DevOps:** Rebuilt the full marketing site (animated hero, comparison, FAQ); cut deploy time from ~30 min to under 5 with zero-downtime PM2 cluster reloads; hardened CI/CD (GitHub Actions) with Sentry observability; PKCE OAuth and Apple "Hide My Email" auth.
 - **Mobile:** Initialized the companion React Native app: dashboard viewing, push notifications, biometric auth, offline caching.
 
@@ -36,8 +36,8 @@ Full-Stack Engineer with 3+ years shipping production web & mobile platforms end
 
 **Jun 2023 - Jun 2025**
 
-- Delivered 6+ production applications for clients in the UK, USA, Netherlands, Japan, and Saudi Arabia, with a **5/5 rating across all delivered projects.**
-- **[Cribbix](https://cribbix.com/) (UK):** Rightmove-style property platform (V1 & V2): interactive map search with live filtering, client/agency/admin dashboards, real-time chat, AI property descriptions, Stripe tenancy payments, Redis caching, and independent DigitalOcean VPS deployment.
+- Delivered 6+ production applications for clients in the UK, USA, Netherlands, Japan, and Saudi Arabia, with a **5/5 rating on every client project.**
+- **[Cribbix](https://cribbix.com/) (UK):** Rightmove-style property platform (V1 & V2): interactive map search with instant filtering, client/agency/admin dashboards, real-time chat, AI property descriptions, Stripe tenancy payments, Redis caching, and independent DigitalOcean VPS deployment.
 - **MLC SharePoint to Zoho sync:** Zero-framework Cloudflare Worker watching a SharePoint contract library and auto-updating Zoho CRM (NDA/MSA detection) with SendGrid notifications.
 
 ### Web Development Intern · _Exclusive Labs · Remote_
@@ -70,7 +70,7 @@ Full-Stack Engineer with 3+ years shipping production web & mobile platforms end
 **Master's in Computer Science**, AI & Data Science specialization, ESTIN, Algeria · _Expected 2027_
 
 - **Hackathon Winner 2024:** 1st place, competitive ideathon · 5+ hackathons participated.
-- **Open-source contributor:** [Munia](https://github.com/leandronorcio/munia), a Next.js social platform with 300+ GitHub stars (auth-aware navigation and dynamic UI).
+- **Open-source contributor:** [Munia](https://github.com/leandronorcio/munia), a Next.js social platform with 300+ GitHub stars (auth-aware navigation and UI logic).
 
 ## Technical Skills
 
