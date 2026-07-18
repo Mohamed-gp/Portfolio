@@ -9,7 +9,7 @@ Full-Stack Engineer with 3+ years shipping production web & mobile platforms end
 
 ## Experience
 
-### Full-Stack Engineer (Frontend Lead) · _Analytics Depot (AI Analytics SaaS), USA · Remote_
+### Full-Stack Engineer (Frontend Lead) · _[Analytics Depot](https://analyticsdepot.com/) (AI Analytics SaaS), USA · Remote_
 
 **Apr 2025 - Present**
 
@@ -21,7 +21,7 @@ Full-Stack Engineer with 3+ years shipping production web & mobile platforms end
 - **Growth & DevOps:** Rebuilt the full marketing site (animated hero, comparison, FAQ); cut deploy time from ~30 min to under 5 with zero-downtime PM2 cluster reloads; hardened CI/CD (GitHub Actions) with Sentry observability; PKCE OAuth and Apple "Hide My Email" auth.
 - **Mobile:** Initialized the companion React Native app: dashboard viewing, push notifications, biometric auth, offline caching.
 
-### Full-Stack Engineer (Contract) · _HaulHub (Logistics Marketplace), Netherlands · Remote_
+### Full-Stack Engineer (Contract) · _[HaulHub](https://haulhub.app/) (Logistics Marketplace), Netherlands · Remote_
 
 **Jun 2025 - May 2026**
 
@@ -37,7 +37,7 @@ Full-Stack Engineer with 3+ years shipping production web & mobile platforms end
 **Jun 2023 - Jun 2025**
 
 - Delivered 6+ production applications for clients in the UK, USA, Netherlands, Japan, and Saudi Arabia, with a **5/5 rating across all delivered projects.**
-- **Cribbix (UK):** Rightmove-style property platform (V1 & V2): interactive map search with live filtering, client/agency/admin dashboards, real-time chat, AI property descriptions, Stripe tenancy payments, Redis caching, and independent DigitalOcean VPS deployment.
+- **[Cribbix](https://cribbix.com/) (UK):** Rightmove-style property platform (V1 & V2): interactive map search with live filtering, client/agency/admin dashboards, real-time chat, AI property descriptions, Stripe tenancy payments, Redis caching, and independent DigitalOcean VPS deployment.
 - **MLC SharePoint to Zoho sync:** Zero-framework Cloudflare Worker watching a SharePoint contract library and auto-updating Zoho CRM (NDA/MSA detection) with SendGrid notifications.
 
 ### Web Development Intern · _Exclusive Labs · Remote_
@@ -48,7 +48,7 @@ Full-Stack Engineer with 3+ years shipping production web & mobile platforms end
 
 ## Founder Projects
 
-### DzStore · _Shopify-equivalent E-commerce SaaS · Co-Founder & Lead Engineer · dzstore.org_
+### DzStore · _Shopify-equivalent E-commerce SaaS · Co-Founder & Lead Engineer · [dzstore.org](https://dzstore.org/en)_
 
 **2025 - Present**
 
@@ -57,7 +57,7 @@ Full-Stack Engineer with 3+ years shipping production web & mobile platforms end
 - **Organic SEO engine:** Owned technical SEO end-to-end: 4,300+ pages indexed, 600+ valid product snippets & merchant listings (Google Shopping rich results), and breadcrumb/FAQ structured data, driving 1,600+ Google Search clicks and all merchant acquisition.
 - **Engineering:** Led nearly all engineering across the stack: multi-tenant subdomain-per-store routing with Caddy on-demand TLS for custom domains, a 42-model Prisma/PostgreSQL schema, drag-and-drop storefront builder, online card payments (Chargily Pay) with HMAC-verified webhooks, per-region shipping, abandoned-cart lifecycle emails (Resend), affiliate payouts, AI product descriptions, and Arabic/French RTL; self-hosted on Hetzner via Docker with zero-downtime deploys and Upstash Redis.
 
-### Fibble · _Multiplayer Party Game (Web + Discord) · Co-Founder & Full-Stack Engineer · fibble.io_
+### Fibble · _Multiplayer Party Game (Web + Discord) · Co-Founder & Full-Stack Engineer · [fibble.io](https://fibble.io/)_
 
 **2025 - Present**
 
@@ -70,7 +70,7 @@ Full-Stack Engineer with 3+ years shipping production web & mobile platforms end
 **Master's in Computer Science**, AI & Data Science specialization, ESTIN, Algeria · _Expected 2027_
 
 - **Hackathon Winner 2024:** 1st place, competitive ideathon · 5+ hackathons participated.
-- **Open-source contributor:** Munia, a Next.js social platform with 300+ GitHub stars (auth-aware navigation and dynamic UI).
+- **Open-source contributor:** [Munia](https://github.com/leandronorcio/munia), a Next.js social platform with 300+ GitHub stars (auth-aware navigation and dynamic UI).
 
 ## Technical Skills
 
