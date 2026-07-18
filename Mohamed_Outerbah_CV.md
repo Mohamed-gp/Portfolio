@@ -50,7 +50,7 @@ Full-Stack Engineer with 3+ years shipping production web & mobile platforms end
 
 ### DzStore · _Shopify-equivalent E-commerce SaaS · Co-Founder & Lead Engineer · dzstore.org_
 
-**2026 - Present**
+**2025 - Present**
 
 - **Traction:** 550+ active stores, 600+ users, and 1,300+ products within 2 months of launch, 100% organic with zero ad spend: **15+ paying PRO subscribers acquired through SEO alone**, a +500% week-over-week user-growth spike, and +800% week-over-week revenue growth in the first weeks of monetization.
 - **Quality signals:** 4.6/5 average across 42 in-app merchant survey responses; 99.95% uptime over the last 90 days with zero recorded incidents (public status page).
@@ -59,7 +59,7 @@ Full-Stack Engineer with 3+ years shipping production web & mobile platforms end
 
 ### Fibble · _Multiplayer Party Game (Web + Discord) · Co-Founder & Full-Stack Engineer · fibble.io_
 
-**2026 - Present**
+**2025 - Present**
 
 - **Product:** Free real-time bluffing trivia game (2-8 players, no download) playable in the browser and as a Discord Activity, with a premium subscription tier.
 - **Traction:** 2,500+ players from 39 countries in the first weeks and $50 MRR, entirely organic with zero ad spend.
