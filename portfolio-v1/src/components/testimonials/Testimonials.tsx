@@ -109,12 +109,6 @@ const clients: Client[] = [
     link: "https://www.linkedin.com/in/mohamedouterbah/details/recommendations/",
     reviews: [
       {
-        text: "Mohamed is truly a remarkable software developer! He not only EXCEEDED our expectations with his detailed and well-documented work, but his proactive communication and quick responsiveness made collaborating a breeze. Highly recommend! 👏",
-        rating: 5,
-        date: "2025-06-21",
-        platform: "Fiverr",
-      },
-      {
         text: "Mohamed has been our Frontend Lead at Analytics Depot and one of the most reliable engineers on the team. He owns every user-facing aspect of the platform, from the dashboard builder to real-time collaboration, and consistently delivers high-quality production-ready work at an impressive pace. I'd gladly work with him again and highly recommend him to any team.",
         rating: 5,
         date: "2026-07-19",
