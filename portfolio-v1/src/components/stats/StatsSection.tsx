@@ -33,7 +33,7 @@ const stats = [
   },
   {
     icon: <Store className="h-6 w-6 text-blue-500" />,
-    value: "550+",
+    value: "600+",
     label: "Active Stores",
     description: "On DzStore, co-founded, 100% organic",
   },

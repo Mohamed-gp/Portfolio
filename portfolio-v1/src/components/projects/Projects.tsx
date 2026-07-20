@@ -19,6 +19,7 @@ import {
   ExternalLink,
   Code,
   Target,
+  Check,
 } from "lucide-react";
 import { useState } from "react";
 import Image from "next/image";
@@ -35,6 +36,7 @@ interface Project {
   video?: string;
   image: string;
   description: string;
+  features: string[];
   hardest: string;
   status: string;
   role: string;
@@ -64,6 +66,12 @@ export default function Projects() {
       image: "/projects/analytics-depot/hero-updated-1.png",
       description:
         "Frontend lead on a live AI analytics SaaS, owning every user-facing surface: a drag-and-drop dashboard builder with multiple chart types, shareable reports (password-protected + embed mode) with one-click PDF/PowerPoint export, and an OAuth2 connector platform spanning 10+ data sources (BigQuery, GA4, Search Console, Sheets, Gmail, YouTube, Google Play, PostgreSQL, MySQL, Slack). Shipped RAG document Q&A, an NL-to-SQL query interface, per-connector refresh scheduling (React + FastAPI + Celery), and the rebuilt public marketing site. Hardened auth with PKCE OAuth and Apple \"Hide My Email\"; cut deploy time from ~30 min to under 5 with zero-downtime PM2 cluster reloads.",
+      features: [
+        "Ask questions in plain English, get SQL-backed answers and charts",
+        "Drag-and-drop dashboards with shareable, embeddable reports",
+        "10+ one-click data connectors, from BigQuery and GA4 to Slack",
+        "Upload CSV/PDF/Excel documents and chat with them (RAG)",
+      ],
       hardest:
         "Real-time multi-user dashboard sync over WebSockets: session sync, live presence, and a collaborative chat sidebar that stay consistent across editors.",
       status: "Live",
@@ -90,6 +98,12 @@ export default function Projects() {
       image: "/projects/haulhub/hero-updated-1.png",
       description:
         "One of the primary engineers across backend, mobile & web on a production Uber-style logistics marketplace, live on iOS & Android in the Netherlands across 12 service categories and 100+ skilled-labor sub-categories. Built the on-demand dispatch service (Haversine nearest-provider matching, competing provider offers, live driver tracking over per-ride WebSocket rooms, an 11-state request lifecycle) and the B2B fleet-operations module end-to-end, plus Stripe payments (on-demand, subscriptions, provider payouts) and Dutch KVK business-registry lookup. Shipped with full RTL i18n in 5 languages (EN/NL/AR/DE/UR).",
+      features: [
+        "Post a job, get competing price and pickup-time offers in seconds",
+        "Live driver tracking, proof of delivery, and dispute handling",
+        "Fleet dashboards for companies: drivers, vehicles, earnings splits",
+        "Stripe escrow payments, 5 languages with full RTL",
+      ],
       hardest:
         "Dispatching a request to the right provider in real time: Haversine radius matching that fans out to freelancers and fleet companies, competing offers, live location tracking, and Stripe escrow with timing-based cancellation refunds, across an 11-state request lifecycle.",
       status: "Live on iOS & Android",
@@ -113,10 +127,16 @@ export default function Projects() {
       url: "https://dzstore.org/en",
       image: "/projects/dzstore/hero-updated-1.png",
       description:
-        "550+ active stores, 600+ users, 1,300+ products, and 15+ paying PRO subscribers acquired through SEO alone, with ~40% week-over-week growth, 100% organic, zero ad spend, and 2.2M+ DZD in merchant sales (GMV). Co-founded this multi-tenant Shopify-equivalent SaaS and lead nearly all engineering: subdomain-per-store routing with Caddy on-demand TLS, a 42-model Prisma/PostgreSQL schema, a drag-and-drop storefront builder, per-region shipping, abandoned-cart recovery, an affiliate system, and AI product descriptions; self-hosted on Hetzner via Docker with 99.95% uptime over the last 90 days. Technical SEO drives acquisition: 4,300+ pages indexed with 600+ valid Google Shopping product snippets. Merchants rate it 4.6/5 in the in-app survey.",
+        "600+ active stores, 700+ users, 1,400+ products, and 15+ paying PRO subscribers acquired through SEO alone, adding ~50 new stores a week, 100% organic, zero ad spend, and 2.2M+ DZD in merchant sales (GMV). Co-founded this multi-tenant Shopify-equivalent SaaS and lead nearly all engineering: subdomain-per-store routing with Caddy on-demand TLS, a 42-model Prisma/PostgreSQL schema, a drag-and-drop storefront builder, per-region shipping, abandoned-cart recovery, an affiliate system, and AI product descriptions; self-hosted on Hetzner via Docker with 99.95% uptime over the last 90 days. Technical SEO drives acquisition: 4,300+ pages indexed with 600+ valid Google Shopping product snippets. Merchants rate it 4.6/5 in the in-app survey.",
+      features: [
+        "Merchants launch a full online store in seconds, no code needed",
+        "Every store gets its own subdomain or custom domain with auto HTTPS",
+        "Cash on delivery + online card payments, 50+ delivery carriers",
+        "AI product descriptions, abandoned-cart recovery, trending-product radar",
+      ],
       hardest:
         "Multi-tenant subdomain routing with Caddy on-demand TLS: every merchant gets their own store and custom domain with automatic HTTPS, all from one codebase.",
-      status: "Live · 550+ Stores · 15+ Paying",
+      status: "Live · 600+ Stores · 15+ Paying",
       role: "Co-Founder & Full-Stack Engineer",
       technologies: [
         "Next.js",
@@ -138,6 +158,12 @@ export default function Projects() {
       image: "/projects/fibble/hero-updated-1.png",
       description:
         "Co-founded a real-time multiplayer bluffing trivia game playable on the web and inside Discord as an embedded Activity. 2,500+ players across 39 countries and $50 MRR, fully organic, zero ads. Premium via Paddle checkout on web plus native Discord SKU subscriptions in-app, user-generated question packs, media questions (image/GIF/audio), bots, friends & DMs with moderation, and a full admin panel; Dockerized on Hetzner behind Caddy, with GitHub Actions CI/CD, health checks, and automatic rollback.",
+      features: [
+        "Bluff-based trivia: write fake answers, fool your friends, 2-8 players",
+        "Plays in the browser or inside Discord, nothing to install",
+        "Custom question packs, media questions, bots, friends and DMs",
+        "Premium via Paddle on web and native Discord subscriptions",
+      ],
       hardest:
         "Real-time multiplayer game-state sync on a serverless Next.js stack with no dedicated game server: Postgres as the source of truth, Ably pub/sub fan-out, server-authoritative phase deadlines with idempotent transitions, and HMAC action tokens so guests and Discord players can't spoof each other.",
       status: "Live · 2,500+ Players",
@@ -163,6 +189,12 @@ export default function Projects() {
       image: "/projects/cribbix/hero-updated-1.png",
       description:
         "Built a Rightmove-style property rental & sales platform (V1 & V2): interactive map search with full filtering, client/agency/admin dashboards, renter profiles, real-time chat, AI-generated property descriptions, and Stripe tenancy payments. Added Redis caching, rate limiting, and reCAPTCHA v3; migrated to Next.js 15 + React 18 and ran full VPS deployment on DigitalOcean independently.",
+      features: [
+        "Map-first property search with instant filtering, rent and buy",
+        "Saved alerts, enquiry tracking, and tour scheduling with agents",
+        "Digital agreement signing and Stripe rent collection",
+        "Real-time chat and AI-generated listing descriptions",
+      ],
       hardest:
         "Map-based property search with live filtering that updates results without re-initializing the map on every interaction.",
       status: "Live",
@@ -343,6 +375,22 @@ export default function Projects() {
                   </p>
                 </div>
 
+                {/* Key features */}
+                <div>
+                  <h3 className="font-semibold text-lg mb-2">Key features</h3>
+                  <ul className="space-y-1.5">
+                    {selectedProject.features.map((feature) => (
+                      <li
+                        key={feature}
+                        className="flex items-start gap-2 text-sm text-muted-foreground"
+                      >
+                        <Check className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
                 {/* Description */}
                 <div>
                   <h3 className="font-semibold text-lg mb-2">
@@ -474,6 +522,19 @@ function ProjectCard({
         <p className="text-sm text-muted-foreground line-clamp-3">
           {project.description}
         </p>
+
+        {/* What the app does */}
+        <ul className="space-y-1">
+          {project.features.map((feature) => (
+            <li
+              key={feature}
+              className="flex items-start gap-2 text-xs text-muted-foreground"
+            >
+              <Check className="h-3.5 w-3.5 text-primary mt-0.5 shrink-0" />
+              <span>{feature}</span>
+            </li>
+          ))}
+        </ul>
 
         {/* Hardest problem hook */}
         <div className="rounded-md bg-muted/50 border-l-2 border-primary/60 px-3 py-2">

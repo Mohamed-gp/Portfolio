@@ -41,6 +41,8 @@ export default function Contact() {
 
       setStatus("success");
       formRef.current.reset();
+      const posthog = (await import("posthog-js")).default;
+      posthog.capture("contact_form_submitted");
     } catch (error) {
       console.log(error);
       setStatus("error");

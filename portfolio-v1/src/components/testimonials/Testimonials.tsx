@@ -10,6 +10,7 @@ import {
   RefreshCw,
   ChevronRight,
   ChevronDown,
+  Linkedin,
 } from "lucide-react";
 
 import {
@@ -24,6 +25,7 @@ interface Review {
   text: string;
   rating: number;
   date: string;
+  platform?: "Fiverr" | "LinkedIn";
 }
 
 interface Client {
@@ -33,8 +35,10 @@ interface Client {
   avatar: string | null;
   countryFlag: string;
   countryName: string;
+  title?: string;
   project?: string;
-  fiverr_link: string;
+  source?: "Fiverr" | "LinkedIn";
+  link: string;
   gradient: string;
   reviews: Review[];
 }
@@ -77,7 +81,7 @@ const clients: Client[] = [
     countryName: "United Kingdom",
     project: "Cribbix",
     gradient: "from-violet-600 via-purple-600 to-indigo-600",
-    fiverr_link: "https://www.fiverr.com/mohamedouterbah?public_mode=true",
+    link: "https://www.fiverr.com/mohamedouterbah?public_mode=true",
     reviews: [
       {
         text: "Mohamed is a great developer with a deep understanding of building a product end to end. Amazing communication - highly recommended.",
@@ -93,19 +97,28 @@ const clients: Client[] = [
   },
   {
     id: 2,
-    username: "crimsonbison",
-    displayName: "crimsonbison",
-    avatar: "/clients/crimsonbison.webp",
+    username: "vineetpinto",
+    displayName: "Vineet Pinto",
+    avatar: "/clients/vineet.jpg",
     countryFlag: "🇺🇸",
     countryName: "United States",
+    title: "CEO & Founder, Analytics Depot",
     project: "Analytics Depot",
+    source: "LinkedIn",
     gradient: "from-blue-600 via-cyan-600 to-teal-500",
-    fiverr_link: "https://www.fiverr.com/mohamedouterbah?public_mode=true",
+    link: "https://www.linkedin.com/in/mohamedouterbah/details/recommendations/",
     reviews: [
       {
         text: "Mohamed is truly a remarkable software developer! He not only EXCEEDED our expectations with his detailed and well-documented work, but his proactive communication and quick responsiveness made collaborating a breeze. Highly recommend! 👏",
         rating: 5,
         date: "2025-06-21",
+        platform: "Fiverr",
+      },
+      {
+        text: "Mohamed has been our Frontend Lead at Analytics Depot and one of the most reliable engineers on the team. He owns every user-facing aspect of the platform, from the dashboard builder to real-time collaboration, and consistently delivers high-quality production-ready work at an impressive pace. I'd gladly work with him again and highly recommend him to any team.",
+        rating: 5,
+        date: "2026-07-19",
+        platform: "LinkedIn",
       },
     ],
   },
@@ -118,49 +131,10 @@ const clients: Client[] = [
     countryName: "Japan",
     project: "ArtisBay",
     gradient: "from-rose-500 via-pink-600 to-fuchsia-600",
-    fiverr_link: "https://www.fiverr.com/mohamedouterbah?public_mode=true",
+    link: "https://www.fiverr.com/mohamedouterbah?public_mode=true",
     reviews: [
       {
         text: "We assigned him the task of enhancing font responsiveness, which he executed flawlessly. Beyond that, he proactively suggested valuable improvements that further optimized the design. His communication was clear and professional, and his skills were truly outstanding. Highly recommended!",
-        rating: 5,
-        date: "2025-03-21",
-      },
-    ],
-  },
-  {
-    id: 4,
-    username: "mohammedmans680",
-    displayName: "mohammedmans680",
-    avatar: null,
-    countryFlag: "🇵🇸",
-    countryName: "Palestinian Territories",
-    gradient: "from-amber-500 via-orange-500 to-red-500",
-    fiverr_link: "https://www.fiverr.com/mohamedouterbah?public_mode=true",
-    reviews: [
-      {
-        text: "nice work .",
-        rating: 5,
-        date: "2025-09-21",
-      },
-      {
-        text: "Great work . fast delivery.",
-        rating: 5,
-        date: "2025-09-21",
-      },
-    ],
-  },
-  {
-    id: 5,
-    username: "dhiaa00",
-    displayName: "dhiaa00",
-    avatar: null,
-    countryFlag: "🇩🇿",
-    countryName: "Algeria",
-    gradient: "from-emerald-500 via-green-600 to-teal-600",
-    fiverr_link: "https://www.fiverr.com/mohamedouterbah?public_mode=true",
-    reviews: [
-      {
-        text: "It was a good experience working with mohamed, he is such a professional in his work",
         rating: 5,
         date: "2025-03-21",
       },
@@ -201,7 +175,7 @@ export default function Testimonials() {
               ))}
             </div>
             <span className="font-semibold text-lg text-foreground">
-              5.0 on Fiverr
+              5.0 client rating
             </span>
           </div>
         </div>
@@ -266,12 +240,12 @@ export default function Testimonials() {
                             {client.displayName}
                           </h4>
                           <p className="text-white/70 text-xs">
-                            {client.countryName}
+                            {client.title ?? client.countryName}
                           </p>
                         </div>
                       </div>
                       <a
-                        href={client.fiverr_link}
+                        href={client.link}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="bg-white/15 hover:bg-white/25 transition-colors p-2 rounded-full shrink-0"
@@ -281,23 +255,30 @@ export default function Testimonials() {
                     </div>
 
                     <div className="flex items-center justify-between mt-3">
-                      <div className="flex items-center gap-1.5">
-                        <div className="flex">
-                          {Array.from({ length: 5 }).map((_, i) => (
-                            <Star
-                              key={i}
-                              className={`h-4 w-4 ${
-                                i < Math.floor(latestReview.rating)
-                                  ? "text-yellow-300 fill-yellow-300"
-                                  : "text-white/30"
-                              }`}
-                            />
-                          ))}
+                      {latestReview.platform === "LinkedIn" ? (
+                        <div className="flex items-center gap-1.5 font-semibold text-sm">
+                          <Linkedin className="h-4 w-4 fill-current" />
+                          Recommendation
                         </div>
-                        <span className="font-semibold text-sm">
-                          {latestReview.rating}
-                        </span>
-                      </div>
+                      ) : (
+                        <div className="flex items-center gap-1.5">
+                          <div className="flex">
+                            {Array.from({ length: 5 }).map((_, i) => (
+                              <Star
+                                key={i}
+                                className={`h-4 w-4 ${
+                                  i < Math.floor(latestReview.rating)
+                                    ? "text-yellow-300 fill-yellow-300"
+                                    : "text-white/30"
+                                }`}
+                              />
+                            ))}
+                          </div>
+                          <span className="font-semibold text-sm">
+                            {latestReview.rating}
+                          </span>
+                        </div>
+                      )}
                       <div className="flex items-center gap-1 text-white/60 text-xs">
                         <Clock className="h-3 w-3" />
                         {getRelativeTime(latestReview.date)}
@@ -341,12 +322,12 @@ export default function Testimonials() {
                       </button>
                     ) : (
                       <a
-                        href={client.fiverr_link}
+                        href={client.link}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium text-xs flex items-center gap-0.5 transition-colors"
                       >
-                        Fiverr
+                        Verify
                         <ExternalLink className="h-3 w-3" />
                       </a>
                     )}
@@ -437,21 +418,28 @@ export default function Testimonials() {
 
                       <div className="bg-muted/50 rounded-lg p-4 border border-border">
                         <div className="flex items-center justify-between mb-2">
-                          <div className="flex items-center gap-1">
-                            {Array.from({ length: 5 }).map((_, i) => (
-                              <Star
-                                key={i}
-                                className={`h-3.5 w-3.5 ${
-                                  i < Math.floor(review.rating)
-                                    ? "text-yellow-400 fill-yellow-400"
-                                    : "text-gray-300"
-                                }`}
-                              />
-                            ))}
-                            <span className="text-sm font-medium ml-1">
-                              {review.rating}
-                            </span>
-                          </div>
+                          {review.platform === "LinkedIn" ? (
+                            <div className="flex items-center gap-1.5 text-sm font-medium text-blue-600 dark:text-blue-400">
+                              <Linkedin className="h-3.5 w-3.5 fill-current" />
+                              LinkedIn Recommendation
+                            </div>
+                          ) : (
+                            <div className="flex items-center gap-1">
+                              {Array.from({ length: 5 }).map((_, i) => (
+                                <Star
+                                  key={i}
+                                  className={`h-3.5 w-3.5 ${
+                                    i < Math.floor(review.rating)
+                                      ? "text-yellow-400 fill-yellow-400"
+                                      : "text-gray-300"
+                                  }`}
+                                />
+                              ))}
+                              <span className="text-sm font-medium ml-1">
+                                {review.rating}
+                              </span>
+                            </div>
+                          )}
                           <div className="flex items-center gap-1 text-xs text-muted-foreground">
                             <Clock className="h-3 w-3" />
                             {formatDate(review.date)} ·{" "}
@@ -469,12 +457,12 @@ export default function Testimonials() {
               {/* Fiverr link at bottom of dialog */}
               <div className="mt-4 text-center">
                 <a
-                  href={timelineClient.fiverr_link}
+                  href={timelineClient.link}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-semibold text-sm inline-flex items-center gap-1 transition-colors"
                 >
-                  Verify on Fiverr
+                  Verify
                   <ExternalLink className="h-4 w-4" />
                 </a>
               </div>

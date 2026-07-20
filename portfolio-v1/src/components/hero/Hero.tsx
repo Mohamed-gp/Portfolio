@@ -177,6 +177,11 @@ export default function Hero() {
                   target="_blank"
                   prefetch={false}
                   download
+                  onClick={() => {
+                    import("posthog-js").then(({ default: posthog }) =>
+                      posthog.capture("cv_download"),
+                    );
+                  }}
                 >
                   <Download className="mr-2 h-4 w-4 transition-transform group-hover:translate-y-0.5" />
                   Download CV

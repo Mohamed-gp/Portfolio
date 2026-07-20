@@ -5,7 +5,7 @@ Algeria · CET (UTC+1) · [mohamedterba6@gmail.com](mailto:mohamedterba6@gmail.c
 
 ---
 
-Full-Stack Engineer with 3+ years shipping production web & mobile platforms end-to-end. Own the entire frontend of a live AI analytics SaaS as 2nd-highest contributor in a ~10-person team, and built the on-demand dispatch and fleet-operations services of a live Uber-style logistics marketplace. Co-founder of DzStore, a Shopify-equivalent SaaS that grew to 550+ stores and 15+ paying subscribers in its first 2 months with zero ad spend, and Fibble, a multiplayer party game generating revenue organically.
+Full-Stack Engineer with 3+ years shipping production web & mobile platforms end-to-end. Own the entire frontend of a live AI analytics SaaS as 2nd-highest contributor in a ~10-person team, and built the on-demand dispatch and fleet-operations services of a live Uber-style logistics marketplace. Co-founder of DzStore, a Shopify-equivalent SaaS that grew to 600+ stores and 15+ paying subscribers in its first 2 months with zero ad spend, and Fibble, a multiplayer party game generating revenue organically.
 
 ## Experience
 
@@ -52,7 +52,7 @@ Full-Stack Engineer with 3+ years shipping production web & mobile platforms end
 
 **2025 - Present**
 
-- **Traction:** 550+ active stores, 600+ users, and 1,300+ products within 2 months of launch, 100% organic with zero ad spend, and **15+ paying PRO subscribers acquired through SEO alone**.
+- **Traction:** 600+ active stores, 700+ users, and 1,400+ products within 2 months of launch, 100% organic with zero ad spend, and **15+ paying PRO subscribers acquired through SEO alone**.
 - **Quality signals:** 4.6/5 average across 42 in-app merchant survey responses; 99.95% uptime over the last 90 days with zero recorded incidents (public status page).
 - **Organic SEO engine:** Owned technical SEO end-to-end: 4,300+ pages indexed, 600+ valid product snippets & merchant listings (Google Shopping rich results), and breadcrumb/FAQ structured data, driving 1,600+ Google Search clicks and all merchant acquisition.
 - **Engineering:** Led nearly all engineering across the stack: multi-tenant subdomain-per-store routing with Caddy on-demand TLS for custom domains, a 42-model Prisma/PostgreSQL schema, drag-and-drop storefront builder, online card payments (Chargily Pay) with HMAC-verified webhooks, per-region shipping, abandoned-cart lifecycle emails (Resend), affiliate payouts, AI product descriptions, and Arabic/French RTL; self-hosted on Hetzner via Docker with zero-downtime deploys and Upstash Redis.
