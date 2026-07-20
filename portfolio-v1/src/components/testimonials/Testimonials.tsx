@@ -74,29 +74,6 @@ function formatDate(dateStr: string): string {
 const clients: Client[] = [
   {
     id: 1,
-    username: "mustafanawaz890",
-    displayName: "mustafa nawaz",
-    avatar: null,
-    countryFlag: "🇬🇧",
-    countryName: "United Kingdom",
-    project: "Cribbix",
-    gradient: "from-violet-600 via-purple-600 to-indigo-600",
-    link: "https://www.fiverr.com/mohamedouterbah?public_mode=true",
-    reviews: [
-      {
-        text: "Mohamed is a great developer with a deep understanding of building a product end to end. Amazing communication - highly recommended.",
-        rating: 5,
-        date: "2025-06-21",
-      },
-      {
-        text: "Mohamed is an excellent software engineer. he will work meticulously to align product to the vision and goes above and beyond to deliver. Enjoyed working with Mohamed a lot and looking forward to working together again.",
-        rating: 5,
-        date: "2026-03-21",
-      },
-    ],
-  },
-  {
-    id: 2,
     username: "vineetpinto",
     displayName: "Vineet Pinto",
     avatar: "/clients/vineet.jpg",
@@ -113,6 +90,24 @@ const clients: Client[] = [
         rating: 5,
         date: "2026-07-19",
         platform: "LinkedIn",
+      },
+    ],
+  },
+  {
+    id: 2,
+    username: "mustafanawaz890",
+    displayName: "mustafa nawaz",
+    avatar: null,
+    countryFlag: "🇬🇧",
+    countryName: "United Kingdom",
+    project: "Cribbix",
+    gradient: "from-violet-600 via-purple-600 to-indigo-600",
+    link: "https://www.fiverr.com/mohamedouterbah?public_mode=true",
+    reviews: [
+      {
+        text: "Mohamed is an excellent software engineer. he will work meticulously to align product to the vision and goes above and beyond to deliver. Enjoyed working with Mohamed a lot and looking forward to working together again.",
+        rating: 5,
+        date: "2026-03-21",
       },
     ],
   },
