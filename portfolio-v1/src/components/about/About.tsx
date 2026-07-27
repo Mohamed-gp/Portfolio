@@ -140,7 +140,7 @@ export default function About() {
               , a Shopify-equivalent SaaS where I lead nearly all engineering
               across the full stack, now serving{" "}
               <strong className="text-foreground">
-                600+ active stores, 700+ users, and 15+ paying subscribers
+                600+ active stores, 1,000+ users, and 20+ paying subscribers
               </strong>
               , adding ~50 new stores a week, 100% organic, zero ad spend,
               99.95% uptime. I hold a{" "}
@@ -174,7 +174,7 @@ export default function About() {
                 <div className="flex items-start gap-2.5">
                   <Store className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                   <span className="text-sm text-muted-foreground">
-                    <strong>Co-founded DzStore:</strong> 600+ stores, 15+
+                    <strong>Co-founded DzStore:</strong> 600+ stores, 20+
                     paying subscribers, ~50 new stores/week, 100% organic
                   </span>
                 </div>

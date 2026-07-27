@@ -39,7 +39,7 @@ const stats = [
   },
   {
     icon: <BadgeDollarSign className="h-6 w-6 text-amber-500" />,
-    value: "15+",
+    value: "20+",
     label: "Paying Subscribers",
     description: "On DzStore, acquired via SEO alone",
   },

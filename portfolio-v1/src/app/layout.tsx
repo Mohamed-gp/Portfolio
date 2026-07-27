@@ -222,7 +222,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
                 "HaulHub — shipped live on iOS & Android",
                 "1st Place Hackathon Winner 2024",
                 "5/5 rating across delivered freelance projects",
-                "DzStore - Shopify-equivalent SaaS, 600+ stores & 700+ users, 15+ paying subscribers, 100% organic",
+                "DzStore - Shopify-equivalent SaaS, 600+ stores & 1,000+ users, 20+ paying subscribers, 100% organic",
               ],
               description:
                 "Full-Stack Engineer with 3+ years delivering production-grade platforms for clients across the USA, UK, Netherlands, Japan, and Saudi Arabia. Shipped HaulHub (live logistics marketplace on iOS & Android) and works as a core engineer at Analytics Depot (AI SaaS).",

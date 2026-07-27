@@ -98,7 +98,7 @@ export default function Hero() {
               >
                 DzStore
               </a>{" "}
-              (15+ paying subscribers via SEO alone) and{" "}
+              (20+ paying subscribers via SEO alone) and{" "}
               <a
                 href="https://fibble.io/"
                 target="_blank"
