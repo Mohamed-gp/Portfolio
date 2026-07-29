@@ -13,12 +13,12 @@ Full-Stack Engineer with 3+ years shipping production web & mobile platforms end
 
 **Apr 2025 - Present**
 
-- Own the entire frontend architecture of a live AI analytics platform, working Agile in a cross-functional ~10-person team of AI/ML, LLMOps, and infra engineers: every user-facing surface from dashboards to the marketing site.
+- Build every user-facing surface of a live AI analytics platform in TypeScript, JavaScript, React, HTML, and CSS, from analytics dashboards to the marketing site, so non-technical business teams can explore their data and act on it without engineering help.
 - **Dashboards & reporting:** Designed and implemented the drag-and-drop dashboard builder, shareable password-protected/embed reports, and one-click PDF/PowerPoint export UI.
 - **Real-time collaboration:** Shipped WebSocket session sync, user presence, and a collaborative chat sidebar over production wss://, plus the NL-to-SQL query interface.
-- **Data connectors:** Developed an OAuth2 connector platform with encrypted credential storage spanning 10+ sources (BigQuery, GA4, Search Console, Sheets, Gmail, YouTube, Google Play, PostgreSQL, MySQL, Slack), including per-connector refresh schedules taken end-to-end (React UI, FastAPI, Celery Beat).
-- **AI / RAG:** Built RAG document-intelligence Q&A with resilient streaming, multi-format ingestion (CSV/PDF/Excel/images), and a Gemini model layer with fallback.
-- **Growth & DevOps:** Rebuilt the full marketing site (animated hero, comparison, FAQ); cut deploy time from ~30 min to under 5 with zero-downtime PM2 cluster reloads; hardened CI/CD (GitHub Actions) with Sentry observability; PKCE OAuth and Apple "Hide My Email" auth.
+- **Data connectors:** Developed an OAuth2 connector platform with encrypted credential storage spanning 10+ sources (BigQuery, GA4, Search Console, Sheets, Gmail, YouTube, Google Play, PostgreSQL, MySQL, Slack), including per-connector refresh schedules taken end-to-end (React UI, FastAPI/Python, Celery Beat).
+- **AI / RAG:** Delivered RAG document-intelligence Q&A with resilient streaming, multi-format ingestion (CSV/PDF/Excel/images), and a Gemini model layer with fallback.
+- **Growth & DevOps:** Rebuilt the full marketing site (animated hero, comparison, FAQ); cut deploy time from ~30 min to under 5 with zero-downtime PM2 cluster reloads; hardened CI/CD (GitHub Actions) with Sentry observability, working Agile in a cross-functional ~10-person team of AI/ML, LLMOps, and infra engineers; PKCE OAuth and Apple "Hide My Email" auth.
 - **Mobile:** Initialized the companion React Native app: dashboard viewing, push notifications, biometric auth, offline caching.
 
 ### Full-Stack Engineer (Contract) · _[HaulHub](https://haulhub.app/) (Logistics Marketplace), Netherlands · Remote_
