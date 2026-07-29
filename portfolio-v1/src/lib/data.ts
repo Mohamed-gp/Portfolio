@@ -2,6 +2,8 @@ const projectsImagesSkills = [
   // Frontend
   { filename: "typescript.svg", name: "TypeScript" },
   { filename: "javascript.svg", name: "JavaScript" },
+  { filename: "html5.svg", name: "HTML5" },
+  { filename: "css3.svg", name: "CSS3" },
   { filename: "react.svg", name: "React" },
   { filename: "nextjs.svg", name: "Next.js" },
   { filename: "expo.svg", name: "Expo (React Native)" },
@@ -26,7 +28,9 @@ const projectsImagesSkills = [
   { filename: "stripe.svg", name: "Stripe" },
   { filename: "jwt.svg", name: "JWT" },
 
-  // DevOps & Infrastructure
+  // Cloud & DevOps
+  { filename: "azure.svg", name: "Microsoft Azure" },
+  { filename: "googlecloud.svg", name: "Google Cloud" },
   { filename: "docker.svg", name: "Docker" },
   { filename: "linux.svg", name: "Linux" },
   { filename: "nginx.svg", name: "Nginx" },

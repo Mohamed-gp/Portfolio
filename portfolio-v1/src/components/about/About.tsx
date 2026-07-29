@@ -112,7 +112,8 @@ export default function About() {
               >
                 Analytics Depot
               </a>{" "}
-              (an AI analytics SaaS) and a full-stack role on{" "}
+              (an AI analytics SaaS), where I work Agile in a cross-functional
+              team, and a full-stack role on{" "}
               <a
                 href="https://haulhub.app/"
                 target="_blank"

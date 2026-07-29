@@ -13,7 +13,7 @@ Full-Stack Engineer with 3+ years shipping production web & mobile platforms end
 
 **Apr 2025 - Present**
 
-- Own the entire frontend architecture of a live AI analytics platform in a ~10-person team of AI/ML, LLMOps, and infra engineers: every user-facing surface from dashboards to the marketing site.
+- Own the entire frontend architecture of a live AI analytics platform, working Agile in a cross-functional ~10-person team of AI/ML, LLMOps, and infra engineers: every user-facing surface from dashboards to the marketing site.
 - **Dashboards & reporting:** Designed and implemented the drag-and-drop dashboard builder, shareable password-protected/embed reports, and one-click PDF/PowerPoint export UI.
 - **Real-time collaboration:** Shipped WebSocket session sync, user presence, and a collaborative chat sidebar over production wss://, plus the NL-to-SQL query interface.
 - **Data connectors:** Developed an OAuth2 connector platform with encrypted credential storage spanning 10+ sources (BigQuery, GA4, Search Console, Sheets, Gmail, YouTube, Google Play, PostgreSQL, MySQL, Slack), including per-connector refresh schedules taken end-to-end (React UI, FastAPI, Celery Beat).
@@ -74,9 +74,10 @@ Full-Stack Engineer with 3+ years shipping production web & mobile platforms end
 
 ## Technical Skills
 
-- **Frontend:** React, Next.js (App & Pages Router), TypeScript, JavaScript ES6+, Tailwind CSS, Redux Toolkit
+- **Frontend:** React, Next.js (App & Pages Router), TypeScript, JavaScript ES6+, HTML5, CSS3, Tailwind CSS, Redux Toolkit
 - **Mobile:** React Native (Expo) for iOS & Android: EAS builds, push notifications, biometric auth, RTL i18n
 - **Backend:** Node.js, NestJS, Express.js, FastAPI, Python, REST APIs, WebSockets, Ably, RBAC
-- **Databases:** PostgreSQL, Prisma ORM, Redis, MongoDB
-- **DevOps:** Docker, GitHub Actions, CI/CD, VPS (Hetzner, DigitalOcean), Coolify, Caddy/Nginx, PM2, Cloudflare Workers
+- **Databases:** PostgreSQL, MySQL, SQL, Prisma ORM, Redis, MongoDB
+- **Cloud:** Microsoft Azure (Event Hub / Kafka, Cosmos DB, Blob Storage), Google Cloud (BigQuery), Cloudflare, Hetzner, DigitalOcean
+- **DevOps & Practices:** Docker, Git, GitHub Actions, CI/CD, Agile, Coolify, Caddy/Nginx, PM2, Claude Code (AI-assisted dev)
 - **Integrations & AI:** Stripe, Paddle, online payments (Chargily Pay), OAuth2 (PKCE), Apple/Google Auth, Sentry, SendGrid/Resend, PostHog, RAG systems, LangChain, NL-to-SQL, Celery, real-time collaboration
