@@ -9,7 +9,7 @@ Full-Stack Engineer with 3+ years shipping production web & mobile platforms end
 
 ## Experience
 
-### Full-Stack Engineer (Frontend Lead) · _[Analytics Depot](https://analyticsdepot.com/) (AI Analytics SaaS), USA · Remote · Freelance_
+### Full-Stack Engineer (Frontend Lead) · _[Analytics Depot](https://analyticsdepot.com/) (AI Analytics SaaS), USA · Remote_
 
 **Apr 2025 - Present**
 
