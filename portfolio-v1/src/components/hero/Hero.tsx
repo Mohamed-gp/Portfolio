@@ -89,7 +89,8 @@ export default function Hero() {
                 HaulHub
               </a>
               , a live Uber-style logistics marketplace on iOS &amp; Android,
-              plus products I co-founded that make money organically:{" "}
+              plus products I co-founded that make money organically, with
+              zero ads, within their first 2 months:{" "}
               <a
                 href="https://dzstore.org/en"
                 target="_blank"

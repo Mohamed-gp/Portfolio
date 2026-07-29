@@ -17,7 +17,7 @@ const stats = [
     icon: <Code className="h-6 w-6 text-purple-500" />,
     value: "7+",
     label: "Production Apps",
-    description: "Shipped and live in production",
+    description: "Live in production, real users daily",
   },
   {
     icon: <Calendar className="h-6 w-6 text-pink-500" />,
@@ -33,21 +33,21 @@ const stats = [
   },
   {
     icon: <Store className="h-6 w-6 text-blue-500" />,
-    value: "600+",
+    value: "800+",
     label: "Active Stores",
-    description: "On DzStore, co-founded, 100% organic",
+    description: "Merchants running real stores on DzStore",
   },
   {
     icon: <BadgeDollarSign className="h-6 w-6 text-amber-500" />,
     value: "20+",
     label: "Paying Subscribers",
-    description: "On DzStore, acquired via SEO alone",
+    description: "People paying monthly for what I built",
   },
   {
     icon: <Activity className="h-6 w-6 text-emerald-500" />,
     value: "99.95%",
     label: "Uptime",
-    description: "Self-hosted infra, last 90 days",
+    description: "Infra real users depend on, self-hosted",
   },
   {
     icon: <Users className="h-6 w-6 text-green-500" />,

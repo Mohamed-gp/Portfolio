@@ -98,18 +98,20 @@ export default function About() {
           >
             <h3 className="text-2xl font-semibold">What I do</h3>
             <p className="text-muted-foreground">
-              <strong className="text-foreground">Full-Stack Engineer</strong>{" "}
-              with 3+ years delivering production-grade platforms for clients
-              across the USA, UK, Netherlands, Japan, and Saudi Arabia. A{" "}
+              I don't just build features, I own them end to end: from database
+              schema and API design through the UI, the mobile app, and the
+              pipeline that deploys it. Nearly all of it runs in live
+              production with real users, including my current work as frontend
+              lead on{" "}
               <a
                 href="https://analyticsdepot.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-semibold text-foreground underline decoration-primary/40 underline-offset-4 hover:decoration-primary transition-colors"
               >
-                core engineer on Analytics Depot
+                Analytics Depot
               </a>{" "}
-              (an AI analytics SaaS), and previously a full-stack engineer on{" "}
+              (an AI analytics SaaS) and a full-stack role on{" "}
               <a
                 href="https://haulhub.app/"
                 target="_blank"
@@ -118,8 +120,7 @@ export default function About() {
               >
                 HaulHub
               </a>
-              , a live Uber-style logistics marketplace on iOS &amp; Android in
-              the Netherlands.
+              , a production logistics marketplace on iOS &amp; Android.
             </p>
             <p className="text-muted-foreground">
               My work spans{" "}
@@ -140,7 +141,7 @@ export default function About() {
               , a Shopify-equivalent SaaS where I lead nearly all engineering
               across the full stack, now serving{" "}
               <strong className="text-foreground">
-                600+ active stores, 1,000+ users, and 20+ paying subscribers
+                800+ active stores, 1,000+ users, and 20+ paying subscribers
               </strong>
               , adding ~50 new stores a week, 100% organic, zero ad spend,
               99.95% uptime. I hold a{" "}
@@ -174,15 +175,16 @@ export default function About() {
                 <div className="flex items-start gap-2.5">
                   <Store className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                   <span className="text-sm text-muted-foreground">
-                    <strong>Co-founded DzStore:</strong> 600+ stores, 20+
+                    <strong>Co-founded DzStore:</strong> 800+ stores, 20+
                     paying subscribers, ~50 new stores/week, 100% organic
                   </span>
                 </div>
                 <div className="flex items-start gap-2.5">
                   <Zap className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                   <span className="text-sm text-muted-foreground">
-                    <strong>CI/CD optimization:</strong> cut deployment time
-                    from ~30 minutes to under 5
+                    <strong>Zero-downtime deploys at Analytics Depot:</strong>{" "}
+                    cut release time from ~30 min to under 5 with PM2 cluster
+                    reloads
                   </span>
                 </div>
                 <div className="flex items-start gap-2.5">

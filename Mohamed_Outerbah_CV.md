@@ -5,7 +5,7 @@ Algeria · CET (UTC+1) · [mohamedterba6@gmail.com](mailto:mohamedterba6@gmail.c
 
 ---
 
-Full-Stack Engineer with 3+ years shipping production web & mobile platforms end-to-end. Own the entire frontend of a live AI analytics SaaS as 2nd-highest contributor in a ~10-person team, and built the on-demand dispatch and fleet-operations services of a live Uber-style logistics marketplace. Co-founder of DzStore, a Shopify-equivalent SaaS that grew to 600+ stores, 1,000+ users, and 20+ paying subscribers in its first 2 months with zero ad spend, and Fibble, a multiplayer party game generating revenue organically.
+Full-Stack Engineer with 3+ years shipping production web & mobile platforms end-to-end. Own the entire frontend of a live AI analytics SaaS as 2nd-highest contributor in a ~10-person team, and built the on-demand dispatch and fleet-operations services of a live Uber-style logistics marketplace. Co-founder of DzStore, a Shopify-equivalent SaaS that grew to 800+ stores, 1,000+ users, and 20+ paying subscribers in its first 2 months with zero ad spend, and Fibble, a multiplayer party game generating revenue organically.
 
 ## Experience
 
@@ -52,7 +52,7 @@ Full-Stack Engineer with 3+ years shipping production web & mobile platforms end
 
 **2025 - Present**
 
-- **Traction:** 600+ active stores, 1,000+ users, and 1,400+ products within 2 months of launch, 100% organic with zero ad spend, and **20+ paying PRO subscribers acquired through SEO alone**.
+- **Traction:** 800+ active stores, 1,000+ users, and 1,400+ products within 2 months of launch, 100% organic with zero ad spend, and **20+ paying PRO subscribers acquired through SEO alone**.
 - **Quality signals:** 4.6/5 average across 42 in-app merchant survey responses; 99.95% uptime over the last 90 days with zero recorded incidents (public status page).
 - **Organic SEO engine:** Owned technical SEO end-to-end: 4,300+ pages indexed, 600+ valid product snippets & merchant listings (Google Shopping rich results), and breadcrumb/FAQ structured data, driving 1,600+ Google Search clicks and all merchant acquisition.
 - **Engineering:** Led nearly all engineering across the stack: multi-tenant subdomain-per-store routing with Caddy on-demand TLS for custom domains, a 42-model Prisma/PostgreSQL schema, drag-and-drop storefront builder, online card payments (Chargily Pay) with HMAC-verified webhooks, per-region shipping, abandoned-cart lifecycle emails (Resend), affiliate payouts, AI product descriptions, and Arabic/French RTL; self-hosted on Hetzner via Docker with zero-downtime deploys and Upstash Redis.
@@ -62,7 +62,7 @@ Full-Stack Engineer with 3+ years shipping production web & mobile platforms end
 **2025 - Present**
 
 - **Product:** Free real-time bluffing trivia game (2-8 players, no download) playable in the browser and as a Discord Activity, with a premium subscription tier.
-- **Traction:** 2,500+ players from 39 countries in the first weeks and $50 MRR, entirely organic with zero ad spend.
+- **Traction:** 2,500+ players from 39 countries and $50 MRR within its first 2 months, entirely organic with zero ad spend.
 - **Engineering:** Serverless real-time multiplayer: Postgres as the source of truth with Ably pub/sub fan-out, server-authoritative phase deadlines, and HMAC anti-spoofing action tokens; plus Discord Activity integration, Paddle + Discord SKU billing, and a full admin analytics panel (player geo, sessions, retention, moderation).
 
 ## Education & Awards

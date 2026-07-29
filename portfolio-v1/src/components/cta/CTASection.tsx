@@ -48,8 +48,7 @@ export default function CTASection() {
                     <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75" />
                     <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
                   </span>
-                  Available for full-time remote roles, with US East Coast
-                  overlap &amp; EMEA hours
+                  Available for full-time remote full-stack engineering roles
                 </p>
               </div>
             </CardContent>
