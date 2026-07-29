@@ -6,7 +6,7 @@ import {
   Users,
   Code,
   Calendar,
-  Store,
+  Star,
   Activity,
   Gamepad2,
   BadgeDollarSign,
@@ -32,10 +32,10 @@ const stats = [
     description: "On Fibble, co-founded, 39 countries",
   },
   {
-    icon: <Store className="h-6 w-6 text-blue-500" />,
-    value: "800+",
-    label: "Active Stores",
-    description: "Merchants running real stores on DzStore",
+    icon: <Users className="h-6 w-6 text-blue-500" />,
+    value: "1,000+",
+    label: "DzStore Users",
+    description: "800+ active stores, 100% organic",
   },
   {
     icon: <BadgeDollarSign className="h-6 w-6 text-amber-500" />,
@@ -50,7 +50,7 @@ const stats = [
     description: "Infra real users depend on, self-hosted",
   },
   {
-    icon: <Users className="h-6 w-6 text-green-500" />,
+    icon: <Star className="h-6 w-6 text-green-500" />,
     value: "5/5",
     label: "Client Rating",
     description: "Across every delivered project",
