@@ -127,7 +127,7 @@ export default function Projects() {
       url: "https://dzstore.org/en",
       image: "/projects/dzstore/hero-updated-1.png",
       description:
-        "800+ active stores, 1,000+ users, 1,400+ products, and 20+ paying PRO subscribers acquired through SEO alone, adding ~50 new stores a week, 100% organic, zero ad spend, and 2.2M+ DZD in merchant sales (GMV). Co-founded this multi-tenant Shopify-equivalent SaaS and lead nearly all engineering: subdomain-per-store routing with Caddy on-demand TLS, a 42-model Prisma/PostgreSQL schema, a drag-and-drop storefront builder, per-region shipping, abandoned-cart recovery, an affiliate system, and AI product descriptions; self-hosted on Hetzner via Docker with 99.95% uptime over the last 90 days. Technical SEO drives acquisition: 4,300+ pages indexed with 600+ valid Google Shopping product snippets. Merchants rate it 4.6/5 in the in-app survey.",
+        "In its first 2 months: 800+ active stores, 1,000+ users, 1,400+ products, and 20+ paying PRO subscribers acquired through SEO alone, adding ~50 new stores a week, 100% organic, zero ad spend, and 2.2M+ DZD in merchant sales (GMV). Co-founded this multi-tenant Shopify-equivalent SaaS and lead nearly all engineering: subdomain-per-store routing with Caddy on-demand TLS, a 42-model Prisma/PostgreSQL schema, a drag-and-drop storefront builder, per-region shipping, abandoned-cart recovery, an affiliate system, and AI product descriptions; self-hosted on Hetzner via Docker with 99.95% uptime over the last 90 days. Technical SEO drives acquisition: 4,300+ pages indexed with 600+ valid Google Shopping product snippets. Merchants rate it 4.6/5 in the in-app survey.",
       features: [
         "Merchants launch a full online store in seconds, no code needed",
         "Every store gets its own subdomain or custom domain with auto HTTPS",
@@ -157,7 +157,7 @@ export default function Projects() {
       url: "https://fibble.io/",
       image: "/projects/fibble/hero-updated-1.png",
       description:
-        "Co-founded a real-time multiplayer bluffing trivia game playable on the web and inside Discord as an embedded Activity. 2,500+ players across 39 countries and $50 MRR, fully organic, zero ads. Premium via Paddle checkout on web plus native Discord SKU subscriptions in-app, user-generated question packs, media questions (image/GIF/audio), bots, friends & DMs with moderation, and a full admin panel; Dockerized on Hetzner behind Caddy, with GitHub Actions CI/CD, health checks, and automatic rollback.",
+        "Co-founded a real-time multiplayer bluffing trivia game playable on the web and inside Discord as an embedded Activity. 2,500+ players across 39 countries and $50 MRR in its first 2 months, fully organic, zero ads. Premium via Paddle checkout on web plus native Discord SKU subscriptions in-app, user-generated question packs, media questions (image/GIF/audio), bots, friends & DMs with moderation, and a full admin panel; Dockerized on Hetzner behind Caddy, with GitHub Actions CI/CD, health checks, and automatic rollback.",
       features: [
         "Bluff-based trivia: write fake answers, fool your friends, 2-8 players",
         "Plays in the browser or inside Discord, nothing to install",
