@@ -5,7 +5,7 @@ Algeria · CET (UTC+1) · [mohamedterba6@gmail.com](mailto:mohamedterba6@gmail.c
 
 ---
 
-Full-Stack Engineer with 3+ years shipping production web & mobile platforms end-to-end. Own the entire frontend of a live AI analytics SaaS as 2nd-highest contributor in a ~10-person team, and built the on-demand dispatch and fleet-operations services of a live Uber-style logistics marketplace. Co-founder of DzStore, a Shopify-equivalent SaaS that grew to 800+ stores, 1,000+ users, and 20+ paying subscribers in its first 2 months with zero ad spend, and Fibble, a multiplayer party game generating revenue organically.
+Full-Stack Engineer with 3+ years shipping production web & mobile platforms end-to-end. Own the entire frontend of a live AI analytics SaaS as 2nd-highest contributor in a ~10-person team, and built the on-demand dispatch and fleet-operations services of a live Uber-style logistics marketplace. Co-founder of DzStore, a Shopify-equivalent SaaS that grew to 800+ stores, 1,000+ users, and 20+ paying subscribers in its first 2 months with zero ad spend, and Fibble, a multiplayer party game generating revenue organically within its first 2 months.
 
 ## Experience
 
