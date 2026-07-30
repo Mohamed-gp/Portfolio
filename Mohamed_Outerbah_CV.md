@@ -21,6 +21,15 @@ Full-Stack Engineer with 3+ years shipping production web & mobile platforms end
 - **Growth & DevOps:** Rebuilt the full marketing site (animated hero, comparison, FAQ); cut deploy time from ~30 min to under 5 with zero-downtime PM2 cluster reloads; hardened CI/CD (GitHub Actions) with Sentry observability, working Agile in a cross-functional ~10-person team of AI/ML, LLMOps, and infra engineers; PKCE OAuth and Apple "Hide My Email" auth.
 - **Mobile:** Initialized the companion React Native app: dashboard viewing, push notifications, biometric auth, offline caching.
 
+### Co-Founder & Lead Engineer · _[DzStore](https://dzstore.org/en) (Shopify-equivalent E-commerce SaaS), Algeria · Remote_
+
+**2025 - Present**
+
+- **Traction:** 1,000+ users, 800+ active stores, and 1,400+ products within 2 months of launch, 100% organic with zero ad spend, and **20+ paying PRO subscribers acquired through SEO alone**.
+- **Quality signals:** 4.6/5 average across 42 in-app merchant survey responses; 99.95% uptime over the last 90 days with zero recorded incidents (public status page).
+- **Organic SEO engine:** Owned technical SEO end-to-end: 4,300+ pages indexed, 600+ valid product snippets & merchant listings (Google Shopping rich results), and breadcrumb/FAQ structured data, driving 1,600+ Google Search clicks and all merchant acquisition.
+- **Engineering:** Led nearly all engineering across the stack: multi-tenant subdomain-per-store routing with Caddy on-demand TLS for custom domains, a 42-model Prisma/PostgreSQL schema, drag-and-drop storefront builder, online card payments (Chargily Pay) with HMAC-verified webhooks, per-region shipping, abandoned-cart lifecycle emails (Resend), affiliate payouts, AI product descriptions, and Arabic/French RTL; self-hosted on Hetzner via Docker with zero-downtime deploys and Upstash Redis.
+
 ### Full-Stack Engineer (Contract) · _[HaulHub](https://haulhub.app/) (Logistics Marketplace), Netherlands · Remote_
 
 **Jun 2025 - May 2026**
@@ -47,15 +56,6 @@ Full-Stack Engineer with 3+ years shipping production web & mobile platforms end
 - Created a course management system (Next.js + Express) with role-based auth for students, instructors, and admins.
 
 ## Founder Projects
-
-### DzStore · _Shopify-equivalent E-commerce SaaS · Co-Founder & Lead Engineer · [dzstore.org](https://dzstore.org/en)_
-
-**2025 - Present**
-
-- **Traction:** 1,000+ users, 800+ active stores, and 1,400+ products within 2 months of launch, 100% organic with zero ad spend, and **20+ paying PRO subscribers acquired through SEO alone**.
-- **Quality signals:** 4.6/5 average across 42 in-app merchant survey responses; 99.95% uptime over the last 90 days with zero recorded incidents (public status page).
-- **Organic SEO engine:** Owned technical SEO end-to-end: 4,300+ pages indexed, 600+ valid product snippets & merchant listings (Google Shopping rich results), and breadcrumb/FAQ structured data, driving 1,600+ Google Search clicks and all merchant acquisition.
-- **Engineering:** Led nearly all engineering across the stack: multi-tenant subdomain-per-store routing with Caddy on-demand TLS for custom domains, a 42-model Prisma/PostgreSQL schema, drag-and-drop storefront builder, online card payments (Chargily Pay) with HMAC-verified webhooks, per-region shipping, abandoned-cart lifecycle emails (Resend), affiliate payouts, AI product descriptions, and Arabic/French RTL; self-hosted on Hetzner via Docker with zero-downtime deploys and Upstash Redis.
 
 ### Fibble · _Multiplayer Party Game (Web + Discord) · Co-Founder & Full-Stack Engineer · [fibble.io](https://fibble.io/)_
 
