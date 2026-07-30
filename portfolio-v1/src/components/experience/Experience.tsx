@@ -118,20 +118,6 @@ export default function Experience() {
     //   ],
     // },
     {
-      title: "Web Development Intern",
-      company: "Exclusive Labs",
-      location: "Remote",
-      period: "Sep – Dec 2024",
-      description:
-        "Built a course management system using Next.js and Express with role-based authentication for students, instructors, and admins.",
-      skills: [
-        "Next.js",
-        "Express.js",
-        "Role-based Access Control",
-        "Authentication",
-      ],
-    },
-    {
       title: "Freelance Full-Stack Developer",
       company: "Fiverr",
       website: "https://www.fiverr.com/mohamedouterbah?public_mode=true",
@@ -152,16 +138,30 @@ export default function Experience() {
         platform: "Fiverr",
       },
     },
+    {
+      title: "Web Development Intern",
+      company: "Exclusive Labs",
+      location: "Remote",
+      period: "Sep – Dec 2024",
+      description:
+        "Built a course management system using Next.js and Express with role-based authentication for students, instructors, and admins.",
+      skills: [
+        "Next.js",
+        "Express.js",
+        "Role-based Access Control",
+        "Authentication",
+      ],
+    },
   ];
 
   const education = [
     {
-      degree: "Master's Degree in Computer Science",
+      degree: "Master's Degree in Computer Science, AI & Data Science Specialization",
       institution:
         "Higher School of Computer Science and Digital Technologies (ESTIN)",
       period: "2022 - 2027",
       description:
-        "Focused on advanced topics in computer science, software engineering, and emerging technologies. Gaining expertise in data structures, algorithms, software design, and more.",
+        "Specializing in Artificial Intelligence and Data Science, alongside core computer science: machine learning, data structures and algorithms, software engineering, and software design.",
     },
   ];
 

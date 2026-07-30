@@ -53,7 +53,7 @@ export default function Projects() {
     setIsModalOpen(true);
   };
 
-  // Ordered by strength: Analytics Depot → HaulHub → DzStore → Cribbix → Munia
+  // Ordered by strength: Analytics Depot → DzStore → HaulHub → Fibble → Cribbix
   const projects: Project[] = [
     {
       title: "Analytics Depot — AI-Powered Analytics Platform",
@@ -89,6 +89,36 @@ export default function Projects() {
       ],
     },
     {
+      title: "DzStore — E-commerce SaaS Platform",
+      country: "Algeria",
+      flag: "🇩🇿",
+      type: "Web Application",
+      url: "https://dzstore.org/en",
+      image: "/projects/dzstore/hero-updated-1.png",
+      description:
+        "In its first 2 months: 1,000+ users, 800+ active stores, 1,400+ products, and 20+ paying PRO subscribers acquired through SEO alone, adding ~50 new stores a week, 100% organic, zero ad spend, and 2.2M+ DZD in merchant sales (GMV). Co-founded this multi-tenant Shopify-equivalent SaaS and lead nearly all engineering: subdomain-per-store routing with Caddy on-demand TLS, a 42-model Prisma/PostgreSQL schema, a drag-and-drop storefront builder, per-region shipping, abandoned-cart recovery, an affiliate system, and AI product descriptions; self-hosted on Hetzner via Docker with 99.95% uptime over the last 90 days. Technical SEO drives acquisition: 4,300+ pages indexed with 600+ valid Google Shopping product snippets. Merchants rate it 4.6/5 in the in-app survey.",
+      features: [
+        "Merchants launch a full online store in seconds, no code needed",
+        "Every store gets its own subdomain or custom domain with auto HTTPS",
+        "Cash on delivery + online card payments, 50+ delivery carriers",
+        "AI product descriptions, abandoned-cart recovery, trending-product radar",
+      ],
+      hardest:
+        "Multi-tenant subdomain routing with Caddy on-demand TLS: every merchant gets their own store and custom domain with automatic HTTPS, all from one codebase.",
+      status: "Live · 1,000+ Users · 20+ Paying",
+      role: "Co-Founder & Full-Stack Engineer",
+      technologies: [
+        "Next.js",
+        "PostgreSQL",
+        "Prisma",
+        "TypeScript",
+        "Docker",
+        "Caddy",
+        "Umami",
+        "Technical SEO",
+      ],
+    },
+    {
       title: "HaulHub — Logistics Marketplace (iOS & Android)",
       country: "Netherlands",
       flag: "🇳🇱",
@@ -117,36 +147,6 @@ export default function Projects() {
         "Docker",
         "PostgreSQL",
         "Coolify",
-      ],
-    },
-    {
-      title: "DzStore — E-commerce SaaS Platform",
-      country: "Algeria",
-      flag: "🇩🇿",
-      type: "Web Application",
-      url: "https://dzstore.org/en",
-      image: "/projects/dzstore/hero-updated-1.png",
-      description:
-        "In its first 2 months: 1,000+ users, 800+ active stores, 1,400+ products, and 20+ paying PRO subscribers acquired through SEO alone, adding ~50 new stores a week, 100% organic, zero ad spend, and 2.2M+ DZD in merchant sales (GMV). Co-founded this multi-tenant Shopify-equivalent SaaS and lead nearly all engineering: subdomain-per-store routing with Caddy on-demand TLS, a 42-model Prisma/PostgreSQL schema, a drag-and-drop storefront builder, per-region shipping, abandoned-cart recovery, an affiliate system, and AI product descriptions; self-hosted on Hetzner via Docker with 99.95% uptime over the last 90 days. Technical SEO drives acquisition: 4,300+ pages indexed with 600+ valid Google Shopping product snippets. Merchants rate it 4.6/5 in the in-app survey.",
-      features: [
-        "Merchants launch a full online store in seconds, no code needed",
-        "Every store gets its own subdomain or custom domain with auto HTTPS",
-        "Cash on delivery + online card payments, 50+ delivery carriers",
-        "AI product descriptions, abandoned-cart recovery, trending-product radar",
-      ],
-      hardest:
-        "Multi-tenant subdomain routing with Caddy on-demand TLS: every merchant gets their own store and custom domain with automatic HTTPS, all from one codebase.",
-      status: "Live · 1,000+ Users · 20+ Paying",
-      role: "Co-Founder & Full-Stack Engineer",
-      technologies: [
-        "Next.js",
-        "PostgreSQL",
-        "Prisma",
-        "TypeScript",
-        "Docker",
-        "Caddy",
-        "Umami",
-        "Technical SEO",
       ],
     },
     {
