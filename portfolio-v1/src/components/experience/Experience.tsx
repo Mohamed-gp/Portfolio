@@ -60,24 +60,6 @@ export default function Experience() {
       ],
     },
     {
-      title: "Co-Founder & Lead Engineer",
-      company: "DzStore",
-      website: "https://dzstore.org/en",
-      location: "Algeria · Remote",
-      period: "2026 – Present",
-      description:
-        "Co-founded a Shopify-equivalent multi-tenant e-commerce SaaS and lead nearly all engineering across the stack. Grown in its first 2 months to 1,000+ users, 800+ active stores, and 20+ paying PRO subscribers acquired through SEO alone, 100% organic with zero ad spend, plus 2.2M+ DZD in merchant sales (GMV) and 99.95% uptime over the last 90 days. Multi-tenant subdomain-per-store routing with Caddy on-demand TLS, a 42-model Prisma/PostgreSQL schema, online card payments (Chargily Pay) with HMAC-verified webhooks, and technical SEO with 4,300+ pages indexed; self-hosted on Hetzner via Docker with zero-downtime deploys.",
-      skills: [
-        "Next.js",
-        "TypeScript",
-        "PostgreSQL",
-        "Prisma",
-        "Docker",
-        "Caddy",
-        "Technical SEO",
-      ],
-    },
-    {
       title: "Full-Stack Engineer (Contract)",
       company: "HaulHub",
       website: "https://haulhub.app/",
@@ -96,6 +78,24 @@ export default function Experience() {
         "Hetzner VPS",
         "PostgreSQL",
         "TypeScript",
+      ],
+    },
+    {
+      title: "Co-Founder & Lead Engineer",
+      company: "DzStore",
+      website: "https://dzstore.org/en",
+      location: "Algeria · Remote",
+      period: "2026 – Present",
+      description:
+        "Co-founded a Shopify-equivalent multi-tenant e-commerce SaaS and lead nearly all engineering across the stack. Grown in its first 2 months to 1,000+ users, 800+ active stores, and 20+ paying PRO subscribers acquired through SEO alone, 100% organic with zero ad spend, plus 2.2M+ DZD in merchant sales (GMV) and 99.95% uptime over the last 90 days. Multi-tenant subdomain-per-store routing with Caddy on-demand TLS, a 42-model Prisma/PostgreSQL schema, online card payments (Chargily Pay) with HMAC-verified webhooks, and technical SEO with 4,300+ pages indexed; self-hosted on Hetzner via Docker with zero-downtime deploys.",
+      skills: [
+        "Next.js",
+        "TypeScript",
+        "PostgreSQL",
+        "Prisma",
+        "Docker",
+        "Caddy",
+        "Technical SEO",
       ],
     },
     // Cribbix was a Fiverr freelance engagement — folded into the Fiverr entry below.
