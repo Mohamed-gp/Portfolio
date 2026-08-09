@@ -64,7 +64,7 @@ Full-Stack Engineer with 3+ years shipping production web & mobile platforms end
 **2025 - Present**
 
 - **Product:** Free real-time bluffing trivia game (2-8 players, no download) playable in the browser and as a Discord Activity, with a premium subscription tier.
-- **Traction:** 3,000+ players from 39 countries across 3,300+ games within its first 3 months, entirely organic with zero ad spend, converting its first paying subscribers on both billing rails.
+- **Traction:** 3,000+ players across 2,200+ games played in its first 3 months, from 39 countries, entirely organic with zero ad spend, converting its first paying subscribers on both billing rails.
 - **Engineering:** Serverless real-time multiplayer: Postgres as the source of truth with Ably pub/sub fan-out, server-authoritative phase deadlines, and HMAC anti-spoofing action tokens; plus Discord Activity integration, Paddle + Discord SKU billing, and a full admin analytics panel (player geo, sessions, retention, moderation).
 
 ## Education & Awards

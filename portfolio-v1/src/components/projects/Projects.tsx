@@ -158,7 +158,7 @@ export default function Projects() {
       url: "https://fibble.io/",
       image: "/projects/fibble/hero-updated-1.png",
       description:
-        "Co-founded a real-time multiplayer bluffing trivia game playable on the web and inside Discord as an embedded Activity. 3,000+ players across 39 countries and 3,300+ games in its first 3 months, fully organic, zero ads. Premium via Paddle checkout on web plus native Discord SKU subscriptions in-app, user-generated question packs, media questions (image/GIF/audio), bots, friends & DMs with moderation, and a full admin panel; Dockerized on Hetzner behind Caddy, with GitHub Actions CI/CD, health checks, and automatic rollback.",
+        "Co-founded a real-time multiplayer bluffing trivia game playable on the web and inside Discord as an embedded Activity. 3,000+ players across 39 countries and 2,200+ games played in its first 3 months, fully organic, zero ads. Premium via Paddle checkout on web plus native Discord SKU subscriptions in-app, user-generated question packs, media questions (image/GIF/audio), bots, friends & DMs with moderation, and a full admin panel; Dockerized on Hetzner behind Caddy, with GitHub Actions CI/CD, health checks, and automatic rollback.",
       features: [
         "Bluff-based trivia: write fake answers, fool your friends, 2-8 players",
         "Plays in the browser or inside Discord, nothing to install",
