@@ -185,8 +185,8 @@ export default function About() {
                   <Gamepad2 className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                   <span className="text-sm text-muted-foreground">
                     <strong>Co-founded Fibble:</strong> real-time multiplayer
-                    party game, 2,500+ players across 39 countries & $50 MRR in
-                    2 months, 100% organic
+                    party game, 2,500+ players across 39 countries & $100 MRR
+                    in 3 months, 100% organic
                   </span>
                 </div>
                 <div className="flex items-start gap-2.5">

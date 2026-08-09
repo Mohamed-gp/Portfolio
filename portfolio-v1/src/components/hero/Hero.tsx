@@ -99,7 +99,7 @@ export default function Hero() {
               >
                 DzStore
               </a>{" "}
-              (20+ paying subscribers via SEO alone) and{" "}
+              (~$200/mo, 20+ paying subscribers via SEO alone) and{" "}
               <a
                 href="https://fibble.io/"
                 target="_blank"
@@ -108,7 +108,7 @@ export default function Hero() {
               >
                 Fibble
               </a>{" "}
-              ($50 MRR).{" "}
+              ($100 MRR).{" "}
               <strong className="text-foreground">
                 3+ years, 7+ live products
               </strong>{" "}

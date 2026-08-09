@@ -87,7 +87,7 @@ export default function Experience() {
       location: "Algeria · Remote",
       period: "2026 – Present",
       description:
-        "Co-founded a Shopify-equivalent multi-tenant e-commerce SaaS and lead nearly all engineering across the stack. Grown in its first 3 months to 1,000+ users, 1,000+ active stores, and 20+ paying PRO subscribers acquired through SEO alone, 100% organic with zero ad spend, plus 2.2M+ DZD in merchant sales (GMV) and 99.95% uptime over the last 90 days. Multi-tenant subdomain-per-store routing with Caddy on-demand TLS, a 44-model Prisma/PostgreSQL schema, online card payments (Chargily Pay) with HMAC-verified webhooks, a carrier layer covering 70 Algerian delivery companies behind 5 API adapters, and technical SEO with 7,000+ pages indexed; self-hosted on Hetzner via Docker with zero-downtime deploys.",
+        "Co-founded a Shopify-equivalent multi-tenant e-commerce SaaS and lead nearly all engineering across the stack. Grown in its first 3 months to 1,000+ users, 1,000+ active stores, and 20+ paying PRO subscribers (~$200/mo recurring) acquired through SEO alone, 100% organic with zero ad spend, plus 2.2M+ DZD in merchant sales (GMV) and 99.95% uptime over the last 90 days. Multi-tenant subdomain-per-store routing with Caddy on-demand TLS, a 44-model Prisma/PostgreSQL schema, online card payments (Chargily Pay) with HMAC-verified webhooks, a carrier layer covering 70 Algerian delivery companies behind 5 API adapters, and technical SEO with 7,000+ pages indexed; self-hosted on Hetzner via Docker with zero-downtime deploys.",
       skills: [
         "Next.js",
         "TypeScript",

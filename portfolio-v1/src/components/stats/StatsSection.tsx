@@ -39,9 +39,9 @@ const stats = [
   },
   {
     icon: <BadgeDollarSign className="h-6 w-6 text-amber-500" />,
-    value: "20+",
+    value: "25+",
     label: "Paying Subscribers",
-    description: "People paying monthly for what I built",
+    description: "~$300/mo recurring across DzStore & Fibble",
   },
   {
     icon: <Activity className="h-6 w-6 text-emerald-500" />,
