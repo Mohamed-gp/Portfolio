@@ -96,7 +96,7 @@ export default function Projects() {
       url: "https://dzstore.org/en",
       image: "/projects/dzstore/hero-updated-1.png",
       description:
-        "In its first 3 months: 950+ users, 800+ active stores, 2,100+ products, 500+ orders, and 20+ merchants upgraded to paid PRO plans through SEO alone, adding ~80 new stores a week, 100% organic, zero ad spend, and 4.3M+ DZD in merchant orders. Co-founded this multi-tenant Shopify-equivalent SaaS and lead nearly all engineering: subdomain-per-store routing with Caddy on-demand TLS, a 44-model Prisma/PostgreSQL schema, a drag-and-drop storefront builder, per-region shipping plus a carrier layer covering 70 Algerian delivery companies behind 5 API adapters, abandoned-cart recovery, an affiliate system, and AI product descriptions; self-hosted on Hetzner via Docker with 99.95% uptime over the last 90 days. Cut running costs by moving the production Postgres off Neon to Supabase and persisting the image-optimizer cache across deploys, cutting the database bill by 50%+ (migrated with pg_dump at zero downtime) and retiring ~17 GB/month of CDN egress. Technical SEO drives acquisition: 7,000+ pages indexed with 600+ valid Google Shopping product snippets. Merchants rate it 4.7/5 in the in-app survey.",
+        "In its first 3 months: ~1,000 users, 830+ active stores, 2,100+ products, 500+ orders, and 20+ merchants upgraded to paid PRO plans through SEO alone, adding ~80 new stores a week, 100% organic, zero ad spend, and 5.5M+ DZD in merchant sales (GMV). Co-founded this multi-tenant Shopify-equivalent SaaS and lead nearly all engineering: subdomain-per-store routing with Caddy on-demand TLS, a 44-model Prisma/PostgreSQL schema, a drag-and-drop storefront builder, per-region shipping plus a carrier layer covering 70 Algerian delivery companies behind 5 API adapters, abandoned-cart recovery, an affiliate system, and AI product descriptions; self-hosted on Hetzner via Docker with 99.95% uptime over the last 90 days. Cut running costs by moving the production Postgres off Neon to Supabase and persisting the image-optimizer cache across deploys, cutting the database bill by 50%+ (migrated with pg_dump at zero downtime) and retiring ~17 GB/month of CDN egress. Technical SEO drives acquisition: 7,000+ pages indexed with 600+ valid Google Shopping product snippets. Merchants rate it 4.7/5 in the in-app survey.",
       features: [
         "Merchants launch a full online store in seconds, no code needed",
         "Every store gets its own subdomain or custom domain with auto HTTPS",
@@ -105,7 +105,7 @@ export default function Projects() {
       ],
       hardest:
         "Multi-tenant subdomain routing with Caddy on-demand TLS: every merchant gets their own store and custom domain with automatic HTTPS, all from one codebase.",
-      status: "Live · 950+ Users · 20+ Paying",
+      status: "Live · ~1,000 Users · 20+ Paying",
       role: "Co-Founder & Full-Stack Engineer",
       technologies: [
         "Next.js",
@@ -158,7 +158,7 @@ export default function Projects() {
       url: "https://fibble.io/",
       image: "/projects/fibble/hero-updated-1.png",
       description:
-        "Co-founded a real-time multiplayer bluffing trivia game playable on the web and inside Discord as an embedded Activity. 3,000+ players across 39 countries and 2,200+ games played in its first 3 months, fully organic, zero ads. Premium via Paddle checkout on web plus native Discord SKU subscriptions in-app, user-generated question packs, media questions (image/GIF/audio), bots, friends & DMs with moderation, and a full admin panel; Dockerized on Hetzner behind Caddy, with GitHub Actions CI/CD, health checks, and automatic rollback.",
+        "Co-founded a real-time multiplayer bluffing trivia game playable on the web and inside Discord as an embedded Activity. 3,000+ players across 80+ countries and 2,200+ games played in its first 3 months, fully organic, zero ads. Premium via Paddle checkout on web plus native Discord SKU subscriptions in-app, user-generated question packs, media questions (image/GIF/audio), bots, friends & DMs with moderation, and a full admin panel; Dockerized on Hetzner behind Caddy, with GitHub Actions CI/CD, health checks, and automatic rollback.",
       features: [
         "Bluff-based trivia: write fake answers, fool your friends, 2-8 players",
         "Plays in the browser or inside Discord, nothing to install",
