@@ -27,21 +27,21 @@ const stats = [
   },
   {
     icon: <Gamepad2 className="h-6 w-6 text-cyan-500" />,
-    value: "2,500+",
+    value: "3,000+",
     label: "Game Players",
     description: "On Fibble, co-founded, 39 countries",
   },
   {
     icon: <Users className="h-6 w-6 text-blue-500" />,
-    value: "1,000+",
+    value: "950+",
     label: "DzStore Users",
-    description: "1,000+ active stores, 100% organic",
+    description: "800+ active stores, 100% organic",
   },
   {
     icon: <BadgeDollarSign className="h-6 w-6 text-amber-500" />,
-    value: "25+",
-    label: "Paying Subscribers",
-    description: "~$300/mo recurring across DzStore & Fibble",
+    value: "20+",
+    label: "Merchants on Paid Plans",
+    description: "DzStore PRO, acquired through SEO alone",
   },
   {
     icon: <Activity className="h-6 w-6 text-emerald-500" />,

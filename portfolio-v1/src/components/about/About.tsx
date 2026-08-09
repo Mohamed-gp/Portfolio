@@ -143,9 +143,9 @@ export default function About() {
               , a Shopify-equivalent SaaS where I lead nearly all engineering
               across the full stack. In its first 3 months it has grown to{" "}
               <strong className="text-foreground">
-                1,000+ users, 1,000+ active stores, and 20+ paying subscribers
+                950+ users, 800+ active stores, and 20+ on paid plans
               </strong>
-              , adding ~100 new stores a week, 100% organic, zero ad spend,
+              , adding ~80 new stores a week, 100% organic, zero ad spend,
               99.95% uptime. I hold a{" "}
               <strong className="text-foreground">5/5 rating</strong> across 6+
               delivered production applications.
@@ -177,16 +177,16 @@ export default function About() {
                 <div className="flex items-start gap-2.5">
                   <Store className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                   <span className="text-sm text-muted-foreground">
-                    <strong>Co-founded DzStore:</strong> 1,000+ users, 1,000+
-                    stores & 20+ paying subscribers in 3 months, 100% organic
+                    <strong>Co-founded DzStore:</strong> 950+ users, 800+
+                    stores & 20+ on paid plans in 3 months, 100% organic
                   </span>
                 </div>
                 <div className="flex items-start gap-2.5">
                   <Gamepad2 className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                   <span className="text-sm text-muted-foreground">
                     <strong>Co-founded Fibble:</strong> real-time multiplayer
-                    party game, 2,500+ players across 39 countries & $100 MRR
-                    in 3 months, 100% organic
+                    party game, 3,000+ players across 39 countries in 3 months,
+                    100% organic
                   </span>
                 </div>
                 <div className="flex items-start gap-2.5">
