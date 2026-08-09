@@ -5,7 +5,7 @@ Algeria · CET (UTC+1) · [mohamedterba6@gmail.com](mailto:mohamedterba6@gmail.c
 
 ---
 
-Full-Stack Engineer with 3+ years shipping production web & mobile platforms end-to-end. Own the entire frontend of a live AI analytics SaaS as 2nd-highest contributor in a ~10-person team, and built the on-demand dispatch and fleet-operations services of a live Uber-style logistics marketplace. Co-founder of DzStore, a Shopify-equivalent SaaS that grew to 1,000+ users, 800+ stores, and 20+ paying subscribers in its first 2 months with zero ad spend, and Fibble, a multiplayer party game generating revenue organically within its first 2 months.
+Full-Stack Engineer with 3+ years shipping production web & mobile platforms end-to-end. Own the entire frontend of a live AI analytics SaaS as 2nd-highest contributor in a ~10-person team, and built the on-demand dispatch and fleet-operations services of a live Uber-style logistics marketplace. Co-founder of DzStore, a Shopify-equivalent SaaS that grew to 1,000+ merchants running 1,000+ live stores, with 20+ paying subscribers in its first 3 months and zero ad spend, and Fibble, a multiplayer party game generating revenue organically within its first 2 months.
 
 ## Experience
 
@@ -16,8 +16,9 @@ Full-Stack Engineer with 3+ years shipping production web & mobile platforms end
 - Build every user-facing surface of a live AI analytics platform in TypeScript, JavaScript, React, HTML, and CSS, from analytics dashboards to the marketing site, so non-technical business teams can explore their data and act on it without engineering help.
 - **Dashboards & reporting:** Designed and implemented the drag-and-drop dashboard builder, shareable password-protected/embed reports, and one-click PDF/PowerPoint export UI.
 - **Real-time collaboration:** Shipped WebSocket session sync, user presence, and a collaborative chat sidebar over production wss://, plus the NL-to-SQL query interface.
-- **Data connectors:** Developed an OAuth2 connector platform with encrypted credential storage spanning 10+ sources (BigQuery, GA4, Search Console, Sheets, Gmail, YouTube, Google Play, PostgreSQL, MySQL, Slack), including per-connector refresh schedules taken end-to-end (React UI, FastAPI/Python, Celery Beat).
+- **Data connectors:** Developed an OAuth2 connector platform with encrypted credential storage spanning 10+ sources (BigQuery, GA4, Search Console, Sheets, Gmail, YouTube, Google Play, PostgreSQL, MySQL, Slack), including per-connector refresh schedules taken end-to-end (React UI, FastAPI/Python, Celery Beat) and in-app alerts that tell a user the moment a sync starts failing.
 - **AI / RAG:** Delivered RAG document-intelligence Q&A with resilient streaming, multi-format ingestion (CSV/PDF/Excel/images), and a Gemini model layer with fallback.
+- **LLM agent observability:** Instrumented AI agent runs with an admin console over the trace pipeline: run volume and reliability trends, per-run latency and provider-cost drill-down into spans, cost-regression flags, recovered failures broken out from real ones, and async CSV/JSON export of the query log.
 - **Growth & DevOps:** Rebuilt the full marketing site (animated hero, comparison, FAQ); cut deploy time from ~30 min to under 5 with zero-downtime PM2 cluster reloads; hardened CI/CD (GitHub Actions) with Sentry observability, working Agile in a cross-functional ~10-person team of AI/ML, LLMOps, and infra engineers; PKCE OAuth and Apple "Hide My Email" auth.
 - **Mobile:** Initialized the companion React Native app: dashboard viewing, push notifications, biometric auth, offline caching.
 
@@ -52,10 +53,11 @@ Full-Stack Engineer with 3+ years shipping production web & mobile platforms end
 
 **2025 - Present**
 
-- **Traction:** 1,000+ users, 800+ active stores, and 1,400+ products within 2 months of launch, 100% organic with zero ad spend, and **20+ paying PRO subscribers acquired through SEO alone**.
-- **Quality signals:** 4.6/5 average across 42 in-app merchant survey responses; 99.95% uptime over the last 90 days with zero recorded incidents (public status page).
-- **Organic SEO engine:** Owned technical SEO end-to-end: 4,300+ pages indexed, 600+ valid product snippets & merchant listings (Google Shopping rich results), and breadcrumb/FAQ structured data, driving 1,600+ Google Search clicks and all merchant acquisition.
-- **Engineering:** Led nearly all engineering across the stack: multi-tenant subdomain-per-store routing with Caddy on-demand TLS for custom domains, a 42-model Prisma/PostgreSQL schema, drag-and-drop storefront builder, online card payments (Chargily Pay) with HMAC-verified webhooks, per-region shipping, abandoned-cart lifecycle emails (Resend), affiliate payouts, AI product descriptions, and Arabic/French RTL; self-hosted on Hetzner via Docker with zero-downtime deploys and Upstash Redis.
+- **Traction:** 1,000+ users, 1,000+ active stores, 2,100+ products, and 500+ orders within 3 months of launch, 100% organic with zero ad spend, and **20+ paying PRO subscribers acquired through SEO alone**.
+- **Quality signals:** 4.7/5 average across 73 in-app merchant survey responses; 99.95% uptime over the last 90 days with zero recorded incidents (public status page).
+- **Organic SEO engine:** Owned technical SEO end-to-end: 7,000+ pages indexed, 600+ valid product snippets & merchant listings (Google Shopping rich results), and breadcrumb/FAQ structured data, driving 1,600+ Google Search clicks and all merchant acquisition.
+- **Engineering:** Led nearly all engineering across the stack: multi-tenant subdomain-per-store routing with Caddy on-demand TLS for custom domains, a 44-model Prisma/PostgreSQL schema, drag-and-drop storefront builder, online card payments (Chargily Pay) with HMAC-verified webhooks, per-region shipping rates plus a carrier layer wrapping 70 Algerian delivery companies behind 5 API adapters (tariff import, shipment creation, tracking), abandoned-cart lifecycle emails (Resend), affiliate payouts, AI product descriptions, and Arabic/French RTL; self-hosted on Hetzner via Docker with zero-downtime deploys and Upstash Redis.
+- **Cost engineering:** Migrated the production PostgreSQL from Neon to Supabase with pg_dump/pg_restore, and made the image-optimizer cache survive deploys, together retiring ~$50/month of database spend and ~17 GB/month of Cloudinary egress.
 
 ### Fibble · _Multiplayer Party Game (Web + Discord) · Co-Founder & Full-Stack Engineer · [fibble.io](https://fibble.io/)_
 
@@ -77,7 +79,7 @@ Full-Stack Engineer with 3+ years shipping production web & mobile platforms end
 - **Frontend:** React, Next.js (App & Pages Router), TypeScript, JavaScript ES6+, HTML5, CSS3, Tailwind CSS, Redux Toolkit
 - **Mobile:** React Native (Expo) for iOS & Android: EAS builds, push notifications, biometric auth, RTL i18n
 - **Backend:** Node.js, NestJS, Express.js, FastAPI, Python, REST APIs, WebSockets, Ably, RBAC
-- **Databases:** PostgreSQL, MySQL, SQL, Prisma ORM, Redis, MongoDB
+- **Databases:** PostgreSQL, MySQL, SQL, Prisma ORM, Supabase, Redis, MongoDB
 - **Cloud:** Microsoft Azure (Event Hub / Kafka, Cosmos DB, Blob Storage), Google Cloud (BigQuery), Cloudflare, Hetzner, DigitalOcean
 - **DevOps & Practices:** Docker, Git, GitHub Actions, CI/CD, Agile, Coolify, Caddy/Nginx, PM2, Claude Code (AI-assisted dev)
 - **Integrations & AI:** Stripe, Paddle, online payments (Chargily Pay), OAuth2 (PKCE), Apple/Google Auth, Sentry, SendGrid/Resend, PostHog, RAG systems, LangChain, NL-to-SQL, Celery, real-time collaboration

@@ -35,7 +35,7 @@ const stats = [
     icon: <Users className="h-6 w-6 text-blue-500" />,
     value: "1,000+",
     label: "DzStore Users",
-    description: "800+ active stores, 100% organic",
+    description: "1,000+ active stores, 100% organic",
   },
   {
     icon: <BadgeDollarSign className="h-6 w-6 text-amber-500" />,

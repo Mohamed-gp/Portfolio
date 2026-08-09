@@ -65,7 +65,7 @@ export default function Projects() {
       url: "https://analyticsdepot.com/",
       image: "/projects/analytics-depot/hero-updated-1.png",
       description:
-        "Frontend lead on a live AI analytics SaaS, owning every user-facing surface: a drag-and-drop dashboard builder with multiple chart types, shareable reports (password-protected + embed mode) with one-click PDF/PowerPoint export, and an OAuth2 connector platform spanning 10+ data sources (BigQuery, GA4, Search Console, Sheets, Gmail, YouTube, Google Play, PostgreSQL, MySQL, Slack). Shipped RAG document Q&A, an NL-to-SQL query interface, per-connector refresh scheduling (React + FastAPI + Celery), and the rebuilt public marketing site. Hardened auth with PKCE OAuth and Apple \"Hide My Email\"; cut deploy time from ~30 min to under 5 with zero-downtime PM2 cluster reloads.",
+        "Frontend lead on a live AI analytics SaaS, owning every user-facing surface: a drag-and-drop dashboard builder with multiple chart types, shareable reports (password-protected + embed mode) with one-click PDF/PowerPoint export, and an OAuth2 connector platform spanning 10+ data sources (BigQuery, GA4, Search Console, Sheets, Gmail, YouTube, Google Play, PostgreSQL, MySQL, Slack). Shipped RAG document Q&A, an NL-to-SQL query interface, per-connector refresh scheduling (React + FastAPI + Celery), and the rebuilt public marketing site. Hardened auth with PKCE OAuth and Apple \"Hide My Email\"; cut deploy time from ~30 min to under 5 with zero-downtime PM2 cluster reloads. Built the LLM agent observability console on top of the trace pipeline: run volume and reliability trends, per-run latency and provider-cost drill-down into spans, cost-regression flags, and async CSV/JSON export of the query log.",
       features: [
         "Ask questions in plain English, get SQL-backed answers and charts",
         "Drag-and-drop dashboards with shareable, embeddable reports",
@@ -96,11 +96,11 @@ export default function Projects() {
       url: "https://dzstore.org/en",
       image: "/projects/dzstore/hero-updated-1.png",
       description:
-        "In its first 2 months: 1,000+ users, 800+ active stores, 1,400+ products, and 20+ paying PRO subscribers acquired through SEO alone, adding ~50 new stores a week, 100% organic, zero ad spend, and 2.2M+ DZD in merchant sales (GMV). Co-founded this multi-tenant Shopify-equivalent SaaS and lead nearly all engineering: subdomain-per-store routing with Caddy on-demand TLS, a 42-model Prisma/PostgreSQL schema, a drag-and-drop storefront builder, per-region shipping, abandoned-cart recovery, an affiliate system, and AI product descriptions; self-hosted on Hetzner via Docker with 99.95% uptime over the last 90 days. Technical SEO drives acquisition: 4,300+ pages indexed with 600+ valid Google Shopping product snippets. Merchants rate it 4.6/5 in the in-app survey.",
+        "In its first 3 months: 1,000+ users, 1,000+ active stores, 2,100+ products, 500+ orders, and 20+ paying PRO subscribers acquired through SEO alone, adding ~100 new stores a week, 100% organic, zero ad spend, and 2.2M+ DZD in merchant sales (GMV). Co-founded this multi-tenant Shopify-equivalent SaaS and lead nearly all engineering: subdomain-per-store routing with Caddy on-demand TLS, a 44-model Prisma/PostgreSQL schema, a drag-and-drop storefront builder, per-region shipping plus a carrier layer covering 70 Algerian delivery companies behind 5 API adapters, abandoned-cart recovery, an affiliate system, and AI product descriptions; self-hosted on Hetzner via Docker with 99.95% uptime over the last 90 days. Cut running costs by moving the production Postgres off Neon to Supabase and persisting the image-optimizer cache across deploys, retiring ~$50/month of database spend and ~17 GB/month of CDN egress. Technical SEO drives acquisition: 7,000+ pages indexed with 600+ valid Google Shopping product snippets. Merchants rate it 4.7/5 in the in-app survey.",
       features: [
         "Merchants launch a full online store in seconds, no code needed",
         "Every store gets its own subdomain or custom domain with auto HTTPS",
-        "Cash on delivery + online card payments, 50+ delivery carriers",
+        "Cash on delivery + online card payments, 70 delivery carriers",
         "AI product descriptions, abandoned-cart recovery, trending-product radar",
       ],
       hardest:
@@ -111,6 +111,7 @@ export default function Projects() {
         "Next.js",
         "PostgreSQL",
         "Prisma",
+        "Supabase",
         "TypeScript",
         "Docker",
         "Caddy",
