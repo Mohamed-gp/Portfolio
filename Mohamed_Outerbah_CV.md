@@ -80,6 +80,6 @@ Full-Stack Engineer with 3+ years shipping production web & mobile platforms end
 - **Mobile:** React Native (Expo) for iOS & Android: EAS builds, push notifications, biometric auth, RTL i18n
 - **Backend:** Node.js, NestJS, Express.js, FastAPI, Python, REST APIs, WebSockets, Ably, RBAC
 - **Databases:** PostgreSQL, MySQL, SQL, Prisma ORM, Supabase, Redis, MongoDB
-- **Cloud:** Microsoft Azure (Event Hub / Kafka, Cosmos DB, Blob Storage), Google Cloud (BigQuery), Cloudflare, Hetzner, DigitalOcean
+- **Cloud:** Google Cloud (BigQuery), Microsoft Azure, Cloudflare, Hetzner, DigitalOcean
 - **DevOps & Practices:** Docker, Git, GitHub Actions, CI/CD, Agile, Coolify, Caddy/Nginx, PM2, Claude Code (AI-assisted dev)
 - **Integrations & AI:** Stripe, Paddle, online payments (Chargily Pay), OAuth2 (PKCE), Apple/Google Auth, Sentry, SendGrid/Resend, PostHog, RAG systems, LangChain, NL-to-SQL, Celery, real-time collaboration
