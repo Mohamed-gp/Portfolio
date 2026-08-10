@@ -145,7 +145,8 @@ export default function About() {
               <strong className="text-foreground">
                 1,000+ active stores and 20+ merchants on paid plans
               </strong>
-              , adding ~120 new stores a week, 100% organic, zero ad spend,
+              , adding ~120 new stores a week with orders up 190% month over
+              month, 100% organic, zero ad spend,
               99.95% uptime. I hold a{" "}
               <strong className="text-foreground">5/5 rating</strong> across 6+
               delivered production applications.
