@@ -53,7 +53,7 @@ Full-Stack Engineer with 3+ years shipping production web & mobile platforms end
 
 **2025 - Present**
 
-- **Traction:** ~1,000 users, 830+ active stores, 2,100+ products, and 500+ orders within 3 months of launch, 100% organic with zero ad spend, and **20+ merchants upgraded to paid PRO plans, acquired through SEO alone**.
+- **Traction:** ~1,000 users, 830+ active stores, 2,100+ products, 500+ orders, and 5.5M+ DZD in merchant sales (GMV) within 3 months of launch, 100% organic with zero ad spend, and **20+ merchants upgraded to paid PRO plans, acquired through SEO alone**.
 - **Quality signals:** 4.7/5 average across 73 in-app merchant survey responses; 99.95% uptime over the last 90 days with zero recorded incidents (public status page).
 - **Organic SEO engine:** Owned technical SEO end-to-end: 7,000+ pages indexed, 600+ valid product snippets & merchant listings (Google Shopping rich results), and breadcrumb/FAQ structured data, driving 1,600+ Google Search clicks and all merchant acquisition.
 - **Engineering:** Led nearly all engineering across the stack: multi-tenant subdomain-per-store routing with Caddy on-demand TLS for custom domains, a 44-model Prisma/PostgreSQL schema, drag-and-drop storefront builder, online card payments (Chargily Pay) with HMAC-verified webhooks, per-region shipping rates plus a carrier layer wrapping 70 Algerian delivery companies behind 5 API adapters (tariff import, shipment creation, tracking), abandoned-cart lifecycle emails (Resend), affiliate payouts, AI product descriptions, and Arabic/French RTL; self-hosted on Hetzner via Docker with zero-downtime deploys and Upstash Redis.

@@ -106,7 +106,7 @@ export default function Projects() {
       hardest:
         "Multi-tenant subdomain routing with Caddy on-demand TLS: every merchant gets their own store and custom domain with automatic HTTPS, all from one codebase.",
       status: "Live · ~1,000 Users · 20+ Paying",
-      role: "Co-Founder & Full-Stack Engineer",
+      role: "Co-Founder & Lead Engineer",
       technologies: [
         "Next.js",
         "PostgreSQL",
