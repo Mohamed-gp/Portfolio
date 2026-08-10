@@ -141,7 +141,7 @@ export default function About() {
                 DzStore
               </a>
               , a Shopify-equivalent SaaS where I lead nearly all engineering
-              across the full stack. In its first 3 months it has grown to{" "}
+              across the full stack. In its first 3 months live it has grown to{" "}
               <strong className="text-foreground">
                 1,000+ active stores and 20+ merchants on paid plans
               </strong>
@@ -178,14 +178,14 @@ export default function About() {
                   <Store className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                   <span className="text-sm text-muted-foreground">
                     <strong>Co-founded DzStore:</strong> 1,000+ stores & 20+
-                    on paid plans in 3 months, 100% organic
+                    on paid plans in 3 months live, 100% organic
                   </span>
                 </div>
                 <div className="flex items-start gap-2.5">
                   <Gamepad2 className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                   <span className="text-sm text-muted-foreground">
                     <strong>Co-founded Fibble:</strong> real-time multiplayer
-                    party game, 3,000+ players across 80+ countries in 3 months,
+                    party game, 3,000+ players across 80+ countries in 3 months live,
                     100% organic
                   </span>
                 </div>

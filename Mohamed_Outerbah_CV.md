@@ -5,7 +5,7 @@ Algeria · CET (UTC+1) · [mohamedterba6@gmail.com](mailto:mohamedterba6@gmail.c
 
 ---
 
-Full-Stack Engineer with 3+ years shipping production web & mobile platforms end-to-end. Own the entire frontend of a live AI analytics SaaS as 2nd-highest contributor in a ~10-person team, and built the on-demand dispatch and fleet-operations services of a live Uber-style logistics marketplace. Co-founder of DzStore, a Shopify-equivalent SaaS that grew to 1,000+ live stores in its first 3 months, 20+ of them converting to paid plans, and Fibble, a multiplayer party game on web and Discord with 3,000+ players, both entirely organic with zero ad spend.
+Full-Stack Engineer with 3+ years shipping production web & mobile platforms end-to-end. Own the entire frontend of a live AI analytics SaaS as 2nd-highest contributor in a ~10-person team, and built the on-demand dispatch and fleet-operations services of a live Uber-style logistics marketplace. Co-founder of DzStore, a Shopify-equivalent SaaS that grew to 1,000+ live stores in its first 3 months live, 20+ of them converting to paid plans, and Fibble, a multiplayer party game on web and Discord with 3,000+ players, both entirely organic with zero ad spend.
 
 ## Experience
 
@@ -51,9 +51,9 @@ Full-Stack Engineer with 3+ years shipping production web & mobile platforms end
 
 ### DzStore · _Shopify-equivalent E-commerce SaaS · Co-Founder & Lead Engineer · [dzstore.org](https://dzstore.org/en)_
 
-**2025 - Present**
+**Jun 2025 - Present**
 
-- **Traction:** 1,000+ active stores, 2,100+ products, 500+ orders, and 5.5M+ DZD in merchant sales (GMV) within 3 months of launch, on 47,000+ visitors and 166,000+ pageviews, 100% organic with zero ad spend, and **20+ merchants upgraded to paid PRO plans, acquired through SEO alone**.
+- **Traction:** Reached 1,000+ active stores, 2,100+ products, 500+ orders, and 5.5M+ DZD in merchant sales (GMV) in the first 3 months since the May 2026 launch, on 47,000+ visitors and 166,000+ pageviews, 100% organic with zero ad spend, and **20+ merchants upgraded to paid PRO plans, acquired through SEO alone**.
 - **Quality signals:** 4.7/5 average across 73 in-app merchant survey responses; 99.95% uptime over the last 90 days with zero recorded incidents (public status page).
 - **Organic SEO engine:** Owned technical SEO end-to-end: 15,000+ pages indexed, 600+ valid product snippets & merchant listings (Google Shopping rich results), and breadcrumb/FAQ structured data, now pulling 3,000+ Google Search clicks and 100,000+ impressions a month, and effectively every merchant signup (search out-refers social 12:1 on the signup funnel).
 - **Engineering:** Led nearly all engineering across the stack: multi-tenant subdomain-per-store routing with Caddy on-demand TLS for custom domains, a 44-model Prisma/PostgreSQL schema, drag-and-drop storefront builder, online card payments (Chargily Pay) with HMAC-verified webhooks, per-region shipping rates plus a carrier layer wrapping 70 Algerian delivery companies behind 5 API adapters (tariff import, shipment creation, tracking), abandoned-cart lifecycle emails (Resend), affiliate payouts, AI product descriptions, and Arabic/French RTL; self-hosted on Hetzner via Docker with zero-downtime deploys and Upstash Redis.
@@ -61,10 +61,10 @@ Full-Stack Engineer with 3+ years shipping production web & mobile platforms end
 
 ### Fibble · _Multiplayer Party Game (Web + Discord) · Co-Founder & Full-Stack Engineer · [fibble.io](https://fibble.io/)_
 
-**2025 - Present**
+**Sep 2025 - Present**
 
 - **Product:** Free real-time bluffing trivia game (2-8 players, no download) playable in the browser and as a Discord Activity, with a premium subscription tier.
-- **Traction:** 3,000+ players in 80+ countries across 2,200+ games played in its first 3 months, entirely organic with zero ad spend, converting its first paying subscribers on both billing rails.
+- **Traction:** 3,000+ players in 80+ countries across 2,200+ games played in the first 3 months since the May 2026 launch, entirely organic with zero ad spend, converting its first paying subscribers on both billing rails.
 - **Engineering:** Serverless real-time multiplayer: Postgres as the source of truth with Ably pub/sub fan-out, server-authoritative phase deadlines, and HMAC anti-spoofing action tokens; plus Discord Activity integration, Paddle + Discord SKU billing, and a full admin analytics panel (player geo, sessions, retention, moderation).
 
 ## Education & Awards
