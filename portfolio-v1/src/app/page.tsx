@@ -14,7 +14,6 @@ const ScrollToTop = dynamic(
   () => import("@/components/scroll-to-top/ScrollToTop"),
 );
 const Contact = dynamic(() => import("@/components/contact/Contact"));
-const CTASection = dynamic(() => import("@/components/cta/CTASection"));
 const StatsSection = dynamic(() => import("@/components/stats/StatsSection"));
 const ConsoleLog = dynamic(() => import("@/components/consoleLog/ConsoleLog"));
 export default function Home() {
@@ -28,7 +27,6 @@ export default function Home() {
       <Testimonials />
       <Skills />
       <StatsSection />
-      <CTASection />
       <Contact />
       <Footer />
       <ScrollToTop />

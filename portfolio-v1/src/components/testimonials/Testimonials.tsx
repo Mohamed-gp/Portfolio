@@ -18,6 +18,7 @@ interface Client {
   countryName: string;
   title?: string;
   project?: string;
+  projectUrl?: string;
   link: string;
   gradient: string;
   reviews: Review[];
@@ -53,6 +54,7 @@ const clients: Client[] = [
     countryName: "United States",
     title: "CEO & Founder, Analytics Depot",
     project: "Analytics Depot",
+    projectUrl: "https://analyticsdepot.com/",
     gradient: "from-blue-600 via-cyan-600 to-teal-500",
     link: "https://www.linkedin.com/in/mohamedouterbah/details/recommendations/",
     reviews: [
@@ -71,6 +73,7 @@ const clients: Client[] = [
     countryFlag: "🇬🇧",
     countryName: "United Kingdom",
     project: "Cribbix",
+    projectUrl: "https://cribbix.com/",
     gradient: "from-violet-600 via-purple-600 to-indigo-600",
     link: "https://www.fiverr.com/mohamedouterbah?public_mode=true",
     reviews: [
@@ -184,14 +187,6 @@ export default function Testimonials() {
                           </p>
                         </div>
                       </div>
-                      <a
-                        href={client.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="bg-white/15 hover:bg-white/25 transition-colors p-2 rounded-full shrink-0"
-                      >
-                        <ExternalLink className="h-4 w-4" />
-                      </a>
                     </div>
 
                     <div className="flex items-center justify-between mt-3">
@@ -239,9 +234,21 @@ export default function Testimonials() {
                   {/* Footer */}
                   <div className="mt-5 flex items-center justify-between pt-4 border-t border-gray-100 dark:border-gray-700">
                     {client.project ? (
-                      <div className="bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 px-2.5 py-1 rounded-full text-xs font-semibold">
-                        {client.project}
-                      </div>
+                      client.projectUrl ? (
+                        <a
+                          href={client.projectUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 hover:bg-blue-200 dark:hover:bg-blue-900/50 px-2.5 py-1 rounded-full text-xs font-semibold flex items-center gap-1 transition-colors"
+                        >
+                          {client.project}
+                          <ExternalLink className="h-3 w-3" />
+                        </a>
+                      ) : (
+                        <div className="bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 px-2.5 py-1 rounded-full text-xs font-semibold">
+                          {client.project}
+                        </div>
+                      )
                     ) : (
                       <span />
                     )}
@@ -253,7 +260,7 @@ export default function Testimonials() {
                     >
                       {latestReview.platform === "LinkedIn"
                         ? "Verify on LinkedIn"
-                        : "Verify on Fiverr"}
+                        : "Verify"}
                       <ExternalLink className="h-3 w-3" />
                     </a>
                   </div>

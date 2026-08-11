@@ -204,6 +204,7 @@ export default function Hero() {
                     width={400}
                     height={400}
                     priority
+                    sizes="(max-width: 640px) 220px, (max-width: 768px) 280px, (max-width: 1024px) 320px, 400px"
                     className="object-cover object-top w-full h-full hover:scale-110 transition-transform duration-500"
                   />
                 </div>

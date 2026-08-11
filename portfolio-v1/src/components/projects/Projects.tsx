@@ -575,9 +575,17 @@ function ProjectCard({
             </Badge>
           ))}
           {project.technologies.length > 5 && (
-            <Badge variant="outline" className="text-xs px-2 py-0.5">
-              +{project.technologies.length - 5}
-            </Badge>
+            <button
+              onClick={onClick}
+              aria-label={`Show all ${project.technologies.length} technologies for ${project.title}`}
+            >
+              <Badge
+                variant="outline"
+                className="text-xs px-2 py-0.5 cursor-pointer hover:bg-primary/10 hover:border-primary/40 transition-colors"
+              >
+                +{project.technologies.length - 5}
+              </Badge>
+            </button>
           )}
         </div>
 

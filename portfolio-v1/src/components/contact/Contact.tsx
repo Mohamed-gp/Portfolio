@@ -68,12 +68,22 @@ export default function Contact() {
             Get In Touch
           </Badge>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Let&apos;s Connect
+            Hiring a{" "}
+            <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+              Full-Stack Engineer?
+            </span>
           </h2>
-          <p className="text-muted-foreground">
-            Have a project in mind or want to discuss potential opportunities?
-            Send me a message directly or reach out through any of these
-            channels.
+          <p className="text-muted-foreground text-lg">
+            I ship production web &amp; mobile platforms end-to-end: frontend,
+            backend, mobile, and infrastructure. Send me a message directly or
+            reach out through any of these channels.
+          </p>
+          <p className="text-sm text-muted-foreground flex items-center justify-center gap-2 mt-4">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
+            </span>
+            Available now for full-time remote roles and contracts
           </p>
         </motion.div>
 
