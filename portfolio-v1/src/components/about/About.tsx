@@ -143,7 +143,7 @@ export default function About() {
               , a Shopify-equivalent SaaS where I lead nearly all engineering
               across the full stack. In its first 3 months live it has grown to{" "}
               <strong className="text-foreground">
-                1,000+ active stores and 20+ merchants on paid plans
+                1,000+ active stores and 25+ merchants on paid plans
               </strong>
               , adding ~120 new stores a week with orders up 190% month over
               month, 100% organic, zero ad spend,
@@ -178,7 +178,7 @@ export default function About() {
                 <div className="flex items-start gap-2.5">
                   <Store className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                   <span className="text-sm text-muted-foreground">
-                    <strong>Co-founded DzStore:</strong> 1,000+ stores & 20+
+                    <strong>Co-founded DzStore:</strong> 1,000+ stores & 25+
                     on paid plans in 3 months live, 100% organic
                   </span>
                 </div>

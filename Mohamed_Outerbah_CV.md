@@ -5,7 +5,7 @@ Algeria · CET (UTC+1) · [mohamedterba6@gmail.com](mailto:mohamedterba6@gmail.c
 
 ---
 
-Full-Stack Engineer with 3+ years shipping production web & mobile platforms end-to-end. Own the entire frontend of a live AI analytics SaaS as 2nd-highest contributor in a ~10-person team, and built the on-demand dispatch and fleet-operations services of a live Uber-style logistics marketplace. Co-founder of DzStore, a Shopify-equivalent SaaS that grew to 1,000+ live stores in its first 3 months live, 20+ of them converting to paid plans, and Fibble, a multiplayer party game on web and Discord with 3,000+ players, both entirely organic with zero ad spend.
+Full-Stack Engineer with 3+ years shipping production web & mobile platforms end-to-end. Own the entire frontend of a live AI analytics SaaS as 2nd-highest contributor in a ~10-person team, and built the on-demand dispatch and fleet-operations services of a live Uber-style logistics marketplace. Co-founder of DzStore, a Shopify-equivalent SaaS that grew to 1,000+ live stores in its first 3 months live, 25+ of them converting to paid plans, and Fibble, a multiplayer party game on web and Discord with 3,000+ players, both entirely organic with zero ad spend.
 
 ## Experience
 
@@ -53,7 +53,7 @@ Full-Stack Engineer with 3+ years shipping production web & mobile platforms end
 
 **Jun 2025 - Present**
 
-- **Traction:** Reached 1,000+ active stores, 2,100+ products, 550+ orders, and 5.5M+ DZD in merchant sales (GMV) in the first 3 months since the May 2026 launch, on 47,000+ visitors and 166,000+ pageviews, still adding ~120 new stores a week with new stores up 55% and orders up 190% month over month, 100% organic with zero ad spend, and **20+ merchants upgraded to paid PRO plans, acquired through SEO alone**.
+- **Traction:** Reached 1,000+ active stores, 2,100+ products, 550+ orders, and 5.5M+ DZD in merchant sales (GMV) in the first 3 months since the May 2026 launch, on 47,000+ visitors and 166,000+ pageviews, still adding ~120 new stores a week with new stores up 55% and orders up 190% month over month, 100% organic with zero ad spend, and **25+ merchants upgraded to paid PRO plans, acquired through SEO alone**.
 - **Quality signals:** 4.7/5 average across 73 in-app merchant survey responses; 99.95% uptime over the last 90 days with zero recorded incidents (public status page).
 - **Organic SEO engine:** Owned technical SEO end-to-end: 15,000+ pages indexed, 600+ valid product snippets & merchant listings (Google Shopping rich results), a Google Merchant Center feed with 2,600+ product listings, Meta Pixel integration, and breadcrumb/FAQ structured data, now pulling 3,000+ Google Search clicks and 100,000+ impressions a month, and effectively every merchant signup (search out-refers social 12:1 on the signup funnel).
 - **Merchant mobile app:** Launched a React Native (Expo) app for store owners: real-time order tracking, push notifications for new orders, stock management, and a multilingual UI with Arabic RTL.

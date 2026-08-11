@@ -39,7 +39,7 @@ const stats = [
   },
   {
     icon: <BadgeDollarSign className="h-6 w-6 text-amber-500" />,
-    value: "20+",
+    value: "25+",
     label: "Merchants on Paid Plans",
     description: "DzStore PRO, acquired through SEO alone",
   },
