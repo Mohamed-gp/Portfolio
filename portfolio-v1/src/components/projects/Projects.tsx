@@ -35,7 +35,9 @@ interface Project {
   github?: string;
   video?: string;
   image: string;
-  description: string;
+  description: string | string[];
+  metrics?: { value: string; label: string }[];
+  statusPage?: string;
   features: string[];
   hardest: string;
   status: string;
@@ -92,17 +94,30 @@ export default function Projects() {
       title: "DzStore — E-commerce SaaS Platform",
       country: "Algeria",
       flag: "🇩🇿",
-      type: ["Web Application", "Mobile Application"],
+      type: "Web Application",
       url: "https://dzstore.org/en",
       image: "/projects/dzstore/hero-updated-1.png",
-      description:
-        "In its first 3 months live: 1,000+ active stores, 2,100+ products, 550+ orders, and 25+ merchants upgraded to paid PRO plans through SEO alone, adding ~120 new stores a week with new stores up 55% and orders up 190% month over month, 100% organic, zero ad spend, and 5.5M+ DZD in merchant sales (GMV), on 47,000+ visitors and 166,000+ pageviews. Co-founded this multi-tenant Shopify-equivalent SaaS and lead nearly all engineering: subdomain-per-store routing with Caddy on-demand TLS, a 44-model Prisma/PostgreSQL schema, a drag-and-drop storefront builder, per-region shipping plus a carrier layer covering 70 Algerian delivery companies behind 5 API adapters, abandoned-cart recovery, an affiliate system, AI product descriptions, and a React Native (Expo) merchant app with real-time order tracking, push notifications for new orders, stock management, and Arabic RTL; self-hosted on Hetzner via Docker with 99.95% uptime over the last 90 days. Cut running costs by moving the production Postgres off Neon to Supabase and persisting the image-optimizer cache across deploys, cutting the database bill by 50%+ (migrated with pg_dump at zero downtime) and retiring ~17 GB/month of CDN egress. Technical SEO drives acquisition: 15,000+ pages indexed with 600+ valid Google Shopping product snippets, a Google Merchant Center feed with 2,600+ product listings, and Meta Pixel integration, now pulling 3,000+ Google Search clicks and 100,000+ impressions a month; search out-refers social 12:1 on the signup funnel even though social dominates raw storefront traffic. Merchants rate it 4.7/5 in the in-app survey.",
+      description: [
+        "In its first 3 months live: 1,000+ active stores, 2,100+ products, 550+ orders, and 25+ merchants upgraded to paid PRO plans through SEO alone, adding ~120 new stores a week with new stores up 55% and orders up 190% month over month, 100% organic, zero ad spend, and 5.5M+ DZD in merchant sales (GMV) on 47,000+ visitors and 166,000+ pageviews. Merchants rate it 4.7/5 in the in-app survey.",
+        "Co-founded this multi-tenant Shopify-equivalent SaaS and lead nearly all engineering: subdomain-per-store routing with Caddy on-demand TLS, a 44-model Prisma/PostgreSQL schema, a drag-and-drop storefront builder, per-region shipping plus a carrier layer covering 70 Algerian delivery companies behind 5 API adapters, abandoned-cart recovery, an affiliate system, AI product descriptions, and an iOS/Android merchant app (React Native + Expo) with real-time order tracking, push notifications for new orders, and stock management; self-hosted on Hetzner via Docker with 99.95% uptime over the last 90 days.",
+        "Technical SEO drives acquisition: 15,000+ pages indexed with 600+ valid Google Shopping product snippets, a Google Merchant Center feed with 2,000+ products, and Meta Pixel integration, now pulling 3,000+ Google Search clicks and 100,000+ impressions a month; search out-refers social 12:1 on the signup funnel. Cut running costs by moving the production Postgres off Neon to Supabase (pg_dump, zero downtime) and persisting the image-optimizer cache across deploys, cutting the database bill by 50%+ and retiring ~17 GB/month of CDN egress.",
+      ],
+      metrics: [
+        { value: "1,000+", label: "Active stores" },
+        { value: "25+", label: "Paid PRO merchants" },
+        { value: "5.5M+ DZD", label: "Merchant sales (GMV)" },
+        { value: "4.7/5", label: "73 merchant reviews" },
+        { value: "99.95%", label: "Uptime, last 90 days" },
+        { value: "166K+", label: "Pageviews, 3 months" },
+      ],
+      statusPage: "https://status.dzstore.org",
       features: [
         "Merchants launch a full online store in seconds, no code needed",
         "Every store gets its own subdomain or custom domain with auto HTTPS",
         "Cash on delivery + online card payments, 70 delivery carriers",
         "AI product descriptions, abandoned-cart recovery, trending-product radar",
-        "Merchant mobile app: orders, stock, and push notifications on the go",
+        "Discount codes, product variants, low-stock alerts, fraud screening",
+        "Merchant analytics dashboard + iOS/Android app with push notifications",
       ],
       hardest:
         "Multi-tenant subdomain routing with Caddy on-demand TLS: every merchant gets their own store and custom domain with automatic HTTPS, all from one codebase.",
@@ -367,6 +382,40 @@ export default function Projects() {
                   ))}
                 </div>
 
+                {/* By the numbers */}
+                {selectedProject.metrics && (
+                  <div>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                      {selectedProject.metrics.map((m) => (
+                        <div
+                          key={m.label}
+                          className="rounded-lg border border-primary/10 bg-primary/5 px-3 py-2.5 text-center"
+                        >
+                          <div className="text-lg font-bold text-foreground leading-tight">
+                            {m.value}
+                          </div>
+                          <div className="text-xs text-muted-foreground mt-0.5">
+                            {m.label}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                    {selectedProject.statusPage && (
+                      <p className="text-xs text-muted-foreground mt-2 text-right">
+                        Uptime verifiable live at{" "}
+                        <a
+                          href={selectedProject.statusPage}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="underline underline-offset-2 hover:text-foreground transition-colors"
+                        >
+                          {selectedProject.statusPage.replace("https://", "")}
+                        </a>
+                      </p>
+                    )}
+                  </div>
+                )}
+
                 {/* Hardest problem */}
                 <div className="rounded-lg border-l-2 border-primary bg-primary/5 p-4">
                   <h3 className="font-semibold text-sm mb-1 flex items-center gap-2 text-primary">
@@ -399,9 +448,19 @@ export default function Projects() {
                   <h3 className="font-semibold text-lg mb-2">
                     About the project
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {selectedProject.description}
-                  </p>
+                  <div className="space-y-3">
+                    {(Array.isArray(selectedProject.description)
+                      ? selectedProject.description
+                      : [selectedProject.description]
+                    ).map((paragraph) => (
+                      <p
+                        key={paragraph.slice(0, 40)}
+                        className="text-muted-foreground leading-relaxed"
+                      >
+                        {paragraph}
+                      </p>
+                    ))}
+                  </div>
                 </div>
 
                 {/* Action Buttons */}
@@ -523,7 +582,9 @@ function ProjectCard({
         </div>
 
         <p className="text-sm text-muted-foreground line-clamp-3">
-          {project.description}
+          {Array.isArray(project.description)
+            ? project.description[0]
+            : project.description}
         </p>
 
         {/* What the app does */}
