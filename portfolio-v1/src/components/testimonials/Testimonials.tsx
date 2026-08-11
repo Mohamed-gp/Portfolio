@@ -1,25 +1,7 @@
 "use client";
-import { useState } from "react";
 import Image from "next/image";
 
-import {
-  ExternalLink,
-  Quote,
-  Star,
-  Clock,
-  RefreshCw,
-  ChevronRight,
-  ChevronDown,
-  Linkedin,
-} from "lucide-react";
-
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogDescription,
-} from "@/components/ui/dialog";
+import { ExternalLink, Quote, Star, Clock, Linkedin } from "lucide-react";
 
 interface Review {
   text: string;
@@ -30,14 +12,12 @@ interface Review {
 
 interface Client {
   id: number;
-  username: string;
   displayName: string;
   avatar: string | null;
   countryFlag: string;
   countryName: string;
   title?: string;
   project?: string;
-  source?: "Fiverr" | "LinkedIn";
   link: string;
   gradient: string;
   reviews: Review[];
@@ -64,24 +44,15 @@ function getRelativeTime(dateStr: string): string {
   return `${years} year${years > 1 ? "s" : ""} ago`;
 }
 
-function formatDate(dateStr: string): string {
-  return new Date(dateStr).toLocaleDateString("en-US", {
-    month: "short",
-    year: "numeric",
-  });
-}
-
 const clients: Client[] = [
   {
     id: 1,
-    username: "vineetpinto",
     displayName: "Vineet Pinto",
     avatar: "/clients/vineet.jpg",
     countryFlag: "🇺🇸",
     countryName: "United States",
     title: "CEO & Founder, Analytics Depot",
     project: "Analytics Depot",
-    source: "LinkedIn",
     gradient: "from-blue-600 via-cyan-600 to-teal-500",
     link: "https://www.linkedin.com/in/mohamedouterbah/details/recommendations/",
     reviews: [
@@ -95,7 +66,6 @@ const clients: Client[] = [
   },
   {
     id: 2,
-    username: "mustafanawaz890",
     displayName: "mustafa nawaz",
     avatar: null,
     countryFlag: "🇬🇧",
@@ -113,7 +83,6 @@ const clients: Client[] = [
   },
   {
     id: 3,
-    username: "hamididz",
     displayName: "hamididz",
     avatar: "/clients/hamididz.webp",
     countryFlag: "🇯🇵",
@@ -132,11 +101,6 @@ const clients: Client[] = [
 ];
 
 export default function Testimonials() {
-  const [timelineClient, setTimelineClient] = useState<Client | null>(null);
-  const [showAll, setShowAll] = useState(false);
-
-  const visibleClients = showAll ? clients : clients.slice(0, 3);
-
   return (
     <section id="testimonials" className="py-16 sm:py-20 bg-muted/30">
       <div className="container px-4 sm:px-6 max-w-7xl mx-auto">
@@ -171,26 +135,13 @@ export default function Testimonials() {
 
         {/* Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {visibleClients.map((client, idx) => {
+          {clients.map((client) => {
             const latestReview = client.reviews[client.reviews.length - 1];
-            const isRepeatClient = client.reviews.length > 1;
 
             return (
               <div
                 key={client.id}
-                className={`bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 dark:border-gray-700 overflow-hidden flex flex-col group ${
-                  idx >= 3
-                    ? "animate-in fade-in slide-in-from-bottom-4 duration-500"
-                    : ""
-                }`}
-                style={
-                  idx >= 3
-                    ? {
-                        animationDelay: `${(idx - 3) * 100}ms`,
-                        animationFillMode: "both",
-                      }
-                    : undefined
-                }
+                className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 dark:border-gray-700 overflow-hidden flex flex-col group"
               >
                 {/* Card Header */}
                 <div
@@ -287,178 +238,31 @@ export default function Testimonials() {
 
                   {/* Footer */}
                   <div className="mt-5 flex items-center justify-between pt-4 border-t border-gray-100 dark:border-gray-700">
-                    <div className="flex items-center gap-2">
-                      <div className="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 px-2.5 py-1 rounded-full text-xs font-semibold">
-                        ✓ Verified
+                    {client.project ? (
+                      <div className="bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 px-2.5 py-1 rounded-full text-xs font-semibold">
+                        {client.project}
                       </div>
-                      {isRepeatClient && (
-                        <button
-                          onClick={() => setTimelineClient(client)}
-                          className="bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300 px-2.5 py-1 rounded-full text-xs font-semibold flex items-center gap-1 hover:bg-yellow-200 dark:hover:bg-yellow-900/50 transition-colors"
-                        >
-                          <RefreshCw className="h-3 w-3" />
-                          {client.reviews.length}x
-                        </button>
-                      )}
-                    </div>
-                    {isRepeatClient ? (
-                      <button
-                        onClick={() => setTimelineClient(client)}
-                        className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium text-xs flex items-center gap-0.5 transition-colors"
-                      >
-                        All reviews
-                        <ChevronRight className="h-3.5 w-3.5" />
-                      </button>
                     ) : (
-                      <a
-                        href={client.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium text-xs flex items-center gap-0.5 transition-colors"
-                      >
-                        Verify
-                        <ExternalLink className="h-3 w-3" />
-                      </a>
+                      <span />
                     )}
+                    <a
+                      href={client.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium text-xs flex items-center gap-0.5 transition-colors"
+                    >
+                      {latestReview.platform === "LinkedIn"
+                        ? "Verify on LinkedIn"
+                        : "Verify on Fiverr"}
+                      <ExternalLink className="h-3 w-3" />
+                    </a>
                   </div>
                 </div>
               </div>
             );
           })}
         </div>
-
-        {/* Show More / Show Less */}
-        {clients.length > 3 && (
-          <div className="flex justify-center mt-10">
-            <button
-              onClick={() => setShowAll((prev) => !prev)}
-              className="group inline-flex items-center gap-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-600 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-6 py-3 rounded-full font-semibold text-sm shadow-md hover:shadow-lg transition-all duration-300"
-            >
-              {showAll ? "Show Less" : `Show More (${clients.length - 3})`}
-              <ChevronDown
-                className={`h-4 w-4 transition-transform duration-300 ${
-                  showAll ? "rotate-180" : "group-hover:translate-y-0.5"
-                }`}
-              />
-            </button>
-          </div>
-        )}
       </div>
-
-      {/* Timeline Dialog for Repeat Clients */}
-      <Dialog
-        open={timelineClient !== null}
-        onOpenChange={(open) => !open && setTimelineClient(null)}
-      >
-        <DialogContent className="max-w-lg max-h-[80vh] overflow-y-auto">
-          {timelineClient && (
-            <>
-              <DialogHeader>
-                <div className="flex items-center gap-3 mb-2">
-                  <div
-                    className={`w-12 h-12 rounded-full bg-gradient-to-r ${timelineClient.gradient} overflow-hidden flex items-center justify-center text-white font-bold text-lg shrink-0`}
-                  >
-                    {timelineClient.avatar ? (
-                      <Image
-                        src={timelineClient.avatar}
-                        alt={timelineClient.displayName}
-                        width={48}
-                        height={48}
-                        className="object-cover"
-                      />
-                    ) : (
-                      timelineClient.displayName.charAt(0).toUpperCase()
-                    )}
-                  </div>
-                  <div>
-                    <DialogTitle className="text-left">
-                      {timelineClient.displayName}
-                    </DialogTitle>
-                    <DialogDescription className="text-left">
-                      {timelineClient.countryFlag} {timelineClient.countryName}{" "}
-                      · {timelineClient.reviews.length} reviews
-                    </DialogDescription>
-                  </div>
-                </div>
-                <div className="inline-flex items-center gap-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-300 px-3 py-1 rounded-full text-xs font-semibold w-fit">
-                  <RefreshCw className="h-3 w-3" />
-                  Repeat Client
-                </div>
-              </DialogHeader>
-
-              {/* Timeline */}
-              <div className="mt-4 space-y-0">
-                {[...timelineClient.reviews]
-                  .sort(
-                    (a, b) =>
-                      new Date(b.date).getTime() - new Date(a.date).getTime(),
-                  )
-                  .map((review, index, arr) => (
-                    <div key={index} className="relative pl-8 pb-6 last:pb-0">
-                      {/* Timeline line */}
-                      {index < arr.length - 1 && (
-                        <div className="absolute left-[11px] top-6 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 to-blue-200 dark:from-blue-400 dark:to-blue-800" />
-                      )}
-
-                      {/* Timeline dot */}
-                      <div className="absolute left-0 top-1 w-6 h-6 rounded-full bg-blue-500 border-4 border-white dark:border-gray-900 shadow-md flex items-center justify-center">
-                        <div className="w-2 h-2 rounded-full bg-white" />
-                      </div>
-
-                      <div className="bg-muted/50 rounded-lg p-4 border border-border">
-                        <div className="flex items-center justify-between mb-2">
-                          {review.platform === "LinkedIn" ? (
-                            <div className="flex items-center gap-1.5 text-sm font-medium text-blue-600 dark:text-blue-400">
-                              <Linkedin className="h-3.5 w-3.5 fill-current" />
-                              LinkedIn Recommendation
-                            </div>
-                          ) : (
-                            <div className="flex items-center gap-1">
-                              {Array.from({ length: 5 }).map((_, i) => (
-                                <Star
-                                  key={i}
-                                  className={`h-3.5 w-3.5 ${
-                                    i < Math.floor(review.rating)
-                                      ? "text-yellow-400 fill-yellow-400"
-                                      : "text-gray-300"
-                                  }`}
-                                />
-                              ))}
-                              <span className="text-sm font-medium ml-1">
-                                {review.rating}
-                              </span>
-                            </div>
-                          )}
-                          <div className="flex items-center gap-1 text-xs text-muted-foreground">
-                            <Clock className="h-3 w-3" />
-                            {formatDate(review.date)} ·{" "}
-                            {getRelativeTime(review.date)}
-                          </div>
-                        </div>
-                        <p className="text-sm text-foreground leading-relaxed">
-                          &ldquo;{review.text}&rdquo;
-                        </p>
-                      </div>
-                    </div>
-                  ))}
-              </div>
-
-              {/* Fiverr link at bottom of dialog */}
-              <div className="mt-4 text-center">
-                <a
-                  href={timelineClient.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-semibold text-sm inline-flex items-center gap-1 transition-colors"
-                >
-                  Verify
-                  <ExternalLink className="h-4 w-4" />
-                </a>
-              </div>
-            </>
-          )}
-        </DialogContent>
-      </Dialog>
     </section>
   );
 }
