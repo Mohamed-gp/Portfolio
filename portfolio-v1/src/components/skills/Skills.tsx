@@ -57,7 +57,7 @@ function getSkillLevel(skillName: string) {
     "tailwind css",
     "node js",
     "node.js",
-    "expo (react native)",
+    "react native (expo)",
   ];
   const advancedSkills = [
     "express js",

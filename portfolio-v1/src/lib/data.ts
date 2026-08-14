@@ -4,7 +4,7 @@ const projectsImagesSkills = [
   { filename: "javascript.svg", name: "JavaScript" },
   { filename: "react.svg", name: "React" },
   { filename: "nextjs.svg", name: "Next.js" },
-  { filename: "expo.svg", name: "Expo (React Native)" },
+  { filename: "expo.svg", name: "React Native (Expo)" },
   { filename: "tailwindcss.svg", name: "Tailwind CSS" },
   { filename: "reduxtoolkit.svg", name: "Redux Toolkit" },
 
@@ -18,6 +18,7 @@ const projectsImagesSkills = [
 
   // Databases
   { filename: "postgressql.svg", name: "PostgreSQL" },
+  { filename: "mysql.svg", name: "MySQL" },
   { filename: "prisma.svg", name: "Prisma" },
   { filename: "redis.svg", name: "Redis" },
 
