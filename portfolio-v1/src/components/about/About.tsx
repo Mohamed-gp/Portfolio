@@ -141,7 +141,8 @@ export default function About() {
                 DzStore
               </a>
               , a Shopify-equivalent SaaS where I lead nearly all engineering
-              across the full stack. In its first months live it has grown to{" "}
+              across the full stack. In its first 3 months since launch it has
+              grown to{" "}
               <strong className="text-foreground">
                 1,100+ active stores and 25+ merchants on paid plans
               </strong>
