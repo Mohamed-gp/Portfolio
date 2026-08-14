@@ -18,7 +18,7 @@ const projectsImagesSkills = [
 
   // Databases
   { filename: "postgressql.svg", name: "PostgreSQL" },
-  { filename: "mysql.svg", name: "MySQL" },
+  { filename: "sql.svg", name: "SQL" },
   { filename: "prisma.svg", name: "Prisma" },
   { filename: "redis.svg", name: "Redis" },
 
