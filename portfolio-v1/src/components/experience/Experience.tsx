@@ -43,8 +43,14 @@ export default function Experience() {
       website: "https://analyticsdepot.com/",
       location: "Remote (USA)",
       period: "Apr 2025 – Present",
-      description:
-        "Frontend lead on a live AI analytics SaaS (team of ~10): 2nd-highest contributor, building every user-facing surface in TypeScript, JavaScript, React, HTML, and CSS so non-technical business teams can explore their data without engineering help. Built the custom drag-and-drop dashboard builder, shareable reports with password protection and embed mode, one-click PDF/PowerPoint export, and an NL-to-SQL query interface. Shipped real-time collaboration (WebSocket session sync, live presence, collaborative chat sidebar), an OAuth2 connector platform spanning 10+ data sources (BigQuery, GA4, Search Console, Sheets, Gmail, YouTube, Google Play, PostgreSQL, MySQL, Slack), and RAG document Q&A. Recently rebuilt the public marketing site for launch, shipped per-connector refresh scheduling end-to-end (React + FastAPI + Python + Celery Beat), hardened auth with PKCE OAuth and Apple \"Hide My Email\" support, and moved deploys to zero-downtime PM2 cluster reloads (deploy time cut from ~30 min to under 5), working Agile in a cross-functional team. Most recently built the LLM agent observability console over the trace pipeline (run volume and reliability trends, per-run latency and provider-cost drill-down into spans, cost-regression flags, recovered failures split out from real ones, async CSV/JSON export), in-app alerts when a connector sync starts failing, and a saved-metric picker for dashboard KPI widgets. Also initialized the companion React Native mobile app (dashboard viewing, push notifications, biometric auth, offline caching).",
+      description: [
+        "Frontend lead and 2nd-highest contributor in a ~10-person team, owning every user-facing surface of a live AI analytics SaaS.",
+        "Dashboards & reporting: drag-and-drop dashboard builder, shareable password-protected/embed reports, one-click PDF/PowerPoint export, and an NL-to-SQL query interface.",
+        "Real-time collaboration: WebSocket session sync, live user presence, and a collaborative chat sidebar over production wss://.",
+        "Data connectors: OAuth2 platform spanning 10+ sources (BigQuery, GA4, Search Console, Sheets, Gmail, YouTube, PostgreSQL, MySQL, Slack) with per-connector refresh schedules (React + FastAPI + Celery Beat) and in-app sync-failure alerts.",
+        "AI / RAG: document Q&A with resilient streaming and multi-format ingestion, plus an LLM agent observability console over the trace pipeline (latency and provider-cost drill-down, cost-regression flags, async CSV/JSON export).",
+        "Growth & DevOps: rebuilt the public marketing site, cut deploy time from ~30 min to under 5 with zero-downtime PM2 cluster reloads, PKCE OAuth and Apple \"Hide My Email\" auth; initialized the companion React Native app.",
+      ],
       skills: [
         "Next.js",
         "FastAPI",
@@ -65,8 +71,13 @@ export default function Experience() {
       website: "https://haulhub.app/",
       location: "Remote (Netherlands)",
       period: "Jun 2025 – May 2026",
-      description:
-        "Built a production Uber-style logistics marketplace spanning 12 service categories and 100+ skilled-labor sub-categories, live on iOS & Android in the Netherlands, localized in 5 languages (EN/NL/AR/DE/UR). Implemented a role-based system across 5+ user types: Admin (with sub-roles), End Users, Service Providers (freelancers & companies), and Company Employees, each with dedicated dashboards and permission scopes. Built the on-demand dispatch service end-to-end (Haversine nearest-provider matching with per-provider search radius, competing provider offers, live driver tracking over per-ride WebSocket rooms, an 11-state request lifecycle with proof-of-delivery and disputes, and Stripe escrow with timing-based refunds) plus the B2B fleet-operations module (drivers, vehicles, trip assignment, and commission/earnings settlement). Deployed Dockerized microservices on Hetzner via Coolify.",
+      description: [
+        "One of the primary engineers on a production Uber-style marketplace, live on iOS & Android in the Netherlands: 12 service categories, 100+ skilled-labor sub-categories, 5 languages (EN/NL/AR/DE/UR) with full RTL.",
+        "On-demand dispatch: Haversine nearest-provider matching with per-provider search radius, competing price and pickup-time offers, live driver tracking over per-ride WebSocket rooms, and an 11-state request lifecycle with proof-of-delivery and disputes.",
+        "Fleet operations (B2B): companies manage drivers and vehicles, assign each trip, and settle every job into company commission and driver earnings.",
+        "Payments & compliance: Stripe escrow with timing-based cancellation refunds, subscriptions and provider payouts, plus Dutch KVK business-registry lookup.",
+        "Architecture: role-based system across 5+ user types with dedicated dashboards; Dockerized microservices on Hetzner via Coolify.",
+      ],
       skills: [
         "Next.js",
         "NestJS",
@@ -86,8 +97,15 @@ export default function Experience() {
       website: "https://dzstore.org/en",
       location: "Algeria · Remote",
       period: "Jun 2025 – Present",
-      description:
-        "Co-founded a Shopify-equivalent multi-tenant e-commerce SaaS and lead nearly all engineering across the stack. Grown in its first 3 months since launch to 1,100+ active stores and 25+ merchants upgraded to paid PRO plans through SEO alone, 100% organic with zero ad spend, plus 6.6M+ DZD in orders processed (GMV) and 99.95% uptime over the last 90 days. Multi-tenant subdomain-per-store routing with Caddy on-demand TLS, a 44-model Prisma/PostgreSQL schema, online card payments (Chargily Pay) with HMAC-verified webhooks, a carrier layer covering 70 Algerian delivery companies behind 5 API adapters, and technical SEO with 15,000+ pages indexed, a Google Merchant Center feed (2,000+ products), and Meta Pixel integration pulling 3,000+ Google Search clicks a month; plus an iOS/Android merchant app (React Native + Expo) with real-time order tracking, push notifications, and stock management; self-hosted on Hetzner via Docker with zero-downtime deploys and 1,000+ automated tests. Cut the database bill by 50%+ by migrating the production Postgres from Neon to Supabase with pg_dump at zero downtime, and retired ~17 GB/month of CDN egress by persisting the image-optimizer cache across deploys. Caught and closed a free-plan revenue leak: free merchants with heavy order volume weren't upgrading because customer contact details bypassed the order cap through 8 server-side channels (order detail API, CSV and carrier exports, email/WhatsApp/push alerts, Google Sheets webhook, customers list); sealed behind a single order-privacy module with payload-scanning regression tests.",
+      description: [
+        "Co-founded a Shopify-equivalent multi-tenant e-commerce SaaS and lead nearly all engineering; in its first 3 months since launch: 1,100+ active stores, 25+ merchants on paid PRO plans through SEO alone, and 6.6M+ DZD in orders processed (GMV), 100% organic with zero ad spend.",
+        "Platform: subdomain-per-store routing with Caddy on-demand TLS, a 44-model Prisma/PostgreSQL schema, online card payments (Chargily Pay) with HMAC-verified webhooks, and a carrier layer covering 70 Algerian delivery companies behind 5 API adapters.",
+        "SEO engine: 15,000+ pages indexed, a Google Merchant Center feed (2,000+ products), and Meta Pixel integration pulling 3,000+ Google Search clicks a month.",
+        "Mobile: iOS/Android merchant app (React Native + Expo) with real-time order tracking, push notifications, and stock management.",
+        "Reliability: self-hosted on Hetzner via Docker with zero-downtime deploys, 99.95% uptime over the last 90 days, and 1,000+ automated tests keeping shipped features from breaking.",
+        "Revenue protection: noticed free merchants with heavy order volume weren't upgrading, traced customer contact details bypassing the order cap through 8 server-side channels, and sealed every leak behind a single order-privacy module with payload-scanning regression tests.",
+        "Cost engineering: migrated the production Postgres from Neon to Supabase (pg_dump, zero downtime), cutting the database bill by 50%+, and retired ~17 GB/month of CDN egress by persisting the image-optimizer cache.",
+      ],
       skills: [
         "Next.js",
         "React Native (Expo)",
@@ -123,8 +141,11 @@ export default function Experience() {
       company: "Fiverr",
       website: "https://www.fiverr.com/mohamedouterbah?public_mode=true",
       period: "Jun 2023 – Jun 2025",
-      description:
-        "Delivered 6+ full-stack production applications for clients in the UK, USA, Netherlands, Japan, and Saudi Arabia, including Cribbix, a Rightmove-style real estate platform with tenant dashboards, interactive map search, Stripe subscriptions, and Redis caching. Implemented new features, resolved complex frontend/backend production bugs, improved system performance, and managed VPS deployments for international clients.",
+      description: [
+        "Delivered 6+ full-stack production applications for clients in the UK, USA, Netherlands, Japan, and Saudi Arabia, rated 5/5 on every project.",
+        "Cribbix (UK): Rightmove-style real estate platform with tenant dashboards, interactive map search, Stripe subscriptions, and Redis caching.",
+        "Owned features, production bug fixes, performance work, and independent VPS deployments end to end.",
+      ],
       skills: [
         "React",
         "Next.js",
@@ -144,8 +165,9 @@ export default function Experience() {
       company: "Exclusive Labs",
       location: "Remote",
       period: "Sep – Dec 2024",
-      description:
+      description: [
         "Built a course management system using Next.js and Express with role-based authentication for students, instructors, and admins.",
+      ],
       skills: [
         "Next.js",
         "Express.js",
@@ -290,8 +312,8 @@ export default function Experience() {
             Professional Experience
           </h2>
           <p className="text-muted-foreground">
-            My professional journey has equipped me with practical experience
-            and valuable skills in software development.
+            Full-time roles, contracts, and founder work, with what shipped in
+            each.
           </p>
         </motion.div>
 
@@ -388,9 +410,32 @@ export default function Experience() {
                         </div>
                       </div>
                     )}
-                    <p className="text-muted-foreground text-sm">
-                      {job.description}
-                    </p>
+                    <ul className="text-muted-foreground text-sm space-y-1.5">
+                      {job.description.map((item, i) => {
+                        const sep = item.indexOf(": ");
+                        const hasLabel = sep > 0 && sep < 30;
+                        return (
+                          <li key={i} className="flex gap-2">
+                            <span
+                              className="mt-[0.45rem] h-1.5 w-1.5 rounded-full bg-primary/60 shrink-0"
+                              aria-hidden
+                            />
+                            <span>
+                              {hasLabel ? (
+                                <>
+                                  <span className="font-medium text-foreground">
+                                    {item.slice(0, sep)}:
+                                  </span>
+                                  {item.slice(sep + 1)}
+                                </>
+                              ) : (
+                                item
+                              )}
+                            </span>
+                          </li>
+                        );
+                      })}
+                    </ul>
                     <div className="flex flex-wrap gap-1.5 sm:gap-2 pt-2">
                       {job.skills.map((skill, i) => (
                         <Badge
