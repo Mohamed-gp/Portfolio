@@ -45,7 +45,7 @@ const stats = [
   },
   {
     icon: <Activity className="h-6 w-6 text-emerald-500" />,
-    value: "99.8%",
+    value: "99.95%",
     label: "Uptime",
     description: "Infra real users depend on, self-hosted",
   },
