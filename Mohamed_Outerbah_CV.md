@@ -53,7 +53,8 @@ Full-Stack Engineer with 3+ years shipping production web & mobile platforms end
 
 **Jun 2025 - Present**
 
-- **Traction:** Reached 1,100+ active stores, 2,500+ products, 650+ orders, and 6.6M+ DZD in orders processed (GMV) in the 3 months since the May 2026 launch, on 47,000+ visitors and 166,000+ pageviews (now 1,400+ visitors a day), still adding ~170 new stores and 200+ orders a week with new stores up 88% and orders up 270% month over month, 100% organic with zero ad spend, and **25+ merchants upgraded to paid PRO plans, acquired through SEO alone**.
+- **Traction:** Reached 1,100+ active stores, 2,500+ products, 650+ orders, and 6.6M+ DZD in orders processed (GMV) in the 3 months since the May 2026 launch, 100% organic with zero ad spend, and **25+ merchants upgraded to paid PRO plans, acquired through SEO alone**.
+- **Growth rate:** Still adding ~170 new stores and 200+ orders a week, with new stores up 88% and orders up 270% month over month, on 47,000+ visitors and 166,000+ pageviews (now 1,400+ visitors a day).
 - **Quality signals:** 4.7/5 average across 84 in-app merchant survey responses; 99.95% uptime over the last 90 days with zero recorded incidents (public status page: [status.dzstore.org](https://status.dzstore.org)).
 - **Organic SEO engine:** Owned technical SEO end-to-end: 15,000+ pages indexed, 600+ valid product snippets & merchant listings (Google Shopping rich results), a Google Merchant Center feed with 2,000+ products, Meta Pixel integration, and breadcrumb/FAQ structured data, now pulling 3,000+ Google Search clicks and 100,000+ impressions a month, and effectively every merchant signup (search out-refers social 12:1 on the signup funnel).
 - **Merchant mobile app:** Launched an iOS/Android app (React Native + Expo) for store owners: real-time order tracking, push notifications for new orders, stock management, and a multilingual UI with Arabic RTL.

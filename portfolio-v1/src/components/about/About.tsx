@@ -130,8 +130,10 @@ export default function About() {
                 real-time collaboration over WebSockets
               </strong>
               , custom drag-and-drop dashboard builders, RAG document
-              intelligence, Stripe payments, and self-managed VPS deployments. I
-              co-founded{" "}
+              intelligence, Stripe payments, and self-managed VPS deployments.
+            </p>
+            <p className="text-muted-foreground">
+              I co-founded{" "}
               <a
                 href="https://dzstore.org/en"
                 target="_blank"

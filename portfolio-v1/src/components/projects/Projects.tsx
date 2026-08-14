@@ -66,8 +66,11 @@ export default function Projects() {
       type: "Web Application",
       url: "https://analyticsdepot.com/",
       image: "/projects/analytics-depot/hero-updated-1.png",
-      description:
-        "Frontend lead on a live AI analytics SaaS, owning every user-facing surface: a drag-and-drop dashboard builder with multiple chart types, shareable reports (password-protected + embed mode) with one-click PDF/PowerPoint export, and an OAuth2 connector platform spanning 10+ data sources (BigQuery, GA4, Search Console, Sheets, Gmail, YouTube, Google Play, PostgreSQL, MySQL, Slack). Shipped RAG document Q&A, an NL-to-SQL query interface, per-connector refresh scheduling (React + FastAPI + Celery), and the rebuilt public marketing site. Hardened auth with PKCE OAuth and Apple \"Hide My Email\"; cut deploy time from ~30 min to under 5 with zero-downtime PM2 cluster reloads. Built the LLM agent observability console on top of the trace pipeline: run volume and reliability trends, per-run latency and provider-cost drill-down into spans, cost-regression flags, and async CSV/JSON export of the query log.",
+      description: [
+        "Frontend lead on a live AI analytics SaaS, owning every user-facing surface: a drag-and-drop dashboard builder with multiple chart types, shareable reports (password-protected + embed mode) with one-click PDF/PowerPoint export, and an OAuth2 connector platform spanning 10+ data sources (BigQuery, GA4, Search Console, Sheets, Gmail, YouTube, Google Play, PostgreSQL, MySQL, Slack).",
+        "Shipped RAG document Q&A, an NL-to-SQL query interface, per-connector refresh scheduling (React + FastAPI + Celery), and the LLM agent observability console on top of the trace pipeline: run volume and reliability trends, per-run latency and provider-cost drill-down into spans, cost-regression flags, and async CSV/JSON export of the query log.",
+        "Rebuilt the public marketing site, hardened auth with PKCE OAuth and Apple \"Hide My Email\", and cut deploy time from ~30 min to under 5 with zero-downtime PM2 cluster reloads.",
+      ],
       features: [
         "Ask questions in plain English, get SQL-backed answers and charts",
         "Drag-and-drop dashboards with shareable, embeddable reports",
@@ -145,8 +148,10 @@ export default function Projects() {
       type: ["Web Application", "Mobile Application"],
       url: "https://haulhub.app/",
       image: "/projects/haulhub/hero-updated-1.png",
-      description:
-        "One of the primary engineers across backend, mobile & web on a production Uber-style logistics marketplace, live on iOS & Android in the Netherlands across 12 service categories and 100+ skilled-labor sub-categories. Built the on-demand dispatch service (Haversine nearest-provider matching, competing provider offers, live driver tracking over per-ride WebSocket rooms, an 11-state request lifecycle) and the B2B fleet-operations module end-to-end, plus Stripe payments (on-demand, subscriptions, provider payouts) and Dutch KVK business-registry lookup. Shipped with full RTL i18n in 5 languages (EN/NL/AR/DE/UR).",
+      description: [
+        "One of the primary engineers across backend, mobile & web on a production Uber-style logistics marketplace, live on iOS & Android in the Netherlands across 12 service categories and 100+ skilled-labor sub-categories, with full RTL i18n in 5 languages (EN/NL/AR/DE/UR).",
+        "Built the on-demand dispatch service (Haversine nearest-provider matching, competing provider offers, live driver tracking over per-ride WebSocket rooms, an 11-state request lifecycle) and the B2B fleet-operations module end-to-end, plus Stripe payments (on-demand, subscriptions, provider payouts) and Dutch KVK business-registry lookup.",
+      ],
       features: [
         "Post a job, get competing price and pickup-time offers in seconds",
         "Live driver tracking, proof of delivery, and dispute handling",
@@ -175,8 +180,10 @@ export default function Projects() {
       type: "Web Application",
       url: "https://fibble.io/",
       image: "/projects/fibble/hero-updated-1.png",
-      description:
-        "Co-founded a real-time multiplayer bluffing trivia game playable on the web and inside Discord as an embedded Activity. 3,000+ players across 80+ countries and 2,200+ games played in its first 3 months live, fully organic, zero ads. Premium via Paddle checkout on web plus native Discord SKU subscriptions in-app, user-generated question packs, media questions (image/GIF/audio), bots, friends & DMs with moderation, and a full admin panel; Dockerized on Hetzner behind Caddy, with GitHub Actions CI/CD, health checks, and automatic rollback.",
+      description: [
+        "Co-founded a real-time multiplayer bluffing trivia game playable on the web and inside Discord as an embedded Activity. 3,000+ players across 80+ countries and 2,200+ games played in its first 3 months live, fully organic, zero ads.",
+        "Premium via Paddle checkout on web plus native Discord SKU subscriptions in-app, user-generated question packs, media questions (image/GIF/audio), bots, friends & DMs with moderation, and a full admin panel; Dockerized on Hetzner behind Caddy, with GitHub Actions CI/CD, health checks, and automatic rollback.",
+      ],
       features: [
         "Bluff-based trivia: write fake answers, fool your friends, 2-8 players",
         "Plays in the browser or inside Discord, nothing to install",
