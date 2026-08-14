@@ -412,6 +412,16 @@
             via Docker with zero-downtime deploys and Upstash Redis.
           </li>
           <li>
+            <b>Revenue protection:</b> Noticed free merchants with heavy order
+            volume were not upgrading, audited the free-plan order cap end to
+            end, and found customer contact details bypassing it through 8
+            server-side channels (order detail API, CSV and carrier exports,
+            email, WhatsApp and push alerts, Google Sheets webhook, customers
+            list); closed every leak behind a single order-privacy module,
+            pinned by regression tests that scan whole payloads for raw
+            customer data.
+          </li>
+          <li>
             <b>Cost engineering:</b> Migrated the production PostgreSQL from
             Neon to Supabase with pg_dump/pg_restore at zero downtime, and made
             the image-optimizer cache survive deploys, cutting the database
