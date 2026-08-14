@@ -107,7 +107,7 @@ export default function Projects() {
         { value: "1,100+", label: "Active stores" },
         { value: "25+", label: "Paid PRO merchants" },
         { value: "6.6M+ DZD", label: "Orders processed (GMV)" },
-        { value: "4.7/5", label: "73 merchant reviews" },
+        { value: "4.7/5", label: "84 merchant reviews" },
         { value: "99.8%", label: "Uptime, last 90 days" },
         { value: "166K+", label: "Pageviews, 3 months" },
       ],
