@@ -201,7 +201,6 @@ export default function Skills() {
 
       <div className="container px-4 sm:px-6 relative">
         <motion.div
-          style={{ willChange: "transform, opacity" }}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -272,14 +271,12 @@ export default function Skills() {
         {mounted && (
           <AnimatePresence mode="wait">
             <motion.div
-              style={{ willChange: "transform, opacity" }}
               className="flex flex-wrap justify-center gap-4 sm:gap-6"
               layout
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
             >
               {filteredSkills.map((skill, ind) => (
                 <motion.div
-                  style={{ willChange: "transform, opacity" }}
                   key={ind + skill?.filename}
                   className="flex flex-col gap-2 items-center justify-center group"
                   initial={{ opacity: 0, scale: 0.8 }}
@@ -300,21 +297,18 @@ export default function Skills() {
                       )}
                     ></div>
 
-                    <motion.div
-                      style={{ willChange: "transform, opacity" }}
+                    <div
                       className={cn(
                         "relative flex items-center justify-center",
                         "w-14 h-14 sm:w-16 sm:h-16 md:w-18 md:h-18",
                         "rounded-full",
-                        "transition-all duration-300",
+                        "transition-[transform,border-color] duration-200 ease-out will-change-transform",
+                        "group-hover:scale-110 active:scale-95",
                         "bg-gray-800/90 dark:bg-gray-800" /* Dark background for better contrast in BOTH modes */,
                         "border border-gray-700/50 dark:border-gray-700/80" /* Dark border for light mode too */,
                         "shadow-md dark:shadow-md",
-                        "group-hover:shadow-lg dark:group-hover:shadow-lg",
                         "group-hover:border-primary/30 dark:group-hover:border-primary/30"
                       )}
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
                     >
                       {/* Light reflection */}
                       <div className="absolute inset-0 rounded-full bg-gradient-to-b from-white/20 to-transparent dark:from-white/10 dark:to-transparent opacity-70"></div>
@@ -325,7 +319,7 @@ export default function Skills() {
                           loading="lazy"
                           className={cn(
                             "w-full h-full",
-                            "object-contain transition-all duration-300 group-hover:scale-110",
+                            "object-contain",
                             "drop-shadow-[0_2px_2px_rgba(255,255,255,0.15)]" /* Light drop shadow for dark backgrounds */,
                             "brightness-[1.15] contrast-[1.15]" /* Increased brightness and contrast */
                           )}
@@ -336,12 +330,11 @@ export default function Skills() {
                           quality={90}
                         />
                       </div>
-                    </motion.div>
+                    </div>
                   </div>
 
                   {/* Skill name with better visibility */}
                   <motion.p
-                    style={{ willChange: "transform, opacity" }}
                     className="font-medium text-foreground dark:text-gray-200 text-xs sm:text-sm transition-colors"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
