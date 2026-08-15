@@ -88,7 +88,7 @@ export default function Projects() {
         },
       ],
       description: [
-        "Frontend lead on a live AI analytics SaaS, owning every user-facing surface: a drag-and-drop dashboard builder with multiple chart types, shareable reports (password-protected + embed mode) with one-click PDF/PowerPoint export, and an OAuth2 connector platform spanning 10+ data sources (BigQuery, GA4, Search Console, Sheets, Gmail, YouTube, Google Play, PostgreSQL, MySQL, Slack).",
+        "Frontend lead on a live AI analytics SaaS, owning every user-facing surface: a drag-and-drop dashboard builder, shareable password-protected reports with one-click PDF/PowerPoint export, and an OAuth2 connector platform spanning 10+ data sources (BigQuery, GA4, Sheets, Slack, and more).",
         "Shipped RAG document Q&A, an NL-to-SQL query interface, per-connector refresh scheduling (React + FastAPI + Celery), and the LLM agent observability console on top of the trace pipeline: run volume and reliability trends, per-run latency and provider-cost drill-down into spans, cost-regression flags, and async CSV/JSON export of the query log.",
         "Rebuilt the public marketing site, hardened auth with PKCE OAuth and Apple \"Hide My Email\", and cut deploy time from ~30 min to under 5 with zero-downtime PM2 cluster reloads.",
       ],
@@ -155,10 +155,10 @@ export default function Projects() {
         },
       ],
       description: [
-        "In its first 3 months since launch: 1,100+ active stores, 2,500+ products, 650+ orders, and 25+ merchants upgraded to paid PRO plans through SEO alone, adding ~170 new stores and 200+ orders a week with new stores up 88% and orders up 270% month over month, 100% organic, zero ad spend, and 6.6M+ DZD in orders processed (GMV) on 47,000+ visitors and 166,000+ pageviews, now 1,400+ visitors a day. Merchants rate it 4.7/5 in the in-app survey.",
-        "Co-founded this multi-tenant Shopify-equivalent SaaS and lead nearly all engineering: subdomain-per-store routing with Caddy on-demand TLS, a 44-model Prisma/PostgreSQL schema, a drag-and-drop storefront builder, per-region shipping plus a carrier layer covering 70 Algerian delivery companies behind 5 API adapters, abandoned-cart recovery, an affiliate system, AI product descriptions, and an iOS/Android merchant app (React Native + Expo) with real-time order tracking, push notifications for new orders, and stock management; self-hosted on Hetzner via Docker with 99.95% uptime over the last 90 days and 1,000+ automated tests keeping shipped features from breaking.",
-        "Caught a revenue leak by noticing free merchants with heavy order volume weren't upgrading: customer contact details bypassed the free-plan order cap through 8 server-side channels (order detail API, CSV and carrier exports, email/WhatsApp/push alerts, Google Sheets webhook, customers list) despite correct frontend gating. Sealed every path behind a single order-privacy module, locked in by regression tests that scan whole payloads for raw customer data.",
-        "Technical SEO drives acquisition: 15,000+ pages indexed with 600+ valid Google Shopping product snippets, a Google Merchant Center feed with 2,000+ products, and Meta Pixel integration, now pulling 3,000+ Google Search clicks and 100,000+ impressions a month; search out-refers social 12:1 on the signup funnel. Cut running costs by moving the production Postgres off Neon to Supabase (pg_dump, zero downtime) and persisting the image-optimizer cache across deploys, cutting the database bill by 50%+ and retiring ~17 GB/month of CDN egress.",
+        "1,100+ active stores, 650+ orders, and 25+ paid PRO merchants in its first 3 months since launch, adding ~170 stores a week with orders up 270% month over month. 100% organic, zero ad spend, 6.6M+ DZD in orders processed (GMV), rated 4.7/5 by merchants.",
+        "Co-founded this multi-tenant Shopify-equivalent SaaS and lead nearly all engineering: subdomain-per-store routing with Caddy on-demand TLS, a 44-model Prisma/PostgreSQL schema, a carrier layer covering 70 Algerian delivery companies behind 5 API adapters, and an iOS/Android merchant app (React Native + Expo); self-hosted on Hetzner via Docker with 99.95% uptime and 1,000+ automated tests keeping shipped features from breaking.",
+        "Caught a revenue leak: customer contact details bypassed the free-plan order cap through 8 server-side channels despite correct frontend gating. Sealed every path behind a single order-privacy module, locked in by payload-scanning regression tests.",
+        "Technical SEO drives acquisition: 15,000+ pages indexed, 600+ Google Shopping product snippets, 3,000+ Search clicks a month; search out-refers social 12:1 on the signup funnel. Cut the database bill by 50%+ by moving Postgres off Neon to Supabase at zero downtime.",
       ],
       metrics: [
         { value: "1,100+", label: "Active stores" },
@@ -201,7 +201,7 @@ export default function Projects() {
       client: "HaulHub",
       type: ["Web Application", "Mobile Application"],
       url: "https://haulhub.app/",
-      image: "/projects/haulhub/hero-updated-1.png",
+      image: "/projects/haulhub/hero-v2.webp",
       phoneShotsTitle: "The mobile app",
       phoneShots: [
         {
