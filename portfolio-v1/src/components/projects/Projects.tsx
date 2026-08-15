@@ -35,6 +35,7 @@ interface Project {
   github?: string;
   video?: string;
   image: string;
+  gallery?: { src: string; caption: string }[];
   description: string | string[];
   metrics?: { value: string; label: string }[];
   statusPage?: string;
@@ -65,7 +66,24 @@ export default function Projects() {
       company: "Analytics Depot",
       type: "Web Application",
       url: "https://analyticsdepot.com/",
-      image: "/projects/analytics-depot/hero-updated-1.png",
+      image: "/projects/analytics-depot/hero-v2.webp",
+      gallery: [
+        {
+          src: "/projects/analytics-depot/app-chat-analysis.webp",
+          caption:
+            "The analyst chat: plain-English questions become interactive Plotly charts, with the Data Explorer profiling every column of the uploaded dataset.",
+        },
+        {
+          src: "/projects/analytics-depot/app-auto-dashboard.webp",
+          caption:
+            "A dashboard auto-generated from an uploaded CSV: KPI cards and charts with zero configuration.",
+        },
+        {
+          src: "/projects/analytics-depot/app-spreadsheet-view.webp",
+          caption:
+            "The built-in spreadsheet view over 9,000+ rows, with an AI formula bar and CSV/Excel export.",
+        },
+      ],
       description: [
         "Frontend lead on a live AI analytics SaaS, owning every user-facing surface: a drag-and-drop dashboard builder with multiple chart types, shareable reports (password-protected + embed mode) with one-click PDF/PowerPoint export, and an OAuth2 connector platform spanning 10+ data sources (BigQuery, GA4, Search Console, Sheets, Gmail, YouTube, Google Play, PostgreSQL, MySQL, Slack).",
         "Shipped RAG document Q&A, an NL-to-SQL query interface, per-connector refresh scheduling (React + FastAPI + Celery), and the LLM agent observability console on top of the trace pipeline: run volume and reliability trends, per-run latency and provider-cost drill-down into spans, cost-regression flags, and async CSV/JSON export of the query log.",
@@ -99,7 +117,7 @@ export default function Projects() {
       flag: "🇩🇿",
       type: "Web Application",
       url: "https://dzstore.org/en",
-      image: "/projects/dzstore/hero-updated-1.png",
+      image: "/projects/dzstore/hero-v2.webp",
       description: [
         "In its first 3 months since launch: 1,100+ active stores, 2,500+ products, 650+ orders, and 25+ merchants upgraded to paid PRO plans through SEO alone, adding ~170 new stores and 200+ orders a week with new stores up 88% and orders up 270% month over month, 100% organic, zero ad spend, and 6.6M+ DZD in orders processed (GMV) on 47,000+ visitors and 166,000+ pageviews, now 1,400+ visitors a day. Merchants rate it 4.7/5 in the in-app survey.",
         "Co-founded this multi-tenant Shopify-equivalent SaaS and lead nearly all engineering: subdomain-per-store routing with Caddy on-demand TLS, a 44-model Prisma/PostgreSQL schema, a drag-and-drop storefront builder, per-region shipping plus a carrier layer covering 70 Algerian delivery companies behind 5 API adapters, abandoned-cart recovery, an affiliate system, AI product descriptions, and an iOS/Android merchant app (React Native + Expo) with real-time order tracking, push notifications for new orders, and stock management; self-hosted on Hetzner via Docker with 99.95% uptime over the last 90 days and 1,000+ automated tests keeping shipped features from breaking.",
@@ -179,7 +197,7 @@ export default function Projects() {
       flag: "🌍",
       type: "Web Application",
       url: "https://fibble.io/",
-      image: "/projects/fibble/hero-updated-1.png",
+      image: "/projects/fibble/hero-v2.webp",
       description: [
         "Co-founded a real-time multiplayer bluffing trivia game playable on the web and inside Discord as an embedded Activity. 3,000+ players across 80+ countries and 2,200+ games played in its first 3 months live, fully organic, zero ads.",
         "Premium via Paddle checkout on web plus native Discord SKU subscriptions in-app, user-generated question packs, media questions (image/GIF/audio), bots, friends & DMs with moderation, and a full admin panel; Dockerized on Hetzner behind Caddy, with GitHub Actions CI/CD, health checks, and automatic rollback.",
@@ -367,7 +385,7 @@ export default function Projects() {
                   selectedProject.image && (
                     <div
                       className="relative w-full rounded-lg overflow-hidden"
-                      style={{ aspectRatio: "16/9" }}
+                      style={{ aspectRatio: "2/1" }}
                     >
                       <Image
                         src={selectedProject.image}
@@ -470,6 +488,37 @@ export default function Projects() {
                     ))}
                   </div>
                 </div>
+
+                {/* In-app screenshots */}
+                {selectedProject.gallery && (
+                  <div>
+                    <h3 className="font-semibold text-lg mb-3">
+                      Inside the app
+                    </h3>
+                    <div className="space-y-5">
+                      {selectedProject.gallery.map((shot) => (
+                        <figure key={shot.src}>
+                          <div
+                            className="relative w-full rounded-lg overflow-hidden border border-primary/10"
+                            style={{ aspectRatio: "1.96" }}
+                          >
+                            <Image
+                              src={shot.src}
+                              alt={shot.caption}
+                              fill
+                              sizes="(max-width: 768px) 100vw, 700px"
+                              quality={90}
+                              className="object-cover"
+                            />
+                          </div>
+                          <figcaption className="text-xs text-muted-foreground mt-1.5">
+                            {shot.caption}
+                          </figcaption>
+                        </figure>
+                      ))}
+                    </div>
+                  </div>
+                )}
 
                 {/* Action Buttons */}
                 <div className="pt-2 flex flex-wrap gap-3">
