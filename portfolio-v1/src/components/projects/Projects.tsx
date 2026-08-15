@@ -36,6 +36,9 @@ interface Project {
   video?: string;
   image: string;
   gallery?: { src: string; caption: string }[];
+  galleryTitle?: string;
+  phoneShots?: { src: string; caption: string }[];
+  phoneShotsTitle?: string;
   description: string | string[];
   metrics?: { value: string; label: string }[];
   statusPage?: string;
@@ -118,6 +121,39 @@ export default function Projects() {
       type: "Web Application",
       url: "https://dzstore.org/en",
       image: "/projects/dzstore/hero-v2.webp",
+      galleryTitle: "Inside the merchant admin",
+      gallery: [
+        {
+          src: "/projects/dzstore/admin-analytics.webp",
+          caption:
+            "Merchant analytics: store traffic over time, devices, top pages, and traffic sources.",
+        },
+        {
+          src: "/projects/dzstore/admin-themes.webp",
+          caption:
+            "The theme picker: merchants restyle their storefront in one click, with full Arabic RTL previews.",
+        },
+        {
+          src: "/projects/dzstore/admin-variants.webp",
+          caption:
+            "Product variant editor: per-variant pricing, SKUs, and images.",
+        },
+      ],
+      phoneShotsTitle: "The merchant app (React Native + Expo)",
+      phoneShots: [
+        {
+          src: "/projects/dzstore/app-dashboard.webp",
+          caption: "Today's orders and monthly revenue at a glance",
+        },
+        {
+          src: "/projects/dzstore/app-orders.webp",
+          caption: "Orders with status filters, trilingual UI (EN/FR/AR)",
+        },
+        {
+          src: "/projects/dzstore/app-order-detail.webp",
+          caption: "Call the customer or send to a carrier in one tap",
+        },
+      ],
       description: [
         "In its first 3 months since launch: 1,100+ active stores, 2,500+ products, 650+ orders, and 25+ merchants upgraded to paid PRO plans through SEO alone, adding ~170 new stores and 200+ orders a week with new stores up 88% and orders up 270% month over month, 100% organic, zero ad spend, and 6.6M+ DZD in orders processed (GMV) on 47,000+ visitors and 166,000+ pageviews, now 1,400+ visitors a day. Merchants rate it 4.7/5 in the in-app survey.",
         "Co-founded this multi-tenant Shopify-equivalent SaaS and lead nearly all engineering: subdomain-per-store routing with Caddy on-demand TLS, a 44-model Prisma/PostgreSQL schema, a drag-and-drop storefront builder, per-region shipping plus a carrier layer covering 70 Algerian delivery companies behind 5 API adapters, abandoned-cart recovery, an affiliate system, AI product descriptions, and an iOS/Android merchant app (React Native + Expo) with real-time order tracking, push notifications for new orders, and stock management; self-hosted on Hetzner via Docker with 99.95% uptime over the last 90 days and 1,000+ automated tests keeping shipped features from breaking.",
@@ -166,6 +202,21 @@ export default function Projects() {
       type: ["Web Application", "Mobile Application"],
       url: "https://haulhub.app/",
       image: "/projects/haulhub/hero-updated-1.png",
+      phoneShotsTitle: "The mobile app",
+      phoneShots: [
+        {
+          src: "/projects/haulhub/store-choose-role.webp",
+          caption: "Two-sided marketplace: book services or provide them",
+        },
+        {
+          src: "/projects/haulhub/store-book-service.webp",
+          caption: "Booking a truck service in seconds",
+        },
+        {
+          src: "/projects/haulhub/store-track-drivers.webp",
+          caption: "Live driver offers with price and ETA",
+        },
+      ],
       description: [
         "One of the primary engineers across backend, mobile & web on a production Uber-style logistics marketplace, live on iOS & Android in the Netherlands across 12 service categories and 100+ skilled-labor sub-categories, with full RTL i18n in 5 languages (EN/NL/AR/DE/UR).",
         "Built the on-demand dispatch service (Haversine nearest-provider matching, competing provider offers, live driver tracking over per-ride WebSocket rooms, an 11-state request lifecycle) and the B2B fleet-operations module end-to-end, plus Stripe payments (on-demand, subscriptions, provider payouts) and Dutch KVK business-registry lookup.",
@@ -198,6 +249,24 @@ export default function Projects() {
       type: "Web Application",
       url: "https://fibble.io/",
       image: "/projects/fibble/hero-v2.webp",
+      galleryTitle: "Inside the game",
+      gallery: [
+        {
+          src: "/projects/fibble/game-truth-reveal.webp",
+          caption:
+            "End of a round: the real answer revealed among the players' fakes, points for spotting it and for fooling everyone else.",
+        },
+        {
+          src: "/projects/fibble/room-presets.webp",
+          caption:
+            "Room setup: game modes from Classic to Elimination, 2-8 players plus bots.",
+        },
+        {
+          src: "/projects/fibble/room-categories.webp",
+          caption:
+            "The deck picker: free and premium categories, from flags to Valorant.",
+        },
+      ],
       description: [
         "Co-founded a real-time multiplayer bluffing trivia game playable on the web and inside Discord as an embedded Activity. 3,000+ players across 80+ countries and 2,200+ games played in its first 3 months live, fully organic, zero ads.",
         "Premium via Paddle checkout on web plus native Discord SKU subscriptions in-app, user-generated question packs, media questions (image/GIF/audio), bots, friends & DMs with moderation, and a full admin panel; Dockerized on Hetzner behind Caddy, with GitHub Actions CI/CD, health checks, and automatic rollback.",
@@ -230,7 +299,23 @@ export default function Projects() {
       client: "Cribbix",
       type: "Web Application",
       url: "https://cribbix.com/",
-      image: "/projects/cribbix/hero-updated-1.png",
+      image: "/projects/cribbix/hero-v2.webp",
+      galleryTitle: "Inside the platform",
+      gallery: [
+        {
+          src: "/projects/cribbix/property-detail.webp",
+          caption: "Admin property review: approve or reject new listings.",
+        },
+        {
+          src: "/projects/cribbix/admin-dashboard.webp",
+          caption: "The admin dashboard: platform stats and pending approvals.",
+        },
+        {
+          src: "/projects/cribbix/agent-analytics.webp",
+          caption:
+            "Agent analytics: per-property views, clicks, and performance.",
+        },
+      ],
       description:
         "Built a Rightmove-style property rental & sales platform (V1 & V2): interactive map search with full filtering, client/agency/admin dashboards, renter profiles, real-time chat, AI-generated property descriptions, and Stripe tenancy payments. Added Redis caching, rate limiting, and reCAPTCHA v3; migrated to Next.js 15 + React 18 and ran full VPS deployment on DigitalOcean independently.",
       features: [
@@ -493,7 +578,7 @@ export default function Projects() {
                 {selectedProject.gallery && (
                   <div>
                     <h3 className="font-semibold text-lg mb-3">
-                      Inside the app
+                      {selectedProject.galleryTitle ?? "Inside the app"}
                     </h3>
                     <div className="space-y-5">
                       {selectedProject.gallery.map((shot) => (
@@ -507,6 +592,37 @@ export default function Projects() {
                               alt={shot.caption}
                               fill
                               sizes="(max-width: 768px) 100vw, 700px"
+                              quality={90}
+                              className="object-cover"
+                            />
+                          </div>
+                          <figcaption className="text-xs text-muted-foreground mt-1.5">
+                            {shot.caption}
+                          </figcaption>
+                        </figure>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Mobile app screenshots */}
+                {selectedProject.phoneShots && (
+                  <div>
+                    <h3 className="font-semibold text-lg mb-3">
+                      {selectedProject.phoneShotsTitle ?? "The mobile app"}
+                    </h3>
+                    <div className="grid grid-cols-3 gap-2 sm:gap-3">
+                      {selectedProject.phoneShots.map((shot) => (
+                        <figure key={shot.src}>
+                          <div
+                            className="relative w-full rounded-lg overflow-hidden border border-primary/10 bg-muted"
+                            style={{ aspectRatio: "0.455" }}
+                          >
+                            <Image
+                              src={shot.src}
+                              alt={shot.caption}
+                              fill
+                              sizes="(max-width: 768px) 33vw, 230px"
                               quality={90}
                               className="object-cover"
                             />
