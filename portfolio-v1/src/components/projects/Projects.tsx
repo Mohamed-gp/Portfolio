@@ -142,16 +142,40 @@ export default function Projects() {
       phoneShotsTitle: "The merchant app (React Native + Expo)",
       phoneShots: [
         {
-          src: "/projects/dzstore/app-dashboard.webp",
-          caption: "Today's orders and monthly revenue at a glance",
+          src: "/projects/dzstore/app-01-dashboard.webp",
+          caption: "Dashboard: today's orders, pending count, month revenue",
         },
         {
-          src: "/projects/dzstore/app-orders.webp",
-          caption: "Orders with status filters, trilingual UI (EN/FR/AR)",
+          src: "/projects/dzstore/app-02-orders.webp",
+          caption: "Orders with status filters and per-wilaya delivery",
         },
         {
-          src: "/projects/dzstore/app-order-detail.webp",
+          src: "/projects/dzstore/app-03-order-detail.webp",
           caption: "Call the customer or send to a carrier in one tap",
+        },
+        {
+          src: "/projects/dzstore/app-04-products.webp",
+          caption: "Catalogue with live stock and compare-at pricing",
+        },
+        {
+          src: "/projects/dzstore/app-05-product-edit.webp",
+          caption: "Edit price, stock, and visibility from the phone",
+        },
+        {
+          src: "/projects/dzstore/app-06-abandoned-carts.webp",
+          caption: "Abandoned carts with recovery status, one tap to call",
+        },
+        {
+          src: "/projects/dzstore/app-07-customers.webp",
+          caption: "Customer book with VIP flags and lifetime spend",
+        },
+        {
+          src: "/projects/dzstore/app-08-notifications.webp",
+          caption: "Push feed: new orders, low stock, recovered carts",
+        },
+        {
+          src: "/projects/dzstore/app-09-settings.webp",
+          caption: "Trilingual by design: Arabic (RTL), French, English",
         },
       ],
       description: [
