@@ -71,42 +71,56 @@ export default function Projects() {
       type: "Web Application",
       url: "https://analyticsdepot.com/",
       image: "/projects/analytics-depot/hero-v2.webp",
-      galleryTitle: "The product flow: connect, ask, answer, share",
+      galleryTitle: "The product, end to end",
       gallery: [
         {
-          src: "/projects/analytics-depot/site-02-how-it-works.webp",
+          src: "/projects/analytics-depot/app-01-home-workspaces.webp",
           caption:
-            "1. The promise: connect a source, ask in plain English, get instant visuals. Every connector runs on the OAuth2 platform I own.",
+            "1. Sign in and pick a workspace. Each one (Real Estate, Finance, Marketing, E-commerce, Management) primes the agent with its own domain context.",
+        },
+        {
+          src: "/projects/analytics-depot/app-04-integrations.webp",
+          caption:
+            "2. Connect a source: the OAuth2 connector platform I built end to end, with per-connector sync scheduling, field mapping, and live instance/error counts.",
         },
         {
           src: "/projects/analytics-depot/app-spreadsheet-view.webp",
           caption:
-            "2. The data lands: a built-in spreadsheet over 9,000+ rows with an AI formula bar and CSV/Excel export. Identifier columns blurred here.",
+            "3. The data lands in a built-in spreadsheet over 9,000+ rows, with an AI formula bar and CSV/Excel export. Identifier columns blurred here.",
+        },
+        {
+          src: "/projects/analytics-depot/app-02-agent-console.webp",
+          caption:
+            "4. The agent console: conversation history per workspace, suggested queries, and a live rail showing worker status, data sync, and supported file types.",
+        },
+        {
+          src: "/projects/analytics-depot/app-03-live-analysis.webp",
+          caption:
+            "5. A real answer: the agent researches, cites its sources inline, renders the breakdown, and offers follow-up skills (what drove this, forecast, find outliers).",
+        },
+        {
+          src: "/projects/analytics-depot/app-05-auto-dashboard-live.webp",
+          caption:
+            "6. The dashboard builds itself from the file: KPI tiles with period-over-period deltas plus generated time-series and breakdown charts, all editable widgets.",
         },
         {
           src: "/projects/analytics-depot/app-chat-analysis.webp",
           caption:
-            "3. Ask it anything: plain-English questions become interactive Plotly charts, with the Data Explorer profiling every column.",
-        },
-        {
-          src: "/projects/analytics-depot/app-auto-dashboard.webp",
-          caption:
-            "4. The dashboard builds itself: KPI cards and charts generated from the uploaded file with zero configuration.",
+            "7. Charts are interactive Plotly, with the Data Explorer profiling every column of the dataset alongside the answer.",
         },
         {
           src: "/projects/analytics-depot/site-04-collaboration.webp",
           caption:
-            "5. Share it: role-based access and always-current report links, on top of the WebSocket presence and collaboration layer.",
+            "8. Share it: role-based access and always-current report links, on the WebSocket presence and collaboration layer.",
         },
         {
           src: "/projects/analytics-depot/site-01-comparison.webp",
-          caption:
-            "The positioning section of the marketing site I rebuilt from scratch.",
+          caption: "The marketing site I rebuilt from scratch: positioning.",
         },
         {
           src: "/projects/analytics-depot/site-03-features.webp",
           caption:
-            "The feature grid: connectors, query speed, predictive insights, and per-industry context.",
+            "And its feature grid: connectors, query speed, predictive insights, per-industry context.",
         },
       ],
       description: [
@@ -170,6 +184,11 @@ export default function Projects() {
           caption:
             "The plugin marketplace, with interest capture on each unreleased extension.",
         },
+        {
+          src: "/projects/dzstore/admin-onboarding-checklist.webp",
+          caption:
+            "New-merchant onboarding: a 10-step checklist that tracks activation.",
+        },
       ],
       phoneShotsTitle: "The merchant app (React Native + Expo)",
       phoneShots: [
@@ -208,6 +227,10 @@ export default function Projects() {
         {
           src: "/projects/dzstore/app-09-settings.webp",
           caption: "Trilingual by design: Arabic (RTL), French, English",
+        },
+        {
+          src: "/projects/dzstore/low-stock-alert.webp",
+          caption: "A low-stock push landing on the merchant's phone",
         },
       ],
       description: [
@@ -375,6 +398,15 @@ export default function Projects() {
           src: "/projects/fibble/room-categories.webp",
           caption:
             "The deck picker: free and premium categories, from flags to Valorant.",
+        },
+        {
+          src: "/projects/fibble/mobile-landing.webp",
+          caption:
+            "The mobile web entry: play as a guest, no download, no account.",
+        },
+        {
+          src: "/projects/fibble/arabic-answer-input.webp",
+          caption: "Full Arabic RTL support down to the answer input.",
         },
       ],
       description: [
