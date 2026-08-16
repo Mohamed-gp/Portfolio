@@ -287,7 +287,8 @@ export default function Projects() {
         caption:
           "Recorded against the running backend: the request goes out, three providers bid against each other (€483 undercut to €443, then €459 for a faster pickup), the customer accepts and lands in Stripe checkout. This is only the bidding cycle, the full journey is in the screens below.",
       },
-      phoneShotsTitle: "The full journey, screen by screen",
+      phoneShotsTitle:
+        "All three sides of the marketplace: customer, freelance provider, fleet company",
       phoneShots: [
         {
           src: "/projects/haulhub/app-01-languages.webp",
@@ -349,10 +350,46 @@ export default function Projects() {
           src: "/projects/haulhub/app-15-provider-history.webp",
           caption: "Provider job history by status",
         },
+        {
+          src: "/projects/haulhub/app-16-fleet-dashboard.webp",
+          caption: "Fleet company dashboard: balance, active drivers and jobs",
+        },
+        {
+          src: "/projects/haulhub/app-17-fleet-incoming-requests.webp",
+          caption: "Marketplace jobs arriving for the company to bid on",
+        },
+        {
+          src: "/projects/haulhub/app-18-fleet-job-detail.webp",
+          caption: "Job detail: route, cargo, and the recipient to deliver to",
+        },
+        {
+          src: "/projects/haulhub/app-19-fleet-bid-and-assign.webp",
+          caption: "Bid a price and assign the job to a specific employee",
+        },
+        {
+          src: "/projects/haulhub/app-20-fleet-company-profile.webp",
+          caption: "Company profile with the request radius that gates matching",
+        },
+        {
+          src: "/projects/haulhub/app-21-fleet-drivers.webp",
+          caption: "The driver roster with status and rating per employee",
+        },
+        {
+          src: "/projects/haulhub/app-22-fleet-add-driver.webp",
+          caption: "Onboarding an employee, with the company-employee role",
+        },
+        {
+          src: "/projects/haulhub/app-23-fleet-vehicles.webp",
+          caption: "Vehicle fleet filtered by available, in use, maintenance",
+        },
+        {
+          src: "/projects/haulhub/app-24-fleet-add-vehicle.webp",
+          caption: "Adding a vehicle: type, plate, load capacity, load type",
+        },
       ],
       description: [
         "One of the primary engineers across backend, mobile & web on a production Uber-style logistics marketplace, live on iOS & Android in the Netherlands across 12 service categories and 100+ skilled-labor sub-categories, with full RTL i18n in 5 languages (EN/NL/AR/DE/UR).",
-        "Built the on-demand dispatch service (Haversine nearest-provider matching, competing provider offers, live driver tracking over per-ride WebSocket rooms, an 11-state request lifecycle) and the B2B fleet-operations module end-to-end, plus Stripe payments (on-demand, subscriptions, provider payouts) and Dutch KVK business-registry lookup.",
+        "Built the on-demand dispatch service (Haversine nearest-provider matching, competing provider offers, live driver tracking over per-ride WebSocket rooms, an 11-state request lifecycle) and the B2B fleet-operations module end-to-end: companies onboard their own drivers and vehicles, bid on marketplace jobs, assign each trip to a named employee, and settle every job into company commission and driver earnings. Plus Stripe payments (on-demand, subscriptions, provider payouts) and Dutch KVK business-registry lookup.",
       ],
       features: [
         "Post a job, get competing price and pickup-time offers in seconds",
