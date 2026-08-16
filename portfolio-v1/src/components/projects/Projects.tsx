@@ -124,7 +124,7 @@ export default function Projects() {
         },
       ],
       description: [
-        "Frontend lead on a live AI analytics SaaS, owning every user-facing surface: a drag-and-drop dashboard builder, shareable password-protected reports with one-click PDF/PowerPoint export, and an OAuth2 connector platform spanning 10+ data sources (BigQuery, GA4, Sheets, Slack, and more).",
+        "Frontend lead on a live AI analytics SaaS, owning every user-facing surface: five industry workspaces that prime the agent with domain context, a drag-and-drop dashboard builder, shareable password-protected reports with one-click PDF/PowerPoint export, and an OAuth2 connector platform spanning 10+ data sources (BigQuery, GA4, Sheets, Slack, and more).",
         "Shipped RAG document Q&A, an NL-to-SQL query interface, per-connector refresh scheduling (React + FastAPI + Celery), and the LLM agent observability console on top of the trace pipeline: run volume and reliability trends, per-run latency and provider-cost drill-down into spans, cost-regression flags, and async CSV/JSON export of the query log.",
         "Rebuilt the public marketing site, hardened auth with PKCE OAuth and Apple \"Hide My Email\", and cut deploy time from ~30 min to under 5 with zero-downtime PM2 cluster reloads.",
       ],

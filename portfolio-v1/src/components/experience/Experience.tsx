@@ -48,7 +48,7 @@ export default function Experience() {
         "Dashboards & reporting: drag-and-drop dashboard builder, shareable password-protected/embed reports, one-click PDF/PowerPoint export, and an NL-to-SQL query interface.",
         "Real-time collaboration: WebSocket session sync, live user presence, and a collaborative chat sidebar over production wss://.",
         "Data connectors: OAuth2 platform spanning 10+ sources (BigQuery, GA4, Search Console, Sheets, Gmail, YouTube, PostgreSQL, MySQL, Slack) with per-connector refresh schedules (React + FastAPI + Celery Beat) and in-app sync-failure alerts.",
-        "AI / RAG: document Q&A with resilient streaming and multi-format ingestion, plus an LLM agent observability console over the trace pipeline (latency and provider-cost drill-down, cost-regression flags, async CSV/JSON export).",
+        "AI / RAG: document Q&A with inline source citations and one-tap follow-up skills (root cause, forecast, outliers), plus an LLM agent observability console over the trace pipeline (latency and provider-cost drill-down, cost-regression flags, async CSV/JSON export).",
         "Growth & DevOps: rebuilt the public marketing site, cut deploy time from ~30 min to under 5 with zero-downtime PM2 cluster reloads, and ship through a review-gated pull-request workflow with AI/ML, LLMOps and infra engineers; initialized the companion React Native app.",
       ],
       skills: [
@@ -73,10 +73,10 @@ export default function Experience() {
       period: "Jun 2025 – May 2026",
       description: [
         "One of the primary engineers on a production Uber-style marketplace, live on iOS & Android in the Netherlands: 12 service categories, 100+ skilled-labor sub-categories, 5 languages (EN/NL/AR/DE/UR) with full RTL.",
-        "On-demand dispatch: Haversine nearest-provider matching with per-provider search radius, competing price and pickup-time offers, live driver tracking over per-ride WebSocket rooms, and an 11-state request lifecycle with proof-of-delivery and disputes.",
+        "On-demand dispatch: Haversine nearest-provider matching with per-provider search radius, competing price and pickup-time offers that expire on a timer, live driver tracking over per-ride WebSocket rooms, and an 11-state request lifecycle with proof-of-delivery and disputes.",
         "Fleet operations (B2B): companies manage drivers and vehicles, assign each trip, and settle every job into company commission and driver earnings.",
         "Payments & compliance: Stripe escrow with timing-based cancellation refunds, subscriptions and provider payouts, plus Dutch KVK business-registry lookup.",
-        "Architecture: role-based system across 5+ user types with dedicated dashboards; Dockerized microservices on Hetzner via Coolify.",
+        "Architecture: role-based system across 5+ user types with dedicated dashboards, gated by a document-verification pipeline before a provider can trade; Dockerized microservices on Hetzner via Coolify.",
       ],
       skills: [
         "Next.js",

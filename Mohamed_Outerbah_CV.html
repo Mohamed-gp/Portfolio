@@ -195,7 +195,7 @@
         </div>
         <ul>
           <li>
-            Build every user-facing surface of a live AI analytics platform, from analytics dashboards to the marketing site, so non-technical teams can explore their data without engineering help.
+            Build every user-facing surface of that platform, including the five industry workspaces (real estate, finance, marketing, e-commerce, management) that prime the agent with domain context, so non-technical teams get answers without writing SQL.
           </li>
           <li>
             <b>Dashboards &amp; reporting:</b> Designed and implemented the
@@ -213,9 +213,7 @@
             with encrypted credential storage spanning 10+ sources (BigQuery, GA4, Sheets, Gmail, Slack, and more), with per-connector refresh schedules (React, FastAPI, Celery Beat) and in-app sync-failure alerts.
           </li>
           <li>
-            <b>AI / RAG:</b> Delivered RAG document-intelligence Q&amp;A with
-            resilient streaming, multi-format ingestion
-            (CSV/PDF/Excel/images), and a Gemini model layer with fallback.
+            <b>AI / RAG:</b> Delivered RAG document-intelligence Q&amp;A with resilient streaming, multi-format ingestion (CSV/PDF/Excel/images), inline source citations, and one-tap follow-up skills (root cause, forecast, outliers) on any answer, over a Gemini model layer with fallback.
           </li>
           <li>
             <b>LLM agent observability:</b> Instrumented AI agent runs with an admin console over the trace pipeline: reliability trends, per-run latency and provider-cost drill-down, cost-regression flags, and async CSV/JSON export.
@@ -249,7 +247,7 @@
             production Uber-style marketplace, live on iOS &amp; Android in the Netherlands: 12 service categories, 100+ skilled-labor sub-categories, and 5 languages with full RTL.
           </li>
           <li>
-            <b>On-demand dispatch service:</b> Engineered the request-to-delivery flow end-to-end: Haversine nearest-provider matching, competing price and pickup-time bids, an 11-state request lifecycle, live driver tracking over per-ride WebSocket rooms, and Stripe escrow with timing-based cancellation refunds.
+            <b>On-demand dispatch service:</b> Engineered the request-to-delivery flow end-to-end: Haversine nearest-provider matching, competing price and pickup-time bids on expiring offers, an 11-state request lifecycle, live driver tracking over per-ride WebSocket rooms, and Stripe escrow with timing-based cancellation refunds.
           </li>
           <li>
             <b>Fleet-operations service:</b> Developed the B2B fleet module, the platform's largest: companies manage drivers and vehicles, assign each trip, and settle every job into company commission and driver earnings.
@@ -258,7 +256,7 @@
             <b>Multi-role architecture:</b> Architected a role-based
             permission system across 5+ user types (Admin with sub-roles, End
             Users, freelance &amp; company Service Providers, Company
-            Employees), each with dedicated dashboards.
+            Employees), each with dedicated dashboards, gated by a document-verification pipeline (licence, insurance, registration, tax certificate) before a provider can trade.
           </li>
           <li>
             <b>Payments &amp; compliance:</b> Integrated Stripe with hardened

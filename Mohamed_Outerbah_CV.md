@@ -13,11 +13,11 @@ Full-Stack Engineer with 3+ years shipping production web & mobile platforms end
 
 **Apr 2025 - Present**
 
-- Build every user-facing surface of a live AI analytics platform, from analytics dashboards to the marketing site, so non-technical teams can explore their data without engineering help.
+- Build every user-facing surface of that platform, including the five industry workspaces (real estate, finance, marketing, e-commerce, management) that prime the agent with domain context, so non-technical teams get answers without writing SQL.
 - **Dashboards & reporting:** Designed and implemented the drag-and-drop dashboard builder, shareable password-protected/embed reports, and one-click PDF/PowerPoint export UI.
 - **Real-time collaboration:** Shipped WebSocket session sync, user presence, and a collaborative chat sidebar over production wss://, plus the NL-to-SQL query interface.
 - **Data connectors:** Developed an OAuth2 connector platform with encrypted credential storage spanning 10+ sources (BigQuery, GA4, Sheets, Gmail, Slack, and more), with per-connector refresh schedules (React, FastAPI, Celery Beat) and in-app sync-failure alerts.
-- **AI / RAG:** Delivered RAG document-intelligence Q&A with resilient streaming, multi-format ingestion (CSV/PDF/Excel/images), and a Gemini model layer with fallback.
+- **AI / RAG:** Delivered RAG document-intelligence Q&A with resilient streaming, multi-format ingestion (CSV/PDF/Excel/images), inline source citations, and one-tap follow-up skills (root cause, forecast, outliers) on any answer, over a Gemini model layer with fallback.
 - **LLM agent observability:** Instrumented AI agent runs with an admin console over the trace pipeline: reliability trends, per-run latency and provider-cost drill-down, cost-regression flags, and async CSV/JSON export.
 - **Growth & DevOps:** Rebuilt the full marketing site (animated hero, comparison, FAQ); cut deploy time from ~30 min to under 5 with zero-downtime PM2 cluster reloads; hardened CI/CD (GitHub Actions) with Sentry observability, shipping through a review-gated pull-request workflow alongside AI/ML, LLMOps, and infra engineers; PKCE OAuth and Apple "Hide My Email" auth.
 - **Mobile:** Initialized the companion React Native app: dashboard viewing, push notifications, biometric auth, offline caching.
@@ -27,9 +27,9 @@ Full-Stack Engineer with 3+ years shipping production web & mobile platforms end
 **Jun 2025 - May 2026**
 
 - One of the primary engineers across backend, mobile & web on a production Uber-style marketplace, live on iOS & Android in the Netherlands: 12 service categories, 100+ skilled-labor sub-categories, and 5 languages with full RTL.
-- **On-demand dispatch service:** Engineered the request-to-delivery flow end-to-end: Haversine nearest-provider matching, competing price and pickup-time bids, an 11-state request lifecycle, live driver tracking over per-ride WebSocket rooms, and Stripe escrow with timing-based cancellation refunds.
+- **On-demand dispatch service:** Engineered the request-to-delivery flow end-to-end: Haversine nearest-provider matching, competing price and pickup-time bids on expiring offers, an 11-state request lifecycle, live driver tracking over per-ride WebSocket rooms, and Stripe escrow with timing-based cancellation refunds.
 - **Fleet-operations service:** Developed the B2B fleet module, the platform's largest: companies manage drivers and vehicles, assign each trip, and settle every job into company commission and driver earnings.
-- **Multi-role architecture:** Architected a role-based permission system across 5+ user types (Admin with sub-roles, End Users, freelance & company Service Providers, Company Employees), each with dedicated dashboards.
+- **Multi-role architecture:** Architected a role-based permission system across 5+ user types (Admin with sub-roles, End Users, freelance & company Service Providers, Company Employees), each with dedicated dashboards, gated by a document-verification pipeline (licence, insurance, registration, tax certificate) before a provider can trade.
 - **Payments & compliance:** Integrated Stripe with hardened webhook signature verification (on-demand, subscriptions, provider payouts) and Dutch KVK business-registry lookup.
 - **Mobile & infra:** Shipped the React Native (Expo) app via EAS builds with push notifications, real-time chat, and map directions; Dockerized microservices on Hetzner via Coolify with Sentry + Clarity.
 
