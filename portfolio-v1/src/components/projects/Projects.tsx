@@ -288,7 +288,7 @@ export default function Projects() {
           "Recorded against the running backend: the request goes out, three providers bid against each other (€483 undercut to €443, then €459 for a faster pickup), the customer accepts and lands in Stripe checkout. This is only the bidding cycle, the full journey is in the screens below.",
       },
       phoneShotsTitle:
-        "All three sides of the marketplace: customer, freelance provider, fleet company",
+        "Every side of the marketplace: customer, freelance provider, and fleet companies in both verticals",
       phoneShots: [
         {
           src: "/projects/haulhub/app-01-languages.webp",
@@ -386,10 +386,23 @@ export default function Projects() {
           src: "/projects/haulhub/app-24-fleet-add-vehicle.webp",
           caption: "Adding a vehicle: type, plate, load capacity, load type",
         },
+        {
+          src: "/projects/haulhub/app-25-labor-company-dashboard.webp",
+          caption:
+            "The same company role in skilled labor: workers and jobs, not drivers and trips",
+        },
+        {
+          src: "/projects/haulhub/app-26-labor-company-profile.webp",
+          caption: "A labor company manages workers only, with no vehicle fleet",
+        },
+        {
+          src: "/projects/haulhub/app-27-labor-add-worker.webp",
+          caption: "Onboarding a worker into the company under the same role",
+        },
       ],
       description: [
         "One of the primary engineers across backend, mobile & web on a production Uber-style logistics marketplace, live on iOS & Android in the Netherlands across 12 service categories and 100+ skilled-labor sub-categories, with full RTL i18n in 5 languages (EN/NL/AR/DE/UR).",
-        "Built the on-demand dispatch service (Haversine nearest-provider matching, competing provider offers, live driver tracking over per-ride WebSocket rooms, an 11-state request lifecycle) and the B2B fleet-operations module end-to-end: companies onboard their own drivers and vehicles, bid on marketplace jobs, assign each trip to a named employee, and settle every job into company commission and driver earnings. Plus Stripe payments (on-demand, subscriptions, provider payouts) and Dutch KVK business-registry lookup.",
+        "Built the on-demand dispatch service (Haversine nearest-provider matching, competing provider offers, live driver tracking over per-ride WebSocket rooms, an 11-state request lifecycle) and the B2B fleet-operations module end-to-end: companies onboard their own drivers and vehicles, bid on marketplace jobs, assign each trip to a named employee, and settle every job into company commission and driver earnings. Each role is specialised per service vertical, so a truck-rental company manages drivers and vehicles while a skilled-labor company manages workers and jobs, off one permission system. Plus Stripe payments (on-demand, subscriptions, provider payouts) and Dutch KVK business-registry lookup.",
       ],
       features: [
         "Post a job, get competing price and pickup-time offers in seconds",
