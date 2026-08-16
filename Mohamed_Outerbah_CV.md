@@ -19,7 +19,7 @@ Full-Stack Engineer with 3+ years shipping production web & mobile platforms end
 - **Data connectors:** Developed an OAuth2 connector platform with encrypted credential storage spanning 10+ sources (BigQuery, GA4, Sheets, Gmail, Slack, and more), with per-connector refresh schedules (React, FastAPI, Celery Beat) and in-app sync-failure alerts.
 - **AI / RAG:** Delivered RAG document-intelligence Q&A with resilient streaming, multi-format ingestion (CSV/PDF/Excel/images), and a Gemini model layer with fallback.
 - **LLM agent observability:** Instrumented AI agent runs with an admin console over the trace pipeline: reliability trends, per-run latency and provider-cost drill-down, cost-regression flags, and async CSV/JSON export.
-- **Growth & DevOps:** Rebuilt the full marketing site (animated hero, comparison, FAQ); cut deploy time from ~30 min to under 5 with zero-downtime PM2 cluster reloads; hardened CI/CD (GitHub Actions) with Sentry observability; PKCE OAuth and Apple "Hide My Email" auth.
+- **Growth & DevOps:** Rebuilt the full marketing site (animated hero, comparison, FAQ); cut deploy time from ~30 min to under 5 with zero-downtime PM2 cluster reloads; hardened CI/CD (GitHub Actions) with Sentry observability, shipping through a review-gated pull-request workflow alongside AI/ML, LLMOps, and infra engineers; PKCE OAuth and Apple "Hide My Email" auth.
 - **Mobile:** Initialized the companion React Native app: dashboard viewing, push notifications, biometric auth, offline caching.
 
 ### Full-Stack Engineer (Contract) · _[HaulHub](https://haulhub.app/) (Logistics Marketplace), Netherlands · Remote_

@@ -49,7 +49,7 @@ export default function Experience() {
         "Real-time collaboration: WebSocket session sync, live user presence, and a collaborative chat sidebar over production wss://.",
         "Data connectors: OAuth2 platform spanning 10+ sources (BigQuery, GA4, Search Console, Sheets, Gmail, YouTube, PostgreSQL, MySQL, Slack) with per-connector refresh schedules (React + FastAPI + Celery Beat) and in-app sync-failure alerts.",
         "AI / RAG: document Q&A with resilient streaming and multi-format ingestion, plus an LLM agent observability console over the trace pipeline (latency and provider-cost drill-down, cost-regression flags, async CSV/JSON export).",
-        "Growth & DevOps: rebuilt the public marketing site, cut deploy time from ~30 min to under 5 with zero-downtime PM2 cluster reloads, PKCE OAuth and Apple \"Hide My Email\" auth; initialized the companion React Native app.",
+        "Growth & DevOps: rebuilt the public marketing site, cut deploy time from ~30 min to under 5 with zero-downtime PM2 cluster reloads, and ship through a review-gated pull-request workflow with AI/ML, LLMOps and infra engineers; initialized the companion React Native app.",
       ],
       skills: [
         "Next.js",
