@@ -5,7 +5,7 @@ Algeria · CET (UTC+1) · [mohamedterba6@gmail.com](mailto:mohamedterba6@gmail.c
 
 ---
 
-Full-Stack Engineer with 3+ years shipping production web & mobile platforms end-to-end. Own the entire frontend of a live AI analytics SaaS as 2nd-highest contributor, and built the dispatch and fleet-operations services of a live Uber-style logistics marketplace. Co-founder of DzStore, a Shopify-equivalent SaaS that grew to 1,100+ live stores in the 3 months since launch, 25+ of them converting to paid plans, and Fibble, a multiplayer party game on web and Discord with 3,000+ players, both entirely organic.
+Full-Stack Engineer with 3+ years shipping production web & mobile platforms end-to-end. Own the entire frontend of a live AI analytics SaaS as 2nd-highest contributor, and built the dispatch and fleet-operations services of a live Uber-style logistics marketplace. Co-founder of DzStore, a Shopify-equivalent e-commerce SaaS now serving 1,100+ live stores, and Fibble, a multiplayer party game on web and Discord, both grown entirely through search and word of mouth.
 
 ## Experience
 
@@ -67,7 +67,7 @@ Full-Stack Engineer with 3+ years shipping production web & mobile platforms end
 **Sep 2025 - Present**
 
 - **Product:** Free real-time bluffing trivia game (2-8 players, no download) playable in the browser and as a Discord Activity, with a premium subscription tier.
-- **Traction:** 3,000+ players in 80+ countries across 2,200+ games played in the first 3 months since the May 2026 launch, entirely organic with zero ad spend, converting its first paying subscribers on both billing rails.
+- **Traction:** 3,000+ players in 80+ countries across 2,200+ games played in the first 3 months since launch, entirely organic, converting its first paying subscribers on both billing rails.
 - **Engineering:** Serverless real-time multiplayer: Postgres as the source of truth with Ably pub/sub fan-out, server-authoritative phase deadlines, and HMAC anti-spoofing action tokens; plus Discord Activity integration, Paddle + Discord SKU billing, and a full admin analytics panel.
 
 ## Education & Awards

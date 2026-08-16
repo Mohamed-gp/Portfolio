@@ -180,8 +180,8 @@ export default function Projects() {
         },
       ],
       description: [
-        "1,100+ active stores, 650+ orders, and 25+ paid PRO merchants in its first 3 months since launch, adding ~170 stores a week with orders up 270% month over month. 100% organic, zero ad spend, 6.6M+ DZD in orders processed (GMV), rated 4.7/5 by merchants.",
-        "Co-founded this multi-tenant Shopify-equivalent SaaS and lead nearly all engineering: subdomain-per-store routing with Caddy on-demand TLS, a 44-model Prisma/PostgreSQL schema, a carrier layer covering 70 Algerian delivery companies behind 5 API adapters, and an iOS/Android merchant app (React Native + Expo); self-hosted on Hetzner via Docker with 99.95% uptime and 1,000+ automated tests keeping shipped features from breaking.",
+        "All of that in the first 3 months since launch, and still growing: ~170 new stores a week, with orders up 270% month over month. Not a dinar of ad spend, every merchant came from search.",
+        "Co-founded this multi-tenant Shopify-equivalent SaaS and lead nearly all engineering: subdomain-per-store routing with Caddy on-demand TLS, a 44-model Prisma/PostgreSQL schema, a carrier layer covering 70 Algerian delivery companies behind 5 API adapters, and an iOS/Android merchant app (React Native + Expo); self-hosted on Hetzner via Docker with zero-downtime deploys and 1,000+ automated tests keeping shipped features from breaking.",
         "Caught a revenue leak: customer contact details bypassed the free-plan order cap through 8 server-side channels despite correct frontend gating. Sealed every path behind a single order-privacy module, locked in by payload-scanning regression tests.",
         "Technical SEO drives acquisition: 15,000+ pages indexed, 600+ Google Shopping product snippets, 3,000+ Search clicks a month; search out-refers social 12:1 on the signup funnel. Cut the database bill by 50%+ by moving Postgres off Neon to Supabase at zero downtime.",
       ],

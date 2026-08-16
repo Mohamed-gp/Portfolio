@@ -143,12 +143,9 @@ export default function About() {
                 DzStore
               </a>
               , a Shopify-equivalent SaaS where I lead nearly all engineering
-              across the full stack. In its first 3 months since launch it has
-              grown to{" "}
-              <strong className="text-foreground">
-                1,100+ active stores and 25+ merchants on paid plans
-              </strong>
-              , 100% organic with zero ad spend. I hold a{" "}
+              across the full stack, from the multi-tenant architecture to the
+              merchant mobile app. Before that I spent two years freelancing,
+              and hold a{" "}
               <strong className="text-foreground">5/5 rating</strong> across 6+
               delivered production applications.
             </p>
@@ -184,11 +181,18 @@ export default function About() {
                   </span>
                 </div>
                 <div className="flex items-start gap-2.5">
+                  <ShieldCheck className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                  <span className="text-sm text-muted-foreground">
+                    <strong>Caught a revenue leak at DzStore:</strong> customer
+                    contact details bypassed the free-plan cap through 8
+                    server-side channels; sealed behind one privacy module
+                  </span>
+                </div>
+                <div className="flex items-start gap-2.5">
                   <Gamepad2 className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                   <span className="text-sm text-muted-foreground">
                     <strong>Co-founded Fibble:</strong> real-time multiplayer
-                    party game, 3,000+ players across 80+ countries in 3 months live,
-                    100% organic
+                    party game, 3,000+ players across 80+ countries
                   </span>
                 </div>
                 <div className="flex items-start gap-2.5">
