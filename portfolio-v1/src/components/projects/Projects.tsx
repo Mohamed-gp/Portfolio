@@ -85,7 +85,7 @@ export default function Projects() {
         {
           src: "/projects/analytics-depot/app-spreadsheet-view.webp",
           caption:
-            "The built-in spreadsheet view over 9,000+ rows, with an AI formula bar and CSV/Excel export.",
+            "The built-in spreadsheet view over 9,000+ rows, with an AI formula bar and CSV/Excel export. Identifier columns are blurred here.",
         },
       ],
       description: [

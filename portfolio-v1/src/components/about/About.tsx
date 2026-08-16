@@ -177,7 +177,7 @@ export default function About() {
                   <Store className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                   <span className="text-sm text-muted-foreground">
                     <strong>Co-founded DzStore:</strong> 1,100+ stores & 25+
-                    on paid plans in 3 months live, 100% organic
+                    on paid plans in 3 months live, all from search
                   </span>
                 </div>
                 <div className="flex items-start gap-2.5">
