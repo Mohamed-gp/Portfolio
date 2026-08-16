@@ -367,20 +367,20 @@ export default function Projects() {
           caption: "Bid a price and assign the job to a specific employee",
         },
         {
-          src: "/projects/haulhub/app-20-fleet-company-profile.webp",
+          src: "/projects/haulhub/app-20-fleet-company-profile-v2.webp",
           caption: "Company profile with the request radius that gates matching",
         },
         {
-          src: "/projects/haulhub/app-21-fleet-drivers.webp",
-          caption: "The driver roster with status and rating per employee",
+          src: "/projects/haulhub/app-21-fleet-drivers-v2.webp",
+          caption: "The driver roster: four drivers with status and rating each",
         },
         {
           src: "/projects/haulhub/app-22-fleet-add-driver.webp",
           caption: "Onboarding an employee, with the company-employee role",
         },
         {
-          src: "/projects/haulhub/app-23-fleet-vehicles.webp",
-          caption: "Vehicle fleet filtered by available, in use, maintenance",
+          src: "/projects/haulhub/app-23-fleet-vehicles-v2.webp",
+          caption: "The vehicle fleet, filtered live by available, in use, maintenance",
         },
         {
           src: "/projects/haulhub/app-24-fleet-add-vehicle.webp",
@@ -392,12 +392,22 @@ export default function Projects() {
             "The same company role in skilled labor: workers and jobs, not drivers and trips",
         },
         {
-          src: "/projects/haulhub/app-26-labor-company-profile.webp",
+          src: "/projects/haulhub/app-26-labor-company-profile-v2.webp",
           caption: "A labor company manages workers only, with no vehicle fleet",
         },
         {
           src: "/projects/haulhub/app-27-labor-add-worker.webp",
           caption: "Onboarding a worker into the company under the same role",
+        },
+        {
+          src: "/projects/haulhub/app-28-labor-workers.webp",
+          caption:
+            "The worker roster, scored on jobs completed rather than trips driven",
+        },
+        {
+          src: "/projects/haulhub/app-29-employee-home.webp",
+          caption:
+            "The fourth role: a company employee sees only their own jobs and stats, with no fleet to manage",
         },
       ],
       description: [
