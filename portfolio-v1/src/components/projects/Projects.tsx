@@ -71,21 +71,42 @@ export default function Projects() {
       type: "Web Application",
       url: "https://analyticsdepot.com/",
       image: "/projects/analytics-depot/hero-v2.webp",
+      galleryTitle: "The product flow: connect, ask, answer, share",
       gallery: [
         {
-          src: "/projects/analytics-depot/app-chat-analysis.webp",
+          src: "/projects/analytics-depot/site-02-how-it-works.webp",
           caption:
-            "The analyst chat: plain-English questions become interactive Plotly charts, with the Data Explorer profiling every column of the uploaded dataset.",
-        },
-        {
-          src: "/projects/analytics-depot/app-auto-dashboard.webp",
-          caption:
-            "A dashboard auto-generated from an uploaded CSV: KPI cards and charts with zero configuration.",
+            "1. The promise: connect a source, ask in plain English, get instant visuals. Every connector runs on the OAuth2 platform I own.",
         },
         {
           src: "/projects/analytics-depot/app-spreadsheet-view.webp",
           caption:
-            "The built-in spreadsheet view over 9,000+ rows, with an AI formula bar and CSV/Excel export. Identifier columns are blurred here.",
+            "2. The data lands: a built-in spreadsheet over 9,000+ rows with an AI formula bar and CSV/Excel export. Identifier columns blurred here.",
+        },
+        {
+          src: "/projects/analytics-depot/app-chat-analysis.webp",
+          caption:
+            "3. Ask it anything: plain-English questions become interactive Plotly charts, with the Data Explorer profiling every column.",
+        },
+        {
+          src: "/projects/analytics-depot/app-auto-dashboard.webp",
+          caption:
+            "4. The dashboard builds itself: KPI cards and charts generated from the uploaded file with zero configuration.",
+        },
+        {
+          src: "/projects/analytics-depot/site-04-collaboration.webp",
+          caption:
+            "5. Share it: role-based access and always-current report links, on top of the WebSocket presence and collaboration layer.",
+        },
+        {
+          src: "/projects/analytics-depot/site-01-comparison.webp",
+          caption:
+            "The positioning section of the marketing site I rebuilt from scratch.",
+        },
+        {
+          src: "/projects/analytics-depot/site-03-features.webp",
+          caption:
+            "The feature grid: connectors, query speed, predictive insights, and per-industry context.",
         },
       ],
       description: [
@@ -138,6 +159,16 @@ export default function Projects() {
           src: "/projects/dzstore/admin-variants.webp",
           caption:
             "Product variant editor: per-variant pricing, SKUs, and images.",
+        },
+        {
+          src: "/projects/dzstore/admin-product-editor.webp",
+          caption:
+            "The product editor: pricing, inventory, SEO fields, and pre-orders.",
+        },
+        {
+          src: "/projects/dzstore/admin-plugins.webp",
+          caption:
+            "The plugin marketplace, with interest capture on each unreleased extension.",
         },
       ],
       phoneShotsTitle: "The merchant app (React Native + Expo)",
@@ -229,11 +260,11 @@ export default function Projects() {
       image: "/projects/haulhub/hero-v2.webp",
       flowVideo: {
         src: "/projects/haulhub/request-to-accept-flow.mp4",
-        title: "The dispatch flow, end to end",
+        title: "The live cycle, in 19 seconds",
         caption:
-          "One unbroken run through the app: pick the service, drop pickup and destination pins, describe the load, send the request, then watch three providers bid against each other and accept one. Recorded against the live backend.",
+          "Recorded against the running backend: the request goes out, three providers bid against each other (€483 undercut to €443, then €459 for a faster pickup), the customer accepts and lands in Stripe checkout. This is only the bidding cycle, the full journey is in the screens below.",
       },
-      phoneShotsTitle: "The mobile app, step by step",
+      phoneShotsTitle: "The full journey, screen by screen",
       phoneShots: [
         {
           src: "/projects/haulhub/app-01-languages.webp",
@@ -393,6 +424,20 @@ export default function Projects() {
           src: "/projects/cribbix/agent-analytics.webp",
           caption:
             "Agent analytics: per-property views, clicks, and performance.",
+        },
+        {
+          src: "/projects/cribbix/admin-property-table.webp",
+          caption: "Admin property management across every listing and status.",
+        },
+        {
+          src: "/projects/cribbix/agent-properties.webp",
+          caption:
+            "The agent's own portfolio with per-listing engagement and plan limits.",
+        },
+        {
+          src: "/projects/cribbix/renter-dashboard.webp",
+          caption:
+            "The renter side: saved searches, alerts, offers, and suggested homes.",
         },
       ],
       description:
