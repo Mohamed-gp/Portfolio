@@ -39,6 +39,7 @@ interface Project {
   galleryTitle?: string;
   phoneShots?: { src: string; caption: string }[];
   phoneShotsTitle?: string;
+  flowVideo?: { src: string; title: string; caption: string };
   description: string | string[];
   metrics?: { value: string; label: string }[];
   statusPage?: string;
@@ -226,19 +227,73 @@ export default function Projects() {
       type: ["Web Application", "Mobile Application"],
       url: "https://haulhub.app/",
       image: "/projects/haulhub/hero-v2.webp",
-      phoneShotsTitle: "The mobile app",
+      flowVideo: {
+        src: "/projects/haulhub/request-to-accept-flow.mp4",
+        title: "The dispatch flow, end to end",
+        caption:
+          "One unbroken run through the app: pick the service, drop pickup and destination pins, describe the load, send the request, then watch three providers bid against each other and accept one. Recorded against the live backend.",
+      },
+      phoneShotsTitle: "The mobile app, step by step",
       phoneShots: [
         {
-          src: "/projects/haulhub/store-choose-role.webp",
-          caption: "Two-sided marketplace: book services or provide them",
+          src: "/projects/haulhub/app-01-languages.webp",
+          caption: "5 languages with full RTL (EN/NL/AR/UR/DE)",
         },
         {
-          src: "/projects/haulhub/store-book-service.webp",
-          caption: "Booking a truck service in seconds",
+          src: "/projects/haulhub/app-02-customer-home.webp",
+          caption: "Customer home: pick a service and go",
         },
         {
-          src: "/projects/haulhub/store-track-drivers.webp",
-          caption: "Live driver offers with price and ETA",
+          src: "/projects/haulhub/app-03-service-catalogue.webp",
+          caption: "12 service categories, live and upcoming",
+        },
+        {
+          src: "/projects/haulhub/app-04-pickup-map.webp",
+          caption: "Pickup picker with map search and geocoding",
+        },
+        {
+          src: "/projects/haulhub/app-05-vehicle-types.webp",
+          caption: "Vehicle catalogue with real capacities",
+        },
+        {
+          src: "/projects/haulhub/app-06-request-form.webp",
+          caption: "Load details: material, weight, drivers, timing",
+        },
+        {
+          src: "/projects/haulhub/app-07-destination-recipient.webp",
+          caption: "Per-destination recipient for proof of delivery",
+        },
+        {
+          src: "/projects/haulhub/app-08-confirm-request.webp",
+          caption: "Review before the request goes out",
+        },
+        {
+          src: "/projects/haulhub/app-09-competing-offer-1.webp",
+          caption: "Offer 1 of 3: providers bid, each offer expires",
+        },
+        {
+          src: "/projects/haulhub/app-10-competing-offer-2.webp",
+          caption: "A rival bid undercuts on price and pickup time",
+        },
+        {
+          src: "/projects/haulhub/app-11-request-accepted.webp",
+          caption: "Accepted: provider assigned at the agreed price",
+        },
+        {
+          src: "/projects/haulhub/app-12-request-details.webp",
+          caption: "Request detail with route and live status",
+        },
+        {
+          src: "/projects/haulhub/app-13-provider-verification.webp",
+          caption: "Provider side: document verification gate",
+        },
+        {
+          src: "/projects/haulhub/app-14-provider-dashboard.webp",
+          caption: "Provider dashboard: online toggle and earnings",
+        },
+        {
+          src: "/projects/haulhub/app-15-provider-history.webp",
+          caption: "Provider job history by status",
         },
       ],
       description: [
@@ -625,6 +680,29 @@ export default function Projects() {
                           </figcaption>
                         </figure>
                       ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* End-to-end flow video */}
+                {selectedProject.flowVideo && (
+                  <div>
+                    <h3 className="font-semibold text-lg mb-1">
+                      {selectedProject.flowVideo.title}
+                    </h3>
+                    <p className="text-sm text-muted-foreground mb-3">
+                      {selectedProject.flowVideo.caption}
+                    </p>
+                    <div className="flex justify-center">
+                      <video
+                        src={selectedProject.flowVideo.src}
+                        controls
+                        muted
+                        loop
+                        playsInline
+                        preload="metadata"
+                        className="rounded-xl border border-primary/10 bg-muted max-h-[70vh] w-auto"
+                      />
                     </div>
                   </div>
                 )}
