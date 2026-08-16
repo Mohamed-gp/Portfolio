@@ -298,7 +298,7 @@ export default function Projects() {
           caption: "Customer home: pick a service and go",
         },
         {
-          src: "/projects/haulhub/app-03-service-catalogue.webp",
+          src: "/projects/haulhub/app-03-service-catalogue-v2.webp",
           caption: "12 service categories, live and upcoming",
         },
         {
@@ -306,7 +306,7 @@ export default function Projects() {
           caption: "Pickup picker with map search and geocoding",
         },
         {
-          src: "/projects/haulhub/app-05-vehicle-types.webp",
+          src: "/projects/haulhub/app-05-vehicle-types-v2.webp",
           caption: "Vehicle catalogue with real capacities",
         },
         {
