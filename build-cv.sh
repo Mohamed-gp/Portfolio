@@ -10,6 +10,13 @@ set -euo pipefail
 
 cd "$(dirname "$0")"
 
+# Refresh the DzStore figures from the live stats endpoint first, so the PDF
+# always matches the website. Never fatal: if the endpoint is unreachable the
+# script leaves both CV files untouched and we export what is on disk.
+if command -v node >/dev/null 2>&1; then
+  node scripts/sync-cv-stats.mjs || true
+fi
+
 SRC="Mohamed_Outerbah_CV.html"
 OUT="portfolio-v1/public/cv/Mohamed_Outerbah_CV.pdf"
 

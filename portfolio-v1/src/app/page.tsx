@@ -52,8 +52,8 @@ export default async function Home() {
           proMerchants,
           sinceLaunchLabel,
           stores,
-          storesPerWeek: dz.storesPerWeek,
-          ordersPerWeek: dz.ordersPerWeek,
+          bestWeekStores: dz.bestWeekStores,
+          bestMonthOrders: dz.bestMonthOrders,
         }}
       />
       <Testimonials />

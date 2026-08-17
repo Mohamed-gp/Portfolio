@@ -57,8 +57,8 @@ export type ProjectsDzStats = {
   proMerchants: string;
   sinceLaunchLabel: string;
   stores: string;
-  storesPerWeek: string;
-  ordersPerWeek: string;
+  bestWeekStores: string;
+  bestMonthOrders: string;
 };
 
 export default function Projects({ dz }: { dz?: ProjectsDzStats }) {
@@ -260,7 +260,7 @@ export default function Projects({ dz }: { dz?: ProjectsDzStats }) {
         },
       ],
       description: [
-        `All of that ${dz?.sinceLaunchLabel ?? "in its first 3 months since launch"}, and still growing: about ${dz?.storesPerWeek ?? "180"} new stores and ${dz?.ordersPerWeek ?? "200"} orders in the last week alone. Not a dinar of ad spend, every merchant came from search.`,
+        `All of that ${dz?.sinceLaunchLabel ?? "in its first 3 months since launch"}, and still climbing: its best week added ${dz?.bestWeekStores ?? "184"} new stores, its best month ${dz?.bestMonthOrders ?? "398"} orders. Not a dinar of ad spend, every merchant came from search.`,
         "Co-founded this multi-tenant Shopify-equivalent SaaS and lead nearly all engineering: subdomain-per-store routing with Caddy on-demand TLS, a 44-model Prisma/PostgreSQL schema, a carrier layer covering 70 Algerian delivery companies behind 5 API adapters, and an iOS/Android merchant app (React Native + Expo); self-hosted on Hetzner via Docker with zero-downtime deploys and 1,000+ automated tests keeping shipped features from breaking.",
         "Caught a revenue leak: customer contact details bypassed the free-plan order cap through 8 server-side channels despite correct frontend gating. Sealed every path behind a single order-privacy module, locked in by payload-scanning regression tests.",
         "Technical SEO drives acquisition: 15,000+ pages indexed, 600+ Google Shopping product snippets, 3,000+ Search clicks a month; search out-refers social 12:1 on the signup funnel. Cut the database bill by 50%+ by moving Postgres off Neon to Supabase at zero downtime.",
