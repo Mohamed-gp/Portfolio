@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { getDzStoreStats } from "@/lib/dzstore-stats";
 import { Cairo } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -147,7 +148,8 @@ interface RootLayoutProps {
   children: React.ReactNode;
 }
 
-export default function RootLayout({ children }: RootLayoutProps) {
+export default async function RootLayout({ children }: RootLayoutProps) {
+  const dz = await getDzStoreStats();
   return (
     <html
       lang="en"
@@ -222,7 +224,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
                 "HaulHub — shipped live on iOS & Android",
                 "1st Place Hackathon Winner 2024",
                 "5/5 rating across delivered freelance projects",
-                "DzStore - Shopify-equivalent SaaS, 1,100+ merchants, 1,034+ live stores, 27+ on paid plans, 100% organic",
+                `DzStore - Shopify-equivalent SaaS, ${dz.users} merchants, ${dz.stores} live stores, ${dz.proMerchants} on paid plans, 100% organic`,
               ],
               description:
                 "Full-Stack Engineer with 3+ years delivering production-grade platforms for clients across the USA, UK, Netherlands, Japan, and Saudi Arabia. Shipped HaulHub (live logistics marketplace on iOS & Android) and works as a core engineer at Analytics Depot (AI SaaS).",

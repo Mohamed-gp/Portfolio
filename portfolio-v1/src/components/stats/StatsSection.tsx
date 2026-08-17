@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { FALLBACK_STATS } from "@/lib/dzstore-stats";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Users,
@@ -38,13 +39,13 @@ const buildStats = (o: StatsSectionProps = {}) => [
   },
   {
     icon: <Users className="h-6 w-6 text-blue-500" />,
-    value: o.stores ?? "1,034+",
+    value: o.stores ?? FALLBACK_STATS.stores,
     label: "DzStore Stores",
     description: "Live merchant stores, zero ad spend",
   },
   {
     icon: <BadgeDollarSign className="h-6 w-6 text-amber-500" />,
-    value: o.proMerchants ?? "27+",
+    value: o.proMerchants ?? FALLBACK_STATS.proMerchants,
     label: "Merchants on Paid Plans",
     description: "DzStore PRO, acquired through SEO alone",
   },

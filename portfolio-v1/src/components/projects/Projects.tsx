@@ -23,6 +23,7 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import Image from "next/image";
+import { FALLBACK_STATS } from "@/lib/dzstore-stats";
 
 interface Project {
   title: string;
@@ -260,16 +261,16 @@ export default function Projects({ dz }: { dz?: ProjectsDzStats }) {
         },
       ],
       description: [
-        `All of that ${dz?.sinceLaunchLabel ?? "in its first 3 months since launch"}, and still climbing: its best week added ${dz?.bestWeekStores ?? "184"} new stores, its best month ${dz?.bestMonthOrders ?? "398"} orders. Not a dinar of ad spend, every merchant came from search.`,
+        `All of that ${dz?.sinceLaunchLabel ?? FALLBACK_STATS.sinceLaunchLabel}, and still climbing: its best week added ${dz?.bestWeekStores ?? FALLBACK_STATS.bestWeekStores} new stores, its best month ${dz?.bestMonthOrders ?? FALLBACK_STATS.bestMonthOrders} orders. Not a dinar of ad spend, every merchant came from search.`,
         "Co-founded this multi-tenant Shopify-equivalent SaaS and lead nearly all engineering: subdomain-per-store routing with Caddy on-demand TLS, a 44-model Prisma/PostgreSQL schema, a carrier layer covering 70 Algerian delivery companies behind 5 API adapters, and an iOS/Android merchant app (React Native + Expo); self-hosted on Hetzner via Docker with zero-downtime deploys and 1,000+ automated tests keeping shipped features from breaking.",
         "Caught a revenue leak: customer contact details bypassed the free-plan order cap through 8 server-side channels despite correct frontend gating. Sealed every path behind a single order-privacy module, locked in by payload-scanning regression tests.",
         "Technical SEO drives acquisition: 15,000+ pages indexed, 600+ Google Shopping product snippets, 3,000+ Search clicks a month; search out-refers social 12:1 on the signup funnel. Cut the database bill by 50%+ by moving Postgres off Neon to Supabase at zero downtime.",
       ],
       metrics: [
-        { value: dz?.stores ?? "1,034+", label: "Live stores" },
-        { value: dz?.proMerchants ?? "27+", label: "Paid PRO merchants" },
+        { value: dz?.stores ?? FALLBACK_STATS.stores, label: "Live stores" },
+        { value: dz?.proMerchants ?? FALLBACK_STATS.proMerchants, label: "Paid PRO merchants" },
         {
-          value: `${dz?.gmvDzd ?? "7.2M+"} DZD`,
+          value: `${dz?.gmvDzd ?? FALLBACK_STATS.gmvDzd} DZD`,
           label: "Orders processed (GMV)",
         },
         { value: "4.7/5", label: "84 merchant reviews" },
@@ -287,7 +288,7 @@ export default function Projects({ dz }: { dz?: ProjectsDzStats }) {
       ],
       hardest:
         "Multi-tenant subdomain routing with Caddy on-demand TLS: every merchant gets their own store and custom domain with automatic HTTPS, all from one codebase.",
-      status: `Live · ${dz?.stores ?? "1,034+"} Stores · ${dz?.proMerchants ?? "27+"} Paying`,
+      status: `Live · ${dz?.stores ?? FALLBACK_STATS.stores} Stores · ${dz?.proMerchants ?? FALLBACK_STATS.proMerchants} Paying`,
       role: "Co-Founder & Lead Engineer",
       technologies: [
         "Next.js",

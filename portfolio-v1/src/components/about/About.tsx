@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { FALLBACK_STATS } from "@/lib/dzstore-stats";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -188,8 +189,8 @@ export default function About({
                 <div className="flex items-start gap-2.5">
                   <Store className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                   <span className="text-sm text-muted-foreground">
-                    <strong>Co-founded DzStore:</strong> {stores || "1,034+"}{" "}
-                    live stores & {proMerchants || "25+"} on paid plans in{" "}
+                    <strong>Co-founded DzStore:</strong> {stores || FALLBACK_STATS.stores}{" "}
+                    live stores & {proMerchants || FALLBACK_STATS.proMerchants} on paid plans in{" "}
                     {sinceLaunchLabel || "3 months live"}, all from search
                   </span>
                 </div>
