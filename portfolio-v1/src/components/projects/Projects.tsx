@@ -150,7 +150,7 @@ export default function Projects() {
         "Upload CSV/PDF/Excel documents and chat with them (RAG)",
       ],
       hardest:
-        "Real-time multi-user dashboard sync over WebSockets: session sync, live presence, and a collaborative chat sidebar that stay consistent across editors.",
+        "Making auto-generated analytics tell the truth. The builder renders a confident dashboard from any uploaded file, and its mistakes are silent ones a reader would never catch: an allow-list averaged \"valuation\" under a title promising a total, ranking Oceania above a North America worth 36x more; \"Year Founded\" captured the timeline slot because 2012 parses perfectly while the real DD-MM-YYYY dates failed month-first parsing; a KPI trend compared two sparkline endpoints and printed -9% where the period change was -1.8%. I caught these by running golden workbooks through the live demo path, and rewrote the inference rules behind them.",
       status: "Live",
       role: "Full-Stack Engineer (Frontend Lead) · team of ~10",
       technologies: [

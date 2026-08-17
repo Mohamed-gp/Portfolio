@@ -14,7 +14,7 @@ Full-Stack Engineer with 3+ years shipping production web & mobile platforms end
 **Apr 2025 - Present**
 
 - Build every user-facing surface of that platform, including the five industry workspaces (real estate, finance, marketing, e-commerce, management) that prime the agent with domain context, so non-technical teams get answers without writing SQL.
-- **Dashboards & reporting:** Designed and implemented the drag-and-drop dashboard builder, shareable password-protected/embed reports, and one-click PDF/PowerPoint export UI.
+- **Dashboards & reporting:** Designed and implemented the drag-and-drop dashboard builder, shareable password-protected/embed reports, and one-click PDF/PowerPoint export UI, then defended auto-generated charts against silent misreadings (wrong aggregation, mis-detected date columns, misleading trend arrows) using golden-workbook fixtures.
 - **Real-time collaboration:** Shipped WebSocket session sync, user presence, and a collaborative chat sidebar over production wss://, plus the NL-to-SQL query interface.
 - **Data connectors:** Developed an OAuth2 connector platform with encrypted credential storage spanning 14 sources across warehouses (BigQuery, Snowflake, Databricks, Redshift), databases (PostgreSQL, MySQL) and SaaS tools (GA4, Search Console, Sheets, Gmail, Slack, YouTube), with per-connector refresh schedules (React, FastAPI, Celery Beat) and in-app sync-failure alerts.
 - **AI / RAG:** Delivered RAG document-intelligence Q&A with resilient streaming, multi-format ingestion (CSV/PDF/Excel/images), inline source citations, and one-tap follow-up skills (root cause, forecast, outliers) on any answer, over a Gemini model layer with fallback.
