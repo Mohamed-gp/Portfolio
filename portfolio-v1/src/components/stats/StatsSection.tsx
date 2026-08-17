@@ -12,7 +12,12 @@ import {
   BadgeDollarSign,
 } from "lucide-react";
 
-const stats = [
+export type StatsOverrides = {
+  stores?: string;
+  proMerchants?: string;
+};
+
+const buildStats = (o: StatsOverrides = {}) => [
   {
     icon: <Code className="h-6 w-6 text-purple-500" />,
     value: "7+",
@@ -33,13 +38,13 @@ const stats = [
   },
   {
     icon: <Users className="h-6 w-6 text-blue-500" />,
-    value: "1,100+",
+    value: o.stores ?? "1,000+",
     label: "DzStore Stores",
     description: "Live merchant stores, zero ad spend",
   },
   {
     icon: <BadgeDollarSign className="h-6 w-6 text-amber-500" />,
-    value: "25+",
+    value: o.proMerchants ?? "25+",
     label: "Merchants on Paid Plans",
     description: "DzStore PRO, acquired through SEO alone",
   },
@@ -57,7 +62,12 @@ const stats = [
   },
 ];
 
-export default function StatsSection() {
+export default function StatsSection({
+  overrides = {},
+}: {
+  overrides?: StatsOverrides;
+}) {
+  const stats = buildStats(overrides);
   return (
     <section className="py-16 sm:py-20 relative overflow-hidden">
       {/* Gradient background */}

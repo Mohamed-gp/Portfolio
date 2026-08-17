@@ -1,4 +1,5 @@
 import dynamic from "next/dynamic";
+import { getDzStoreStats } from "@/lib/dzstore-stats";
 import Hero from "@/components/hero/Hero";
 import Header from "@/components/header/Header";
 import Footer from "@/components/foooter/Footer";
@@ -16,7 +17,8 @@ const ScrollToTop = dynamic(
 const Contact = dynamic(() => import("@/components/contact/Contact"));
 const StatsSection = dynamic(() => import("@/components/stats/StatsSection"));
 const ConsoleLog = dynamic(() => import("@/components/consoleLog/ConsoleLog"));
-export default function Home() {
+export default async function Home() {
+  const dz = await getDzStoreStats();
   return (
     <>
       <Header />
@@ -26,7 +28,9 @@ export default function Home() {
       <Projects />
       <Testimonials />
       <Skills />
-      <StatsSection />
+      <StatsSection
+        overrides={{ stores: dz.stores, proMerchants: dz.proMerchants }}
+      />
       <Contact />
       <Footer />
       <ScrollToTop />

@@ -255,7 +255,7 @@ export default function Projects() {
         "Technical SEO drives acquisition: 15,000+ pages indexed, 600+ Google Shopping product snippets, 3,000+ Search clicks a month; search out-refers social 12:1 on the signup funnel. Cut the database bill by 50%+ by moving Postgres off Neon to Supabase at zero downtime.",
       ],
       metrics: [
-        { value: "1,100+", label: "Active stores" },
+        { value: "1,000+", label: "Live stores" },
         { value: "25+", label: "Paid PRO merchants" },
         { value: "6.6M+ DZD", label: "Orders processed (GMV)" },
         { value: "4.7/5", label: "84 merchant reviews" },
@@ -273,7 +273,7 @@ export default function Projects() {
       ],
       hardest:
         "Multi-tenant subdomain routing with Caddy on-demand TLS: every merchant gets their own store and custom domain with automatic HTTPS, all from one codebase.",
-      status: "Live · 1,100+ Stores · 25+ Paying",
+      status: "Live · 1,000+ Stores · 25+ Paying",
       role: "Co-Founder & Lead Engineer",
       technologies: [
         "Next.js",
