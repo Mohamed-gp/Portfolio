@@ -9,7 +9,7 @@ export default function OpengraphImage() {
   const chips = [
     "HaulHub · live on iOS & Android",
     "Analytics Depot · AI SaaS",
-    "DzStore · 1,020+ live stores",
+    "DzStore · 1,034+ live stores",
   ];
 
   return new ImageResponse(

@@ -17,7 +17,17 @@ import {
   GitCommitHorizontal,
 } from "lucide-react";
 
-export default function About() {
+interface AboutProps {
+  proMerchants: string;
+  sinceLaunchLabel: string;
+  stores: string;
+}
+
+export default function About({
+  proMerchants,
+  sinceLaunchLabel,
+  stores,
+}: AboutProps) {
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
     visible: (i: number) => ({
@@ -38,7 +48,9 @@ export default function About() {
       body: "Frontend, backend, mobile, and deployment, solo or embedded in a team.",
     },
     {
-      icon: <ShieldCheck className="h-6 w-6 text-cyan-600 dark:text-cyan-400" />,
+      icon: (
+        <ShieldCheck className="h-6 w-6 text-cyan-600 dark:text-cyan-400" />
+      ),
       bg: "bg-cyan-100 dark:bg-cyan-900/30",
       title: "Production-grade",
       body: "Auth, Stripe payments, real-time sync, observability, and CI/CD on live apps.",
@@ -50,7 +62,9 @@ export default function About() {
       body: "React / Next.js on web; React Native (Expo) shipped to the App Store & Play Store.",
     },
     {
-      icon: <Compass className="h-6 w-6 text-indigo-600 dark:text-indigo-400" />,
+      icon: (
+        <Compass className="h-6 w-6 text-indigo-600 dark:text-indigo-400" />
+      ),
       bg: "bg-indigo-100 dark:bg-indigo-900/30",
       title: "Owns ambiguity",
       body: "Took HaulHub's dispatch and fleet services from spec to live in production.",
@@ -101,9 +115,8 @@ export default function About() {
             <p className="text-muted-foreground">
               I don't just build features, I own them end to end: from database
               schema and API design through the UI, the mobile app, and the
-              pipeline that deploys it. Nearly all of it runs in live
-              production with real users, including my current work as frontend
-              lead on{" "}
+              pipeline that deploys it. Nearly all of it runs in live production
+              with real users, including my current work as frontend lead on{" "}
               <a
                 href="https://analyticsdepot.com/"
                 target="_blank"
@@ -145,9 +158,8 @@ export default function About() {
               , a Shopify-equivalent SaaS where I lead nearly all engineering
               across the full stack, from the multi-tenant architecture to the
               merchant mobile app. Before that I spent two years freelancing,
-              and hold a{" "}
-              <strong className="text-foreground">5/5 rating</strong> across 6+
-              delivered production applications.
+              and hold a <strong className="text-foreground">5/5 rating</strong>{" "}
+              across 6+ delivered production applications.
             </p>
 
             {/* Professional Highlights */}
@@ -161,8 +173,8 @@ export default function About() {
                   <Smartphone className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                   <span className="text-sm text-muted-foreground">
                     <strong>HaulHub, live on iOS & Android:</strong> built its
-                    on-demand dispatch and fleet-operations services
-                    end-to-end, across backend, mobile & web
+                    on-demand dispatch and fleet-operations services end-to-end,
+                    across backend, mobile & web
                   </span>
                 </div>
                 <div className="flex items-start gap-2.5">
@@ -176,8 +188,9 @@ export default function About() {
                 <div className="flex items-start gap-2.5">
                   <Store className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                   <span className="text-sm text-muted-foreground">
-                    <strong>Co-founded DzStore:</strong> 1,020+ live stores & 25+
-                    on paid plans in 3 months live, all from search
+                    <strong>Co-founded DzStore:</strong> {stores || "1,034+"}{" "}
+                    live stores & {proMerchants || "25+"} on paid plans in{" "}
+                    {sinceLaunchLabel || "3 months live"}, all from search
                   </span>
                 </div>
                 <div className="flex items-start gap-2.5">

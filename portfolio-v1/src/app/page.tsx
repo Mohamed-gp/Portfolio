@@ -19,17 +19,50 @@ const StatsSection = dynamic(() => import("@/components/stats/StatsSection"));
 const ConsoleLog = dynamic(() => import("@/components/consoleLog/ConsoleLog"));
 export default async function Home() {
   const dz = await getDzStoreStats();
+  const {
+    gmvDzd,
+    orders,
+    proMerchants,
+    products,
+    sinceLaunchLabel,
+    stores,
+    users,
+  } = dz;
   return (
     <>
       <Header />
-      <Hero />
-      <About />
-      <Experience />
-      <Projects />
+      <Hero proMerchants={proMerchants} sinceLaunchLabel={sinceLaunchLabel} />
+      <About
+        proMerchants={proMerchants}
+        sinceLaunchLabel={sinceLaunchLabel}
+        stores={stores}
+      />
+      <Experience
+        proMerchants={proMerchants}
+        sinceLaunchLabel={sinceLaunchLabel}
+        stores={stores}
+        users={users}
+        gmvDzd={gmvDzd}
+      />
+      <Projects
+        dz={{
+          gmvDzd,
+          orders,
+          products,
+          proMerchants,
+          sinceLaunchLabel,
+          stores,
+          storesPerWeek: dz.storesPerWeek,
+          ordersPerWeek: dz.ordersPerWeek,
+        }}
+      />
       <Testimonials />
       <Skills />
       <StatsSection
-        overrides={{ stores: dz.stores, proMerchants: dz.proMerchants }}
+        dzStoreStats={{
+          stores: stores,
+          proMerchants: proMerchants,
+        }}
       />
       <Contact />
       <Footer />

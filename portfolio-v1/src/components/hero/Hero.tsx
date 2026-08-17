@@ -16,8 +16,12 @@ import Image from "next/image";
 import ProfilePicture from "@/../public/profile/profile_picture.jpg";
 
 const EMAIL = "mohamedterba6@gmail.com";
+interface HeroProps {
+  proMerchants: string;
+  sinceLaunchLabel: string;
+}
 
-export default function Hero() {
+export default function Hero({ proMerchants, sinceLaunchLabel }: HeroProps) {
   const [text, setText] = useState("");
   const fullText = "Full-Stack Engineer";
   const [index, setIndex] = useState(0);
@@ -69,8 +73,8 @@ export default function Hero() {
               <span className="animate-blink">|</span>
             </h2>
             <p className="text-base md:text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0">
-              I build and ship production web &amp; mobile platforms
-              end-to-end: AI analytics dashboards at{" "}
+              I build and ship production web &amp; mobile platforms end-to-end:
+              AI analytics dashboards at{" "}
               <a
                 href="https://analyticsdepot.com/"
                 target="_blank"
@@ -89,8 +93,8 @@ export default function Hero() {
                 HaulHub
               </a>
               , a live Uber-style logistics marketplace on iOS &amp; Android,
-              plus products I co-founded that make money organically, with
-              zero ads, within months of launching:{" "}
+              plus products I co-founded that make money organically, with zero
+              ads, within months of launching:{" "}
               <a
                 href="https://dzstore.org/en"
                 target="_blank"
@@ -99,7 +103,8 @@ export default function Hero() {
               >
                 DzStore
               </a>{" "}
-              (26+ merchants on paid plans via SEO alone) and{" "}
+              ({proMerchants || "27"} merchants on paid plans via SEO alone{" "}
+              {sinceLaunchLabel || "in its first 3 months since launch"}) and{" "}
               <a
                 href="https://fibble.io/"
                 target="_blank"

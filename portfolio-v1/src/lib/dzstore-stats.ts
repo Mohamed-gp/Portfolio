@@ -22,6 +22,14 @@ export type DzStoreStats = {
   orders: string;
   proMerchants: string;
   gmvDzd: string;
+  /** new stores in the last 7 days, e.g. "183" */
+  storesPerWeek: string;
+  /** new orders in the last 7 days */
+  ordersPerWeek: string;
+  /** best single week for new stores in the trailing year */
+  bestWeekStores: string;
+  /** best single month for new orders in the trailing year */
+  bestMonthOrders: string;
   /** e.g. "in its first 3 months since launch", computed from the launch date */
   sinceLaunchLabel: string;
   /** true when these came from the live endpoint rather than the fallback */
@@ -34,18 +42,21 @@ export type DzStoreStats = {
  * make that unnecessary.
  */
 export const FALLBACK_STATS: DzStoreStats = {
-  users: "1,177+",
-  stores: "1,020+",
-  products: "2,692+",
-  orders: "737+",
-  proMerchants: "26+",
-  gmvDzd: "7.1M+",
+  users: "1,192+",
+  stores: "1,034+",
+  products: "2,714+",
+  orders: "754+",
+  proMerchants: "27+",
+  gmvDzd: "7.2M+",
+  storesPerWeek: "180",
+  ordersPerWeek: "200",
+  bestWeekStores: "184",
+  bestMonthOrders: "398",
   sinceLaunchLabel: "in its first 3 months since launch",
   live: false,
 };
 
-const ENDPOINT =
-  process.env.DZSTORE_STATS_URL ?? "https://dzstore.org/api/public/stats";
+const ENDPOINT = "https://dzstore.org/api/public/stats";
 
 function isNonEmptyString(v: unknown): v is string {
   return typeof v === "string" && v.trim().length > 0;
@@ -61,9 +72,11 @@ export async function getDzStoreStats(): Promise<DzStoreStats> {
       signal: AbortSignal.timeout(8000),
     });
 
+    console.log("fallback",FALLBACK_STATS)
     if (!res.ok) return FALLBACK_STATS;
 
     const json: unknown = await res.json();
+    console.log("result",json)
     const display =
       typeof json === "object" && json !== null
         ? (json as Record<string, unknown>).display
@@ -85,10 +98,29 @@ export async function getDzStoreStats(): Promise<DzStoreStats> {
       return FALLBACK_STATS;
     }
 
+    const root = json as Record<string, unknown>;
     const launch =
-      typeof (json as Record<string, unknown>).launch === "object"
-        ? ((json as Record<string, unknown>).launch as Record<string, unknown>)
+      typeof root.launch === "object" && root.launch !== null
+        ? (root.launch as Record<string, unknown>)
         : {};
+    const recent =
+      typeof root.recent === "object" && root.recent !== null
+        ? (root.recent as Record<string, unknown>)
+        : {};
+    const records =
+      typeof root.records === "object" && root.records !== null
+        ? (root.records as Record<string, unknown>)
+        : {};
+
+    /** A positive integer from the payload, or the verified fallback. */
+    const num = (v: unknown, fb: string): string =>
+      typeof v === "number" && Number.isFinite(v) && v > 0
+        ? Math.round(v).toLocaleString("en-US")
+        : fb;
+    const bucket = (v: unknown, fb: string): string =>
+      typeof v === "object" && v !== null
+        ? num((v as Record<string, unknown>).count, fb)
+        : fb;
 
     return {
       users: d.users,
@@ -97,12 +129,17 @@ export async function getDzStoreStats(): Promise<DzStoreStats> {
       orders: d.orders,
       proMerchants: d.proEverUpgraded,
       gmvDzd: d.gmvDzd,
+      storesPerWeek: num(recent.newStoresLast7Days, FALLBACK_STATS.storesPerWeek),
+      ordersPerWeek: num(recent.newOrdersLast7Days, FALLBACK_STATS.ordersPerWeek),
+      bestWeekStores: bucket(records.bestWeekStores, FALLBACK_STATS.bestWeekStores),
+      bestMonthOrders: bucket(records.bestMonthOrders, FALLBACK_STATS.bestMonthOrders),
       sinceLaunchLabel: isNonEmptyString(launch.sinceLaunchLabel)
         ? launch.sinceLaunchLabel
         : FALLBACK_STATS.sinceLaunchLabel,
       live: true,
     };
-  } catch {
+  } catch (er){
+    console.log("issue",er)
     return FALLBACK_STATS;
   }
 }

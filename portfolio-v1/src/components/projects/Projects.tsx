@@ -50,7 +50,18 @@ interface Project {
   technologies: string[];
 }
 
-export default function Projects() {
+export type ProjectsDzStats = {
+  gmvDzd: string;
+  orders: string;
+  products: string;
+  proMerchants: string;
+  sinceLaunchLabel: string;
+  stores: string;
+  storesPerWeek: string;
+  ordersPerWeek: string;
+};
+
+export default function Projects({ dz }: { dz?: ProjectsDzStats }) {
   const [activeTab, setActiveTab] = useState("all");
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -249,15 +260,18 @@ export default function Projects() {
         },
       ],
       description: [
-        "All of that in the first 3 months since launch, and still growing: ~170 new stores a week, with orders up 270% month over month. Not a dinar of ad spend, every merchant came from search.",
+        `All of that ${dz?.sinceLaunchLabel ?? "in its first 3 months since launch"}, and still growing: about ${dz?.storesPerWeek ?? "180"} new stores and ${dz?.ordersPerWeek ?? "200"} orders in the last week alone. Not a dinar of ad spend, every merchant came from search.`,
         "Co-founded this multi-tenant Shopify-equivalent SaaS and lead nearly all engineering: subdomain-per-store routing with Caddy on-demand TLS, a 44-model Prisma/PostgreSQL schema, a carrier layer covering 70 Algerian delivery companies behind 5 API adapters, and an iOS/Android merchant app (React Native + Expo); self-hosted on Hetzner via Docker with zero-downtime deploys and 1,000+ automated tests keeping shipped features from breaking.",
         "Caught a revenue leak: customer contact details bypassed the free-plan order cap through 8 server-side channels despite correct frontend gating. Sealed every path behind a single order-privacy module, locked in by payload-scanning regression tests.",
         "Technical SEO drives acquisition: 15,000+ pages indexed, 600+ Google Shopping product snippets, 3,000+ Search clicks a month; search out-refers social 12:1 on the signup funnel. Cut the database bill by 50%+ by moving Postgres off Neon to Supabase at zero downtime.",
       ],
       metrics: [
-        { value: "1,000+", label: "Live stores" },
-        { value: "25+", label: "Paid PRO merchants" },
-        { value: "7.1M+ DZD", label: "Orders processed (GMV)" },
+        { value: dz?.stores ?? "1,034+", label: "Live stores" },
+        { value: dz?.proMerchants ?? "27+", label: "Paid PRO merchants" },
+        {
+          value: `${dz?.gmvDzd ?? "7.2M+"} DZD`,
+          label: "Orders processed (GMV)",
+        },
         { value: "4.7/5", label: "84 merchant reviews" },
         { value: "99.95%", label: "Uptime, last 90 days" },
         { value: "214K+", label: "Pageviews, 3 months" },
@@ -273,7 +287,7 @@ export default function Projects() {
       ],
       hardest:
         "Multi-tenant subdomain routing with Caddy on-demand TLS: every merchant gets their own store and custom domain with automatic HTTPS, all from one codebase.",
-      status: "Live · 1,020+ Stores · 26+ Paying",
+      status: `Live · ${dz?.stores ?? "1,034+"} Stores · ${dz?.proMerchants ?? "27+"} Paying`,
       role: "Co-Founder & Lead Engineer",
       technologies: [
         "Next.js",

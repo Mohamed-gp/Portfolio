@@ -12,12 +12,12 @@ import {
   BadgeDollarSign,
 } from "lucide-react";
 
-export type StatsOverrides = {
+export type StatsSectionProps = {
   stores?: string;
   proMerchants?: string;
 };
 
-const buildStats = (o: StatsOverrides = {}) => [
+const buildStats = (o: StatsSectionProps = {}) => [
   {
     icon: <Code className="h-6 w-6 text-purple-500" />,
     value: "7+",
@@ -38,13 +38,13 @@ const buildStats = (o: StatsOverrides = {}) => [
   },
   {
     icon: <Users className="h-6 w-6 text-blue-500" />,
-    value: o.stores ?? "1,020+",
+    value: o.stores ?? "1,034+",
     label: "DzStore Stores",
     description: "Live merchant stores, zero ad spend",
   },
   {
     icon: <BadgeDollarSign className="h-6 w-6 text-amber-500" />,
-    value: o.proMerchants ?? "26+",
+    value: o.proMerchants ?? "27+",
     label: "Merchants on Paid Plans",
     description: "DzStore PRO, acquired through SEO alone",
   },
@@ -63,11 +63,11 @@ const buildStats = (o: StatsOverrides = {}) => [
 ];
 
 export default function StatsSection({
-  overrides = {},
+dzStoreStats = {},
 }: {
-  overrides?: StatsOverrides;
+dzStoreStats?: StatsSectionProps;
 }) {
-  const stats = buildStats(overrides);
+  const stats = buildStats(dzStoreStats);
   return (
     <section className="py-16 sm:py-20 relative overflow-hidden">
       {/* Gradient background */}
