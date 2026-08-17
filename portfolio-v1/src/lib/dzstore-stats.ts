@@ -15,6 +15,8 @@
  * is never shipped to the browser.
  */
 
+import snapshot from "@/data/dzstore-stats.json";
+
 export type DzStoreStats = {
   users: string;
   stores: string;
@@ -22,10 +24,6 @@ export type DzStoreStats = {
   orders: string;
   proMerchants: string;
   gmvDzd: string;
-  /** new stores in the last 7 days, e.g. "183" */
-  storesPerWeek: string;
-  /** new orders in the last 7 days */
-  ordersPerWeek: string;
   /** best single week for new stores in the trailing year */
   bestWeekStores: string;
   /** best single month for new orders in the trailing year */
@@ -37,22 +35,15 @@ export type DzStoreStats = {
 };
 
 /**
- * Last figures verified by hand against the production database.
- * Update only when a fresh audit says so; the live endpoint should normally
- * make that unnecessary.
+ * Last-known-good numbers, refreshed automatically.
+ *
+ * scripts/sync-cv-stats.mjs rewrites this snapshot on every build that can
+ * reach the stats endpoint, so nobody has to remember to update a constant.
+ * If the endpoint is down at request time we serve these, which are the last
+ * values actually observed in production rather than a hand-typed guess.
  */
 export const FALLBACK_STATS: DzStoreStats = {
-  users: "1,192+",
-  stores: "1,034+",
-  products: "2,714+",
-  orders: "754+",
-  proMerchants: "27+",
-  gmvDzd: "7.2M+",
-  storesPerWeek: "180",
-  ordersPerWeek: "200",
-  bestWeekStores: "184",
-  bestMonthOrders: "398",
-  sinceLaunchLabel: "in its first 3 months since launch",
+  ...snapshot,
   live: false,
 };
 
@@ -103,10 +94,6 @@ export async function getDzStoreStats(): Promise<DzStoreStats> {
       typeof root.launch === "object" && root.launch !== null
         ? (root.launch as Record<string, unknown>)
         : {};
-    const recent =
-      typeof root.recent === "object" && root.recent !== null
-        ? (root.recent as Record<string, unknown>)
-        : {};
     const records =
       typeof root.records === "object" && root.records !== null
         ? (root.records as Record<string, unknown>)
@@ -129,8 +116,6 @@ export async function getDzStoreStats(): Promise<DzStoreStats> {
       orders: d.orders,
       proMerchants: d.proEverUpgraded,
       gmvDzd: d.gmvDzd,
-      storesPerWeek: num(recent.newStoresLast7Days, FALLBACK_STATS.storesPerWeek),
-      ordersPerWeek: num(recent.newOrdersLast7Days, FALLBACK_STATS.ordersPerWeek),
       bestWeekStores: bucket(records.bestWeekStores, FALLBACK_STATS.bestWeekStores),
       bestMonthOrders: bucket(records.bestMonthOrders, FALLBACK_STATS.bestMonthOrders),
       sinceLaunchLabel: isNonEmptyString(launch.sinceLaunchLabel)

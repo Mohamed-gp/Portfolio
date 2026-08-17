@@ -27,6 +27,12 @@ import { fileURLToPath } from "node:url";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const FILES = ["Mohamed_Outerbah_CV.md", "Mohamed_Outerbah_CV.html"];
+/**
+ * Last-known-good snapshot. The site imports this as its fallback, so the
+ * numbers shown when the endpoint is unreachable are the last ones actually
+ * observed rather than a constant someone has to remember to edit.
+ */
+const SNAPSHOT = join(ROOT, "portfolio-v1/src/data/dzstore-stats.json");
 const ENDPOINT =
   process.env.DZSTORE_STATS_URL ?? "https://dzstore.org/api/public/stats";
 
@@ -118,6 +124,39 @@ async function main() {
   if (!rules.length) {
     log("skipped, no usable values in payload. CV left as is.");
     return;
+  }
+
+  // Persist the snapshot first: even if no CV wording changes, the site
+  // fallback should still advance to what we just observed.
+  try {
+    const d = payload.display ?? {};
+    const rec = payload.records ?? {};
+    const snap = {
+      capturedAt: new Date().toISOString(),
+      users: d.users,
+      stores: d.stores,
+      products: d.products,
+      orders: d.orders,
+      proMerchants: d.proEverUpgraded,
+      gmvDzd: d.gmvDzd,
+      bestWeekStores: intOrNull(rec?.bestWeekStores?.count)
+        ? group(intOrNull(rec.bestWeekStores.count))
+        : undefined,
+      bestMonthOrders: intOrNull(rec?.bestMonthOrders?.count)
+        ? group(intOrNull(rec.bestMonthOrders.count))
+        : undefined,
+      sinceLaunchLabel: payload?.launch?.sinceLaunchLabel,
+    };
+    // Only write a complete snapshot; a partial one would degrade the
+    // fallback rather than improve it.
+    if (Object.values(snap).every((v) => typeof v === "string" && v.length)) {
+      writeFileSync(SNAPSHOT, JSON.stringify(snap, null, 2) + "\n");
+      log("snapshot written for the site fallback.");
+    } else {
+      log("snapshot skipped, payload incomplete. Previous snapshot kept.");
+    }
+  } catch (err) {
+    log(`snapshot skipped (${err.message}). Previous snapshot kept.`);
   }
 
   let changedFiles = 0;
