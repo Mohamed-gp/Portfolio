@@ -61,7 +61,7 @@ export default function Experience({
       description: [
         "Frontend lead and 2nd-highest contributor in a ~10-person team, owning every user-facing surface of a live AI analytics SaaS.",
         "Dashboards & reporting: drag-and-drop dashboard builder, shareable password-protected/embed reports, one-click PDF/PowerPoint export, and an NL-to-SQL query interface.",
-        "Real-time collaboration: WebSocket session sync, live user presence, and a collaborative chat sidebar over production wss://.",
+        "Real-time & auto-dashboards: took the realtime layer to production (WebSocket URL detection, CSP hardening for wss://) and built auto-dashboard generation that turns an uploaded file into a populated dashboard.",
         "Data connectors: OAuth2 platform spanning 14 sources, from warehouses (BigQuery, Snowflake, Databricks, Redshift) to databases and SaaS tools, with per-connector refresh schedules (React + FastAPI + Celery Beat) and in-app sync-failure alerts.",
         "AI / RAG: document Q&A with inline source citations and one-tap follow-up skills (root cause, forecast, outliers), plus an LLM agent observability console over the trace pipeline (latency and provider-cost drill-down, cost-regression flags, async CSV/JSON export).",
         "Growth & DevOps: rebuilt the public marketing site, cut deploy time from ~30 min to under 5 with zero-downtime PM2 cluster reloads, and ship through a review-gated pull-request workflow with AI/ML, LLMOps and infra engineers; initialized the companion React Native app.",

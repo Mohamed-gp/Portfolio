@@ -5,7 +5,7 @@ Algeria · CET (UTC+1) · [mohamedterba6@gmail.com](mailto:mohamedterba6@gmail.c
 
 ---
 
-Full-Stack Engineer with 3+ years shipping production web & mobile platforms end-to-end. Own the entire frontend of a live AI analytics SaaS as 2nd-highest contributor, and built the dispatch and fleet-operations services of a live Uber-style logistics marketplace. Co-founder of DzStore, a Shopify-equivalent e-commerce SaaS now serving 1,034+ live stores, and Fibble, a multiplayer party game on web and Discord, both grown entirely through search and word of mouth.
+Full-Stack Engineer with 3+ years shipping production web & mobile platforms end-to-end. Own the entire frontend of a live AI analytics SaaS as 2nd-highest contributor, and built the dispatch and fleet-operations services of a live Uber-style logistics marketplace. Co-founder of DzStore, a Shopify-equivalent e-commerce SaaS now serving 1,037+ live stores, and Fibble, a multiplayer party game on web and Discord, both grown entirely through search and word of mouth.
 
 ## Experience
 
@@ -15,7 +15,7 @@ Full-Stack Engineer with 3+ years shipping production web & mobile platforms end
 
 - Build every user-facing surface of that platform, including the five industry workspaces (real estate, finance, marketing, e-commerce, management) that prime the agent with domain context, so non-technical teams get answers without writing SQL.
 - **Dashboards & reporting:** Designed and implemented the drag-and-drop dashboard builder, shareable password-protected/embed reports, and one-click PDF/PowerPoint export UI, then defended auto-generated charts against silent misreadings (wrong aggregation, mis-detected date columns, misleading trend arrows) using golden-workbook fixtures.
-- **Real-time collaboration:** Shipped WebSocket session sync, user presence, and a collaborative chat sidebar over production wss://, plus the NL-to-SQL query interface.
+- **Real-time & auto-dashboards:** Took the realtime layer to production, fixing WebSocket URL detection and hardening the CSP for wss:// across the expert and inquiry surfaces, and built auto-dashboard generation that turns an uploaded file into a populated dashboard.
 - **Data connectors:** Developed an OAuth2 connector platform with encrypted credential storage spanning 14 sources across warehouses (BigQuery, Snowflake, Databricks, Redshift), databases (PostgreSQL, MySQL) and SaaS tools (GA4, Search Console, Sheets, Gmail, Slack, YouTube), with per-connector refresh schedules (React, FastAPI, Celery Beat) and in-app sync-failure alerts.
 - **AI / RAG:** Delivered RAG document-intelligence Q&A with resilient streaming, multi-format ingestion (CSV/PDF/Excel/images), inline source citations, and one-tap follow-up skills (root cause, forecast, outliers) on any answer, over a Gemini model layer with fallback.
 - **LLM agent observability:** Instrumented AI agent runs with an admin console over the trace pipeline: reliability trends, per-run latency and provider-cost drill-down, cost-regression flags, and async CSV/JSON export.
@@ -53,8 +53,8 @@ Full-Stack Engineer with 3+ years shipping production web & mobile platforms end
 
 **Jun 2025 - Present**
 
-- **Traction:** Reached 1,192+ merchant signups, 1,034+ live stores, 2,715+ products, 754+ orders, and 7.2M+ DZD in orders processed (GMV) in the 3 months since the May 2026 launch, 100% organic with zero ad spend, and **27+ merchants upgraded to paid PRO plans, acquired through SEO alone**.
-- **Growth rate:** Peaking at 184 new stores in its best week and 398 orders in its best month, on 55,000+ visitors and 214,000+ pageviews.
+- **Traction:** Reached 1,196+ merchant signups, 1,037+ live stores, 2,717+ products, 759+ orders, and 7.2M+ DZD in orders processed (GMV) in the 3 months since the May 2026 launch, 100% organic with zero ad spend, and **27+ merchants upgraded to paid PRO plans, acquired through SEO alone**.
+- **Growth rate:** Peaking at 184 new stores in its best week and 404 orders in its best month, on 55,000+ visitors and 214,000+ pageviews.
 - **Quality signals:** 4.7/5 average across 84 in-app merchant survey responses; 99.95% uptime over the last 90 days with zero recorded incidents (public status page: [status.dzstore.org](https://status.dzstore.org)).
 - **Organic SEO engine:** Owned technical SEO end-to-end: 15,000+ pages indexed, 600+ valid product snippets & merchant listings (Google Shopping rich results), and a Merchant Center feed with 2,000+ products, now pulling 3,000+ Google Search clicks and 100,000+ impressions a month (search out-refers social 12:1 on the signup funnel).
 - **Merchant mobile app:** Launched an iOS/Android app (React Native + Expo) for store owners: real-time order tracking, push notifications for new orders, stock management, and a multilingual UI with Arabic RTL.
