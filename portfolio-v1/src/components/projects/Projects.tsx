@@ -409,6 +409,25 @@ export default function Projects() {
           caption:
             "The fourth role: a company employee sees only their own jobs and stats, with no fleet to manage",
         },
+        {
+          src: "/projects/haulhub/app-30-employee-assigned-job.webp",
+          caption:
+            "The company assigns a job and it lands on that employee's phone",
+        },
+        {
+          src: "/projects/haulhub/app-31-employee-job-route.webp",
+          caption: "The driver's brief: routed pickup to drop-off with an ETA",
+        },
+        {
+          src: "/projects/haulhub/app-32-employee-assigned-by-company.webp",
+          caption:
+            "\"Assigned by your company\": the employee accepts nothing, they just start the trip",
+        },
+        {
+          src: "/projects/haulhub/app-33-employee-trip-in-progress.webp",
+          caption:
+            "Trip in progress: live route, chat with the customer, then confirm each destination",
+        },
       ],
       description: [
         "One of the primary engineers across backend, mobile & web on a production Uber-style logistics marketplace, live on iOS & Android in the Netherlands across 12 service categories and 100+ skilled-labor sub-categories, with full RTL i18n in 5 languages (EN/NL/AR/DE/UR).",
