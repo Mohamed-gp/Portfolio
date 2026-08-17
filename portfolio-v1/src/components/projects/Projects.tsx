@@ -257,10 +257,10 @@ export default function Projects() {
       metrics: [
         { value: "1,000+", label: "Live stores" },
         { value: "25+", label: "Paid PRO merchants" },
-        { value: "6.6M+ DZD", label: "Orders processed (GMV)" },
+        { value: "7.1M+ DZD", label: "Orders processed (GMV)" },
         { value: "4.7/5", label: "84 merchant reviews" },
         { value: "99.95%", label: "Uptime, last 90 days" },
-        { value: "166K+", label: "Pageviews, 3 months" },
+        { value: "214K+", label: "Pageviews, 3 months" },
       ],
       statusPage: "https://status.dzstore.org",
       features: [
@@ -273,7 +273,7 @@ export default function Projects() {
       ],
       hardest:
         "Multi-tenant subdomain routing with Caddy on-demand TLS: every merchant gets their own store and custom domain with automatic HTTPS, all from one codebase.",
-      status: "Live · 1,000+ Stores · 25+ Paying",
+      status: "Live · 1,020+ Stores · 26+ Paying",
       role: "Co-Founder & Lead Engineer",
       technologies: [
         "Next.js",

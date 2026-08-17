@@ -16,11 +16,14 @@
  */
 
 export type DzStoreStats = {
+  users: string;
   stores: string;
   products: string;
   orders: string;
   proMerchants: string;
   gmvDzd: string;
+  /** e.g. "in its first 3 months since launch", computed from the launch date */
+  sinceLaunchLabel: string;
   /** true when these came from the live endpoint rather than the fallback */
   live: boolean;
 };
@@ -31,11 +34,13 @@ export type DzStoreStats = {
  * make that unnecessary.
  */
 export const FALLBACK_STATS: DzStoreStats = {
-  stores: "1,000+",
-  products: "2,700+",
-  orders: "700+",
-  proMerchants: "25+",
-  gmvDzd: "6.6M+",
+  users: "1,177+",
+  stores: "1,020+",
+  products: "2,692+",
+  orders: "737+",
+  proMerchants: "26+",
+  gmvDzd: "7.1M+",
+  sinceLaunchLabel: "in its first 3 months since launch",
   live: false,
 };
 
@@ -70,6 +75,7 @@ export async function getDzStoreStats(): Promise<DzStoreStats> {
     // Every field must be present and non-empty, or we use the fallback
     // wholesale rather than rendering a half-live, half-stale row.
     if (
+      !isNonEmptyString(d.users) ||
       !isNonEmptyString(d.stores) ||
       !isNonEmptyString(d.products) ||
       !isNonEmptyString(d.orders) ||
@@ -79,12 +85,21 @@ export async function getDzStoreStats(): Promise<DzStoreStats> {
       return FALLBACK_STATS;
     }
 
+    const launch =
+      typeof (json as Record<string, unknown>).launch === "object"
+        ? ((json as Record<string, unknown>).launch as Record<string, unknown>)
+        : {};
+
     return {
+      users: d.users,
       stores: d.stores,
       products: d.products,
       orders: d.orders,
       proMerchants: d.proEverUpgraded,
       gmvDzd: d.gmvDzd,
+      sinceLaunchLabel: isNonEmptyString(launch.sinceLaunchLabel)
+        ? launch.sinceLaunchLabel
+        : FALLBACK_STATS.sinceLaunchLabel,
       live: true,
     };
   } catch {

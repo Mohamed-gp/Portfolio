@@ -38,13 +38,13 @@ const buildStats = (o: StatsOverrides = {}) => [
   },
   {
     icon: <Users className="h-6 w-6 text-blue-500" />,
-    value: o.stores ?? "1,000+",
+    value: o.stores ?? "1,020+",
     label: "DzStore Stores",
     description: "Live merchant stores, zero ad spend",
   },
   {
     icon: <BadgeDollarSign className="h-6 w-6 text-amber-500" />,
-    value: o.proMerchants ?? "25+",
+    value: o.proMerchants ?? "26+",
     label: "Merchants on Paid Plans",
     description: "DzStore PRO, acquired through SEO alone",
   },
