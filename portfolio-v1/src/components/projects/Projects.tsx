@@ -81,7 +81,12 @@ export default function Projects() {
         {
           src: "/projects/analytics-depot/app-04-integrations.webp",
           caption:
-            "2. Connect a source: the OAuth2 connector platform I built end to end, with per-connector sync scheduling, field mapping, and live instance/error counts.",
+            "2. Connect a source: the OAuth2 connector platform I built end to end, spanning warehouses (BigQuery, Snowflake, Databricks, Redshift), databases, and SaaS tools.",
+        },
+        {
+          src: "/projects/analytics-depot/app-07-connector-instance.webp",
+          caption:
+            "Each connection is a managed instance: pick the sheet, sync on a schedule, disconnect, with live active and error counts above.",
         },
         {
           src: "/projects/analytics-depot/app-spreadsheet-view.webp",
@@ -109,6 +114,16 @@ export default function Projects() {
             "7. Charts are interactive Plotly, with the Data Explorer profiling every column of the dataset alongside the answer.",
         },
         {
+          src: "/projects/analytics-depot/app-06-data-explorer.webp",
+          caption:
+            "The Data Explorer profiles the file as it lands: row and column counts, a quality score, KPI sparklines, then every column typed with its missing rate, cardinality, and distribution.",
+        },
+        {
+          src: "/projects/analytics-depot/app-08-full-workspace.webp",
+          caption:
+            "The whole workspace in one frame: conversation history, the answer, the profiler, and the toolbar for upload, data sources, charts, export, and sharing.",
+        },
+        {
           src: "/projects/analytics-depot/site-04-collaboration.webp",
           caption:
             "8. Share it: role-based access and always-current report links, on the WebSocket presence and collaboration layer.",
@@ -124,14 +139,14 @@ export default function Projects() {
         },
       ],
       description: [
-        "Frontend lead on a live AI analytics SaaS, owning every user-facing surface: five industry workspaces that prime the agent with domain context, a drag-and-drop dashboard builder, shareable password-protected reports with one-click PDF/PowerPoint export, and an OAuth2 connector platform spanning 10+ data sources (BigQuery, GA4, Sheets, Slack, and more).",
+        "Frontend lead on a live AI analytics SaaS, owning every user-facing surface: five industry workspaces that prime the agent with domain context, a drag-and-drop dashboard builder, shareable password-protected reports with one-click PDF/PowerPoint export, and an OAuth2 connector platform spanning 14 data sources, from warehouses (BigQuery, Snowflake, Databricks, Redshift) to databases and SaaS tools.",
         "Shipped RAG document Q&A, an NL-to-SQL query interface, per-connector refresh scheduling (React + FastAPI + Celery), and the LLM agent observability console on top of the trace pipeline: run volume and reliability trends, per-run latency and provider-cost drill-down into spans, cost-regression flags, and async CSV/JSON export of the query log.",
         "Rebuilt the public marketing site, hardened auth with PKCE OAuth and Apple \"Hide My Email\", and cut deploy time from ~30 min to under 5 with zero-downtime PM2 cluster reloads.",
       ],
       features: [
         "Ask questions in plain English, get SQL-backed answers and charts",
         "Drag-and-drop dashboards with shareable, embeddable reports",
-        "10+ one-click data connectors, from BigQuery and GA4 to Slack",
+        "14 one-click data connectors, from Snowflake and BigQuery to Slack",
         "Upload CSV/PDF/Excel documents and chat with them (RAG)",
       ],
       hardest:
