@@ -255,10 +255,6 @@ export default function Projects({ dz }: { dz?: ProjectsDzStats }) {
           src: "/projects/dzstore/app-09-settings.webp",
           caption: "Trilingual by design: Arabic (RTL), French, English",
         },
-        {
-          src: "/projects/dzstore/low-stock-alert.webp",
-          caption: "A low-stock push landing on the merchant's phone",
-        },
       ],
       description: [
         `All of that ${dz?.sinceLaunchLabel ?? FALLBACK_STATS.sinceLaunchLabel}, and still climbing: its best week added ${dz?.bestWeekStores ?? FALLBACK_STATS.bestWeekStores} new stores, its best month ${dz?.bestMonthOrders ?? FALLBACK_STATS.bestMonthOrders} orders. Not a dinar of ad spend, every merchant came from search.`,
@@ -490,9 +486,19 @@ export default function Projects({ dz }: { dz?: ProjectsDzStats }) {
       flag: "🌍",
       type: "Web Application",
       url: "https://fibble.io/",
-      image: "/projects/fibble/hero-v2.webp",
+      image: "/projects/fibble/hero-v3.webp",
       galleryTitle: "Inside the game",
       gallery: [
+        {
+          src: "/projects/fibble/lobby-chat.webp",
+          caption:
+            "The lobby: real players and bots in one room, chatting live while the host sets the rules.",
+        },
+        {
+          src: "/projects/fibble/round-write-answer.webp",
+          caption:
+            "A round in play: everyone writes a fake answer against a server-authoritative countdown.",
+        },
         {
           src: "/projects/fibble/game-truth-reveal.webp",
           caption:
@@ -508,14 +514,20 @@ export default function Projects({ dz }: { dz?: ProjectsDzStats }) {
           caption:
             "The deck picker: free and premium categories, from flags to Valorant.",
         },
+      ],
+      phoneShotsTitle: "The same game on a phone, in the browser",
+      phoneShots: [
         {
-          src: "/projects/fibble/mobile-landing.webp",
-          caption:
-            "The mobile web entry: play as a guest, no download, no account.",
+          src: "/projects/fibble/phone-01-guest-entry.webp",
+          caption: "Play as a guest: no app, no download, no account",
         },
         {
-          src: "/projects/fibble/arabic-answer-input.webp",
-          caption: "Full Arabic RTL support down to the answer input.",
+          src: "/projects/fibble/phone-02-vote.webp",
+          caption: "Voting: spot the real answer among the players' fakes",
+        },
+        {
+          src: "/projects/fibble/phone-03-standings.webp",
+          caption: "Standings after every round, players and bots ranked",
         },
       ],
       description: [
