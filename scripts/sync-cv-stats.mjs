@@ -21,11 +21,39 @@
  *   DZSTORE_STATS_TOKEN  required if the endpoint is token-gated
  */
 
-import { readFileSync, writeFileSync } from "node:fs";
+import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
+
+/**
+ * Load the token from the same .env files Next.js reads.
+ *
+ * npm does not load .env, so without this the script runs tokenless during
+ * `npm run build`, gets a 401, and silently leaves the CV on stale numbers,
+ * which is exactly the hand-editing this script exists to remove. Values
+ * already present in the environment win, so CI secrets still take priority.
+ */
+function loadEnvFiles() {
+  const files = [
+    join(ROOT, "portfolio-v1/.env.local"),
+    join(ROOT, "portfolio-v1/.env"),
+    join(ROOT, ".env.local"),
+    join(ROOT, ".env"),
+  ];
+  for (const file of files) {
+    if (!existsSync(file)) continue;
+    for (const line of readFileSync(file, "utf8").split(/\r?\n/)) {
+      const m = /^\s*(?:export\s+)?([A-Za-z_][A-Za-z0-9_]*)\s*=\s*(.*)$/.exec(line);
+      if (!m) continue;
+      const key = m[1];
+      if (process.env[key] !== undefined) continue;
+      process.env[key] = m[2].trim().replace(/^(['"])(.*)\1$/s, "$2");
+    }
+  }
+}
+loadEnvFiles();
 const FILES = ["Mohamed_Outerbah_CV.md", "Mohamed_Outerbah_CV.html"];
 /**
  * Last-known-good snapshot. The site imports this as its fallback, so the

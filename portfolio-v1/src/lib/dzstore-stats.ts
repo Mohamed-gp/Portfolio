@@ -63,11 +63,9 @@ export async function getDzStoreStats(): Promise<DzStoreStats> {
       signal: AbortSignal.timeout(8000),
     });
 
-    console.log("fallback",FALLBACK_STATS)
     if (!res.ok) return FALLBACK_STATS;
 
     const json: unknown = await res.json();
-    console.log("result",json)
     const display =
       typeof json === "object" && json !== null
         ? (json as Record<string, unknown>).display
@@ -123,8 +121,9 @@ export async function getDzStoreStats(): Promise<DzStoreStats> {
         : FALLBACK_STATS.sinceLaunchLabel,
       live: true,
     };
-  } catch (er){
-    console.log("issue",er)
+  } catch {
+    // Network error, timeout, or malformed JSON: the snapshot is still true,
+    // just older. Never let a stats fetch break a page render.
     return FALLBACK_STATS;
   }
 }
