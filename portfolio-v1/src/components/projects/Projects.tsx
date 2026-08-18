@@ -212,7 +212,7 @@ export default function Projects({ dz }: { dz?: ProjectsDzStats }) {
             "The plugin marketplace, with interest capture on each unreleased extension.",
         },
         {
-          src: "/projects/dzstore/admin-onboarding-checklist.webp",
+          src: "/projects/dzstore/admin-onboarding-checklist-v2.webp",
           caption:
             "New-merchant onboarding: a 10-step checklist that tracks activation.",
         },
