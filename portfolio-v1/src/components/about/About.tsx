@@ -190,7 +190,7 @@ export default function About({
                   <Store className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                   <span className="text-sm text-muted-foreground">
                     <strong>Co-founded DzStore:</strong> {stores || FALLBACK_STATS.stores}{" "}
-                    live stores & {proMerchants || FALLBACK_STATS.proMerchants} on paid plans in{" "}
+                    live stores & {proMerchants || FALLBACK_STATS.proMerchants} upgraded to paid plans in{" "}
                     {sinceLaunchLabel || "3 months live"}, all from search
                   </span>
                 </div>

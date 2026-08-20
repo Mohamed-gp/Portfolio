@@ -103,7 +103,8 @@ export default function Hero({ proMerchants, sinceLaunchLabel }: HeroProps) {
               >
                 DzStore
               </a>{" "}
-              ({proMerchants || "27"} merchants on paid plans via SEO alone{" "}
+              ({proMerchants || "27"} merchants upgraded to paid plans via SEO
+              alone{" "}
               {sinceLaunchLabel || "in its first 3 months since launch"}) and{" "}
               <a
                 href="https://fibble.io/"

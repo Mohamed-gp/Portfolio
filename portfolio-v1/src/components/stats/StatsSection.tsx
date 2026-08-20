@@ -46,7 +46,7 @@ const buildStats = (o: StatsSectionProps = {}) => [
   {
     icon: <BadgeDollarSign className="h-6 w-6 text-amber-500" />,
     value: o.proMerchants ?? FALLBACK_STATS.proMerchants,
-    label: "Merchants on Paid Plans",
+    label: "Merchants Upgraded to Paid",
     description: "DzStore PRO, acquired through SEO alone",
   },
   {

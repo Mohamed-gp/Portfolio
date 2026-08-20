@@ -22,6 +22,7 @@ export default async function Home() {
   const {
     gmvDzd,
     orders,
+    proActive,
     proMerchants,
     products,
     sinceLaunchLabel,
@@ -49,6 +50,7 @@ export default async function Home() {
           gmvDzd,
           orders,
           products,
+          proActive,
           proMerchants,
           sinceLaunchLabel,
           stores,

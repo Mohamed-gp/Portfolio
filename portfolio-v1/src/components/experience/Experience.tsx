@@ -113,7 +113,7 @@ export default function Experience({
       location: "Algeria · Remote",
       period: "Jun 2025 – Present",
       description: [
-        `Co-founded a Shopify-equivalent multi-tenant e-commerce SaaS and lead nearly all engineering; ${sinceLaunchLabel || FALLBACK_STATS.sinceLaunchLabel}: ${users || FALLBACK_STATS.users} merchant signups, ${stores || FALLBACK_STATS.stores} live stores, ${proMerchants || FALLBACK_STATS.proMerchants} on paid PRO plans through SEO alone, and ${gmvDzd || FALLBACK_STATS.gmvDzd} DZD in orders processed (GMV), 100% organic with zero ad spend.`,
+        `Co-founded a Shopify-equivalent multi-tenant e-commerce SaaS and lead nearly all engineering; ${sinceLaunchLabel || FALLBACK_STATS.sinceLaunchLabel}: ${users || FALLBACK_STATS.users} merchant signups, ${stores || FALLBACK_STATS.stores} live stores, ${proMerchants || FALLBACK_STATS.proMerchants} upgraded to paid PRO plans through SEO alone, and ${gmvDzd || FALLBACK_STATS.gmvDzd} DZD in orders processed (GMV), 100% organic with zero ad spend.`,
         "Platform: subdomain-per-store routing with Caddy on-demand TLS, a 44-model Prisma/PostgreSQL schema, online card payments (Chargily Pay) with HMAC-verified webhooks, and a carrier layer covering 70 Algerian delivery companies behind 5 API adapters.",
         "SEO engine: 15,000+ pages indexed, a Google Merchant Center feed (2,000+ products), and Meta Pixel integration pulling 3,000+ Google Search clicks a month.",
         "Mobile: iOS/Android merchant app (React Native + Expo) with real-time order tracking, push notifications, and stock management.",

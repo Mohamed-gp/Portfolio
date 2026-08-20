@@ -159,13 +159,18 @@ async function main() {
   try {
     const d = payload.display ?? {};
     const rec = payload.records ?? {};
+    const proActive = intOrNull(payload?.totals?.proActive);
     const snap = {
       capturedAt: new Date().toISOString(),
       users: d.users,
       stores: d.stores,
       products: d.products,
       orders: d.orders,
+      // Two different facts, and the site says which is which. proMerchants
+      // is everyone who ever paid; proActive is who is on PRO right now.
+      // Anything phrased in the present tense must use proActive.
       proMerchants: d.proEverUpgraded,
+      proActive: proActive === null ? undefined : group(proActive),
       gmvDzd: d.gmvDzd,
       bestWeekStores: intOrNull(rec?.bestWeekStores?.count)
         ? group(intOrNull(rec.bestWeekStores.count))

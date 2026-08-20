@@ -22,7 +22,10 @@ export type DzStoreStats = {
   stores: string;
   products: string;
   orders: string;
+  /** everyone who has ever paid for PRO. Only ever phrased as "upgraded". */
   proMerchants: string;
+  /** merchants on the PRO plan right now. The only one that may read "paying". */
+  proActive: string;
   gmvDzd: string;
   /** best single week for new stores in the trailing year */
   bestWeekStores: string;
@@ -88,6 +91,10 @@ export async function getDzStoreStats(): Promise<DzStoreStats> {
     }
 
     const root = json as Record<string, unknown>;
+    const totals =
+      typeof root.totals === "object" && root.totals !== null
+        ? (root.totals as Record<string, unknown>)
+        : {};
     const launch =
       typeof root.launch === "object" && root.launch !== null
         ? (root.launch as Record<string, unknown>)
@@ -113,6 +120,7 @@ export async function getDzStoreStats(): Promise<DzStoreStats> {
       products: d.products,
       orders: d.orders,
       proMerchants: d.proEverUpgraded,
+      proActive: num(totals.proActive, FALLBACK_STATS.proActive),
       gmvDzd: d.gmvDzd,
       bestWeekStores: bucket(records.bestWeekStores, FALLBACK_STATS.bestWeekStores),
       bestMonthOrders: bucket(records.bestMonthOrders, FALLBACK_STATS.bestMonthOrders),

@@ -1,12 +1,13 @@
 {
-  "capturedAt": "2026-08-18T06:20:20.133Z",
-  "users": "1,202+",
-  "stores": "1,043+",
-  "products": "2,741+",
-  "orders": "766+",
-  "proMerchants": "27+",
-  "gmvDzd": "7.2M+",
+  "capturedAt": "2026-08-20T01:27:47.457Z",
+  "users": "1,250+",
+  "stores": "1,080+",
+  "products": "2,990+",
+  "orders": "833+",
+  "proMerchants": "30+",
+  "proActive": "16",
+  "gmvDzd": "9.4M+",
   "bestWeekStores": "184",
-  "bestMonthOrders": "411",
+  "bestMonthOrders": "478",
   "sinceLaunchLabel": "in its first 3 months since launch"
 }
