@@ -45,6 +45,52 @@ function getRelativeTime(dateStr: string): string {
   return `${years} year${years > 1 ? "s" : ""} ago`;
 }
 
+/**
+ * Merchants running real stores on DzStore, quoted from the public reviews on
+ * dzstore.org. Different proof from the client cards above: those are people
+ * who hired me, these are people who use what I built. Arabic is the original,
+ * English is my translation, and every store link resolves.
+ */
+interface Merchant {
+  name: string;
+  store: string;
+  subdomain: string;
+  avatar: string | null;
+  quote: string;
+  quoteAr: string;
+}
+
+const merchants: Merchant[] = [
+  {
+    name: "avora1815",
+    store: "AVO WEAR",
+    subdomain: "avo-wear",
+    avatar: "/merchants/avo-wear.webp",
+    quote:
+      "My experience has been excellent. The interface is simple and clear, I set up my store quickly and received my first orders without any problems. The support team was helpful and quick to answer my questions.",
+    quoteAr:
+      "كانت تجربتي ممتازة واجهة الموقع سهلة وواضحة وتمكنت من إنشاء متجري بسرعة واستقبلت أولى الطلبات دون مشاكل كما أن فريق الدعم كان متعاونًا وسريعًا في الرد على استفساراتي",
+  },
+  {
+    name: "Ghalabe Shalabia",
+    store: "Sat Annaba",
+    subdomain: "sat-annaba",
+    avatar: "/merchants/sat-annaba.webp",
+    quote:
+      "Honestly, it cut my launch time right down, just sign up and get to work. We hope the team keeps improving it to compete with the other platforms.",
+    quoteAr:
+      "صراحة اختصر لي مدة الانطلاق فقط سجل تباشر عملك نرجوا من القائمين التطوير أكثر ومنافسة باقي المنصات",
+  },
+  {
+    name: "abdogaming147",
+    store: "Vanessia",
+    subdomain: "vanessia",
+    avatar: null,
+    quote: "I have received so many orders.",
+    quoteAr: "طلبيات كثيرة وصلوني",
+  },
+];
+
 const clients: Client[] = [
   {
     id: 1,
@@ -268,6 +314,80 @@ export default function Testimonials() {
               </div>
             );
           })}
+        </div>
+
+        {/* Merchants using the product, as opposed to clients who hired me */}
+        <div className="mt-16 sm:mt-20">
+          <div className="text-center max-w-3xl mx-auto mb-10">
+            <h3 className="text-2xl sm:text-3xl font-bold mb-3">
+              And the merchants who use what I build
+            </h3>
+            <p className="text-muted-foreground leading-relaxed">
+              DzStore is rated 4.7/5 across 84 merchant reviews. These are three
+              of them, running live stores on the platform. Arabic is the
+              original, English is my translation.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {merchants.map((merchant) => (
+              <div
+                key={merchant.subdomain}
+                className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 p-5 shadow-sm hover:shadow-lg transition-shadow duration-300 flex flex-col"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-11 h-11 rounded-full overflow-hidden bg-gradient-to-br from-emerald-500 to-teal-600 shrink-0 flex items-center justify-center">
+                    {merchant.avatar ? (
+                      <Image
+                        src={merchant.avatar}
+                        alt={`${merchant.store} store logo`}
+                        width={44}
+                        height={44}
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <span className="text-base font-bold text-white">
+                        {merchant.store.charAt(0)}
+                      </span>
+                    )}
+                  </div>
+                  <div className="min-w-0">
+                    <a
+                      href={`https://${merchant.subdomain}.dzstore.org`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-semibold text-sm text-foreground hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center gap-1"
+                    >
+                      {merchant.store}
+                      <ExternalLink className="h-3 w-3 shrink-0" />
+                    </a>
+                    <p className="text-xs text-muted-foreground truncate">
+                      {merchant.name}
+                    </p>
+                  </div>
+                  <div className="ml-auto flex shrink-0">
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <Star
+                        key={i}
+                        className="h-3.5 w-3.5 text-yellow-400 fill-yellow-400"
+                      />
+                    ))}
+                  </div>
+                </div>
+
+                <p className="mt-4 text-sm leading-relaxed text-gray-700 dark:text-gray-300 flex-grow">
+                  {merchant.quote}
+                </p>
+                <p
+                  dir="rtl"
+                  lang="ar"
+                  className="mt-3 pt-3 border-t border-gray-100 dark:border-gray-700 text-xs leading-relaxed text-muted-foreground"
+                >
+                  {merchant.quoteAr}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
