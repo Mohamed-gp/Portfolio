@@ -5,7 +5,7 @@ Algeria · CET (UTC+1) · [mohamedterba6@gmail.com](mailto:mohamedterba6@gmail.c
 
 ---
 
-Full-Stack Engineer with 3+ years shipping production web & mobile platforms end-to-end. Own the entire frontend of a live AI analytics SaaS as 2nd-highest contributor, and built the dispatch and fleet-operations services of a live Uber-style logistics marketplace. Co-founder of DzStore, a Shopify-equivalent e-commerce SaaS now serving 1,080+ live stores, and Fibble, a multiplayer party game on web and Discord, both grown entirely through search and word of mouth.
+Full-Stack Engineer with 3+ years shipping production web & mobile platforms end-to-end. Own the entire frontend of a live AI analytics SaaS as 2nd-highest contributor, and built the dispatch and fleet-operations services of a live Uber-style logistics marketplace. Co-founder of DzStore, a Shopify-equivalent e-commerce SaaS now serving 1,100+ live stores, and Fibble, a multiplayer party game on web and Discord, both grown entirely through search and word of mouth.
 
 ## Experience
 
@@ -53,7 +53,7 @@ Full-Stack Engineer with 3+ years shipping production web & mobile platforms end
 
 **Jun 2025 - Present**
 
-- **Traction:** Reached 1,250+ merchant signups, 1,080+ live stores, 2,990+ products, 833+ orders, and 9.4M+ DZD in orders processed (GMV) in the 3 months since the May 2026 launch, 100% organic with zero ad spend, and **30+ merchants upgraded to paid PRO plans, acquired through SEO alone**.
+- **Traction:** Reached 1,250+ merchant signups, 1,100+ live stores, 2,990+ products, 833+ orders, and 9.4M+ DZD in orders processed (GMV) in the 3 months since the May 2026 launch, 100% organic with zero ad spend, and **30+ merchants upgraded to paid PRO plans, acquired through SEO alone**.
 - **Growth rate:** Peaking at 184 new stores in its best week and 478 orders in its best month, on 55,000+ visitors and 214,000+ pageviews.
 - **Conversion fix:** Diagnosed why signups climbed while orders stayed flat: every storefront led with Add to cart, but Algerian shoppers buy direct rather than build a basket, and on phones the order button sat below the fold. Shipped Buy now across all four storefront themes plus a fixed mobile order bar carrying the live total, taking orders from 142 at the end of June to 833 by 20 August, 5.9x against 2.4x growth in stores over the same window.
 - **Quality signals:** 4.7/5 average across 84 in-app merchant survey responses; 99.95% uptime over the last 90 days with zero recorded incidents (public status page: [status.dzstore.org](https://status.dzstore.org)).

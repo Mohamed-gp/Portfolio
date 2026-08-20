@@ -266,7 +266,7 @@ export default function Projects({ dz }: { dz?: ProjectsDzStats }) {
       ],
       metrics: [
         { value: dz?.stores ?? FALLBACK_STATS.stores, label: "Live stores" },
-        { value: dz?.proActive ?? FALLBACK_STATS.proActive, label: "Paying PRO merchants" },
+        { value: dz?.proMerchants ?? FALLBACK_STATS.proMerchants, label: "Paying PRO merchants" },
         {
           value: `${dz?.gmvDzd ?? FALLBACK_STATS.gmvDzd} DZD`,
           label: "Orders processed (GMV)",
@@ -286,7 +286,10 @@ export default function Projects({ dz }: { dz?: ProjectsDzStats }) {
       ],
       hardest:
         "Multi-tenant subdomain routing with Caddy on-demand TLS: every merchant gets their own store and custom domain with automatic HTTPS, all from one codebase.",
-      status: `Live · ${dz?.stores ?? FALLBACK_STATS.stores} Stores · ${dz?.proActive ?? FALLBACK_STATS.proActive} Paying`,
+      // proMerchants (distinct approved payments, ever) — the stable brag;
+      // the right-now PRO count breathes with renewals and undersells the
+      // project the week someone lapses.
+      status: `Live · ${dz?.stores ?? FALLBACK_STATS.stores} Stores · ${dz?.proMerchants ?? FALLBACK_STATS.proMerchants} Paying`,
       role: "Co-Founder & Lead Engineer",
       technologies: [
         "Next.js",
