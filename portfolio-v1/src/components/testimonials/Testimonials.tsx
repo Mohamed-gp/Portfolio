@@ -48,8 +48,8 @@ function getRelativeTime(dateStr: string): string {
 /**
  * Merchants running real stores on DzStore, quoted from the public reviews on
  * dzstore.org. Different proof from the client cards above: those are people
- * who hired me, these are people who use what I built. Arabic is the original,
- * English is my translation, and every store link resolves.
+ * who hired me, these are people who use what I built. They wrote in Arabic;
+ * the quotes are my translation, and every store link resolves.
  */
 interface Merchant {
   name: string;
@@ -57,7 +57,6 @@ interface Merchant {
   subdomain: string;
   avatar: string | null;
   quote: string;
-  quoteAr: string;
 }
 
 const merchants: Merchant[] = [
@@ -68,8 +67,6 @@ const merchants: Merchant[] = [
     avatar: "/merchants/avo-wear.webp",
     quote:
       "My experience has been excellent. The interface is simple and clear, I set up my store quickly and received my first orders without any problems. The support team was helpful and quick to answer my questions.",
-    quoteAr:
-      "كانت تجربتي ممتازة واجهة الموقع سهلة وواضحة وتمكنت من إنشاء متجري بسرعة واستقبلت أولى الطلبات دون مشاكل كما أن فريق الدعم كان متعاونًا وسريعًا في الرد على استفساراتي",
   },
   {
     name: "Ghalabe Shalabia",
@@ -78,8 +75,6 @@ const merchants: Merchant[] = [
     avatar: "/merchants/sat-annaba.webp",
     quote:
       "Honestly, it cut my launch time right down, just sign up and get to work. We hope the team keeps improving it to compete with the other platforms.",
-    quoteAr:
-      "صراحة اختصر لي مدة الانطلاق فقط سجل تباشر عملك نرجوا من القائمين التطوير أكثر ومنافسة باقي المنصات",
   },
   {
     name: "abdogaming147",
@@ -87,7 +82,6 @@ const merchants: Merchant[] = [
     subdomain: "vanessia",
     avatar: null,
     quote: "I have received so many orders.",
-    quoteAr: "طلبيات كثيرة وصلوني",
   },
 ];
 
@@ -324,8 +318,8 @@ export default function Testimonials() {
             </h3>
             <p className="text-muted-foreground leading-relaxed">
               DzStore is rated 4.7/5 across 84 merchant reviews. These are three
-              of them, running live stores on the platform. Arabic is the
-              original, English is my translation.
+              of them, running live stores on the platform, translated from
+              Arabic.
             </p>
           </div>
 
@@ -375,15 +369,8 @@ export default function Testimonials() {
                   </div>
                 </div>
 
-                <p className="mt-4 text-sm leading-relaxed text-gray-700 dark:text-gray-300 flex-grow">
+                <p className="mt-4 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
                   {merchant.quote}
-                </p>
-                <p
-                  dir="rtl"
-                  lang="ar"
-                  className="mt-3 pt-3 border-t border-gray-100 dark:border-gray-700 text-xs leading-relaxed text-muted-foreground"
-                >
-                  {merchant.quoteAr}
                 </p>
               </div>
             ))}
