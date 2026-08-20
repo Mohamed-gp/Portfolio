@@ -318,8 +318,7 @@ export default function Testimonials() {
             </h3>
             <p className="text-muted-foreground leading-relaxed">
               DzStore is rated 4.7/5 across 84 merchant reviews. These are three
-              of them, running live stores on the platform, translated from
-              Arabic.
+              of them, running live stores on the platform.
             </p>
           </div>
 
