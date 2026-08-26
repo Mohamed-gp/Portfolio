@@ -5,13 +5,13 @@ Algeria · CET (UTC+1) · [mohamedterba6@gmail.com](mailto:mohamedterba6@gmail.c
 
 ---
 
-Full-Stack Engineer with 3+ years shipping production web & mobile platforms end-to-end. Own the entire frontend of a live AI analytics SaaS as 2nd-highest contributor, and built the dispatch and fleet-operations services of a live Uber-style logistics marketplace. Co-founder of DzStore, a Shopify-equivalent e-commerce SaaS now serving 1,100+ live stores, and Fibble, a multiplayer party game on web and Discord, both grown entirely through search and word of mouth.
+Full-Stack Engineer with 3+ years of professional experience (June 2023 to present) shipping production web & mobile platforms end-to-end. Own the entire frontend of a live AI analytics SaaS as 2nd-highest contributor, and built the dispatch and fleet-operations services of a live Uber-style logistics marketplace. Co-founder of DzStore, a Shopify-equivalent e-commerce SaaS now serving 1,187+ live stores, and Fibble, a multiplayer party game on web and Discord, both grown entirely through search and word of mouth.
 
 ## Experience
 
 ### Full-Stack Engineer (Frontend Lead) · _[Analytics Depot](https://analyticsdepot.com/) (AI Analytics SaaS), USA · Remote_
 
-**Apr 2025 - Present**
+**Apr 2025 - Present · 1 yr 5 mos**
 
 - Build every user-facing surface of that platform, including the five industry workspaces (real estate, finance, marketing, e-commerce, management) that prime the agent with domain context, so non-technical teams get answers without writing SQL.
 - **Dashboards & reporting:** Designed and implemented the drag-and-drop dashboard builder, shareable password-protected/embed reports, and one-click PDF/PowerPoint export UI, then defended auto-generated charts against silent misreadings (wrong aggregation, mis-detected date columns, misleading trend arrows) using golden-workbook fixtures.
@@ -24,7 +24,7 @@ Full-Stack Engineer with 3+ years shipping production web & mobile platforms end
 
 ### Full-Stack Engineer (Contract) · _[HaulHub](https://haulhub.app/) (Logistics Marketplace), Netherlands · Remote_
 
-**Jun 2025 - May 2026**
+**Jun 2025 - May 2026 · 1 yr**
 
 - One of the primary engineers across backend, mobile & web on a production Uber-style marketplace, live on iOS & Android in the Netherlands: 12 service categories, 100+ skilled-labor sub-categories, and 5 languages with full RTL.
 - **On-demand dispatch service:** Engineered the request-to-delivery flow end-to-end: Haversine nearest-provider matching, competing price and pickup-time bids on expiring offers, an 11-state request lifecycle, live driver tracking over per-ride WebSocket rooms, and Stripe escrow with timing-based cancellation refunds.
@@ -35,7 +35,7 @@ Full-Stack Engineer with 3+ years shipping production web & mobile platforms end
 
 ### Freelance Full-Stack Developer · _Global clients · Remote_
 
-**Jun 2023 - Jun 2025**
+**Jun 2023 - Jun 2025 · 2 yrs**
 
 - Delivered 6+ production applications for clients in the UK, USA, Netherlands, Japan, and Saudi Arabia, with a **5/5 rating on every client project** ([Fiverr](https://www.fiverr.com/mohamedouterbah)).
 - **[Cribbix](https://cribbix.com/) (UK):** Rightmove-style property platform (V1 & V2): interactive map search with instant filtering, client/agency/admin dashboards, real-time chat, AI property descriptions, Stripe tenancy payments, Redis caching, and independent DigitalOcean VPS deployment.
@@ -43,7 +43,7 @@ Full-Stack Engineer with 3+ years shipping production web & mobile platforms end
 
 ### Web Development Intern · _Exclusive Labs · Remote_
 
-**Sep - Dec 2024**
+**Sep - Dec 2024 · 4 mos**
 
 - Created a course management system (Next.js + Express) with role-based auth for students, instructors, and admins.
 
@@ -51,10 +51,10 @@ Full-Stack Engineer with 3+ years shipping production web & mobile platforms end
 
 ### DzStore · _Shopify-equivalent E-commerce SaaS · Co-Founder & Lead Engineer · [dzstore.org](https://dzstore.org/en)_
 
-**Jun 2025 - Present**
+**Jun 2025 - Present · 1 yr 3 mos**
 
-- **Traction:** Reached 1,250+ merchant signups, 1,100+ live stores, 2,990+ products, 833+ orders, and 9.4M+ DZD in orders processed (GMV) in the 3 months since the May 2026 launch, 100% organic with zero ad spend, and **30+ merchants upgraded to paid PRO plans, acquired through SEO alone**.
-- **Growth rate:** Peaking at 184 new stores in its best week and 478 orders in its best month, on 55,000+ visitors and 214,000+ pageviews.
+- **Traction:** Reached 1,368+ merchant signups, 1,187+ live stores, 3,221+ products, 1,003+ orders, and 11.3M+ DZD in orders processed (GMV) in the 3 months since the May 2026 launch, 100% organic with zero ad spend, and **34+ merchants upgraded to paid PRO plans, acquired through SEO alone**.
+- **Growth rate:** Peaking at 184 new stores in its best week and 648 orders in its best month, on 55,000+ visitors and 214,000+ pageviews.
 - **Conversion fix:** Diagnosed why signups climbed while orders stayed flat: every storefront led with Add to cart, but Algerian shoppers buy direct rather than build a basket, and on phones the order button sat below the fold. Shipped Buy now across all four storefront themes plus a fixed mobile order bar carrying the live total, taking orders from 142 at the end of June to 833 by 20 August, 5.9x against 2.4x growth in stores over the same window.
 - **Quality signals:** 4.7/5 average across 84 in-app merchant survey responses; 99.95% uptime over the last 90 days with zero recorded incidents (public status page: [status.dzstore.org](https://status.dzstore.org)).
 - **Organic SEO engine:** Owned technical SEO end-to-end: 15,000+ pages indexed, 600+ valid product snippets & merchant listings (Google Shopping rich results), and a Merchant Center feed with 2,000+ products, now pulling 3,000+ Google Search clicks and 100,000+ impressions a month (search out-refers social 12:1 on the signup funnel).
@@ -65,7 +65,7 @@ Full-Stack Engineer with 3+ years shipping production web & mobile platforms end
 
 ### Fibble · _Multiplayer Party Game (Web + Discord) · Co-Founder & Full-Stack Engineer · [fibble.io](https://fibble.io/)_
 
-**Sep 2025 - Present**
+**Sep 2025 - Present · 11 mos**
 
 - **Product:** Free real-time bluffing trivia game (2-8 players, no download) playable in the browser and as a Discord Activity, with a premium subscription tier.
 - **Traction:** 3,000+ players in 80+ countries across 2,200+ games played in the first 3 months since launch, entirely organic, converting its first paying subscribers on both billing rails.
@@ -80,6 +80,7 @@ Full-Stack Engineer with 3+ years shipping production web & mobile platforms end
 
 ## Technical Skills
 
+- **Core stack (hands-on years):** React 3 yrs · Next.js 3 yrs · TypeScript 3 yrs · Node.js & Express 3 yrs · PostgreSQL 3 yrs · React Native 1+ yr across 3 shipped apps
 - **Frontend:** React, Next.js (App & Pages Router), TypeScript, JavaScript ES6+, HTML5, CSS3, Tailwind CSS, Redux Toolkit
 - **Mobile:** React Native (Expo) for iOS & Android: EAS builds, push notifications, biometric auth, RTL i18n
 - **Backend:** Node.js, NestJS, Express.js, FastAPI, Python, REST APIs, WebSockets, Ably, RBAC
