@@ -116,7 +116,7 @@ export default function Hero({ proMerchants, sinceLaunchLabel }: HeroProps) {
               </a>{" "}
               (3,000+ players).{" "}
               <strong className="text-foreground">
-                3+ years of production experience, 7+ live products
+                More than 3 years of production experience, 7+ live products
               </strong>{" "}
               for clients across the US, UK, Netherlands, Japan &amp; Saudi
               Arabia.

@@ -28,8 +28,8 @@ const buildStats = (o: StatsSectionProps = {}) => [
   {
     icon: <Calendar className="h-6 w-6 text-pink-500" />,
     value: "3+",
-    label: "Years Experience",
-    description: "Full-stack engineering",
+    label: "Years in Production",
+    description: "Shipping live products since June 2023",
   },
   {
     icon: <Gamepad2 className="h-6 w-6 text-cyan-500" />,
