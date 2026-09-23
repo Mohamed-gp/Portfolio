@@ -5,7 +5,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Repository layout
 
 - The repo root is Mohamed Outerbah's professional portfolio (recruiter-facing single-page Next.js site). The old 3D `portfolio-v2` experiment lives on the `portfolio-v2` branch, not in `main`.
-- `public/cv/Mohamed_Outerbah_CV.pdf` — the downloadable CV. Its source (`Mohamed_Outerbah_CV.html` + `build-cv.sh`) lives outside the repo in `../cv-source/`; edit the HTML there, run `./build-cv.sh`, and it writes the PDF back here. Re-check PDF text extraction (pypdf/pdfminer) after any change so it stays ATS-parseable.
+- `public/cv/Mohamed_Outerbah_CV.pdf` — the downloadable CV. Its source (`Mohamed_Outerbah_CV.html` + `build-cv.sh`) lives outside the repo in `../cv-source/`; edit the HTML there, run `./build-cv.sh`, and it writes the PDF back here. Re-check PDF text extraction after any change so it stays ATS-parseable; the rules that keep words from gluing together are in `../cv-source/README.md`.
 
 ## Common commands
 

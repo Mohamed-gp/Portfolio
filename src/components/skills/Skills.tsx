@@ -12,7 +12,6 @@ import {
   ShieldCheck,
   Sparkles,
 } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import { skillGroups, type Skill } from "@/lib/data";
 
@@ -60,12 +59,6 @@ export default function Skills() {
           transition={{ duration: 0.5 }}
           className="text-center mb-8 max-w-3xl mx-auto"
         >
-          <Badge
-            variant="outline"
-            className="mb-4 px-3 py-1 text-sm border-primary/20"
-          >
-            Skills
-          </Badge>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
             Technical Skills
           </h2>

@@ -31,9 +31,20 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 
+// Roles show this many bullets until expanded; the full list is on the CV.
+const VISIBLE_BULLETS = 2;
+
 export default function Experience() {
   const [currentPage, setCurrentPage] = useState(1);
   const [touchStartX, setTouchStartX] = useState<number | null>(null);
+  const [expanded, setExpanded] = useState<Set<number>>(new Set());
+  const toggleExpanded = (i: number) =>
+    setExpanded((prev) => {
+      const next = new Set(prev);
+      if (next.has(i)) next.delete(i);
+      else next.add(i);
+      return next;
+    });
   const itemsPerPage = 3;
 
   // Each bullet is [bold lead, rest], mirroring the CV line for line.
@@ -44,7 +55,6 @@ export default function Experience() {
     location?: string;
     period: string;
     description: [string, string][];
-    skills: string[];
     rating?: { score: number; platform: string };
   }[] = [
     {
@@ -71,7 +81,6 @@ export default function Experience() {
           ", cutting deployment time from ~30 minutes to under 5 with zero-downtime deployments.",
         ],
       ],
-      skills: ["Next.js", "TypeScript", "FastAPI", "WebSockets", "RAG", "BigQuery", "OAuth2", "PM2"],
     },
     {
       title: "Full-Stack Engineer (Contract)",
@@ -93,7 +102,6 @@ export default function Experience() {
           " across 5+ user roles, then launched the React Native app and production infrastructure with realtime chat, maps, Dockerized services on Hetzner/Coolify, and Sentry monitoring.",
         ],
       ],
-      skills: ["NestJS", "React Native", "Next.js", "PostgreSQL", "Stripe", "WebSockets", "Docker", "Coolify"],
     },
     {
       title: "Co-Founder & Lead Engineer",
@@ -123,7 +131,6 @@ export default function Experience() {
           ", reducing database costs by 50%+, while maintaining 4.7/5 across 200+ merchant survey responses and operating with 1,000+ automated tests.",
         ],
       ],
-      skills: ["Next.js", "React Native (Expo)", "TypeScript", "PostgreSQL", "Prisma", "Docker", "Caddy"],
     },
     {
       title: "Freelance Full-Stack Developer",
@@ -141,7 +148,6 @@ export default function Experience() {
           " with interactive map search, realtime chat, AI-generated descriptions, Stripe tenancy payments, Redis caching, and independent VPS deployment, plus a serverless SharePoint to Zoho CRM automation for contract processing and notifications.",
         ],
       ],
-      skills: ["React", "Next.js", "Node.js", "TypeScript", "Stripe", "Redis"],
       rating: { score: 5, platform: "Fiverr" },
     },
     {
@@ -155,19 +161,14 @@ export default function Experience() {
           " (Next.js + Express) with role-based auth for students, instructors, and admins.",
         ],
       ],
-      skills: ["Next.js", "Express.js", "RBAC"],
     },
   ];
 
   const education = [
     {
-      degree:
-        "Master's Degree in Computer Science, AI & Data Science Specialization",
-      institution:
-        "Higher School of Computer Science and Digital Technologies (ESTIN)",
-      period: "2022 - 2027",
-      description:
-        "Specializing in Artificial Intelligence and Data Science, alongside core computer science: machine learning, data structures and algorithms, software engineering, and software design.",
+      degree: "Master's in Computer Science, AI & Data Science",
+      institution: "ESTIN, Algeria",
+      period: "Expected 2027",
     },
   ];
 
@@ -393,32 +394,34 @@ export default function Experience() {
                       </div>
                     )}
                     <ul className="text-muted-foreground text-sm space-y-1.5">
-                      {job.description.map(([lead, rest], i) => (
-                        <li key={i} className="flex gap-2">
-                          <span
-                            className="mt-[0.45rem] h-1.5 w-1.5 rounded-full bg-primary/60 shrink-0"
-                            aria-hidden
-                          />
-                          <span>
-                            <span className="font-medium text-foreground">
-                              {lead}
+                      {job.description
+                        .slice(0, expanded.has(index) ? undefined : VISIBLE_BULLETS)
+                        .map(([lead, rest], i) => (
+                          <li key={i} className="flex gap-2">
+                            <span
+                              className="mt-[0.45rem] h-1.5 w-1.5 rounded-full bg-primary/60 shrink-0"
+                              aria-hidden
+                            />
+                            <span>
+                              <span className="font-medium text-foreground">
+                                {lead}
+                              </span>
+                              {rest}
                             </span>
-                            {rest}
-                          </span>
-                        </li>
-                      ))}
+                          </li>
+                        ))}
                     </ul>
-                    <div className="flex flex-wrap gap-1.5 sm:gap-2 pt-2">
-                      {job.skills.map((skill, i) => (
-                        <Badge
-                          key={i}
-                          variant="secondary"
-                          className="px-2 py-0.5 text-xs"
-                        >
-                          {skill}
-                        </Badge>
-                      ))}
-                    </div>
+                    {job.description.length > VISIBLE_BULLETS && (
+                      <button
+                        type="button"
+                        onClick={() => toggleExpanded(index)}
+                        className="text-xs font-medium text-primary hover:underline underline-offset-4"
+                      >
+                        {expanded.has(index)
+                          ? "Show less"
+                          : `Show ${job.description.length - VISIBLE_BULLETS} more`}
+                      </button>
+                    )}
                   </div>
                 </motion.div>
               ))}
@@ -455,9 +458,6 @@ export default function Experience() {
                       </div>
                       <p className="text-primary font-medium text-sm">
                         {edu.institution}
-                      </p>
-                      <p className="text-muted-foreground text-xs sm:text-sm">
-                        {edu.description}
                       </p>
                     </div>
                   </CardContent>
