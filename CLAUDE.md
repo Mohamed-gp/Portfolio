@@ -16,7 +16,6 @@ npm install
 npm run dev      # next dev (localhost:3000)
 npm run build
 npm run start    # next start
-npm run lint     # next lint
 ```
 
 No test runner is configured.
