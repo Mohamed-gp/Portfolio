@@ -95,12 +95,12 @@ export default function Skills() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.2 }}
-            className="mx-auto grid max-w-3xl grid-cols-3 gap-3 sm:grid-cols-4 md:grid-cols-5"
+            className="mx-auto flex max-w-3xl flex-wrap justify-center gap-3"
           >
             {group.skills.map((skill) => (
               <div
                 key={skill.name}
-                className="flex flex-col items-center justify-center gap-2 rounded-xl border bg-card/60 px-2 py-4 text-center transition-colors hover:border-primary/40"
+                className="flex w-[calc((100%-1.5rem)/3)] flex-col items-center justify-center gap-2 rounded-xl border bg-card/60 px-2 py-4 text-center transition-colors hover:border-primary/40 sm:w-32"
               >
                 <SkillIcon skill={skill} />
                 <span className="text-xs sm:text-sm font-medium leading-tight">
