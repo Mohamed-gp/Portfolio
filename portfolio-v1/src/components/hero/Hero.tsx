@@ -16,12 +16,8 @@ import Image from "next/image";
 import ProfilePicture from "@/../public/profile/profile_picture.jpg";
 
 const EMAIL = "mohamedterba6@gmail.com";
-interface HeroProps {
-  proMerchants: string;
-  sinceLaunchLabel: string;
-}
 
-export default function Hero({ proMerchants, sinceLaunchLabel }: HeroProps) {
+export default function Hero() {
   const [text, setText] = useState("");
   const fullText = "Full-Stack Engineer";
   const [index, setIndex] = useState(0);
@@ -73,8 +69,11 @@ export default function Hero({ proMerchants, sinceLaunchLabel }: HeroProps) {
               <span className="animate-blink">|</span>
             </h2>
             <p className="text-base md:text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0">
-              I build and ship production web &amp; mobile platforms end-to-end:
-              AI analytics dashboards at{" "}
+              <strong className="text-foreground">
+                3+ years of production experience
+              </strong>{" "}
+              building and shipping web and mobile products end-to-end.
+              Frontend Lead on{" "}
               <a
                 href="https://analyticsdepot.com/"
                 target="_blank"
@@ -82,19 +81,8 @@ export default function Hero({ proMerchants, sinceLaunchLabel }: HeroProps) {
                 className="font-semibold text-foreground underline decoration-primary/40 underline-offset-4 hover:decoration-primary transition-colors"
               >
                 Analytics Depot
-              </a>{" "}
-              to{" "}
-              <a
-                href="https://haulhub.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-semibold text-foreground underline decoration-primary/40 underline-offset-4 hover:decoration-primary transition-colors"
-              >
-                HaulHub
               </a>
-              , a live Uber-style logistics marketplace on iOS &amp; Android,
-              plus products I co-founded that make money organically, with zero
-              ads, within months of launching:{" "}
+              , a production AI analytics SaaS, and Co-Founder/Lead Engineer of{" "}
               <a
                 href="https://dzstore.org/en"
                 target="_blank"
@@ -102,24 +90,10 @@ export default function Hero({ proMerchants, sinceLaunchLabel }: HeroProps) {
                 className="font-semibold text-foreground underline decoration-primary/40 underline-offset-4 hover:decoration-primary transition-colors"
               >
                 DzStore
-              </a>{" "}
-              ({proMerchants || "27"} merchants upgraded to paid plans via SEO
-              alone{" "}
-              {sinceLaunchLabel || "in its first 3 months since launch"}) and{" "}
-              <a
-                href="https://fibble.io/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-semibold text-foreground underline decoration-primary/40 underline-offset-4 hover:decoration-primary transition-colors"
-              >
-                Fibble
-              </a>{" "}
-              (3,000+ players).{" "}
-              <strong className="text-foreground">
-                More than 3 years of production experience, 7+ live products
-              </strong>{" "}
-              for clients across the US, UK, Netherlands, Japan &amp; Saudi
-              Arabia.
+              </a>
+              , an e-commerce SaaS that reached 2,000+ merchant signups and 50+
+              paying merchants within its first three months through organic
+              SEO.
             </p>
 
             {/* Prominent contact bar */}

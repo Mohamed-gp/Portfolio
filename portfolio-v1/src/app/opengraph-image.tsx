@@ -1,17 +1,15 @@
 import { ImageResponse } from "next/og";
-import { getDzStoreStats } from "@/lib/dzstore-stats";
 
 export const alt = "Mohamed Outerbah — Full-Stack Engineer";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 // Dedicated 1200x630 social card (replaces the old portrait photo that cropped badly)
-export default async function OpengraphImage() {
-  const dz = await getDzStoreStats();
+export default function OpengraphImage() {
   const chips = [
+    "Analytics Depot · Frontend Lead",
     "HaulHub · live on iOS & Android",
-    "Analytics Depot · AI SaaS",
-    `DzStore · ${dz.stores} live stores`,
+    "DzStore · 1,800+ live stores",
   ];
 
   return new ImageResponse(

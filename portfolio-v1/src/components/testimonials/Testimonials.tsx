@@ -317,7 +317,7 @@ export default function Testimonials() {
               And the merchants who use what I build
             </h3>
             <p className="text-muted-foreground leading-relaxed">
-              DzStore is rated 4.7/5 across 84 merchant reviews. These are three
+              DzStore is rated 4.7/5 across 200+ merchant survey responses. These are three
               of them, running live stores on the platform.
             </p>
           </div>

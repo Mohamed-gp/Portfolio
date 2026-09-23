@@ -27,7 +27,7 @@ No test runner is configured.
 
 Single-page marketing site, App Router (Next.js 16, React 19, Tailwind v3).
 
-- Entry: `src/app/page.tsx` — composes the page from section components (`Hero`, `About`, `Experience`, `Projects`, `Testimonials`, `Skills`, `StatsSection`, `CTASection`, `Contact`, etc.). All sections except `Header`/`Hero`/`Footer` are loaded via `next/dynamic` to keep the initial bundle lean.
+- Entry: `src/app/page.tsx` — composes the page from section components (`Hero`, `Experience`, `Projects`, `Testimonials`, `Skills`, `Contact`). All sections except `Header`/`Hero`/`Footer` are loaded via `next/dynamic` to keep the initial bundle lean.
 - Components live in `src/components/<section>/` (one folder per page section); shared primitives are in `src/components/ui/` (Radix-based, shadcn-style). `src/lib/utils.ts` exposes the standard `cn()` helper.
 - Static content (skills list) is centralized in `src/lib/data.ts`; experience/project copy lives inside the section components.
 - SEO is heavy in `src/app/layout.tsx`: full Open Graph / Twitter metadata, JSON-LD `Person` schema, viewport theme colors. When editing copy or links shown publicly, keep this metadata in sync (and the CV files in sync with the site).

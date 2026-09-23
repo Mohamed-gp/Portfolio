@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FALLBACK_STATS } from "@/lib/dzstore-stats";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -32,26 +31,22 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 
-interface ExperienceProps {
-  proMerchants: string;
-  sinceLaunchLabel: string;
-  stores: string;
-  users: string;
-  gmvDzd: string;
-}
-
-export default function Experience({
-  proMerchants,
-  sinceLaunchLabel,
-  stores,
-  users,
-  gmvDzd,
-}: ExperienceProps) {
+export default function Experience() {
   const [currentPage, setCurrentPage] = useState(1);
   const [touchStartX, setTouchStartX] = useState<number | null>(null);
   const itemsPerPage = 3;
 
-  const workExperience = [
+  // Each bullet is [bold lead, rest], mirroring the CV line for line.
+  const workExperience: {
+    title: string;
+    company: string;
+    website?: string;
+    location?: string;
+    period: string;
+    description: [string, string][];
+    skills: string[];
+    rating?: { score: number; platform: string };
+  }[] = [
     {
       title: "Full-Stack Engineer (Frontend Lead)",
       company: "Analytics Depot",
@@ -59,26 +54,24 @@ export default function Experience({
       location: "Remote (USA)",
       period: "Apr 2025 – Present",
       description: [
-        "Frontend lead and 2nd-highest contributor in a ~10-person team, owning every user-facing surface of a live AI analytics SaaS.",
-        "Dashboards & reporting: drag-and-drop dashboard builder, shareable password-protected/embed reports, one-click PDF/PowerPoint export, and an NL-to-SQL query interface.",
-        "Real-time & auto-dashboards: took the realtime layer to production (WebSocket URL detection, CSP hardening for wss://) and built auto-dashboard generation that turns an uploaded file into a populated dashboard.",
-        "Data connectors: OAuth2 platform spanning 14 sources, from warehouses (BigQuery, Snowflake, Databricks, Redshift) to databases and SaaS tools, with per-connector refresh schedules (React + FastAPI + Celery Beat) and in-app sync-failure alerts.",
-        "AI / RAG: document Q&A with inline source citations and one-tap follow-up skills (root cause, forecast, outliers), plus an LLM agent observability console over the trace pipeline (latency and provider-cost drill-down, cost-regression flags, async CSV/JSON export).",
-        "Growth & DevOps: rebuilt the public marketing site, cut deploy time from ~30 min to under 5 with zero-downtime PM2 cluster reloads, and ship through a review-gated pull-request workflow with AI/ML, LLMOps and infra engineers; initialized the companion React Native app.",
+        [
+          "Built most of the user-facing product",
+          ", owning the frontend across five AI analytics workspaces, dashboards, reporting, data visualization, realtime features, and AI-powered workflows while integrating closely with backend and AI services.",
+        ],
+        [
+          "Developed the data integration platform across 14 sources",
+          ", including BigQuery, Snowflake, Databricks, Redshift, PostgreSQL, GA4, Google Sheets, Gmail, Slack, and YouTube, with OAuth2, scheduled syncs, encrypted credentials, and failure monitoring.",
+        ],
+        [
+          "Shipped the AI/RAG experience",
+          " for CSV, PDF, Excel, and image analysis with streaming answers, source citations, automated root-cause/forecast/outlier analysis, and LLM cost and reliability observability.",
+        ],
+        [
+          "Owned production deployment and VPS infrastructure",
+          ", cutting deployment time from ~30 minutes to under 5 with zero-downtime deployments.",
+        ],
       ],
-      skills: [
-        "Next.js",
-        "FastAPI",
-        "React Native",
-        "TypeScript",
-        "WebSockets",
-        "Redis",
-        "Celery",
-        "RAG Systems",
-        "LangChain",
-        "Sentry",
-        "CI/CD",
-      ],
+      skills: ["Next.js", "TypeScript", "FastAPI", "WebSockets", "RAG", "BigQuery", "OAuth2", "PM2"],
     },
     {
       title: "Full-Stack Engineer (Contract)",
@@ -87,93 +80,39 @@ export default function Experience({
       location: "Remote (Netherlands)",
       period: "Jun 2025 – May 2026",
       description: [
-        "One of the primary engineers on a production Uber-style marketplace, live on iOS & Android in the Netherlands: 12 service categories, 100+ skilled-labor sub-categories, 5 languages (EN/NL/AR/DE/UR) with full RTL.",
-        "On-demand dispatch: Haversine nearest-provider matching with per-provider search radius, competing price and pickup-time offers that expire on a timer, live driver tracking over per-ride WebSocket rooms, and an 11-state request lifecycle with proof-of-delivery and disputes.",
-        "Fleet operations (B2B): companies manage drivers and vehicles, assign each trip, and settle every job into company commission and driver earnings.",
-        "Payments & compliance: Stripe escrow with timing-based cancellation refunds, subscriptions and provider payouts, plus Dutch KVK business-registry lookup.",
-        "Architecture: role-based system across 5+ user types with dedicated dashboards, gated by a document-verification pipeline before a provider can trade; Dockerized microservices on Hetzner via Coolify.",
+        [
+          "Built core backend, web, and mobile systems for a production logistics marketplace",
+          " live in the Netherlands, supporting 12 service categories, 100+ subcategories, 5 languages, and full RTL.",
+        ],
+        [
+          "Engineered the on-demand dispatch system end-to-end",
+          ", including nearest-provider matching, competing price/pickup-time offers, an 11-state request lifecycle, per-ride WebSocket tracking, and Stripe escrow with automated cancellation refunds.",
+        ],
+        [
+          "Architected the B2B fleet and multi-role platform",
+          " across 5+ user roles, then launched the React Native app and production infrastructure with realtime chat, maps, Dockerized services on Hetzner/Coolify, and Sentry monitoring.",
+        ],
       ],
-      skills: [
-        "Next.js",
-        "NestJS",
-        "React Native",
-        "Expo",
-        "Stripe",
-        "Docker",
-        "Coolify",
-        "Hetzner VPS",
-        "PostgreSQL",
-        "TypeScript",
-      ],
+      skills: ["NestJS", "React Native", "Next.js", "PostgreSQL", "Stripe", "WebSockets", "Docker", "Coolify"],
     },
-    {
-      title: "Co-Founder & Lead Engineer",
-      company: "DzStore",
-      website: "https://dzstore.org/en",
-      location: "Algeria · Remote",
-      period: "Jun 2025 – Present",
-      description: [
-        `Co-founded a Shopify-equivalent multi-tenant e-commerce SaaS and lead nearly all engineering; ${sinceLaunchLabel || FALLBACK_STATS.sinceLaunchLabel}: ${users || FALLBACK_STATS.users} merchant signups, ${stores || FALLBACK_STATS.stores} live stores, ${proMerchants || FALLBACK_STATS.proMerchants} upgraded to paid PRO plans through SEO alone, and ${gmvDzd || FALLBACK_STATS.gmvDzd} DZD in orders processed (GMV), 100% organic with zero ad spend.`,
-        "Platform: subdomain-per-store routing with Caddy on-demand TLS, a 44-model Prisma/PostgreSQL schema, online card payments (Chargily Pay) with HMAC-verified webhooks, and a carrier layer covering 70 Algerian delivery companies behind 5 API adapters.",
-        "SEO engine: 15,000+ pages indexed, a Google Merchant Center feed (2,000+ products), and Meta Pixel integration pulling 3,000+ Google Search clicks a month.",
-        "Mobile: iOS/Android merchant app (React Native + Expo) with real-time order tracking, push notifications, and stock management.",
-        "Reliability: self-hosted on Hetzner via Docker with zero-downtime deploys, 99.95% uptime over the last 90 days, and 1,000+ automated tests keeping shipped features from breaking.",
-        "Revenue protection: noticed free merchants with heavy order volume weren't upgrading, traced customer contact details bypassing the order cap through 8 server-side channels, and sealed every leak behind a single order-privacy module with payload-scanning regression tests.",
-        "Cost engineering: migrated the production Postgres from Neon to Supabase (pg_dump, zero downtime), cutting the database bill by 50%+, and retired ~17 GB/month of CDN egress by persisting the image-optimizer cache.",
-      ],
-      skills: [
-        "Next.js",
-        "React Native (Expo)",
-        "TypeScript",
-        "PostgreSQL",
-        "Prisma",
-        "Docker",
-        "Caddy",
-        "Technical SEO",
-      ],
-    },
-    // Cribbix was a Fiverr freelance engagement — folded into the Fiverr entry below.
-    // Uncomment to restore it as a standalone work-experience role.
-    // {
-    //   title: "Full-Stack Developer",
-    //   company: "Cribbix",
-    //   location: "Remote (United Kingdom)",
-    //   period: "2023 – 2024",
-    //   description:
-    //     "Built a Rightmove-style real estate platform (V1 & V2): tenant dashboard, application tracking, payments history, price drop alerts, interactive map search with full filtering, and Stripe subscriptions. Implemented Redis caching, rate limiting, reCAPTCHA v3. Managed full VPS deployment on DigitalOcean independently.",
-    //   skills: [
-    //     "Next.js",
-    //     "Redis",
-    //     "Stripe",
-    //     "SSR/CSR",
-    //     "reCAPTCHA",
-    //     "VPS Deployment",
-    //     "DigitalOcean",
-    //   ],
-    // },
     {
       title: "Freelance Full-Stack Developer",
       company: "Fiverr",
       website: "https://www.fiverr.com/mohamedouterbah?public_mode=true",
+      location: "Remote (Global clients)",
       period: "Jun 2023 – Jun 2025",
       description: [
-        "Delivered 6+ full-stack production applications for clients in the UK, USA, Netherlands, Japan, and Saudi Arabia, rated 5/5 on every project.",
-        "Cribbix (UK): Rightmove-style real estate platform with tenant dashboards, interactive map search, Stripe subscriptions, and Redis caching.",
-        "Owned features, production bug fixes, performance work, and independent VPS deployments end to end.",
+        [
+          "Delivered 6+ production applications",
+          " for clients across the UK, USA, Netherlands, Japan, and Saudi Arabia, maintaining a 5/5 rating across client projects.",
+        ],
+        [
+          "Created a Rightmove-style property platform",
+          " with interactive map search, realtime chat, AI-generated descriptions, Stripe tenancy payments, Redis caching, and independent VPS deployment, plus a serverless SharePoint to Zoho CRM automation for contract processing and notifications.",
+        ],
       ],
-      skills: [
-        "React",
-        "Next.js",
-        "Node.js",
-        "TypeScript",
-        "Stripe",
-        "Redis",
-        "VPS Deployment",
-      ],
-      rating: {
-        score: 5,
-        platform: "Fiverr",
-      },
+      skills: ["React", "Next.js", "Node.js", "TypeScript", "Stripe", "Redis"],
+      rating: { score: 5, platform: "Fiverr" },
     },
     {
       title: "Web Development Intern",
@@ -181,14 +120,42 @@ export default function Experience({
       location: "Remote",
       period: "Sep – Dec 2024",
       description: [
-        "Built a course management system using Next.js and Express with role-based authentication for students, instructors, and admins.",
+        [
+          "Created a course management system",
+          " (Next.js + Express) with role-based auth for students, instructors, and admins.",
+        ],
       ],
-      skills: [
-        "Next.js",
-        "Express.js",
-        "Role-based Access Control",
-        "Authentication",
+      skills: ["Next.js", "Express.js", "RBAC"],
+    },
+    {
+      title: "Co-Founder & Lead Engineer",
+      company: "DzStore",
+      website: "https://dzstore.org/en",
+      location: "Algeria · Founder project",
+      period: "Jun 2025 – Present",
+      description: [
+        [
+          "Grew the platform to 2,000+ merchant signups, 1,800+ live stores, 5,000+ products, and 2,000+ orders",
+          ", with 50+ merchants upgrading to paid plans within the first three months through organic SEO.",
+        ],
+        [
+          "Architected the platform end-to-end",
+          ", including multi-tenant storefronts, custom domains, product/order management, payments, analytics, themes, and integrations with 70 delivery providers.",
+        ],
+        [
+          "Launched the entire React Native merchant app",
+          " for iOS and Android, with inventory management, realtime orders, push notifications, order tracking, and multilingual/Arabic RTL support.",
+        ],
+        [
+          "Scaled organic SEO to 15,000+ indexed pages",
+          ", generating 3,000+ monthly Google Search clicks and 100,000+ impressions.",
+        ],
+        [
+          "Migrated the production PostgreSQL database with zero downtime",
+          ", reducing database costs by 50%+, while maintaining 4.7/5 across 200+ merchant survey responses and operating with 1,000+ automated tests.",
+        ],
       ],
+      skills: ["Next.js", "React Native (Expo)", "TypeScript", "PostgreSQL", "Prisma", "Docker", "Caddy"],
     },
   ];
 
@@ -328,8 +295,7 @@ export default function Experience({
             Professional Experience
           </h2>
           <p className="text-muted-foreground">
-            Full-time roles, contracts, and founder work, with what shipped in
-            each.
+            Roles, contracts, and the product I co-founded.
           </p>
         </motion.div>
 
@@ -411,9 +377,9 @@ export default function Experience({
                               <Star
                                 key={i}
                                 className={`h-4 w-4 ${
-                                  i < Math.floor(job.rating.score)
+                                  i < Math.floor(job.rating!.score)
                                     ? "text-yellow-400 fill-yellow-400"
-                                    : i < job.rating.score
+                                    : i < job.rating!.score
                                       ? "text-yellow-400 fill-yellow-400" // For the partial star
                                       : "text-muted"
                                 }`}
@@ -427,30 +393,20 @@ export default function Experience({
                       </div>
                     )}
                     <ul className="text-muted-foreground text-sm space-y-1.5">
-                      {job.description.map((item, i) => {
-                        const sep = item.indexOf(": ");
-                        const hasLabel = sep > 0 && sep < 30;
-                        return (
-                          <li key={i} className="flex gap-2">
-                            <span
-                              className="mt-[0.45rem] h-1.5 w-1.5 rounded-full bg-primary/60 shrink-0"
-                              aria-hidden
-                            />
-                            <span>
-                              {hasLabel ? (
-                                <>
-                                  <span className="font-medium text-foreground">
-                                    {item.slice(0, sep)}:
-                                  </span>
-                                  {item.slice(sep + 1)}
-                                </>
-                              ) : (
-                                item
-                              )}
+                      {job.description.map(([lead, rest], i) => (
+                        <li key={i} className="flex gap-2">
+                          <span
+                            className="mt-[0.45rem] h-1.5 w-1.5 rounded-full bg-primary/60 shrink-0"
+                            aria-hidden
+                          />
+                          <span>
+                            <span className="font-medium text-foreground">
+                              {lead}
                             </span>
-                          </li>
-                        );
-                      })}
+                            {rest}
+                          </span>
+                        </li>
+                      ))}
                     </ul>
                     <div className="flex flex-wrap gap-1.5 sm:gap-2 pt-2">
                       {job.skills.map((skill, i) => (

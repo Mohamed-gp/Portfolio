@@ -1,90 +1,68 @@
 # Mohamed Outerbah
 
-**Full-Stack Engineer** · Next.js · React · React Native · Node.js · Express · TypeScript
+**Full-Stack Engineer** · TypeScript · React · Next.js · Node.js
 Algeria · CET (UTC+1) · [mohamedterba6@gmail.com](mailto:mohamedterba6@gmail.com) · [mohamedouterbah.com](https://www.mohamedouterbah.com) · [github.com/Mohamed-gp](https://github.com/Mohamed-gp) · [linkedin.com/in/mohamedouterbah](https://www.linkedin.com/in/mohamedouterbah)
 
 ---
 
-Full-Stack Engineer with more than 3 years of production experience (June 2023 to present), shipping web & mobile platforms end-to-end. Own the entire frontend of a live AI analytics SaaS as 2nd-highest contributor, and built the dispatch and fleet-operations services of a live Uber-style logistics marketplace. Co-founder of DzStore, a Shopify-equivalent e-commerce SaaS now serving 1,187+ live stores, and Fibble, a multiplayer party game on web and Discord, both grown entirely through search and word of mouth.
+Full-Stack Engineer with 3+ years of production experience building and shipping web and mobile products end-to-end. Frontend Lead on a production AI analytics SaaS and Co-Founder/Lead Engineer of DzStore, an e-commerce SaaS reaching 2,000+ merchant signups and 50+ paying merchants within its first three months through organic SEO.
 
 ## Experience
 
 ### Full-Stack Engineer (Frontend Lead) · _[Analytics Depot](https://analyticsdepot.com/) (AI Analytics SaaS), USA · Remote_
 
-**Apr 2025 - Present · 1 yr 5 mos**
+**Apr 2025 - Present**
 
-- Build every user-facing surface of that platform, including the five industry workspaces (real estate, finance, marketing, e-commerce, management) that prime the agent with domain context, so non-technical teams get answers without writing SQL.
-- **Dashboards & reporting:** Designed and implemented the drag-and-drop dashboard builder, shareable password-protected/embed reports, and one-click PDF/PowerPoint export UI, then defended auto-generated charts against silent misreadings (wrong aggregation, mis-detected date columns, misleading trend arrows) using golden-workbook fixtures.
-- **Real-time & auto-dashboards:** Took the realtime layer to production, fixing WebSocket URL detection and hardening the CSP for wss:// across the expert and inquiry surfaces, and built auto-dashboard generation that turns an uploaded file into a populated dashboard.
-- **Data connectors:** Developed an OAuth2 connector platform with encrypted credential storage spanning 14 sources across warehouses (BigQuery, Snowflake, Databricks, Redshift), databases (PostgreSQL, MySQL) and SaaS tools (GA4, Search Console, Sheets, Gmail, Slack, YouTube), with per-connector refresh schedules (React, FastAPI, Celery Beat) and in-app sync-failure alerts.
-- **AI / RAG:** Delivered RAG document-intelligence Q&A with resilient streaming, multi-format ingestion (CSV/PDF/Excel/images), inline source citations, and one-tap follow-up skills (root cause, forecast, outliers) on any answer, over a Gemini model layer with fallback.
-- **LLM agent observability:** Instrumented AI agent runs with an admin console over the trace pipeline: reliability trends, per-run latency and provider-cost drill-down, cost-regression flags, and async CSV/JSON export.
-- **Growth & DevOps:** Rebuilt the full marketing site (animated hero, comparison, FAQ); cut deploy time from ~30 min to under 5 with zero-downtime PM2 cluster reloads; hardened CI/CD (GitHub Actions) with Sentry observability, shipping through a review-gated pull-request workflow alongside AI/ML, LLMOps, and infra engineers; PKCE OAuth and Apple "Hide My Email" auth.
-- **Mobile:** Initialized the companion React Native app: dashboard viewing, push notifications, biometric auth, offline caching.
+- **Built most of the user-facing product**, owning the frontend across five AI analytics workspaces, dashboards, reporting, data visualization, realtime features, and AI-powered workflows while integrating closely with backend and AI services.
+- **Developed the data integration platform across 14 sources**, including BigQuery, Snowflake, Databricks, Redshift, PostgreSQL, GA4, Google Sheets, Gmail, Slack, and YouTube, with OAuth2, scheduled syncs, encrypted credentials, and failure monitoring.
+- **Shipped the AI/RAG experience** for CSV, PDF, Excel, and image analysis with streaming answers, source citations, automated root-cause/forecast/outlier analysis, and LLM cost and reliability observability.
+- **Owned production deployment and VPS infrastructure**, cutting deployment time from ~30 minutes to under 5 with zero-downtime deployments.
 
 ### Full-Stack Engineer (Contract) · _[HaulHub](https://haulhub.app/) (Logistics Marketplace), Netherlands · Remote_
 
-**Jun 2025 - May 2026 · 1 yr**
+**Jun 2025 - May 2026**
 
-- One of the primary engineers across backend, mobile & web on a production Uber-style marketplace, live on iOS & Android in the Netherlands: 12 service categories, 100+ skilled-labor sub-categories, and 5 languages with full RTL.
-- **On-demand dispatch service:** Engineered the request-to-delivery flow end-to-end: Haversine nearest-provider matching, competing price and pickup-time bids on expiring offers, an 11-state request lifecycle, live driver tracking over per-ride WebSocket rooms, and Stripe escrow with timing-based cancellation refunds.
-- **Fleet-operations service:** Developed the B2B fleet module, the platform's largest: companies manage drivers and vehicles, assign each trip, and settle every job into company commission and driver earnings.
-- **Multi-role architecture:** Architected a role-based permission system across 5+ user types (Admin with sub-roles, End Users, freelance & company Service Providers, Company Employees), each with dedicated dashboards and specialised per service vertical (a truck company manages drivers and vehicles, a labor company manages workers), gated by a document-verification pipeline before a provider can trade.
-- **Payments & compliance:** Integrated Stripe with hardened webhook signature verification (on-demand, subscriptions, provider payouts) and Dutch KVK business-registry lookup.
-- **Mobile & infra:** Shipped the React Native (Expo) app via EAS builds with push notifications, real-time chat, and map directions; Dockerized microservices on Hetzner via Coolify with Sentry + Clarity.
+- **Built core backend, web, and mobile systems for a production logistics marketplace** live in the Netherlands, supporting 12 service categories, 100+ subcategories, 5 languages, and full RTL.
+- **Engineered the on-demand dispatch system end-to-end**, including nearest-provider matching, competing price/pickup-time offers, an 11-state request lifecycle, per-ride WebSocket tracking, and Stripe escrow with automated cancellation refunds.
+- **Architected the B2B fleet and multi-role platform** across 5+ user roles, then launched the React Native app and production infrastructure with realtime chat, maps, Dockerized services on Hetzner/Coolify, and Sentry monitoring.
 
 ### Freelance Full-Stack Developer · _Global clients · Remote_
 
-**Jun 2023 - Jun 2025 · 2 yrs**
+**Jun 2023 - Jun 2025**
 
-- Delivered 6+ production applications for clients in the UK, USA, Netherlands, Japan, and Saudi Arabia, with a **5/5 rating on every client project** ([Fiverr](https://www.fiverr.com/mohamedouterbah)).
-- **[Cribbix](https://cribbix.com/) (UK):** Rightmove-style property platform (V1 & V2): interactive map search with instant filtering, client/agency/admin dashboards, real-time chat, AI property descriptions, Stripe tenancy payments, Redis caching, and independent DigitalOcean VPS deployment.
-- **MLC SharePoint to Zoho sync:** Zero-framework Cloudflare Worker watching a SharePoint contract library and auto-updating Zoho CRM (NDA/MSA detection) with SendGrid notifications.
+- **Delivered 6+ production applications** for clients across the UK, USA, Netherlands, Japan, and Saudi Arabia, maintaining a **5/5 rating across client projects** on [Fiverr](https://www.fiverr.com/mohamedouterbah).
+- **Created a Rightmove-style property platform** with interactive map search, realtime chat, AI-generated descriptions, Stripe tenancy payments, Redis caching, and independent VPS deployment, plus a serverless SharePoint to Zoho CRM automation for contract processing and notifications.
 
 ### Web Development Intern · _Exclusive Labs · Remote_
 
-**Sep - Dec 2024 · 4 mos**
+**Sep - Dec 2024**
 
 - Created a course management system (Next.js + Express) with role-based auth for students, instructors, and admins.
 
 ## Founder Projects
 
-### DzStore · _Shopify-equivalent E-commerce SaaS · Co-Founder & Lead Engineer · [dzstore.org](https://dzstore.org/en)_
+### [DzStore](https://dzstore.org/en) · _E-commerce SaaS · Co-Founder & Lead Engineer_
 
-**Jun 2025 - Present · 1 yr 3 mos**
+**Jun 2025 - Present**
 
-- **Traction:** Reached 1,368+ merchant signups, 1,187+ live stores, 3,222+ products, 1,003+ orders, and 11.3M+ DZD in orders processed (GMV) in the 3 months since the May 2026 launch, 100% organic with zero ad spend, and **34+ merchants upgraded to paid PRO plans, acquired through SEO alone**.
-- **Growth rate:** Peaking at 184 new stores in its best week and 648 orders in its best month, on 55,000+ visitors and 214,000+ pageviews.
-- **Conversion fix:** Diagnosed why signups climbed while orders stayed flat: every storefront led with Add to cart, but Algerian shoppers buy direct rather than build a basket, and on phones the order button sat below the fold. Shipped Buy now across all four storefront themes plus a fixed mobile order bar carrying the live total, taking orders from 142 at the end of June to 833 by 20 August, 5.9x against 2.4x growth in stores over the same window.
-- **Quality signals:** 4.7/5 average across 84 in-app merchant survey responses; 99.95% uptime over the last 90 days with zero recorded incidents (public status page: [status.dzstore.org](https://status.dzstore.org)).
-- **Organic SEO engine:** Owned technical SEO end-to-end: 15,000+ pages indexed, 600+ valid product snippets & merchant listings (Google Shopping rich results), and a Merchant Center feed with 2,000+ products, now pulling 3,000+ Google Search clicks and 100,000+ impressions a month (search out-refers social 12:1 on the signup funnel).
-- **Merchant mobile app:** Launched an iOS/Android app (React Native + Expo) for store owners: real-time order tracking, push notifications for new orders, stock management, and a multilingual UI with Arabic RTL.
-- **Engineering:** Led nearly all engineering across the stack: multi-tenant subdomain-per-store routing with Caddy on-demand TLS for custom domains, a 44-model Prisma/PostgreSQL schema, drag-and-drop storefront builder, online card payments (Chargily Pay) with HMAC-verified webhooks, and a carrier layer wrapping 70 Algerian delivery companies behind 5 API adapters; self-hosted on Hetzner via Docker with zero-downtime deploys and 1,000+ automated tests (Jest) keeping existing features from breaking.
-- **Revenue protection:** Noticed free merchants with heavy order volume were not upgrading, audited the free-plan order cap end to end, and found customer contact details bypassing it through 8 server-side channels; closed every leak behind a single order-privacy module, pinned by regression tests that scan whole payloads for raw customer data.
-- **Cost engineering:** Migrated the production PostgreSQL from Neon to Supabase with pg_dump/pg_restore at zero downtime, and made the image-optimizer cache survive deploys, cutting the database bill by 50%+ and retiring ~17 GB/month of Cloudinary egress.
-
-### Fibble · _Multiplayer Party Game (Web + Discord) · Co-Founder & Full-Stack Engineer · [fibble.io](https://fibble.io/)_
-
-**Sep 2025 - Present · 11 mos**
-
-- **Product:** Free real-time bluffing trivia game (2-8 players, no download) playable in the browser and as a Discord Activity, with a premium subscription tier.
-- **Traction:** 3,000+ players in 80+ countries across 2,200+ games played in the first 3 months since launch, entirely organic, converting its first paying subscribers on both billing rails.
-- **Engineering:** Serverless real-time multiplayer: Postgres as the source of truth with Ably pub/sub fan-out, server-authoritative phase deadlines, and HMAC anti-spoofing action tokens; plus Discord Activity integration, Paddle + Discord SKU billing, and a full admin analytics panel.
+- **Grew the platform to 2,000+ merchant signups, 1,800+ live stores, 5,000+ products, and 2,000+ orders**, with 50+ merchants upgrading to paid plans within the first three months through organic SEO.
+- **Architected the platform end-to-end**, including multi-tenant storefronts, custom domains, product/order management, payments, analytics, themes, and integrations with 70 delivery providers.
+- **Launched the entire React Native merchant app** for iOS and Android, with inventory management, realtime orders, push notifications, order tracking, and multilingual/Arabic RTL support.
+- **Scaled organic SEO to 15,000+ indexed pages**, generating 3,000+ monthly Google Search clicks and 100,000+ impressions.
+- **Migrated the production PostgreSQL database with zero downtime**, reducing database costs by 50%+, while maintaining 4.7/5 across 200+ merchant survey responses and operating with 1,000+ automated tests.
 
 ## Education & Awards
 
 **Master's in Computer Science**, AI & Data Science specialization, ESTIN, Algeria · _Expected 2027_
 
-- **Hackathon Winner 2024:** 1st place, competitive ideathon · 5+ hackathons participated.
+- **Hackathon Winner 2024:** 1st place, competitive ideathon.
 - **Open-source contributor:** [Munia](https://github.com/leandronorcio/munia), a Next.js social platform with 300+ GitHub stars (auth-aware navigation and UI logic).
 
 ## Technical Skills
 
-- **Core stack (hands-on years):** React 3 yrs · Next.js 3 yrs · TypeScript 3 yrs · Node.js & Express 3 yrs · PostgreSQL 3 yrs · React Native 1+ yr across 3 shipped apps
-- **Frontend:** React, Next.js (App & Pages Router), TypeScript, JavaScript ES6+, HTML5, CSS3, Tailwind CSS, Redux Toolkit
-- **Mobile:** React Native (Expo) for iOS & Android: EAS builds, push notifications, biometric auth, RTL i18n
-- **Backend:** Node.js, NestJS, Express.js, FastAPI, Python, REST APIs, WebSockets, Ably, RBAC
-- **Databases:** PostgreSQL, MySQL, SQL, Prisma ORM, Supabase, Redis, MongoDB
-- **Cloud:** Google Cloud (BigQuery), Microsoft Azure, Cloudflare, Hetzner, DigitalOcean
-- **DevOps & Practices:** Docker, Git, GitHub Actions, CI/CD, Agile, Coolify, Caddy/Nginx, PM2, Claude Code (AI-assisted dev)
-- **Integrations & AI:** Stripe, Paddle, online payments (Chargily Pay), OAuth2 (PKCE), Apple/Google Auth, Sentry, SendGrid/Resend, PostHog, RAG systems, LangChain, NL-to-SQL, Celery, real-time collaboration
+- **Languages:** TypeScript · JavaScript · Python · SQL
+- **Frontend:** React · Next.js · React Native · Redux Toolkit · Tailwind CSS
+- **Backend:** Node.js · Express · NestJS · FastAPI · REST · GraphQL · WebSockets · RBAC
+- **Data:** PostgreSQL · MySQL · Prisma · Redis · MongoDB · Supabase
+- **Cloud & DevOps:** AWS · Docker · GitHub Actions · Hetzner · Cloudflare · DigitalOcean · PM2 · Caddy · Coolify
+- **AI & Integrations:** RAG · LLM APIs · OAuth2/PKCE · Stripe · Paddle · Sentry · BigQuery

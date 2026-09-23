@@ -23,7 +23,6 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import Image from "next/image";
-import { FALLBACK_STATS } from "@/lib/dzstore-stats";
 
 interface Project {
   title: string;
@@ -51,19 +50,7 @@ interface Project {
   technologies: string[];
 }
 
-export type ProjectsDzStats = {
-  gmvDzd: string;
-  orders: string;
-  products: string;
-  proMerchants: string;
-  proActive: string;
-  sinceLaunchLabel: string;
-  stores: string;
-  bestWeekStores: string;
-  bestMonthOrders: string;
-};
-
-export default function Projects({ dz }: { dz?: ProjectsDzStats }) {
+export default function Projects() {
   const [activeTab, setActiveTab] = useState("all");
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -152,9 +139,10 @@ export default function Projects({ dz }: { dz?: ProjectsDzStats }) {
         },
       ],
       description: [
-        "Frontend lead on a live AI analytics SaaS, owning every user-facing surface: five industry workspaces that prime the agent with domain context, a drag-and-drop dashboard builder, shareable password-protected reports with one-click PDF/PowerPoint export, and an OAuth2 connector platform spanning 14 data sources, from warehouses (BigQuery, Snowflake, Databricks, Redshift) to databases and SaaS tools.",
-        "Shipped RAG document Q&A, an NL-to-SQL query interface, per-connector refresh scheduling (React + FastAPI + Celery), and the LLM agent observability console on top of the trace pipeline: run volume and reliability trends, per-run latency and provider-cost drill-down into spans, cost-regression flags, and async CSV/JSON export of the query log.",
-        "Rebuilt the public marketing site, hardened auth with PKCE OAuth and Apple \"Hide My Email\", and cut deploy time from ~30 min to under 5 with zero-downtime PM2 cluster reloads.",
+        "Built most of the user-facing product, owning the frontend across five AI analytics workspaces, dashboards, reporting, data visualization, realtime features, and AI-powered workflows while integrating closely with backend and AI services.",
+        "Developed the data integration platform across 14 sources, including BigQuery, Snowflake, Databricks, Redshift, PostgreSQL, GA4, Google Sheets, Gmail, Slack, and YouTube, with OAuth2, scheduled syncs, encrypted credentials, and failure monitoring.",
+        "Shipped the AI/RAG experience for CSV, PDF, Excel, and image analysis with streaming answers, source citations, automated root-cause/forecast/outlier analysis, and LLM cost and reliability observability.",
+        "Owned production deployment and VPS infrastructure, cutting deployment time from ~30 minutes to under 5 with zero-downtime deployments.",
       ],
       features: [
         "Ask questions in plain English, get SQL-backed answers and charts",
@@ -258,22 +246,19 @@ export default function Projects({ dz }: { dz?: ProjectsDzStats }) {
         },
       ],
       description: [
-        `All of that ${dz?.sinceLaunchLabel ?? FALLBACK_STATS.sinceLaunchLabel}, and still climbing: its best week added ${dz?.bestWeekStores ?? FALLBACK_STATS.bestWeekStores} new stores, its best month ${dz?.bestMonthOrders ?? FALLBACK_STATS.bestMonthOrders} orders. Not a dinar of ad spend, every merchant came from search.`,
-        "Co-founded this multi-tenant Shopify-equivalent SaaS and lead nearly all engineering: subdomain-per-store routing with Caddy on-demand TLS, a 44-model Prisma/PostgreSQL schema, a carrier layer covering 70 Algerian delivery companies behind 5 API adapters, and an iOS/Android merchant app (React Native + Expo); self-hosted on Hetzner via Docker with zero-downtime deploys and 1,000+ automated tests keeping shipped features from breaking.",
-        "Diagnosed a conversion problem the roadmap had missed: signups were climbing while orders stayed flat, because every storefront led with Add to cart and Algerian shoppers buy direct rather than build a basket, with the phone CTA sitting below the fold. Shipped Buy now across all four themes plus a fixed mobile order bar carrying the live total. Orders went from 142 at the end of June to 833 by 20 August, 5.9x while the store count grew 2.4x.",
-        "Caught a revenue leak: customer contact details bypassed the free-plan order cap through 8 server-side channels despite correct frontend gating. Sealed every path behind a single order-privacy module, locked in by payload-scanning regression tests.",
-        "Technical SEO drives acquisition: 15,000+ pages indexed, 600+ Google Shopping product snippets, 3,000+ Search clicks a month; search out-refers social 12:1 on the signup funnel. Cut the database bill by 50%+ by moving Postgres off Neon to Supabase at zero downtime.",
+        "Co-founded this multi-tenant e-commerce SaaS and lead its engineering. It grew to 2,000+ merchant signups, 1,800+ live stores, 5,000+ products, and 2,000+ orders, with 50+ merchants upgrading to paid plans within the first three months, all through organic SEO.",
+        "Architected the platform end-to-end: multi-tenant storefronts, custom domains, product/order management, payments, analytics, themes, and integrations with 70 delivery providers.",
+        "Launched the entire React Native merchant app for iOS and Android, with inventory management, realtime orders, push notifications, order tracking, and multilingual/Arabic RTL support.",
+        "Scaled organic SEO to 15,000+ indexed pages, generating 3,000+ monthly Google Search clicks and 100,000+ impressions.",
+        "Migrated the production PostgreSQL database with zero downtime, reducing database costs by 50%+, while maintaining 4.7/5 across 200+ merchant survey responses and operating with 1,000+ automated tests.",
       ],
       metrics: [
-        { value: dz?.stores ?? FALLBACK_STATS.stores, label: "Live stores" },
-        { value: dz?.proMerchants ?? FALLBACK_STATS.proMerchants, label: "Paying PRO merchants" },
-        {
-          value: `${dz?.gmvDzd ?? FALLBACK_STATS.gmvDzd} DZD`,
-          label: "Orders processed (GMV)",
-        },
-        { value: "4.7/5", label: "84 merchant reviews" },
-        { value: "99.95%", label: "Uptime, last 90 days" },
-        { value: "214K+", label: "Pageviews, 3 months" },
+        { value: "2,000+", label: "Merchant signups" },
+        { value: "1,800+", label: "Live stores" },
+        { value: "50+", label: "Paying merchants" },
+        { value: "2,000+", label: "Orders" },
+        { value: "15,000+", label: "Indexed pages" },
+        { value: "4.7/5", label: "200+ merchant surveys" },
       ],
       statusPage: "https://status.dzstore.org",
       features: [
@@ -286,10 +271,7 @@ export default function Projects({ dz }: { dz?: ProjectsDzStats }) {
       ],
       hardest:
         "Multi-tenant subdomain routing with Caddy on-demand TLS: every merchant gets their own store and custom domain with automatic HTTPS, all from one codebase.",
-      // proMerchants (distinct approved payments, ever) — the stable brag;
-      // the right-now PRO count breathes with renewals and undersells the
-      // project the week someone lapses.
-      status: `Live · ${dz?.stores ?? FALLBACK_STATS.stores} Stores · ${dz?.proMerchants ?? FALLBACK_STATS.proMerchants} Paying`,
+      status: "Live · 1,800+ Stores · 50+ Paying",
       role: "Co-Founder & Lead Engineer",
       technologies: [
         "Next.js",
