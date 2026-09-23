@@ -1,14 +1,14 @@
 {
-  "name": "portfolio-v1",
+  "name": "portfolio",
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "prebuild": "bash ../build-cv.sh || true",
+    "prebuild": "bash ./build-cv.sh || true",
     "build": "next build",
     "dev": "next dev",
     "start": "next start",
     "lint": "next lint",
-    "cv": "bash ../build-cv.sh"
+    "cv": "bash ./build-cv.sh"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.15",

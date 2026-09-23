@@ -40,6 +40,7 @@ interface Project {
   phoneShots?: { src: string; caption: string }[];
   phoneShotsTitle?: string;
   flowVideo?: { src: string; title: string; caption: string };
+  tagline: string;
   description: string | string[];
   metrics?: { value: string; label: string }[];
   statusPage?: string;
@@ -138,20 +139,20 @@ export default function Projects() {
             "And its feature grid: connectors, query speed, predictive insights, per-industry context.",
         },
       ],
+      tagline: "AI analytics SaaS: connect your data, ask in plain English, get answers and dashboards back.",
       description: [
-        "Built most of the user-facing product, owning the frontend across five AI analytics workspaces, dashboards, reporting, data visualization, realtime features, and AI-powered workflows while integrating closely with backend and AI services.",
-        "Developed the data integration platform across 14 sources, including BigQuery, Snowflake, Databricks, Redshift, PostgreSQL, GA4, Google Sheets, Gmail, Slack, and YouTube, with OAuth2, scheduled syncs, encrypted credentials, and failure monitoring.",
-        "Shipped the AI/RAG experience for CSV, PDF, Excel, and image analysis with streaming answers, source citations, automated root-cause/forecast/outlier analysis, and LLM cost and reliability observability.",
-        "Owned production deployment and VPS infrastructure, cutting deployment time from ~30 minutes to under 5 with zero-downtime deployments.",
+        "Frontend lead. I built most of the product: five AI workspaces, dashboards, reporting, and the realtime features.",
+        "14 data connectors (BigQuery, Snowflake, GA4, Slack and more) with OAuth2 and scheduled syncs.",
+        "RAG over CSV, PDF, Excel and images, with streaming answers and cited sources.",
+        "Cut deploys from ~30 minutes to under 5, with zero downtime.",
       ],
       features: [
-        "Ask questions in plain English, get SQL-backed answers and charts",
-        "Drag-and-drop dashboards with shareable, embeddable reports",
-        "14 one-click data connectors, from Snowflake and BigQuery to Slack",
-        "Upload CSV/PDF/Excel documents and chat with them (RAG)",
+        "Ask in plain English, get SQL-backed answers and charts",
+        "Dashboards that build themselves from an uploaded file",
+        "14 one-click data connectors",
       ],
       hardest:
-        "Making auto-generated analytics tell the truth. The builder renders a confident dashboard from any uploaded file, and its mistakes are silent ones a reader would never catch: an allow-list averaged \"valuation\" under a title promising a total, ranking Oceania above a North America worth 36x more; \"Year Founded\" captured the timeline slot because 2012 parses perfectly while the real DD-MM-YYYY dates failed month-first parsing; a KPI trend compared two sparkline endpoints and printed -9% where the period change was -1.8%. I caught these by running golden workbooks through the live demo path, and rewrote the inference rules behind them.",
+        "Keeping auto-generated charts honest. A wrong aggregation or a misread date column gives you a dashboard that looks right and isn't. I caught these with golden test workbooks and rewrote the rules behind them.",
       status: "Live",
       role: "Full-Stack Engineer (Frontend Lead) · team of ~10",
       technologies: [
@@ -245,12 +246,13 @@ export default function Projects() {
           caption: "Trilingual by design: Arabic (RTL), French, English",
         },
       ],
+      tagline: "Shopify for Algeria. 1,800+ live stores and 50+ paying merchants, all from organic search.",
       description: [
-        "Co-founded this multi-tenant e-commerce SaaS and lead its engineering. It grew to 2,000+ merchant signups, 1,800+ live stores, 5,000+ products, and 2,000+ orders, with 50+ merchants upgrading to paid plans within the first three months, all through organic SEO.",
-        "Architected the platform end-to-end: multi-tenant storefronts, custom domains, product/order management, payments, analytics, themes, and integrations with 70 delivery providers.",
-        "Launched the entire React Native merchant app for iOS and Android, with inventory management, realtime orders, push notifications, order tracking, and multilingual/Arabic RTL support.",
-        "Scaled organic SEO to 15,000+ indexed pages, generating 3,000+ monthly Google Search clicks and 100,000+ impressions.",
-        "Migrated the production PostgreSQL database with zero downtime, reducing database costs by 50%+, while maintaining 4.7/5 across 200+ merchant survey responses and operating with 1,000+ automated tests.",
+        "Co-founder and lead engineer. 2,000+ signups, 5,000+ products and 2,000+ orders in the first three months, with zero ad spend.",
+        "Multi-tenant storefronts on custom domains, payments, themes, and 70 delivery providers behind one integration.",
+        "React Native merchant app for iOS and Android, Arabic RTL included.",
+        "15,000+ indexed pages bring in 3,000+ Google clicks a month.",
+        "Moved production Postgres with zero downtime and halved the database bill.",
       ],
       metrics: [
         { value: "2,000+", label: "Merchant signups" },
@@ -262,15 +264,12 @@ export default function Projects() {
       ],
       statusPage: "https://status.dzstore.org",
       features: [
-        "Merchants launch a full online store in seconds, no code needed",
-        "Every store gets its own subdomain or custom domain with auto HTTPS",
-        "Cash on delivery + online card payments, 70 delivery carriers",
-        "AI product descriptions, abandoned-cart recovery, trending-product radar",
-        "Discount codes, product variants, low-stock alerts, fraud screening",
-        "Merchant analytics dashboard + iOS/Android app with push notifications",
+        "Launch a store in seconds, no code",
+        "Own subdomain or custom domain with automatic HTTPS",
+        "Cash on delivery, card payments, 70 carriers",
       ],
       hardest:
-        "Multi-tenant subdomain routing with Caddy on-demand TLS: every merchant gets their own store and custom domain with automatic HTTPS, all from one codebase.",
+        "Giving every merchant their own domain with automatic HTTPS, all from one codebase, using Caddy on-demand TLS.",
       status: "Live · 1,800+ Stores · 50+ Paying",
       role: "Co-Founder & Lead Engineer",
       technologies: [
@@ -442,18 +441,19 @@ export default function Projects() {
             "Trip in progress: live route, chat with the customer, then confirm each destination",
         },
       ],
+      tagline: "Uber-style logistics marketplace, live on iOS and Android in the Netherlands.",
       description: [
-        "One of the primary engineers across backend, mobile & web on a production Uber-style logistics marketplace, live on iOS & Android in the Netherlands across 12 service categories and 100+ skilled-labor sub-categories, with full RTL i18n in 5 languages (EN/NL/AR/DE/UR).",
-        "Built the on-demand dispatch service (Haversine nearest-provider matching, competing provider offers, live driver tracking over per-ride WebSocket rooms, an 11-state request lifecycle) and the B2B fleet-operations module end-to-end: companies onboard their own drivers and vehicles, bid on marketplace jobs, assign each trip to a named employee, and settle every job into company commission and driver earnings. Each role is specialised per service vertical, so a truck-rental company manages drivers and vehicles while a skilled-labor company manages workers and jobs, off one permission system. Plus Stripe payments (on-demand, subscriptions, provider payouts) and Dutch KVK business-registry lookup.",
+        "Core engineer across backend, web and mobile. 12 service categories, 5 languages, full RTL.",
+        "Built the dispatch system: nearest-provider matching, competing bids, live tracking, Stripe escrow.",
+        "Built the B2B fleet module: companies manage their drivers and vehicles and split every payout.",
       ],
       features: [
-        "Post a job, get competing price and pickup-time offers in seconds",
-        "Live driver tracking, proof of delivery, and dispute handling",
-        "Fleet dashboards for companies: drivers, vehicles, earnings splits",
-        "Stripe escrow payments, 5 languages with full RTL",
+        "Post a job, get competing offers in seconds",
+        "Live driver tracking and proof of delivery",
+        "Fleet dashboards for companies",
       ],
       hardest:
-        "Dispatching a request to the right provider in real time: Haversine radius matching that fans out to freelancers and fleet companies, competing offers, live location tracking, and Stripe escrow with timing-based cancellation refunds, across an 11-state request lifecycle.",
+        "Real-time dispatch: matching a request to nearby providers, running a live bidding round, and holding payment in escrow across an 11-state lifecycle.",
       status: "Live on iOS & Android",
       role: "Full-Stack Engineer",
       technologies: [
@@ -517,18 +517,18 @@ export default function Projects() {
           caption: "Standings after every round, players and bots ranked",
         },
       ],
+      tagline: "Bluffing trivia game for the browser and Discord. 3,000+ players in 80+ countries.",
       description: [
-        "Co-founded a real-time multiplayer bluffing trivia game playable on the web and inside Discord as an embedded Activity. 3,000+ players across 80+ countries and 2,200+ games played in its first 3 months live, fully organic, zero ads.",
-        "Premium via Paddle checkout on web plus native Discord SKU subscriptions in-app, user-generated question packs, media questions (image/GIF/audio), bots, friends & DMs with moderation, and a full admin panel; Dockerized on Hetzner behind Caddy, with GitHub Actions CI/CD, health checks, and automatic rollback.",
+        "Co-founder. Real-time multiplayer with no game server: Postgres as the source of truth plus Ably pub/sub.",
+        "Runs inside Discord as an Activity, with Paddle and Discord subscriptions.",
       ],
       features: [
-        "Bluff-based trivia: write fake answers, fool your friends, 2-8 players",
-        "Plays in the browser or inside Discord, nothing to install",
-        "Custom question packs, media questions, bots, friends and DMs",
-        "Premium via Paddle on web and native Discord subscriptions",
+        "Write fake answers, fool your friends",
+        "Browser or Discord, nothing to install",
+        "Custom question packs and bots",
       ],
       hardest:
-        "Real-time multiplayer game-state sync on a serverless Next.js stack with no dedicated game server: Postgres as the source of truth, Ably pub/sub fan-out, server-authoritative phase deadlines with idempotent transitions, and HMAC action tokens so guests and Discord players can't spoof each other.",
+        "Keeping game state in sync on serverless: server-owned timers, idempotent phase changes, and signed action tokens so players can't cheat.",
       status: "Live · 3,000+ Players",
       role: "Co-Founder & Full-Stack Engineer",
       technologies: [
@@ -580,16 +580,18 @@ export default function Projects() {
             "The renter side: saved searches, alerts, offers, and suggested homes.",
         },
       ],
-      description:
-        "Built a Rightmove-style property rental & sales platform (V1 & V2): interactive map search with full filtering, client/agency/admin dashboards, renter profiles, real-time chat, AI-generated property descriptions, and Stripe tenancy payments. Added Redis caching, rate limiting, and reCAPTCHA v3; migrated to Next.js 15 + React 18 and ran full VPS deployment on DigitalOcean independently.",
+      tagline: "Rightmove-style property platform for the UK.",
+      description: [
+        "Map search with instant filters, agent and admin dashboards, and realtime chat.",
+        "Stripe rent payments, AI listing descriptions, Redis caching, self-managed VPS.",
+      ],
       features: [
-        "Map-first property search with instant filtering, rent and buy",
-        "Saved alerts, enquiry tracking, and tour scheduling with agents",
-        "Digital agreement signing and Stripe rent collection",
-        "Real-time chat and AI-generated listing descriptions",
+        "Map-first search, to rent or buy",
+        "Realtime chat with agents",
+        "Stripe rent collection",
       ],
       hardest:
-        "Map-based property search with live filtering that updates results without re-initializing the map on every interaction.",
+        "Filtering live results without reloading the map on every change.",
       status: "Live",
       role: "Full-Stack Developer",
       technologies: [
@@ -641,9 +643,8 @@ export default function Projects() {
             Selected Work
           </h2>
           <p className="text-muted-foreground text-lg">
-            Production platforms serving real users: AI analytics, a live
-            logistics marketplace, e-commerce SaaS, and open source. Click any
-            card for the full breakdown.
+            Live products with real users. Open any card for screenshots and
+            the details.
           </p>
         </motion.div>
 
@@ -821,21 +822,25 @@ export default function Projects() {
                 {/* Description */}
                 <div>
                   <h3 className="font-semibold text-lg mb-2">
-                    About the project
+                    What I did
                   </h3>
-                  <div className="space-y-3">
+                  <ul className="space-y-1.5">
                     {(Array.isArray(selectedProject.description)
                       ? selectedProject.description
                       : [selectedProject.description]
-                    ).map((paragraph) => (
-                      <p
-                        key={paragraph.slice(0, 40)}
-                        className="text-muted-foreground leading-relaxed"
+                    ).map((line) => (
+                      <li
+                        key={line.slice(0, 40)}
+                        className="flex gap-2 text-sm text-muted-foreground"
                       >
-                        {paragraph}
-                      </p>
+                        <span
+                          className="mt-[0.45rem] h-1.5 w-1.5 rounded-full bg-primary/60 shrink-0"
+                          aria-hidden
+                        />
+                        <span>{line}</span>
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                 </div>
 
                 {/* In-app screenshots */}
@@ -1049,11 +1054,7 @@ function ProjectCard({
           )}
         </div>
 
-        <p className="text-sm text-muted-foreground line-clamp-3">
-          {Array.isArray(project.description)
-            ? project.description[0]
-            : project.description}
-        </p>
+        <p className="text-sm text-muted-foreground">{project.tagline}</p>
 
         {/* What the app does */}
         <ul className="space-y-1">
@@ -1067,16 +1068,6 @@ function ProjectCard({
             </li>
           ))}
         </ul>
-
-        {/* Hardest problem hook */}
-        <div className="rounded-md bg-muted/50 border-l-2 border-primary/60 px-3 py-2">
-          <p className="text-xs text-muted-foreground">
-            <span className="font-semibold text-foreground">
-              Hardest problem:{" "}
-            </span>
-            {project.hardest}
-          </p>
-        </div>
 
         <div className="flex items-center gap-2 pt-1 mt-auto">
           <Button asChild size="sm" className="flex-1">

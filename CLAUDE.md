@@ -4,13 +4,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repository layout
 
-- `portfolio-v1/` — Mohamed Outerbah's professional portfolio (recruiter-facing single-page Next.js site). Always `cd` into it before running commands.
+- The repo root is Mohamed Outerbah's professional portfolio (recruiter-facing single-page Next.js site). The old 3D `portfolio-v2` experiment lives on the `portfolio-v2` branch, not in `main`.
 - `Mohamed_Outerbah_CV.md` / `Mohamed_Outerbah_CV.html` — the CV source files at the repo root. The HTML is the print source for the downloadable PDF.
-- `build-cv.sh` — exports the CV HTML to `portfolio-v1/public/cv/Mohamed_Outerbah_CV.pdf` via headless Chromium. It also runs automatically as the `prebuild` script of `npm run build` (skipped silently where no Chromium exists, e.g. Vercel — so the committed PDF must be kept current).
+- `build-cv.sh` — exports the CV HTML to `public/cv/Mohamed_Outerbah_CV.pdf` via headless Chromium. It also runs automatically as the `prebuild` script of `npm run build` (skipped silently where no Chromium exists, e.g. Vercel — so the committed PDF must be kept current).
 
 ## Common commands
 
-Run from inside `portfolio-v1`:
+Run from the repo root:
 
 ```bash
 npm install
@@ -23,7 +23,7 @@ npm run cv       # rebuild only the CV PDF
 
 No test runner is configured.
 
-## portfolio-v1 architecture
+## Architecture
 
 Single-page marketing site, App Router (Next.js 16, React 19, Tailwind v3).
 

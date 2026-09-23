@@ -12,7 +12,6 @@ Source code for [mohamedouterbah.com](https://www.mohamedouterbah.com) — my pe
 ## Run locally
 
 ```bash
-cd portfolio-v1
 npm install
 npm run dev
 ```
@@ -24,10 +23,10 @@ Open [http://localhost:3000](http://localhost:3000).
 The downloadable CV PDF is generated from `Mohamed_Outerbah_CV.html`:
 
 ```bash
-./build-cv.sh   # or: cd portfolio-v1 && npm run cv
+./build-cv.sh   # or: npm run cv
 ```
 
-It renders the HTML with a headless Chromium browser and writes the PDF to `portfolio-v1/public/cv/`.
+It renders the HTML with a headless Chromium browser and writes the PDF to `public/cv/`.
 
 ## Contact
 

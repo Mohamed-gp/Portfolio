@@ -96,6 +96,36 @@ export default function Experience() {
       skills: ["NestJS", "React Native", "Next.js", "PostgreSQL", "Stripe", "WebSockets", "Docker", "Coolify"],
     },
     {
+      title: "Co-Founder & Lead Engineer",
+      company: "DzStore",
+      website: "https://dzstore.org/en",
+      location: "Algeria · Founder project",
+      period: "Jun 2025 – Present",
+      description: [
+        [
+          "Grew the platform to 2,000+ merchant signups, 1,800+ live stores, 5,000+ products, and 2,000+ orders",
+          ", with 50+ merchants upgrading to paid plans within the first three months through organic SEO.",
+        ],
+        [
+          "Architected the platform end-to-end",
+          ", including multi-tenant storefronts, custom domains, product/order management, payments, analytics, themes, and integrations with 70 delivery providers.",
+        ],
+        [
+          "Launched the entire React Native merchant app",
+          " for iOS and Android, with inventory management, realtime orders, push notifications, order tracking, and multilingual/Arabic RTL support.",
+        ],
+        [
+          "Scaled organic SEO to 15,000+ indexed pages",
+          ", generating 3,000+ monthly Google Search clicks and 100,000+ impressions.",
+        ],
+        [
+          "Migrated the production PostgreSQL database with zero downtime",
+          ", reducing database costs by 50%+, while maintaining 4.7/5 across 200+ merchant survey responses and operating with 1,000+ automated tests.",
+        ],
+      ],
+      skills: ["Next.js", "React Native (Expo)", "TypeScript", "PostgreSQL", "Prisma", "Docker", "Caddy"],
+    },
+    {
       title: "Freelance Full-Stack Developer",
       company: "Fiverr",
       website: "https://www.fiverr.com/mohamedouterbah?public_mode=true",
@@ -126,36 +156,6 @@ export default function Experience() {
         ],
       ],
       skills: ["Next.js", "Express.js", "RBAC"],
-    },
-    {
-      title: "Co-Founder & Lead Engineer",
-      company: "DzStore",
-      website: "https://dzstore.org/en",
-      location: "Algeria · Founder project",
-      period: "Jun 2025 – Present",
-      description: [
-        [
-          "Grew the platform to 2,000+ merchant signups, 1,800+ live stores, 5,000+ products, and 2,000+ orders",
-          ", with 50+ merchants upgrading to paid plans within the first three months through organic SEO.",
-        ],
-        [
-          "Architected the platform end-to-end",
-          ", including multi-tenant storefronts, custom domains, product/order management, payments, analytics, themes, and integrations with 70 delivery providers.",
-        ],
-        [
-          "Launched the entire React Native merchant app",
-          " for iOS and Android, with inventory management, realtime orders, push notifications, order tracking, and multilingual/Arabic RTL support.",
-        ],
-        [
-          "Scaled organic SEO to 15,000+ indexed pages",
-          ", generating 3,000+ monthly Google Search clicks and 100,000+ impressions.",
-        ],
-        [
-          "Migrated the production PostgreSQL database with zero downtime",
-          ", reducing database costs by 50%+, while maintaining 4.7/5 across 200+ merchant survey responses and operating with 1,000+ automated tests.",
-        ],
-      ],
-      skills: ["Next.js", "React Native (Expo)", "TypeScript", "PostgreSQL", "Prisma", "Docker", "Caddy"],
     },
   ];
 
