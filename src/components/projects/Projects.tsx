@@ -42,8 +42,6 @@ interface Project {
   flowVideo?: { src: string; title: string; caption: string };
   tagline: string;
   description: string | string[];
-  metrics?: { value: string; label: string }[];
-  statusPage?: string;
   features: string[];
   hardest: string;
   status: string;
@@ -141,7 +139,7 @@ export default function Projects() {
       ],
       tagline: "AI analytics SaaS: connect your data, ask in plain English, get answers and dashboards back.",
       description: [
-        "Frontend lead. I built most of the product: five AI workspaces, dashboards, reporting, and the realtime features.",
+        "Frontend lead and 2nd-highest contributor on a ~10-person team. I built most of the product: five AI workspaces, dashboards, reporting, and the realtime features.",
         "14 data connectors (BigQuery, Snowflake, GA4, Slack and more) with OAuth2 and scheduled syncs.",
         "RAG over CSV, PDF, Excel and images, with streaming answers and cited sources.",
         "Cut deploys from ~30 minutes to under 5, with zero downtime.",
@@ -254,15 +252,6 @@ export default function Projects() {
         "15,000+ indexed pages bring in 3,000+ Google clicks a month.",
         "Moved production Postgres with zero downtime and halved the database bill.",
       ],
-      metrics: [
-        { value: "2,000+", label: "Merchant signups" },
-        { value: "1,800+", label: "Live stores" },
-        { value: "50+", label: "Paying merchants" },
-        { value: "2,000+", label: "Orders" },
-        { value: "15,000+", label: "Indexed pages" },
-        { value: "4.7/5", label: "200+ merchant surveys" },
-      ],
-      statusPage: "https://status.dzstore.org",
       features: [
         "Launch a store in seconds, no code",
         "Own subdomain or custom domain with automatic HTTPS",
@@ -757,40 +746,6 @@ export default function Projects() {
                     </Badge>
                   ))}
                 </div>
-
-                {/* By the numbers */}
-                {selectedProject.metrics && (
-                  <div>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                      {selectedProject.metrics.map((m) => (
-                        <div
-                          key={m.label}
-                          className="rounded-lg border border-primary/10 bg-primary/5 px-3 py-2.5 text-center"
-                        >
-                          <div className="text-lg font-bold text-foreground leading-tight">
-                            {m.value}
-                          </div>
-                          <div className="text-xs text-muted-foreground mt-0.5">
-                            {m.label}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                    {selectedProject.statusPage && (
-                      <p className="text-xs text-muted-foreground mt-2 text-right">
-                        Uptime verifiable live at{" "}
-                        <a
-                          href={selectedProject.statusPage}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="underline underline-offset-2 hover:text-foreground transition-colors"
-                        >
-                          {selectedProject.statusPage.replace("https://", "")}
-                        </a>
-                      </p>
-                    )}
-                  </div>
-                )}
 
                 {/* Hardest problem */}
                 <div className="rounded-lg border-l-2 border-primary bg-primary/5 p-4">

@@ -13,7 +13,7 @@ Full-Stack Engineer with 3+ years of production experience building and shipping
 
 **Apr 2025 - Present**
 
-- **Built most of the user-facing product**, owning the frontend across five AI analytics workspaces, dashboards, reporting, data visualization, realtime features, and AI-powered workflows while integrating closely with backend and AI services.
+- **Built most of the user-facing product** as the 2nd-highest contributor on a ~10-person team, owning the frontend across five AI analytics workspaces, dashboards, reporting, data visualization, realtime features, and AI-powered workflows.
 - **Developed the data integration platform across 14 sources**, including BigQuery, Snowflake, Databricks, Redshift, PostgreSQL, GA4, Google Sheets, Gmail, Slack, and YouTube, with OAuth2, scheduled syncs, encrypted credentials, and failure monitoring.
 - **Shipped the AI/RAG experience** for CSV, PDF, Excel, and image analysis with streaming answers, source citations, automated root-cause/forecast/outlier analysis, and LLM cost and reliability observability.
 - **Owned production deployment and VPS infrastructure**, cutting deployment time from ~30 minutes to under 5 with zero-downtime deployments.

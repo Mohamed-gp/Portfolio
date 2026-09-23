@@ -56,7 +56,7 @@ export default function Experience() {
       description: [
         [
           "Built most of the user-facing product",
-          ", owning the frontend across five AI analytics workspaces, dashboards, reporting, data visualization, realtime features, and AI-powered workflows while integrating closely with backend and AI services.",
+          " as the 2nd-highest contributor on a ~10-person team, owning the frontend across five AI analytics workspaces, dashboards, reporting, data visualization, realtime features, and AI-powered workflows.",
         ],
         [
           "Developed the data integration platform across 14 sources",
