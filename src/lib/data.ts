@@ -8,7 +8,7 @@ export type Skill = {
   name: string;
   icon?: string;
   tone?: "light" | "dark";
-  concept?: "rest" | "websocket" | "rbac" | "rag" | "llm" | "oauth";
+  concept?: "rest" | "websocket" | "sse" | "rbac" | "rag" | "llm" | "oauth";
 };
 
 export const skillGroups: { label: string; skills: Skill[] }[] = [
@@ -41,6 +41,7 @@ export const skillGroups: { label: string; skills: Skill[] }[] = [
       { name: "GraphQL", icon: "graphql.svg" },
       { name: "REST", concept: "rest" },
       { name: "WebSockets", concept: "websocket" },
+      { name: "SSE", concept: "sse" },
       { name: "RBAC", concept: "rbac" },
     ],
   },

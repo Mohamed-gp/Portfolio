@@ -5,8 +5,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Repository layout
 
 - The repo root is Mohamed Outerbah's professional portfolio (recruiter-facing single-page Next.js site). The old 3D `portfolio-v2` experiment lives on the `portfolio-v2` branch, not in `main`.
-- `Mohamed_Outerbah_CV.md` / `Mohamed_Outerbah_CV.html` — the CV source files at the repo root. The HTML is the print source for the downloadable PDF.
-- `build-cv.sh` — exports the CV HTML to `public/cv/Mohamed_Outerbah_CV.pdf` via headless Chromium. It also runs automatically as the `prebuild` script of `npm run build` (skipped silently where no Chromium exists, e.g. Vercel — so the committed PDF must be kept current).
+- `public/cv/Mohamed_Outerbah_CV.pdf` — the downloadable CV. Its source (`Mohamed_Outerbah_CV.html` + `build-cv.sh`) lives outside the repo in `../cv-source/`; edit the HTML there, run `./build-cv.sh`, and it writes the PDF back here. Re-check PDF text extraction (pypdf/pdfminer) after any change so it stays ATS-parseable.
 
 ## Common commands
 
@@ -15,10 +14,9 @@ Run from the repo root:
 ```bash
 npm install
 npm run dev      # next dev (localhost:3000)
-npm run build    # regenerates the CV PDF, then next build
+npm run build
 npm run start    # next start
 npm run lint     # next lint
-npm run cv       # rebuild only the CV PDF
 ```
 
 No test runner is configured.
@@ -38,5 +36,5 @@ Note: there is a typo'd directory `src/components/foooter/` (three o's) — impo
 
 ## Content rules
 
-- Metrics on the site and CV are user-verified claims (store counts, paying subscribers, uptime). Do not invent or inflate numbers; when they change, update site + CV md + CV html together and rebuild the PDF.
+- Metrics on the site and CV are user-verified claims (store counts, paying subscribers, uptime). Do not invent or inflate numbers; when they change, update the site and the CV source in `../cv-source/` together and rebuild the PDF.
 - The CV must contain no em-dashes and no action verb used more than twice (ATS conventions the user follows).

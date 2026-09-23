@@ -1,12 +1,14 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import {
   BrainCircuit,
   KeyRound,
   Network,
   Radio,
+  RadioTower,
   ShieldCheck,
   Sparkles,
 } from "lucide-react";
@@ -17,6 +19,7 @@ import { skillGroups, type Skill } from "@/lib/data";
 const conceptIcons = {
   rest: Network,
   websocket: Radio,
+  sse: RadioTower,
   rbac: ShieldCheck,
   rag: BrainCircuit,
   llm: Sparkles,
@@ -26,16 +29,16 @@ const conceptIcons = {
 function SkillIcon({ skill }: { skill: Skill }) {
   if (skill.concept) {
     const Icon = conceptIcons[skill.concept];
-    return <Icon className="h-7 w-7 text-primary" strokeWidth={1.75} />;
+    return <Icon className="h-8 w-8 text-primary" strokeWidth={1.75} />;
   }
   return (
     <Image
       src={`/skills/${skill.icon}`}
       alt=""
-      width={28}
-      height={28}
+      width={32}
+      height={32}
       className={cn(
-        "h-7 w-7 object-contain",
+        "h-8 w-8 object-contain",
         skill.tone === "light" && "invert dark:invert-0",
         skill.tone === "dark" && "dark:invert dark:hue-rotate-180",
       )}
@@ -44,6 +47,9 @@ function SkillIcon({ skill }: { skill: Skill }) {
 }
 
 export default function Skills() {
+  const [active, setActive] = useState(skillGroups[0].label);
+  const group = skillGroups.find((g) => g.label === active) ?? skillGroups[0];
+
   return (
     <section id="skills" className="py-16 sm:py-20">
       <div className="container px-4 sm:px-6">
@@ -52,7 +58,7 @@ export default function Skills() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-10 sm:mb-12 max-w-3xl mx-auto"
+          className="text-center mb-8 max-w-3xl mx-auto"
         >
           <Badge
             variant="outline"
@@ -65,35 +71,52 @@ export default function Skills() {
           </h2>
         </motion.div>
 
-        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
-          {skillGroups.map((group, gi) => (
-            <motion.div
-              key={group.label}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: gi * 0.05 }}
-              className="rounded-2xl border bg-card/60 p-5"
+        <div
+          role="tablist"
+          aria-label="Skill categories"
+          className="mx-auto mb-8 flex max-w-3xl flex-wrap justify-center gap-2"
+        >
+          {skillGroups.map((g) => (
+            <button
+              key={g.label}
+              role="tab"
+              aria-selected={g.label === active}
+              onClick={() => setActive(g.label)}
+              className={cn(
+                "rounded-full border px-4 py-1.5 text-sm font-medium transition-colors",
+                g.label === active
+                  ? "border-primary bg-primary text-primary-foreground"
+                  : "text-muted-foreground hover:border-primary/40 hover:text-foreground",
+              )}
             >
-              <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-                {group.label}
-              </h3>
-              <div className="grid grid-cols-3 gap-3">
-                {group.skills.map((skill) => (
-                  <div
-                    key={skill.name}
-                    className="flex flex-col items-center justify-center gap-2 rounded-xl border bg-background px-2 py-3 text-center transition-colors hover:border-primary/40"
-                  >
-                    <SkillIcon skill={skill} />
-                    <span className="text-xs font-medium leading-tight">
-                      {skill.name}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
+              {g.label}
+            </button>
           ))}
         </div>
+
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={group.label}
+            role="tabpanel"
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.2 }}
+            className="mx-auto grid max-w-3xl grid-cols-3 gap-3 sm:grid-cols-4 md:grid-cols-5"
+          >
+            {group.skills.map((skill) => (
+              <div
+                key={skill.name}
+                className="flex flex-col items-center justify-center gap-2 rounded-xl border bg-card/60 px-2 py-4 text-center transition-colors hover:border-primary/40"
+              >
+                <SkillIcon skill={skill} />
+                <span className="text-xs sm:text-sm font-medium leading-tight">
+                  {skill.name}
+                </span>
+              </div>
+            ))}
+          </motion.div>
+        </AnimatePresence>
       </div>
     </section>
   );

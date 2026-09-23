@@ -169,7 +169,7 @@ export default function Projects() {
       title: "DzStore — E-commerce SaaS Platform",
       country: "Algeria",
       flag: "🇩🇿",
-      type: "Web Application",
+      type: ["Web Application", "Mobile Application"],
       url: "https://dzstore.org/en",
       image: "/projects/dzstore/hero-v2.webp",
       galleryTitle: "Inside the merchant admin",

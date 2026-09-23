@@ -20,13 +20,7 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## CV
 
-The downloadable CV PDF is generated from `Mohamed_Outerbah_CV.html`:
-
-```bash
-./build-cv.sh   # or: npm run cv
-```
-
-It renders the HTML with a headless Chromium browser and writes the PDF to `public/cv/`.
+The downloadable CV lives at `public/cv/Mohamed_Outerbah_CV.pdf`. Its source is kept outside this repo.
 
 ## Contact
 
