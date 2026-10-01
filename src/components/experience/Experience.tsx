@@ -66,19 +66,64 @@ export default function Experience() {
       description: [
         [
           "Built most of the user-facing product",
-          " as the 2nd-highest contributor on a ~10-person team, owning the frontend across five AI analytics workspaces, dashboards, reporting, data visualization, realtime features, and AI-powered workflows.",
+          " as the 2nd-highest contributor on a ~10-person team: five AI analytics workspaces, dashboards, reporting, realtime collaboration, and AI-powered workflows.",
         ],
         [
           "Developed the data integration platform across 14 sources",
-          ", including BigQuery, Snowflake, Databricks, Redshift, PostgreSQL, GA4, Google Sheets, Gmail, Slack, and YouTube, with OAuth2, scheduled syncs, encrypted credentials, and failure monitoring.",
+          " (BigQuery, Snowflake, Databricks, Redshift, PostgreSQL, GA4, Slack and more), with OAuth2, scheduled syncs, encrypted credentials, and failure alerts.",
         ],
         [
           "Shipped the AI/RAG experience",
-          " for CSV, PDF, Excel, and image analysis with streaming answers, source citations, automated root-cause/forecast/outlier analysis, and LLM cost and reliability observability.",
+          " for CSV, PDF, Excel, and image analysis, with streaming answers, source citations, and LLM cost and reliability observability.",
         ],
         [
-          "Owned production deployment and VPS infrastructure",
-          ", cutting deployment time from ~30 minutes to under 5 with zero-downtime deployments.",
+          "Eliminated a 1-3 minute outage on every production deploy and cut deploy time from ~30 minutes to under 5",
+          ", by building into a staging directory, swapping it in atomically, and running PM2 cluster reloads.",
+        ],
+        [
+          "Removed a ~30-second window of login failures after idle periods",
+          " by keeping auth signing-key checks warm on a background timer.",
+        ],
+        [
+          "Made the case for FastAPI over Express for the backend",
+          ", since the product is AI-heavy and Python owns the LLM ecosystem; the team agreed and the stack held in production.",
+        ],
+      ],
+    },
+    {
+      title: "Founder & Lead Engineer",
+      company: "DzStore",
+      website: "https://dzstore.org/en",
+      location: "Remote · Founder project",
+      period: "Jun 2025 – Present",
+      description: [
+        [
+          "Grew DzStore, a Shopify-style store builder, from zero to 2,000+ merchants within 4 months of launch",
+          ", with 5,000+ products, ~300 orders a week, 13M+ DZD (~$100K) in delivered merchant sales, and 70+ paid Pro subscriptions, on zero ad spend.",
+        ],
+        [
+          "Led the product end to end",
+          ": features, merchant onboarding and support, payments, and the production infrastructure, turning merchant feedback into shipped releases.",
+        ],
+        [
+          "Doubled weekly orders (+127%, 128 to 290)",
+          " by shipping one-click Buy Now across every storefront.",
+        ],
+        [
+          "Designed the multi-tenant architecture",
+          ": one Next.js app serves 1,650+ storefronts by routing on the host header, every query is scoped to the owning store, a least-privilege database role with row-level security adds a second wall, and custom domains get automatic HTTPS.",
+        ],
+        [
+          "Cut marketplace page weight by 80% and server response time by 64%",
+          " (3.4MB to 675KB, 1.32s to 0.47s) by moving search and pagination to the server and making the slowest SQL query 4x faster; image payload dropped 95%.",
+        ],
+        [
+          "Boosted Google Search clicks by 780% in 90 days, to 10K+ total and 4K+ in the last 28 days",
+          ", with 235K+ impressions, through technical SEO across 15,000+ indexed pages, and launched the React Native merchant app for iOS and Android.",
+        ],
+        [
+          "Integrated 100+ delivery carriers behind 6 reusable adapters",
+          ", so merchants ship and track orders from one dashboard.",
         ],
       ],
     },
@@ -90,45 +135,16 @@ export default function Experience() {
       period: "Jun 2025 – May 2026",
       description: [
         [
-          "Built core backend, web, and mobile systems for a production logistics marketplace",
-          " live in the Netherlands, supporting 12 service categories, 100+ subcategories, 5 languages, and full RTL.",
+          "Built the on-demand dispatch system end-to-end",
+          " for a logistics marketplace live on iOS and Android: nearest-provider matching, competing offers, an 11-state request lifecycle, live WebSocket tracking, and Stripe escrow.",
         ],
         [
-          "Engineered the on-demand dispatch system end-to-end",
-          ", including nearest-provider matching, competing price/pickup-time offers, an 11-state request lifecycle, per-ride WebSocket tracking, and Stripe escrow with automated cancellation refunds.",
+          "Architected the B2B fleet platform across 5+ user roles",
+          ", letting companies manage drivers and vehicles and split every payout, across 12 service categories and 5 languages with full RTL.",
         ],
         [
-          "Architected the B2B fleet and multi-role platform",
-          " across 5+ user roles, then launched the React Native app and production infrastructure with realtime chat, maps, Dockerized services on Hetzner/Coolify, and Sentry monitoring.",
-        ],
-      ],
-    },
-    {
-      title: "Co-Founder & Lead Engineer",
-      company: "DzStore",
-      website: "https://dzstore.org/en",
-      location: "Algeria · Founder project",
-      period: "Jun 2025 – Present",
-      description: [
-        [
-          "Grew the platform to 2,000+ merchant signups, 1,800+ live stores, 5,000+ products, and 2,000+ orders",
-          ", with 50+ merchants upgrading to paid plans within the first three months through organic SEO.",
-        ],
-        [
-          "Architected the platform end-to-end",
-          ", including multi-tenant storefronts, custom domains, product/order management, payments, analytics, themes, and integrations with 70 delivery providers.",
-        ],
-        [
-          "Launched the entire React Native merchant app",
-          " for iOS and Android, with inventory management, realtime orders, push notifications, order tracking, and multilingual/Arabic RTL support.",
-        ],
-        [
-          "Scaled organic SEO to 15,000+ indexed pages",
-          ", generating 3,000+ monthly Google Search clicks and 100,000+ impressions.",
-        ],
-        [
-          "Migrated the production PostgreSQL database with zero downtime",
-          ", reducing database costs by 50%+, while maintaining 4.7/5 across 200+ merchant survey responses and operating with 1,000+ automated tests.",
+          "Launched the React Native app and production infrastructure",
+          " with realtime chat, maps, Dockerized services on Hetzner/Coolify, and Sentry monitoring.",
         ],
       ],
     },
@@ -140,12 +156,8 @@ export default function Experience() {
       period: "Jun 2023 – Jun 2025",
       description: [
         [
-          "Delivered 6+ production applications",
-          " for clients across the UK, USA, Netherlands, Japan, and Saudi Arabia, maintaining a 5/5 rating across client projects.",
-        ],
-        [
-          "Created a Rightmove-style property platform",
-          " with interactive map search, realtime chat, AI-generated descriptions, Stripe tenancy payments, Redis caching, and independent VPS deployment, plus a serverless SharePoint to Zoho CRM automation for contract processing and notifications.",
+          "Delivered 6+ production applications for clients worldwide",
+          ", with a 5/5 rating across client projects.",
         ],
       ],
       rating: { score: 5, platform: "Fiverr" },
@@ -286,18 +298,9 @@ export default function Experience() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12 sm:mb-16 max-w-3xl mx-auto"
         >
-          <Badge
-            variant="outline"
-            className="mb-4 px-3 py-1 text-sm border-primary/20"
-          >
-            My Journey
-          </Badge>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
-            Professional Experience
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
+            My Experience
           </h2>
-          <p className="text-muted-foreground">
-            Roles, contracts, and the product I co-founded.
-          </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">

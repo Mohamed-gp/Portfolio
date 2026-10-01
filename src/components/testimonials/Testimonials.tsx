@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 
-import { ExternalLink, Quote, Star, Clock, Linkedin } from "lucide-react";
+import { ExternalLink, Quote, Clock, Linkedin } from "lucide-react";
 
 interface Review {
   text: string;
@@ -14,13 +14,11 @@ interface Client {
   id: number;
   displayName: string;
   avatar: string | null;
-  countryFlag: string;
   countryName: string;
   title?: string;
   project?: string;
   projectUrl?: string;
   link: string;
-  gradient: string;
   reviews: Review[];
 }
 
@@ -50,12 +48,10 @@ const clients: Client[] = [
     id: 1,
     displayName: "Vineet Pinto",
     avatar: "/clients/vineet.jpg",
-    countryFlag: "🇺🇸",
     countryName: "United States",
     title: "CEO & Founder, Analytics Depot",
     project: "Analytics Depot",
     projectUrl: "https://analyticsdepot.com/",
-    gradient: "from-blue-600 via-cyan-600 to-teal-500",
     link: "https://www.linkedin.com/in/mohamedouterbah/details/recommendations/",
     reviews: [
       {
@@ -70,11 +66,9 @@ const clients: Client[] = [
     id: 2,
     displayName: "mustafa nawaz",
     avatar: null,
-    countryFlag: "🇬🇧",
     countryName: "United Kingdom",
     project: "Cribbix",
     projectUrl: "https://cribbix.com/",
-    gradient: "from-violet-600 via-purple-600 to-indigo-600",
     link: "https://www.fiverr.com/mohamedouterbah?public_mode=true",
     reviews: [
       {
@@ -88,10 +82,8 @@ const clients: Client[] = [
     id: 3,
     displayName: "hamididz",
     avatar: "/clients/hamididz.webp",
-    countryFlag: "🇯🇵",
     countryName: "Japan",
     project: "ArtisBay",
-    gradient: "from-rose-500 via-pink-600 to-fuchsia-600",
     link: "https://www.fiverr.com/mohamedouterbah?public_mode=true",
     reviews: [
       {
@@ -108,33 +100,9 @@ export default function Testimonials() {
     <section id="testimonials" className="py-16 sm:py-20 bg-muted/30">
       <div className="container px-4 sm:px-6 max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-12 sm:mb-16 max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
-            <Star className="h-4 w-4 fill-current" />
-            Client Feedback
-          </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-900 via-blue-800 to-indigo-800 dark:from-white dark:via-blue-200 dark:to-indigo-200 bg-clip-text text-transparent">
-            What My Clients Say
-          </h2>
-          <p className="text-muted-foreground text-lg leading-relaxed">
-            I&apos;ve had the privilege of working with amazing clients who have
-            shared their experiences working with me. Here&apos;s what they have
-            to say.
-          </p>
-          <div className="flex items-center justify-center mt-6 gap-3">
-            <div className="flex">
-              {[1, 2, 3, 4, 5].map((star) => (
-                <Star
-                  key={star}
-                  className="h-5 w-5 sm:h-6 sm:w-6 text-yellow-400 fill-yellow-400"
-                />
-              ))}
-            </div>
-            <span className="font-semibold text-lg text-foreground">
-              5.0 client rating
-            </span>
-          </div>
-        </div>
+        <h2 className="text-center text-2xl sm:text-3xl md:text-4xl font-bold mb-10 sm:mb-12">
+          Testimonials
+        </h2>
 
         {/* Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -144,89 +112,59 @@ export default function Testimonials() {
             return (
               <div
                 key={client.id}
-                className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 dark:border-gray-700 overflow-hidden flex flex-col group"
+                className="relative bg-card rounded-2xl border shadow-sm hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 overflow-hidden flex flex-col"
               >
+                {/* Brand accent */}
+                <div className="h-1 w-full bg-gradient-to-r from-blue-600 to-cyan-500" />
+
                 {/* Card Header */}
-                <div
-                  className={`bg-gradient-to-r ${client.gradient} p-5 text-white relative overflow-hidden`}
-                >
-                  {/* Subtle pattern overlay */}
-                  <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_30%_50%,white_1px,transparent_1px)] bg-[length:20px_20px]" />
-
-                  <div className="relative z-10">
-                    <div className="flex items-start justify-between">
-                      <div className="flex items-center gap-3">
-                        <div className="relative">
-                          <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm overflow-hidden border-2 border-white/40">
-                            {client.avatar ? (
-                              <div className="relative w-full h-full">
-                                <Image
-                                  src={client.avatar}
-                                  alt={`${client.displayName} profile picture`}
-                                  fill
-                                  sizes="48px"
-                                  className="object-cover"
-                                />
-                              </div>
-                            ) : (
-                              <div className="w-full h-full flex items-center justify-center text-lg font-bold text-white">
-                                {client.displayName.charAt(0).toUpperCase()}
-                              </div>
-                            )}
-                          </div>
-                          <div className="absolute -bottom-1 -right-1 text-lg">
-                            {client.countryFlag}
-                          </div>
-                        </div>
-                        <div className="min-w-0">
-                          <h4 className="font-bold text-base truncate">
-                            {client.displayName}
-                          </h4>
-                          <p className="text-white/70 text-xs">
-                            {client.title ?? client.countryName}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="flex items-center justify-between mt-3">
-                      {latestReview.platform === "LinkedIn" ? (
-                        <div className="flex items-center gap-1.5 font-semibold text-sm">
-                          <Linkedin className="h-4 w-4 fill-current" />
-                          Recommendation
+                <div className="px-5 pt-5 flex items-center justify-between gap-3">
+                  <div className="flex items-center gap-3 min-w-0">
+                    <div className="w-11 h-11 rounded-full overflow-hidden ring-2 ring-primary/15 shrink-0 bg-gradient-to-br from-blue-600 to-cyan-500">
+                      {client.avatar ? (
+                        <div className="relative w-full h-full">
+                          <Image
+                            src={client.avatar}
+                            alt={`${client.displayName} profile picture`}
+                            fill
+                            sizes="44px"
+                            className="object-cover"
+                          />
                         </div>
                       ) : (
-                        <div className="flex items-center gap-1.5">
-                          <div className="flex">
-                            {Array.from({ length: 5 }).map((_, i) => (
-                              <Star
-                                key={i}
-                                className={`h-4 w-4 ${
-                                  i < Math.floor(latestReview.rating)
-                                    ? "text-yellow-300 fill-yellow-300"
-                                    : "text-white/30"
-                                }`}
-                              />
-                            ))}
-                          </div>
-                          <span className="font-semibold text-sm">
-                            {latestReview.rating}
-                          </span>
+                        <div className="w-full h-full flex items-center justify-center text-base font-bold text-white">
+                          {client.displayName.charAt(0).toUpperCase()}
                         </div>
                       )}
-                      <div className="flex items-center gap-1 text-white/60 text-xs">
-                        <Clock className="h-3 w-3" />
-                        {getRelativeTime(latestReview.date)}
-                      </div>
                     </div>
+                    <div className="min-w-0">
+                      <h4 className="font-semibold text-base truncate capitalize">
+                        {client.displayName}
+                      </h4>
+                      <p className="text-muted-foreground text-xs truncate">
+                        {client.title ?? client.countryName}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex flex-col items-end gap-1 shrink-0 text-xs text-muted-foreground">
+                    {latestReview.platform === "LinkedIn" && (
+                      <span className="inline-flex items-center gap-1 font-medium text-[#0a66c2]">
+                        <Linkedin className="h-3.5 w-3.5 fill-current" />
+                        Recommendation
+                      </span>
+                    )}
+                    <span className="inline-flex items-center gap-1">
+                      <Clock className="h-3 w-3" />
+                      {getRelativeTime(latestReview.date)}
+                    </span>
                   </div>
                 </div>
 
                 {/* Card Content */}
                 <div className="p-5 flex-grow flex flex-col">
                   <div className="relative flex-grow">
-                    <Quote className="h-8 w-8 text-blue-200 dark:text-blue-800 absolute -top-3 -left-1 opacity-40" />
-                    <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed pl-6 font-medium">
+                    <Quote className="h-7 w-7 text-primary/15 absolute -top-2 -left-1" />
+                    <p className="text-foreground/80 text-sm leading-relaxed pl-6">
                       {latestReview.text}
                     </p>
                   </div>

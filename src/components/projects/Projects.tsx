@@ -26,8 +26,6 @@ import Image from "next/image";
 
 interface Project {
   title: string;
-  country: string;
-  flag: string;
   client?: string;
   company?: string;
   type: string | string[];
@@ -45,6 +43,7 @@ interface Project {
   features: string[];
   hardest: string;
   status: string;
+  highlight?: string;
   role: string;
   technologies: string[];
 }
@@ -59,17 +58,15 @@ export default function Projects() {
     setIsModalOpen(true);
   };
 
-  // Ordered by strength: Analytics Depot → DzStore → HaulHub → Fibble → Cribbix
+  // Ordered by strength: Analytics Depot → DzStore → HaulHub
   const projects: Project[] = [
     {
       title: "Analytics Depot — AI-Powered Analytics Platform",
-      country: "United States",
-      flag: "🇺🇸",
       client: "Analytics Depot",
       company: "Analytics Depot",
       type: "Web Application",
       url: "https://analyticsdepot.com/",
-      image: "/projects/analytics-depot/hero-v2.webp",
+      image: "/projects/analytics-depot/hero-v3.webp",
       galleryTitle: "The product, end to end",
       gallery: [
         {
@@ -142,7 +139,7 @@ export default function Projects() {
         "Frontend lead and 2nd-highest contributor on a ~10-person team. I built most of the product: five AI workspaces, dashboards, reporting, and the realtime features.",
         "14 data connectors (BigQuery, Snowflake, GA4, Slack and more) with OAuth2 and scheduled syncs.",
         "RAG over CSV, PDF, Excel and images, with streaming answers and cited sources.",
-        "Cut deploys from ~30 minutes to under 5, with zero downtime.",
+        "Eliminated a 1-3 minute outage on every deploy and cut deploys from ~30 minutes to under 5.",
       ],
       features: [
         "Ask in plain English, get SQL-backed answers and charts",
@@ -167,100 +164,116 @@ export default function Projects() {
     },
     {
       title: "DzStore — E-commerce SaaS Platform",
-      country: "Algeria",
-      flag: "🇩🇿",
       type: ["Web Application", "Mobile Application"],
       url: "https://dzstore.org/en",
-      image: "/projects/dzstore/hero-v2.webp",
-      galleryTitle: "Inside the merchant admin",
+      image: "/projects/dzstore/hero-v3.webp",
+      galleryTitle: "Storefront themes and the merchant dashboard",
       gallery: [
         {
-          src: "/projects/dzstore/admin-analytics.webp",
+          src: "/projects/dzstore/v3-dashboard.webp",
           caption:
-            "Merchant analytics: store traffic over time, devices, top pages, and traffic sources.",
+            "The merchant dashboard: revenue trend, orders, and the delivery funnel from pending to delivered.",
         },
         {
-          src: "/projects/dzstore/admin-themes.webp",
+          src: "/projects/dzstore/v3-theme-atlas.webp",
           caption:
-            "The theme picker: merchants restyle their storefront in one click, with full Arabic RTL previews.",
+            "Atlas, the default theme: clean and editorial, with checkout kept fast.",
         },
         {
-          src: "/projects/dzstore/admin-variants.webp",
+          src: "/projects/dzstore/v3-theme-souk.webp",
           caption:
-            "Product variant editor: per-variant pricing, SKUs, and images.",
+            "Souk: a dense theme for large catalogues, with offers and best sellers up front.",
         },
         {
-          src: "/projects/dzstore/admin-product-editor.webp",
-          caption:
-            "The product editor: pricing, inventory, SEO fields, and pre-orders.",
+          src: "/projects/dzstore/v3-theme-noir.webp",
+          caption: "Noir: a dark, premium theme for fashion and luxury stores.",
         },
         {
-          src: "/projects/dzstore/admin-plugins.webp",
+          src: "/projects/dzstore/v3-theme-vitrine.webp",
           caption:
-            "The plugin marketplace, with interest capture on each unreleased extension.",
+            "Vitrine: a lookbook theme with big imagery and refined type.",
         },
         {
-          src: "/projects/dzstore/admin-onboarding-checklist-v2.webp",
+          src: "/projects/dzstore/v3-theme-epure.webp",
           caption:
-            "New-merchant onboarding: a 10-step checklist that tracks activation.",
+            "Épure: a minimal product page built around one hero product and a one-tap order.",
+        },
+        {
+          src: "/projects/dzstore/v3-theme-picker.webp",
+          caption:
+            "Merchants switch themes in one click, or design their own pages in the builder.",
+        },
+        {
+          src: "/projects/dzstore/v3-orders.webp",
+          caption:
+            "Orders: every status at a glance, cash collected on delivery, and inline status changes.",
+        },
+        {
+          src: "/projects/dzstore/v3-products.webp",
+          caption:
+            "The catalogue: stock, sales, compare-at pricing, and bulk import.",
+        },
+        {
+          src: "/projects/dzstore/v3-carriers.webp",
+          caption:
+            "100+ Algerian delivery carriers, each connected from one page.",
         },
       ],
       phoneShotsTitle: "The merchant app (React Native + Expo)",
       phoneShots: [
         {
-          src: "/projects/dzstore/app-01-dashboard.webp",
-          caption: "Dashboard: today's orders, pending count, month revenue",
+          src: "/projects/dzstore/v3-app-01-home.webp",
+          caption: "Home: today's orders, pending count, and month revenue",
         },
         {
-          src: "/projects/dzstore/app-02-orders.webp",
-          caption: "Orders with status filters and per-wilaya delivery",
+          src: "/projects/dzstore/v3-app-02-orders.webp",
+          caption: "Orders with status filters, one tap to call or update",
         },
         {
-          src: "/projects/dzstore/app-03-order-detail.webp",
+          src: "/projects/dzstore/v3-app-03-order-detail.webp",
           caption: "Call the customer or send to a carrier in one tap",
         },
         {
-          src: "/projects/dzstore/app-04-products.webp",
+          src: "/projects/dzstore/v3-app-04-products.webp",
           caption: "Catalogue with live stock and compare-at pricing",
         },
         {
-          src: "/projects/dzstore/app-05-product-edit.webp",
-          caption: "Edit price, stock, and visibility from the phone",
+          src: "/projects/dzstore/v3-app-05-product-edit.webp",
+          caption: "Edit a product from the phone, with AI descriptions",
         },
         {
-          src: "/projects/dzstore/app-06-abandoned-carts.webp",
-          caption: "Abandoned carts with recovery status, one tap to call",
+          src: "/projects/dzstore/v3-app-06-customers.webp",
+          caption: "Customer book with VIP tags and lifetime spend",
         },
         {
-          src: "/projects/dzstore/app-07-customers.webp",
-          caption: "Customer book with VIP flags and lifetime spend",
+          src: "/projects/dzstore/v3-app-07-abandoned.webp",
+          caption: "Abandoned carts, recovered over WhatsApp or a call",
         },
         {
-          src: "/projects/dzstore/app-08-notifications.webp",
-          caption: "Push feed: new orders, low stock, recovered carts",
-        },
-        {
-          src: "/projects/dzstore/app-09-settings.webp",
+          src: "/projects/dzstore/v3-app-09-settings.webp",
           caption: "Trilingual by design: Arabic (RTL), French, English",
         },
       ],
-      tagline: "Shopify for Algeria. 1,800+ live stores and 50+ paying merchants, all from organic search.",
+      tagline: "A Shopify-style store builder: 2,000+ merchants and 70+ paying subscribers in 4 months, with zero ad spend.",
       description: [
-        "Co-founder and lead engineer. 2,000+ signups, 5,000+ products and 2,000+ orders in the first three months, with zero ad spend.",
-        "Multi-tenant storefronts on custom domains, payments, themes, and 70 delivery providers behind one integration.",
+        "Founder and lead engineer. 2,000+ merchants, 5,000+ products, 13M+ DZD (~$100K) in delivered sales and 70+ paid Pro subscriptions within 4 months of launch.",
+        "Doubled weekly orders (+127%) by shipping one-click Buy Now on every storefront.",
+        "One Next.js app serves every store by host header, with each query scoped to the owning store and row-level security as a second wall.",
+        "Cut marketplace page weight by 80% and response time by 64% by moving search and pagination server-side; the slowest SQL query now runs 4x faster.",
+        "Multi-tenant storefronts on custom domains, payments, themes, and 100+ delivery carriers behind 6 reusable adapters.",
         "React Native merchant app for iOS and Android, Arabic RTL included.",
-        "15,000+ indexed pages bring in 3,000+ Google clicks a month.",
-        "Moved production Postgres with zero downtime and halved the database bill.",
+        "10K+ Google Search clicks (4K+ in the last 28 days), up 780% in 90 days, all organic.",
       ],
       features: [
         "Launch a store in seconds, no code",
         "Own subdomain or custom domain with automatic HTTPS",
-        "Cash on delivery, card payments, 70 carriers",
+        "Cash on delivery, card payments, 100+ carriers",
       ],
       hardest:
-        "Giving every merchant their own domain with automatic HTTPS, all from one codebase, using Caddy on-demand TLS.",
-      status: "Live · 1,800+ Stores · 50+ Paying",
-      role: "Co-Founder & Lead Engineer",
+        "Multi-tenancy: one Next.js app serves every store by reading the host header, every query is scoped to the store that owns the data, and a least-privilege database role with row-level security is a second wall, so no merchant can ever see another's orders. Custom domains get HTTPS automatically through Caddy on-demand TLS.",
+      status: "Live",
+      highlight: "2,000+ merchants · 70+ paying in 4 months",
+      role: "Founder & Lead Engineer",
       technologies: [
         "Next.js",
         "React Native (Expo)",
@@ -276,8 +289,6 @@ export default function Projects() {
     },
     {
       title: "HaulHub — Logistics Marketplace (iOS & Android)",
-      country: "Netherlands",
-      flag: "🇳🇱",
       client: "HaulHub",
       type: ["Web Application", "Mobile Application"],
       url: "https://haulhub.app/",
@@ -456,142 +467,82 @@ export default function Projects() {
         "Coolify",
       ],
     },
-    {
-      title: "Fibble — Multiplayer Trivia Game (Web & Discord)",
-      country: "Global",
-      flag: "🌍",
-      type: "Web Application",
-      url: "https://fibble.io/",
-      image: "/projects/fibble/hero-v3.webp",
-      galleryTitle: "Inside the game",
-      gallery: [
-        {
-          src: "/projects/fibble/lobby-chat.webp",
-          caption:
-            "The lobby: real players and bots in one room, chatting live while the host sets the rules.",
-        },
-        {
-          src: "/projects/fibble/round-write-answer.webp",
-          caption:
-            "A round in play: everyone writes a fake answer against a server-authoritative countdown.",
-        },
-        {
-          src: "/projects/fibble/game-truth-reveal.webp",
-          caption:
-            "End of a round: the real answer revealed among the players' fakes, points for spotting it and for fooling everyone else.",
-        },
-        {
-          src: "/projects/fibble/room-presets.webp",
-          caption:
-            "Room setup: game modes from Classic to Elimination, 2-8 players plus bots.",
-        },
-        {
-          src: "/projects/fibble/room-categories.webp",
-          caption:
-            "The deck picker: free and premium categories, from flags to Valorant.",
-        },
-      ],
-      phoneShotsTitle: "The same game on a phone, in the browser",
-      phoneShots: [
-        {
-          src: "/projects/fibble/phone-01-guest-entry.webp",
-          caption: "Play as a guest: no app, no download, no account",
-        },
-        {
-          src: "/projects/fibble/phone-02-vote.webp",
-          caption: "Voting: spot the real answer among the players' fakes",
-        },
-        {
-          src: "/projects/fibble/phone-03-standings.webp",
-          caption: "Standings after every round, players and bots ranked",
-        },
-      ],
-      tagline: "Bluffing trivia game for the browser and Discord. 3,000+ players in 80+ countries.",
-      description: [
-        "Co-founder. Real-time multiplayer with no game server: Postgres as the source of truth plus Ably pub/sub.",
-        "Runs inside Discord as an Activity, with Paddle and Discord subscriptions.",
-      ],
-      features: [
-        "Write fake answers, fool your friends",
-        "Browser or Discord, nothing to install",
-        "Custom question packs and bots",
-      ],
-      hardest:
-        "Keeping game state in sync on serverless: server-owned timers, idempotent phase changes, and signed action tokens so players can't cheat.",
-      status: "Live · 3,000+ Players",
-      role: "Co-Founder & Full-Stack Engineer",
-      technologies: [
-        "Next.js",
-        "TypeScript",
-        "PostgreSQL",
-        "Prisma",
-        "Ably",
-        "Discord SDK",
-        "Paddle",
-        "Docker",
-      ],
-    },
-    {
-      title: "Cribbix — Real Estate Platform",
-      country: "United Kingdom",
-      flag: "🇬🇧",
-      client: "Cribbix",
-      type: "Web Application",
-      url: "https://cribbix.com/",
-      image: "/projects/cribbix/hero-v2.webp",
-      galleryTitle: "Inside the platform",
-      gallery: [
-        {
-          src: "/projects/cribbix/property-detail.webp",
-          caption: "Admin property review: approve or reject new listings.",
-        },
-        {
-          src: "/projects/cribbix/admin-dashboard.webp",
-          caption: "The admin dashboard: platform stats and pending approvals.",
-        },
-        {
-          src: "/projects/cribbix/agent-analytics.webp",
-          caption:
-            "Agent analytics: per-property views, clicks, and performance.",
-        },
-        {
-          src: "/projects/cribbix/admin-property-table.webp",
-          caption: "Admin property management across every listing and status.",
-        },
-        {
-          src: "/projects/cribbix/agent-properties.webp",
-          caption:
-            "The agent's own portfolio with per-listing engagement and plan limits.",
-        },
-        {
-          src: "/projects/cribbix/renter-dashboard.webp",
-          caption:
-            "The renter side: saved searches, alerts, offers, and suggested homes.",
-        },
-      ],
-      tagline: "Rightmove-style property platform for the UK.",
-      description: [
-        "Map search with instant filters, agent and admin dashboards, and realtime chat.",
-        "Stripe rent payments, AI listing descriptions, Redis caching, self-managed VPS.",
-      ],
-      features: [
-        "Map-first search, to rent or buy",
-        "Realtime chat with agents",
-        "Stripe rent collection",
-      ],
-      hardest:
-        "Filtering live results without reloading the map on every change.",
-      status: "Live",
-      role: "Full-Stack Developer",
-      technologies: [
-        "Next.js",
-        "Redis",
-        "Stripe",
-        "reCAPTCHA",
-        "PostgreSQL",
-        "DigitalOcean",
-      ],
-    },
+    // Fibble is hidden for now (kept for later).
+    // {
+    //   title: "Fibble — Multiplayer Trivia Game (Web & Discord)",
+    //   country: "Global",
+    //   flag: "🌍",
+    //   type: "Web Application",
+    //   url: "https://fibble.io/",
+    //   image: "/projects/fibble/hero-v3.webp",
+    //   galleryTitle: "Inside the game",
+    //   gallery: [
+    //     {
+    //       src: "/projects/fibble/lobby-chat.webp",
+    //       caption:
+    //         "The lobby: real players and bots in one room, chatting live while the host sets the rules.",
+    //     },
+    //     {
+    //       src: "/projects/fibble/round-write-answer.webp",
+    //       caption:
+    //         "A round in play: everyone writes a fake answer against a server-authoritative countdown.",
+    //     },
+    //     {
+    //       src: "/projects/fibble/game-truth-reveal.webp",
+    //       caption:
+    //         "End of a round: the real answer revealed among the players' fakes, points for spotting it and for fooling everyone else.",
+    //     },
+    //     {
+    //       src: "/projects/fibble/room-presets.webp",
+    //       caption:
+    //         "Room setup: game modes from Classic to Elimination, 2-8 players plus bots.",
+    //     },
+    //     {
+    //       src: "/projects/fibble/room-categories.webp",
+    //       caption:
+    //         "The deck picker: free and premium categories, from flags to Valorant.",
+    //     },
+    //   ],
+    //   phoneShotsTitle: "The same game on a phone, in the browser",
+    //   phoneShots: [
+    //     {
+    //       src: "/projects/fibble/phone-01-guest-entry.webp",
+    //       caption: "Play as a guest: no app, no download, no account",
+    //     },
+    //     {
+    //       src: "/projects/fibble/phone-02-vote.webp",
+    //       caption: "Voting: spot the real answer among the players' fakes",
+    //     },
+    //     {
+    //       src: "/projects/fibble/phone-03-standings.webp",
+    //       caption: "Standings after every round, players and bots ranked",
+    //     },
+    //   ],
+    //   tagline: "Bluffing trivia game for the browser and Discord. 3,000+ players in 80+ countries.",
+    //   description: [
+    //     "Co-founder. Real-time multiplayer with no game server: Postgres as the source of truth plus Ably pub/sub.",
+    //     "Runs inside Discord as an Activity, with Paddle and Discord subscriptions.",
+    //   ],
+    //   features: [
+    //     "Write fake answers, fool your friends",
+    //     "Browser or Discord, nothing to install",
+    //     "Custom question packs and bots",
+    //   ],
+    //   hardest:
+    //     "Keeping game state in sync on serverless: server-owned timers, idempotent phase changes, and signed action tokens so players can't cheat.",
+    //   status: "Live · 3,000+ Players",
+    //   role: "Co-Founder & Full-Stack Engineer",
+    //   technologies: [
+    //     "Next.js",
+    //     "TypeScript",
+    //     "PostgreSQL",
+    //     "Prisma",
+    //     "Ably",
+    //     "Discord SDK",
+    //     "Paddle",
+    //     "Docker",
+    //   ],
+    // },
   ];
 
   const isWeb = (p: Project) =>
@@ -621,20 +572,9 @@ export default function Projects() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12 sm:mb-16 max-w-4xl mx-auto"
         >
-          <Badge
-            variant="outline"
-            className="mb-4 px-4 py-2 text-sm border-primary/20 bg-primary/5"
-          >
-            <Globe className="mr-2 h-4 w-4" />
-            Live Projects
-          </Badge>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
-            Selected Work
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
+            Projects
           </h2>
-          <p className="text-muted-foreground text-lg">
-            Live products with real users. Open any card for screenshots and
-            the details.
-          </p>
         </motion.div>
 
         <motion.div
@@ -695,11 +635,10 @@ export default function Projects() {
           <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
             <DialogHeader>
               <DialogTitle className="text-2xl font-bold flex items-center gap-2">
-                <span className="text-2xl">{selectedProject?.flag}</span>
                 {selectedProject?.title}
               </DialogTitle>
               <DialogDescription className="text-base">
-                {selectedProject?.role} • {selectedProject?.country}
+                {selectedProject?.role}
               </DialogDescription>
             </DialogHeader>
 
@@ -935,8 +874,6 @@ function ProjectCard({
   const isMobileProject = Array.isArray(project.type)
     ? project.type.includes("Mobile Application")
     : project.type === "Mobile Application";
-  const isLive =
-    project.status.startsWith("Live") || project.status === "Live & Profitable";
 
   return (
     <Card className="overflow-hidden group border border-primary/10 bg-card shadow-lg hover:shadow-2xl transition-all duration-300 hover:border-primary/20 hover:-translate-y-1 h-full flex flex-col">
@@ -955,23 +892,6 @@ function ProjectCard({
             quality={85}
             className="object-cover transition-transform duration-500 group-hover:scale-105"
           />
-          <div className="absolute top-3 left-3 flex gap-1.5">
-            <Badge className="bg-background/85 text-foreground backdrop-blur-sm border-none shadow-sm">
-              <span className="mr-1">{project.flag}</span>
-              {project.country}
-            </Badge>
-          </div>
-          <div className="absolute top-3 right-3">
-            <Badge
-              className={
-                isLive
-                  ? "bg-green-600 text-white border-none shadow-sm"
-                  : "bg-background/85 text-foreground border-none shadow-sm"
-              }
-            >
-              {project.status}
-            </Badge>
-          </div>
         </button>
       )}
 
@@ -981,6 +901,11 @@ function ProjectCard({
           <p className="text-sm text-primary font-medium mt-0.5">
             {project.role}
           </p>
+          {project.highlight && (
+            <p className="mt-2 inline-flex items-center rounded-full bg-green-600/10 px-2.5 py-0.5 text-xs font-semibold text-green-700 dark:text-green-400">
+              {project.highlight}
+            </p>
+          )}
         </div>
 
         {/* Stack badges — lead with these */}

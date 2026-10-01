@@ -4,8 +4,6 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
   ArrowRight,
-  Check,
-  Copy,
   Download,
   Github,
   Linkedin,
@@ -21,7 +19,6 @@ export default function Hero() {
   const [text, setText] = useState("");
   const fullText = "Full-Stack Engineer";
   const [index, setIndex] = useState(0);
-  const [copied, setCopied] = useState(false);
 
   useEffect(() => {
     if (index < fullText.length) {
@@ -32,16 +29,6 @@ export default function Hero() {
       return () => clearTimeout(timeout);
     }
   }, [index]);
-
-  const copyEmail = async () => {
-    try {
-      await navigator.clipboard.writeText(EMAIL);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    } catch {
-      window.location.href = `mailto:${EMAIL}`;
-    }
-  };
 
   return (
     <section
@@ -58,22 +45,22 @@ export default function Hero() {
       <div className="flex-1 flex items-center">
         <div className="container px-4 sm:px-6 grid lg:grid-cols-2 gap-8 md:gap-12 items-center pt-20 pb-16 sm:pb-20">
           <div className="space-y-4 sm:space-y-6 text-center lg:text-left animate-fade-in-up">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
+            <h1 className="text-xl sm:text-2xl md:text-3xl font-semibold text-muted-foreground">
               Hi, I'm{" "}
               <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
                 Mohamed Outerbah
               </span>
             </h1>
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold min-h-[1.2em]">
               {text}
               <span className="animate-blink">|</span>
             </h2>
             <p className="text-base md:text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0">
               <strong className="text-foreground">
-                3+ years of production experience
+                I build web and mobile products used by thousands in
+                production.
               </strong>{" "}
-              building and shipping web and mobile products end-to-end.
-              Frontend Lead on{" "}
+              3+ years shipping end-to-end: Frontend Lead on{" "}
               <a
                 href="https://analyticsdepot.com/"
                 target="_blank"
@@ -82,7 +69,7 @@ export default function Hero() {
               >
                 Analytics Depot
               </a>
-              , a production AI analytics SaaS, and Co-Founder/Lead Engineer of{" "}
+              , a production AI analytics SaaS, and Founder/Lead Engineer of{" "}
               <a
                 href="https://dzstore.org/en"
                 target="_blank"
@@ -91,33 +78,23 @@ export default function Hero() {
               >
                 DzStore
               </a>
-              , an e-commerce SaaS that reached 2,000+ merchant signups and 50+
-              paying merchants within its first three months through organic
-              SEO.
+              , a Shopify-style store builder that grew to{" "}
+              <strong className="text-foreground">
+                2,000+ merchants, 70+ paying subscribers, and ~300 orders a
+                week
+              </strong>{" "}
+              within 4 months, with zero ad spend.
             </p>
 
             {/* Prominent contact bar */}
             <div className="flex flex-wrap items-center gap-2 justify-center lg:justify-start">
-              <div className="inline-flex items-center gap-2 rounded-full border bg-background/60 backdrop-blur-sm pl-4 pr-1.5 py-1.5 shadow-sm">
-                <Mail className="h-4 w-4 text-primary shrink-0" />
-                <span className="text-sm font-medium select-all">{EMAIL}</span>
-                <button
-                  type="button"
-                  onClick={copyEmail}
-                  aria-label="Copy email address"
-                  className="inline-flex items-center gap-1 rounded-full bg-primary px-2.5 py-1 text-xs font-semibold text-primary-foreground hover:opacity-90 transition-opacity"
-                >
-                  {copied ? (
-                    <>
-                      <Check className="h-3.5 w-3.5" /> Copied
-                    </>
-                  ) : (
-                    <>
-                      <Copy className="h-3.5 w-3.5" /> Copy
-                    </>
-                  )}
-                </button>
-              </div>
+              <Link
+                href={`mailto:${EMAIL}`}
+                className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm hover:opacity-90 transition-opacity"
+              >
+                <Mail className="h-4 w-4 shrink-0" />
+                Email me
+              </Link>
               <Link
                 href="https://www.linkedin.com/in/mohamedouterbah"
                 target="_blank"

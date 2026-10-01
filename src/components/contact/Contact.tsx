@@ -1,9 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import { Github, Linkedin, Mail, Clock } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 export default function Contact() {
   return (
@@ -16,31 +15,18 @@ export default function Contact() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12 max-w-3xl mx-auto"
         >
-          <Badge
-            variant="outline"
-            className="mb-4 px-3 py-1 text-sm border-primary/20 bg-primary/5 dark:bg-primary/10"
-          >
-            Get In Touch
-          </Badge>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Hiring a{" "}
             <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
               Full-Stack Engineer?
             </span>
           </h2>
-          <p className="text-muted-foreground text-lg">
-            Reach out on LinkedIn or by email.
-          </p>
           <p className="text-sm text-muted-foreground flex items-center justify-center gap-2 mt-4">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
             </span>
             Available now for full-time remote roles and contracts
-          </p>
-          <p className="text-sm text-muted-foreground flex items-center justify-center gap-2 mt-2">
-            <Clock className="h-3.5 w-3.5" />
-            I usually respond within a few hours
           </p>
         </motion.div>
 

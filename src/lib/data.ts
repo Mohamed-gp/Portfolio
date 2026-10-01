@@ -46,7 +46,7 @@ export const skillGroups: { label: string; skills: Skill[] }[] = [
     ],
   },
   {
-    label: "Data",
+    label: "Databases & ORMs",
     skills: [
       { name: "PostgreSQL", icon: "postgressql.svg" },
       { name: "MySQL", icon: "mysql.svg" },
