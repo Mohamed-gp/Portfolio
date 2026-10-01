@@ -262,7 +262,7 @@ export default function Projects() {
         "Cut marketplace page weight by 80% and response time by 64% by moving search and pagination server-side; the slowest SQL query now runs 4x faster.",
         "Multi-tenant storefronts on custom domains, payments, themes, and 100+ delivery carriers behind 6 reusable adapters.",
         "React Native merchant app for iOS and Android, Arabic RTL included.",
-        "10K+ Google Search clicks (4K+ in the last 28 days), up 780% in 90 days, all organic.",
+        "10K+ Google Search clicks (4K+ in the last 28 days), up 780% in 90 days, and 40K+ monthly visits, all organic.",
       ],
       features: [
         "Launch a store in seconds, no code",

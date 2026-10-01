@@ -119,7 +119,7 @@ export default function Experience() {
         ],
         [
           "Boosted Google Search clicks by 780% in 90 days, to 10K+ total and 4K+ in the last 28 days",
-          ", with 235K+ impressions, through technical SEO across 15,000+ indexed pages, and launched the React Native merchant app for iOS and Android.",
+          ", with 235K+ impressions and 40K+ monthly visits, through technical SEO across 15,000+ indexed pages, and launched the React Native merchant app for iOS and Android.",
         ],
         [
           "Integrated 100+ delivery carriers behind 6 reusable adapters",
