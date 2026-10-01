@@ -81,12 +81,12 @@ export default function Experience() {
           ", by building into a staging directory, swapping it in atomically, and running PM2 cluster reloads.",
         ],
         [
-          "Removed a ~30-second window of login failures after idle periods",
-          " by keeping auth signing-key checks warm on a background timer.",
+          "Removed a ~30-second login failure window after idle periods",
+          " by keeping auth key checks warm.",
         ],
         [
-          "Made the case for FastAPI over Express for the backend",
-          ", since the product is AI-heavy and Python owns the LLM ecosystem; the team agreed and the stack held in production.",
+          "Made the case for FastAPI over Express",
+          ", since the product is AI-heavy and Python owns the LLM ecosystem; the team adopted it.",
         ],
       ],
     },
@@ -141,10 +141,6 @@ export default function Experience() {
         [
           "Opened the platform to B2B fleets",
           ": companies manage their own drivers and vehicles and get payouts split automatically, across 5+ user roles, 12 service categories, and 5 languages.",
-        ],
-        [
-          "Took the React Native app and infrastructure to production",
-          " on Dockerized services (Hetzner/Coolify) with Sentry monitoring.",
         ],
       ],
     },

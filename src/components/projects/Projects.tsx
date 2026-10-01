@@ -443,9 +443,9 @@ export default function Projects() {
       ],
       tagline: "Uber-style logistics marketplace, live on iOS and Android in the Netherlands.",
       description: [
-        "Core engineer across backend, web and mobile. 12 service categories, 5 languages, full RTL.",
-        "Built the dispatch system: nearest-provider matching, competing bids, live tracking, Stripe escrow.",
-        "Built the B2B fleet module: companies manage their drivers and vehicles and split every payout.",
+        "Core engineer across backend, web and mobile: 5+ user roles, 12 service categories, 5 languages with full RTL.",
+        "Engineered the dispatch system: requests go to the nearest providers, who compete on price and pickup time, with live tracking and Stripe escrow.",
+        "Opened the platform to B2B fleets: companies manage their own drivers and vehicles and get payouts split automatically.",
       ],
       features: [
         "Post a job, get competing offers in seconds",
