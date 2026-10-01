@@ -103,7 +103,7 @@ export default function Experience() {
         ],
         [
           "Led the product end to end",
-          ": features, merchant onboarding and support, payments, and the production infrastructure, turning merchant feedback into shipped releases.",
+          ": features, merchant onboarding and support, payments, and the production infrastructure, turning merchant feedback into releases.",
         ],
         [
           "Doubled weekly orders (+127%, 128 to 290)",
@@ -111,19 +111,19 @@ export default function Experience() {
         ],
         [
           "Designed the multi-tenant architecture",
-          ": one Next.js app serves 1,650+ storefronts by routing on the host header, every query is scoped to the owning store, a least-privilege database role with row-level security adds a second wall, and custom domains get automatic HTTPS.",
+          ": one Next.js app serves 1,650+ storefronts by host header, with per-store query scoping, row-level security, and automatic HTTPS on custom domains.",
         ],
         [
           "Cut marketplace page weight by 80% and server response time by 64%",
-          " (3.4MB to 675KB, 1.32s to 0.47s) by moving search and pagination to the server and making the slowest SQL query 4x faster; image payload dropped 95%.",
+          " (3.4MB to 675KB, 1.32s to 0.47s) by moving search and pagination server-side and speeding up the slowest SQL query 4x.",
         ],
         [
           "Boosted Google Search clicks by 780% in 90 days, to 10K+ total and 4K+ in the last 28 days",
-          ", with 235K+ impressions and 40K+ monthly visits, through technical SEO across 15,000+ indexed pages, and launched the React Native merchant app for iOS and Android.",
+          ", reaching 40K+ monthly visits through technical SEO across 15,000+ indexed pages.",
         ],
         [
-          "Integrated 100+ delivery carriers behind 6 reusable adapters",
-          ", so merchants ship and track orders from one dashboard.",
+          "Launched the React Native merchant app and integrated 100+ delivery carriers",
+          " behind 6 reusable adapters, so merchants book and track shipments from their phone or dashboard.",
         ],
       ],
     },
@@ -135,16 +135,16 @@ export default function Experience() {
       period: "Jun 2025 – May 2026",
       description: [
         [
-          "Built the on-demand dispatch system end-to-end",
-          " for a logistics marketplace live on iOS and Android: nearest-provider matching, competing offers, an 11-state request lifecycle, live WebSocket tracking, and Stripe escrow.",
+          "Engineered the dispatch system behind a logistics marketplace live on iOS and Android",
+          ": requests go to the nearest providers, who compete on price and pickup time, with live WebSocket tracking and Stripe escrow.",
         ],
         [
-          "Architected the B2B fleet platform across 5+ user roles",
-          ", letting companies manage drivers and vehicles and split every payout, across 12 service categories and 5 languages with full RTL.",
+          "Opened the platform to B2B fleets",
+          ": companies manage their own drivers and vehicles and get payouts split automatically, across 5+ user roles, 12 service categories, and 5 languages.",
         ],
         [
-          "Launched the React Native app and production infrastructure",
-          " with realtime chat, maps, Dockerized services on Hetzner/Coolify, and Sentry monitoring.",
+          "Took the React Native app and infrastructure to production",
+          " on Dockerized services (Hetzner/Coolify) with Sentry monitoring.",
         ],
       ],
     },
@@ -157,7 +157,7 @@ export default function Experience() {
       description: [
         [
           "Delivered 6+ production applications for clients worldwide",
-          ", with a 5/5 rating across client projects.",
+          ", owning each one from scoping to deployment and handover, with a 5/5 rating on every project.",
         ],
       ],
       rating: { score: 5, platform: "Fiverr" },
